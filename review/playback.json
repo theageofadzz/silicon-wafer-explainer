@@ -3,23 +3,23 @@
     {
       "event": "playing",
       "time": 0,
-      "wallTime": 555
+      "wallTime": 565.4000000022352
     },
     {
       "event": "pause",
       "time": 174.25,
-      "wallTime": 178767.90000000224
+      "wallTime": 175158.40000000224
     },
     {
       "event": "ended",
       "time": 174.25,
-      "wallTime": 178769.69999999925
+      "wallTime": 175160.80000000075
     }
   ],
-  "startedAt": 552.6000000014901,
+  "startedAt": 563.6000000014901,
   "checkpoints": [
     {
-      "time": 14.713645,
+      "time": 14.671536,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -27,7 +27,7 @@
       "rate": 1
     },
     {
-      "time": 29.767707,
+      "time": 29.736711,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -35,7 +35,7 @@
       "rate": 1
     },
     {
-      "time": 44.924151,
+      "time": 44.799946,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -43,7 +43,7 @@
       "rate": 1
     },
     {
-      "time": 59.808626,
+      "time": 59.851281,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -51,7 +51,7 @@
       "rate": 1
     },
     {
-      "time": 74.537831,
+      "time": 74.90497,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -59,7 +59,7 @@
       "rate": 1
     },
     {
-      "time": 86.956168,
+      "time": 89.945704,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -67,7 +67,7 @@
       "rate": 1
     },
     {
-      "time": 101.98897,
+      "time": 105.000149,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -75,7 +75,7 @@
       "rate": 1
     },
     {
-      "time": 116.549098,
+      "time": 120.039903,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -83,7 +83,7 @@
       "rate": 1
     },
     {
-      "time": 131.598776,
+      "time": 135.077578,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -91,7 +91,7 @@
       "rate": 1
     },
     {
-      "time": 146.647439,
+      "time": 150.185258,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -99,7 +99,7 @@
       "rate": 1
     },
     {
-      "time": 161.669185,
+      "time": 165.23746,
       "ended": false,
       "paused": false,
       "readyState": 4,
@@ -115,10 +115,10 @@
       "rate": 1
     }
   ],
-  "elapsed": 180.6935,
+  "elapsed": 180.65860000000148,
   "quality": {
     "totalVideoFrames": 4182,
-    "droppedVideoFrames": 1
+    "droppedVideoFrames": 0
   },
   "info": {
     "duration": 174.25,

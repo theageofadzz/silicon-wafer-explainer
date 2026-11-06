@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-06T05:43:04.733Z",
+  "date": "2026-11-06T06:21:15.759Z",
   "clips": [
     {
       "id": "silica",
@@ -566,7 +566,7 @@
   },
   "film": {
     "file": "output/silicon-wafer-explainer-9x16.mp4",
-    "sha256": "045bad953fe6866d088e0c57a4886c00125b7e169a0ea5ac90f3dbae334636b1"
+    "sha256": "91071e0c1fad4e0ed92be9c34c7ac0c8b69cd491d76295ad4f5ce9c55fadf3a3"
   },
   "timelineSHA256": "55390700402ac000c8c7b4905e281c124f7a5c252f24fe651c0c64071e60a48f",
   "scope": "Saved ComfyUI execution graphs and output hashes; input snapshot hashes measured at packaging. The full regeneration workflow may use a newer decode tile configuration. Seeds do not guarantee identical pixels across hardware."

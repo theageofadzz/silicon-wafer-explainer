@@ -92,9 +92,16 @@ def mix_audio(timeline, output):
 def caption_lines(text, font):
     if font.getlength(text) <= 930:
         return [text]
-    for i in range(len(text) // 2, 0, -1):
-        if font.getlength(text[:i]) <= 930 and font.getlength(text[i:]) <= 930:
-            return [text[:i], text[i:]]
+    candidates = []
+    for i in range(1, len(text)):
+        if text[i] in "，。！？；：、）》】」』”’" or text[i - 1] in "（《【「『“‘":
+            continue
+        widths = [font.getlength(text[:i]), font.getlength(text[i:])]
+        if max(widths) <= 930:
+            candidates.append((abs(widths[0] - widths[1]), i))
+    if candidates:
+        _, index = min(candidates)
+        return [text[:index], text[index:]]
     raise ValueError(f"Caption does not fit: {text}")
 
 
