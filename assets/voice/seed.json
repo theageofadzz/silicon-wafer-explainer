@@ -1,0 +1,142 @@
+{
+  "config": {
+    "text": "一小段籽晶接触熔体，再一边旋转，一边缓慢向上提拉。新凝固的硅，沿着籽晶的方向生长。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 1625000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 2625000,
+      "duration": 1875000,
+      "text": "小"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4500000,
+      "duration": 2000000,
+      "text": "段"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6500000,
+      "duration": 3625000,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10375000,
+      "duration": 2875000,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13375000,
+      "duration": 5125000,
+      "text": "熔体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21375000,
+      "duration": 1625000,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23125000,
+      "duration": 2250000,
+      "text": "一边"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25500000,
+      "duration": 5375000,
+      "text": "旋转"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34500000,
+      "duration": 2375000,
+      "text": "一边"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37125000,
+      "duration": 3250000,
+      "text": "缓慢"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40500000,
+      "duration": 3250000,
+      "text": "向上"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43875000,
+      "duration": 3625000,
+      "text": "提拉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53250000,
+      "duration": 3125000,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56375000,
+      "duration": 2875000,
+      "text": "凝固"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59250000,
+      "duration": 1000000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60250000,
+      "duration": 3375000,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 66375000,
+      "duration": 2875000,
+      "text": "沿着"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69500000,
+      "duration": 3125000,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72625000,
+      "duration": 625000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73375000,
+      "duration": 3000000,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76500000,
+      "duration": 4250000,
+      "text": "生长"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

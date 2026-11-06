@@ -1,0 +1,106 @@
+{
+  "config": {
+    "text": "所以还要倒圆边缘，研磨，控制厚度和平行度，再蚀刻掉加工损伤层。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 5500000,
+      "text": "所以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 7500000,
+      "duration": 3875000,
+      "text": "还要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11500000,
+      "duration": 1875000,
+      "text": "倒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13375000,
+      "duration": 1500000,
+      "text": "圆"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15000000,
+      "duration": 4500000,
+      "text": "边缘"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22375000,
+      "duration": 5000000,
+      "text": "研磨"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30500000,
+      "duration": 3375000,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34000000,
+      "duration": 4000000,
+      "text": "厚度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38250000,
+      "duration": 3000000,
+      "text": "和平"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41375000,
+      "duration": 3875000,
+      "text": "行度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47000000,
+      "duration": 2000000,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49125000,
+      "duration": 3875000,
+      "text": "蚀刻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53000000,
+      "duration": 1875000,
+      "text": "掉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55125000,
+      "duration": 3500000,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58750000,
+      "duration": 3875000,
+      "text": "损伤"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62625000,
+      "duration": 3125000,
+      "text": "层"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

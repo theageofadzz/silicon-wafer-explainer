@@ -1,0 +1,259 @@
+{
+  "6": {
+    "class_type": "SWEPrepare",
+    "inputs": {
+      "regenerate_narration": false,
+      "regenerate_guides": false,
+      "prepare_guides": false
+    }
+  },
+  "10": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/silica.mp4"
+    }
+  },
+  "11": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/reduction.mp4"
+    }
+  },
+  "12": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/distill.mp4"
+    }
+  },
+  "13": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/deposition.mp4"
+    }
+  },
+  "14": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/polycrystal.mp4"
+    }
+  },
+  "15": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/melt.mp4"
+    }
+  },
+  "16": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/doping.mp4"
+    }
+  },
+  "17": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/seed.mp4"
+    }
+  },
+  "18": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/growth.mp4"
+    }
+  },
+  "19": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/trim.mp4"
+    }
+  },
+  "20": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/slice.mp4"
+    }
+  },
+  "21": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/lapping.mp4"
+    }
+  },
+  "22": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/polish.mp4"
+    }
+  },
+  "23": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/clean.mp4"
+    }
+  },
+  "24": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/inspect.mp4"
+    }
+  },
+  "25": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/ending.mp4"
+    }
+  },
+  "40": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/silicon-seed.mp4"
+    }
+  },
+  "41": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "generated/silicon-shoulder.mp4"
+    }
+  },
+  "50": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "opening/edit/v3/generated/chip.mp4"
+    }
+  },
+  "51": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "opening/edit/v3/generated/blank.mp4"
+    }
+  },
+  "52": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "opening/edit/v3/generated/boule.mp4"
+    }
+  },
+  "53": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "opening/edit/v3/generated/quartz.mp4"
+    }
+  },
+  "54": {
+    "class_type": "SWEExisting",
+    "inputs": {
+      "relative_path": "opening/edit/v3/generated/quartz-macro.mp4"
+    }
+  },
+  "500": {
+    "class_type": "SWEOpening",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "rebuild": false,
+      "chip": [
+        "50",
+        0
+      ],
+      "blank": [
+        "51",
+        0
+      ],
+      "boule": [
+        "52",
+        0
+      ],
+      "quartz": [
+        "53",
+        0
+      ],
+      "quartz_macro": [
+        "54",
+        0
+      ]
+    }
+  },
+  "501": {
+    "class_type": "SWEAssemble",
+    "inputs": {
+      "opening": [
+        "500",
+        0
+      ],
+      "silica": [
+        "10",
+        0
+      ],
+      "reduction": [
+        "11",
+        0
+      ],
+      "distill": [
+        "12",
+        0
+      ],
+      "deposition": [
+        "13",
+        0
+      ],
+      "polycrystal": [
+        "14",
+        0
+      ],
+      "melt": [
+        "15",
+        0
+      ],
+      "doping": [
+        "16",
+        0
+      ],
+      "seed": [
+        "17",
+        0
+      ],
+      "growth": [
+        "18",
+        0
+      ],
+      "trim": [
+        "19",
+        0
+      ],
+      "slice": [
+        "20",
+        0
+      ],
+      "lapping": [
+        "21",
+        0
+      ],
+      "polish": [
+        "22",
+        0
+      ],
+      "clean": [
+        "23",
+        0
+      ],
+      "inspect": [
+        "24",
+        0
+      ],
+      "ending": [
+        "25",
+        0
+      ],
+      "silicon_seed": [
+        "40",
+        0
+      ],
+      "silicon_shoulder": [
+        "41",
+        0
+      ]
+    }
+  }
+}

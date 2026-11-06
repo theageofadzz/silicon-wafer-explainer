@@ -1,0 +1,130 @@
+{
+  "config": {
+    "text": "在加热的硅芯表面，新的硅不断沉积，硅棒逐渐变粗。得到的，就是高纯多晶硅。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 2125000,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3250000,
+      "duration": 3000000,
+      "text": "加热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6250000,
+      "duration": 1125000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 7625000,
+      "duration": 3250000,
+      "text": "硅芯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11000000,
+      "duration": 4750000,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 18625000,
+      "duration": 2875000,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21500000,
+      "duration": 875000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22500000,
+      "duration": 2250000,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25000000,
+      "duration": 2750000,
+      "text": "不断"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27875000,
+      "duration": 4750000,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34875000,
+      "duration": 4750000,
+      "text": "硅棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39875000,
+      "duration": 4000000,
+      "text": "逐渐"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 44000000,
+      "duration": 4750000,
+      "text": "变粗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54500000,
+      "duration": 4375000,
+      "text": "得到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58875000,
+      "duration": 2500000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63250000,
+      "duration": 1750000,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 65000000,
+      "duration": 1125000,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 66375000,
+      "duration": 5375000,
+      "text": "高纯多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71875000,
+      "duration": 2125000,
+      "text": "晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74000000,
+      "duration": 2875000,
+      "text": "硅"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

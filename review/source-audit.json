@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-06T05:55:47.558Z",
+  "files": 349,
+  "bytes": 222106589,
+  "issues": [],
+  "scope": "Tracked source files only: forbidden paths, credential patterns, and source size. Release extras are separately enumerated by package.py."
+}

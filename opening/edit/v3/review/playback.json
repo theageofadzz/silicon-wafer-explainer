@@ -1,0 +1,251 @@
+{
+  "videoSHA256": "3b685f426843fda45672efd8c50a233aa381d4fab543616e9b2583c3a1ec7ef2",
+  "normalSpeedPlayback": true,
+  "playback": [
+    {
+      "time": 0.971286,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 1.466559,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 2.475563,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 3.48622,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 4.496914,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 5.56954,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 6.577054,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 7.590532,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 8.603186,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 9.680378,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 10.68634,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 11.695086,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 12.703355,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 13.782553,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 14.788235,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 15.795902,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 16.805888,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 17.925158,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 18.932533,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 19.941322,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 20.950225,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 22.037294,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 23.047104,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 24.055275,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 25.066663,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 26.145453,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 27.155202,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 28.162723,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 29.171908,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 30.285727,
+      "ended": false,
+      "width": 1080,
+      "height": 1920,
+      "paused": false
+    },
+    {
+      "time": 30.375,
+      "ended": true,
+      "width": 1080,
+      "height": 1920,
+      "paused": true
+    }
+  ],
+  "viewports": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bounds": {
+        "x": 475,
+        "y": 42.84375,
+        "width": 490,
+        "height": 871.109375
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bounds": {
+        "x": 7.796875,
+        "y": 67.609375,
+        "width": 374.390625,
+        "height": 665.578125
+      }
+    }
+  ],
+  "humanListening": false,
+  "limits": "Playback and screenshots do not substitute for human listening."
+}

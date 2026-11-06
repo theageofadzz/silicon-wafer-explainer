@@ -1,0 +1,271 @@
+{
+  "last_node_id": 90,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "WV3ExistingClip",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "WV3_CLIP",
+          "type": "WV3_CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3ExistingClip"
+      },
+      "widgets_values": [
+        "edit/v3/generated/chip.mp4"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "WV3ExistingClip",
+      "pos": [
+        0,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "WV3_CLIP",
+          "type": "WV3_CLIP",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3ExistingClip"
+      },
+      "widgets_values": [
+        "edit/v3/generated/blank.mp4"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "WV3ExistingClip",
+      "pos": [
+        0,
+        1020
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "WV3_CLIP",
+          "type": "WV3_CLIP",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3ExistingClip"
+      },
+      "widgets_values": [
+        "edit/v3/generated/boule.mp4"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "WV3ExistingClip",
+      "pos": [
+        0,
+        1530
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "WV3_CLIP",
+          "type": "WV3_CLIP",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3ExistingClip"
+      },
+      "widgets_values": [
+        "edit/v3/generated/quartz.mp4"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "WV3ExistingClip",
+      "pos": [
+        0,
+        2040
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "WV3_CLIP",
+          "type": "WV3_CLIP",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3ExistingClip"
+      },
+      "widgets_values": [
+        "edit/v3/generated/quartz-macro.mp4"
+      ]
+    },
+    {
+      "id": 90,
+      "type": "WV3Assemble",
+      "pos": [
+        3330,
+        4080
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "chip",
+          "type": "WV3_CLIP",
+          "link": 1
+        },
+        {
+          "name": "blank",
+          "type": "WV3_CLIP",
+          "link": 2
+        },
+        {
+          "name": "boule",
+          "type": "WV3_CLIP",
+          "link": 3
+        },
+        {
+          "name": "quartz",
+          "type": "WV3_CLIP",
+          "link": 4
+        },
+        {
+          "name": "quartz_macro",
+          "type": "WV3_CLIP",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "finished_video",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3Assemble"
+      },
+      "widgets_values": [
+        false
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      90,
+      0,
+      "WV3_CLIP"
+    ],
+    [
+      2,
+      2,
+      0,
+      90,
+      1,
+      "WV3_CLIP"
+    ],
+    [
+      3,
+      3,
+      0,
+      90,
+      2,
+      "WV3_CLIP"
+    ],
+    [
+      4,
+      4,
+      0,
+      90,
+      3,
+      "WV3_CLIP"
+    ],
+    [
+      5,
+      5,
+      0,
+      90,
+      4,
+      "WV3_CLIP"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3,
+      "offset": [
+        20,
+        20
+      ]
+    },
+    "note": "Native LTX diffusion uses real photos; the blank wafer uses a precise 3D motion guide. Code renders engineering geometry and assembles captions."
+  },
+  "version": 0.4
+}

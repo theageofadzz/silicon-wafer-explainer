@@ -1,0 +1,14 @@
+{
+  "name": "wafer-vertical-opening",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.9.15 check",
+    "review": "node tools.mjs review",
+    "render": "node tools.mjs render",
+    "preview": "node server.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.64.1"
+  }
+}

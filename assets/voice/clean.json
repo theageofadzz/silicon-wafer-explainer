@@ -1,0 +1,118 @@
+{
+  "config": {
+    "text": "接着清洗，去掉颗粒和残留污染。这时，任何一次接触，都要尽量避免重新弄脏表面。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 3000000,
+      "text": "接着"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4125000,
+      "duration": 5750000,
+      "text": "清洗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12625000,
+      "duration": 3250000,
+      "text": "去掉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16000000,
+      "duration": 5750000,
+      "text": "颗粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22000000,
+      "duration": 1625000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23750000,
+      "duration": 4375000,
+      "text": "残留"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28250000,
+      "duration": 4250000,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38250000,
+      "duration": 6000000,
+      "text": "这时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48500000,
+      "duration": 3375000,
+      "text": "任何"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52000000,
+      "duration": 2250000,
+      "text": "一次"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54375000,
+      "duration": 4875000,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61500000,
+      "duration": 1250000,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62750000,
+      "duration": 1375000,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64375000,
+      "duration": 3625000,
+      "text": "尽量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68125000,
+      "duration": 4250000,
+      "text": "避免"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73375000,
+      "duration": 5375000,
+      "text": "重新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78875000,
+      "duration": 3375000,
+      "text": "弄脏"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82375000,
+      "duration": 3750000,
+      "text": "表面"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

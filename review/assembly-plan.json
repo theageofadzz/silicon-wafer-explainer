@@ -1,0 +1,327 @@
+{
+  "duration": 174.25,
+  "shots": [
+    {
+      "name": "opening",
+      "startFrame": 0,
+      "endFrame": 729,
+      "source": "opening/sample-9x16-v3.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 30.375,
+      "timeScale": 1.0,
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "quartz-return",
+      "startFrame": 729,
+      "endFrame": 778,
+      "source": "opening/edit/v3/generated/quartz-macro.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.0416666666666665,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "silica",
+      "startFrame": 778,
+      "endFrame": 904,
+      "source": "generated/silica.mp4",
+      "sourceStart": 2.0416666666666665,
+      "sourceDuration": 5.25,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.914285714285715
+    },
+    {
+      "name": "reduction",
+      "startFrame": 904,
+      "endFrame": 1123,
+      "source": "generated/reduction.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.123287671232877
+    },
+    {
+      "name": "distill",
+      "startFrame": 1123,
+      "endFrame": 1359,
+      "source": "generated/distill.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.833333,
+      "timeScale": 1.0000000338983064,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.610169491525424
+    },
+    {
+      "name": "deposition",
+      "startFrame": 1359,
+      "endFrame": 1570,
+      "source": "generated/deposition.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.791666666666666,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.393364928909953
+    },
+    {
+      "name": "polycrystal",
+      "startFrame": 1570,
+      "endFrame": 1803,
+      "source": "generated/polycrystal.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.708333,
+      "timeScale": 1.0000000343347653,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.695278969957082
+    },
+    {
+      "name": "melt",
+      "startFrame": 1803,
+      "endFrame": 1972,
+      "source": "generated/melt.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 7.041666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 9.23076923076923
+    },
+    {
+      "name": "doping",
+      "startFrame": 1972,
+      "endFrame": 2178,
+      "source": "generated/doping.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.583333,
+      "timeScale": 1.000000038834953,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.572815533980583
+    },
+    {
+      "name": "silicon-seed",
+      "startFrame": 2178,
+      "endFrame": 2203,
+      "source": "generated/silicon-seed.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 1.0416666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "seed",
+      "startFrame": 2203,
+      "endFrame": 2399,
+      "source": "generated/seed.mp4",
+      "sourceStart": 1.0416666666666667,
+      "sourceDuration": 8.166666333333334,
+      "timeScale": 1.000000040816328,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.0588235294117645
+    },
+    {
+      "name": "growth",
+      "startFrame": 2399,
+      "endFrame": 2608,
+      "source": "generated/growth.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.708333,
+      "timeScale": 1.0000000382775136,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.464114832535885
+    },
+    {
+      "name": "silicon-shoulder",
+      "startFrame": 2608,
+      "endFrame": 2635,
+      "source": "generated/silicon-shoulder.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 1.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "trim",
+      "startFrame": 2635,
+      "endFrame": 2810,
+      "source": "generated/trim.mp4",
+      "sourceStart": 1.125,
+      "sourceDuration": 7.291666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.7227722772277225
+    },
+    {
+      "name": "slice",
+      "startFrame": 2810,
+      "endFrame": 3053,
+      "source": "generated/slice.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 10.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.419753086419753
+    },
+    {
+      "name": "lapping",
+      "startFrame": 3053,
+      "endFrame": 3237,
+      "source": "generated/lapping.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 7.666666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.478260869565217
+    },
+    {
+      "name": "polish",
+      "startFrame": 3237,
+      "endFrame": 3404,
+      "source": "generated/polish.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 6.958333333333333,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.167539267015707
+    },
+    {
+      "name": "mirror-result",
+      "startFrame": 3404,
+      "endFrame": 3428,
+      "source": "opening/edit/v3/generated/blank.mp4",
+      "sourceStart": 0.1,
+      "sourceDuration": 1.0,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "clean",
+      "startFrame": 3428,
+      "endFrame": 3662,
+      "source": "generated/clean.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.75,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.666666666666667
+    },
+    {
+      "name": "inspect",
+      "startFrame": 3662,
+      "endFrame": 3903,
+      "source": "generated/inspect.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 10.041666666666666,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.473029045643154
+    },
+    {
+      "name": "ending",
+      "startFrame": 3903,
+      "endFrame": 3962,
+      "source": "generated/ending.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.4583333333333335,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 5.591397849462366
+    },
+    {
+      "name": "blank-ending",
+      "startFrame": 3962,
+      "endFrame": 4072,
+      "source": "opening/edit/v3/generated/blank.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 3.375,
+      "timeScale": 1.3580246913580245,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "chip-ending",
+      "startFrame": 4072,
+      "endFrame": 4182,
+      "source": "opening/edit/v3/generated/chip.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.0416666666666665,
+      "timeScale": 2.2448979591836733,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    }
+  ]
+}

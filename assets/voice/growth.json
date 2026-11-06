@@ -1,0 +1,130 @@
+{
+  "config": {
+    "text": "温度和拉速要配合得恰到好处。先拉细颈，再放肩，最后长出直径稳定的单晶棒。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 6125000,
+      "text": "温度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 7375000,
+      "duration": 1250000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8750000,
+      "duration": 2750000,
+      "text": "拉速"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11500000,
+      "duration": 1625000,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13250000,
+      "duration": 3000000,
+      "text": "配合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16250000,
+      "duration": 1375000,
+      "text": "得"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17875000,
+      "duration": 8625000,
+      "text": "恰到好处"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32125000,
+      "duration": 2875000,
+      "text": "先"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35000000,
+      "duration": 1500000,
+      "text": "拉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36500000,
+      "duration": 4875000,
+      "text": "细颈"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43000000,
+      "duration": 1750000,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 44750000,
+      "duration": 5125000,
+      "text": "放肩"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52750000,
+      "duration": 3375000,
+      "text": "最后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56250000,
+      "duration": 2250000,
+      "text": "长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58500000,
+      "duration": 2375000,
+      "text": "出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61125000,
+      "duration": 3625000,
+      "text": "直径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64875000,
+      "duration": 3750000,
+      "text": "稳定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68625000,
+      "duration": 1250000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 70125000,
+      "duration": 1875000,
+      "text": "单"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72000000,
+      "duration": 3875000,
+      "text": "晶棒"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

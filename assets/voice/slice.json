@@ -1,0 +1,142 @@
+{
+  "config": {
+    "text": "接下来，金刚线像一排细密的锯，把晶棒同时切成许多薄片。切开之后，表面仍有锯痕和损伤。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 6500000,
+      "text": "接下来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11250000,
+      "duration": 5625000,
+      "text": "金刚线"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16875000,
+      "duration": 3375000,
+      "text": "像"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21125000,
+      "duration": 1500000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22625000,
+      "duration": 1875000,
+      "text": "排"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24750000,
+      "duration": 3125000,
+      "text": "细密"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27875000,
+      "duration": 1125000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29000000,
+      "duration": 2875000,
+      "text": "锯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35000000,
+      "duration": 1625000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36625000,
+      "duration": 5125000,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42000000,
+      "duration": 3875000,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46000000,
+      "duration": 3125000,
+      "text": "切成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49375000,
+      "duration": 2875000,
+      "text": "许多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52375000,
+      "duration": 4125000,
+      "text": "薄片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62250000,
+      "duration": 3000000,
+      "text": "切开"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 65375000,
+      "duration": 4500000,
+      "text": "之后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72500000,
+      "duration": 4125000,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76750000,
+      "duration": 1375000,
+      "text": "仍"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78125000,
+      "duration": 1250000,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79500000,
+      "duration": 4250000,
+      "text": "锯痕"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84000000,
+      "duration": 875000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 85000000,
+      "duration": 4750000,
+      "text": "损伤"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

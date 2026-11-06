@@ -1,0 +1,195 @@
+{
+  "output": "model.mp4",
+  "globalStartFrame": 0,
+  "globalStartSeconds": 0,
+  "fps": 24,
+  "duration": 30.375,
+  "frameCount": 729,
+  "windows": [
+    {
+      "id": "measure",
+      "startFrame": 115,
+      "endFrame": 222
+    },
+    {
+      "id": "slicing",
+      "startFrame": 277,
+      "endFrame": 341
+    },
+    {
+      "id": "lattice",
+      "startFrame": 375,
+      "endFrame": 450
+    },
+    {
+      "id": "thin",
+      "startFrame": 450,
+      "endFrame": 507
+    },
+    {
+      "id": "purity-integrity",
+      "startFrame": 507,
+      "endFrame": 566
+    }
+  ],
+  "inactiveFrames": "black; use parent photo/I2V shots",
+  "modelCaptures": 362,
+  "reusedBlackFrames": 367,
+  "audio": false,
+  "narrationCaptions": false,
+  "branding": false,
+  "technicalAnnotations": [
+    "300 mm",
+    "0.775 mm",
+    "示意杂质"
+  ],
+  "geometry": {
+    "diameterMillimetres": 300,
+    "thicknessMillimetres": 0.775,
+    "thicknessRatio": 0.0025833333333333333,
+    "atoms": 2520,
+    "bonds": 4489,
+    "interiorAtoms": 997,
+    "coordinationFailures": 0,
+    "maxAngleError": 1.609823385706477e-15,
+    "maxBondLengthError": 6.661338147750939e-16,
+    "nearestNeighbourDistance": 0.6928203230275509,
+    "chainHasMissingBonds": false,
+    "residualBouleScaleY": 1,
+    "separatedSliceSpacingIsExaggerated": true
+  },
+  "impurityAnnotation": {
+    "text": "示意杂质",
+    "fontSize": 40,
+    "startSeconds": 21.9065,
+    "endSeconds": 22.5,
+    "objectAnchored": true
+  },
+  "sourceHashes": {
+    "model.mjs": "8d585e746e87843c85d0ed82db399b3f87373b86479771c61c85196da5a37683",
+    "index.html": "90aa8804d231663dc377d97d4e2457a18c69ed47798aa1a336fd8f3dead6016e",
+    "timing.json": "a2e9b4abc6e3a5669b9654388bfa4b662e0c332cd89023c568716c5ef28fe6fe"
+  },
+  "cameraValidation": {
+    "framesChecked": 134,
+    "minimumAtomClearance": 2.48558928759318,
+    "minimumBondClearance": 2.60458928759318,
+    "maximumAtomDiameterPx": 267.0460264401548,
+    "purityFramesChecked": 35,
+    "puritySiteAlwaysVisible": true,
+    "allFourFirstNeighboursRetained": true,
+    "continuityRowAlwaysVisible": true
+  },
+  "slicingValidation": {
+    "framesChecked": 64,
+    "sourceAndFirstDiskAlwaysInFrame": true,
+    "realThicknessPreserved": true,
+    "minimumCloseGapPx": 83.57493302770149
+  },
+  "purityCutaway": {
+    "viewOnly": true,
+    "atoms": 110,
+    "bonds": 167,
+    "retainedFirstNeighbours": 4,
+    "sourceTopologyUnchanged": true
+  },
+  "validation": {
+    "fullDecode": true,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1080,
+          "height": 1920,
+          "coded_width": 1080,
+          "coded_height": 1920,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "9:16",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "time_base": "1/12288",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 373248,
+          "duration": "30.375000",
+          "bit_rate": "2100777",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "729",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc63.1.101 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/vertical-sample-9x16/edit/v3/model/model.pending.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.375000",
+        "size": "7986815",
+        "bit_rate": "2103523",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "title": "Silicon precise model layer v3",
+          "encoder": "Lavf63.1.101",
+          "comment": "Global time 0..30.375s; 24fps; model windows [115,222),[277,341),[375,450),[450,507),[507,566); inactive frames black; no audio."
+        }
+      }
+    },
+    "browserErrors": [],
+    "reviewFrames": 48,
+    "deterministicSeek": true
+  }
+}

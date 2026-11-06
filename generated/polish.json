@@ -1,0 +1,1534 @@
+{
+  "file": "generated/polish.mp4",
+  "fps": 8.167539267015696,
+  "frames": 65,
+  "width": 576,
+  "height": 1024,
+  "sha256": "90b77d85084d8d776e5ce2114fdd99ae51b00a7206bc6b8f2234497c5a185c03",
+  "method": "Native LTXV diffusion sampling and VAE decode",
+  "prompt": {
+    "1": {
+      "class_type": "CheckpointLoaderSimple",
+      "inputs": {
+        "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors"
+      }
+    },
+    "2": {
+      "class_type": "CLIPLoader",
+      "inputs": {
+        "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+        "type": "ltxv",
+        "device": "cpu"
+      }
+    },
+    "3": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "Text, lettering, subtitles, logo, watermark, cartoon, plastic, low polygon, extra geometry, melting solid metal, changing parts, flicker, distorted atoms, disconnected bonds."
+      }
+    },
+    "4": {
+      "class_type": "ManualSigmas",
+      "inputs": {
+        "sigmas": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+      }
+    },
+    "5": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler_ancestral"
+      }
+    },
+    "10": {
+      "class_type": "SWEInput",
+      "inputs": {
+        "relative_path": "model/guides/reduction.mp4"
+      }
+    },
+    "11": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics."
+      }
+    },
+    "12": {
+      "class_type": "LTXVConditioning",
+      "inputs": {
+        "positive": [
+          "11",
+          0
+        ],
+        "negative": [
+          "3",
+          0
+        ],
+        "frame_rate": 7.123287671232877
+      }
+    },
+    "13": {
+      "class_type": "LTXVPreprocess",
+      "inputs": {
+        "image": [
+          "10",
+          0
+        ],
+        "img_compression": 18
+      }
+    },
+    "14": {
+      "class_type": "LTXVImgToVideo",
+      "inputs": {
+        "positive": [
+          "12",
+          0
+        ],
+        "negative": [
+          "12",
+          1
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "image": [
+          "13",
+          0
+        ],
+        "width": 576,
+        "height": 1024,
+        "length": 65,
+        "batch_size": 1,
+        "strength": 0.93
+      }
+    },
+    "15": {
+      "class_type": "SamplerCustom",
+      "inputs": {
+        "model": [
+          "1",
+          0
+        ],
+        "add_noise": true,
+        "noise_seed": 20261106001,
+        "cfg": 1.0,
+        "positive": [
+          "14",
+          0
+        ],
+        "negative": [
+          "14",
+          1
+        ],
+        "sampler": [
+          "5",
+          0
+        ],
+        "sigmas": [
+          "4",
+          0
+        ],
+        "latent_image": [
+          "14",
+          2
+        ]
+      }
+    },
+    "16": {
+      "class_type": "VAEDecodeTiled",
+      "inputs": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      }
+    },
+    "17": {
+      "class_type": "SWESave",
+      "inputs": {
+        "images": [
+          "16",
+          0
+        ],
+        "fps": 7.123287671232877,
+        "relative_path": "generated/reduction.mp4"
+      }
+    },
+    "20": {
+      "class_type": "SWEInput",
+      "inputs": {
+        "relative_path": "model/guides/polish.mp4"
+      }
+    },
+    "21": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics."
+      }
+    },
+    "22": {
+      "class_type": "LTXVConditioning",
+      "inputs": {
+        "positive": [
+          "21",
+          0
+        ],
+        "negative": [
+          "3",
+          0
+        ],
+        "frame_rate": 8.167539267015696
+      }
+    },
+    "23": {
+      "class_type": "LTXVPreprocess",
+      "inputs": {
+        "image": [
+          "20",
+          0
+        ],
+        "img_compression": 18
+      }
+    },
+    "24": {
+      "class_type": "LTXVImgToVideo",
+      "inputs": {
+        "positive": [
+          "22",
+          0
+        ],
+        "negative": [
+          "22",
+          1
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "image": [
+          "23",
+          0
+        ],
+        "width": 576,
+        "height": 1024,
+        "length": 65,
+        "batch_size": 1,
+        "strength": 0.93
+      }
+    },
+    "25": {
+      "class_type": "SamplerCustom",
+      "inputs": {
+        "model": [
+          "1",
+          0
+        ],
+        "add_noise": true,
+        "noise_seed": 20261106012,
+        "cfg": 1.0,
+        "positive": [
+          "24",
+          0
+        ],
+        "negative": [
+          "24",
+          1
+        ],
+        "sampler": [
+          "5",
+          0
+        ],
+        "sigmas": [
+          "4",
+          0
+        ],
+        "latent_image": [
+          "24",
+          2
+        ]
+      }
+    },
+    "26": {
+      "class_type": "VAEDecodeTiled",
+      "inputs": {
+        "samples": [
+          "25",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      }
+    },
+    "27": {
+      "class_type": "SWESave",
+      "inputs": {
+        "images": [
+          "26",
+          0
+        ],
+        "fps": 8.167539267015696,
+        "relative_path": "generated/polish.mp4"
+      }
+    }
+  },
+  "workflow": {
+    "last_node_id": 27,
+    "last_link_id": 35,
+    "nodes": [
+      {
+        "id": 1,
+        "type": "CheckpointLoaderSimple",
+        "pos": [
+          0,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 0,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "MODEL",
+            "type": "MODEL",
+            "links": [
+              10,
+              27
+            ]
+          },
+          {
+            "name": "CLIP",
+            "type": "CLIP",
+            "links": []
+          },
+          {
+            "name": "VAE",
+            "type": "VAE",
+            "links": [
+              8,
+              17,
+              25,
+              34
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "CheckpointLoaderSimple"
+        },
+        "widgets_values": [
+          "ltxv-2b-0.9.8-distilled.safetensors"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "CLIPLoader",
+        "pos": [
+          0,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 1,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "CLIP",
+            "type": "CLIP",
+            "links": [
+              1,
+              2,
+              19
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "CLIPLoader"
+        },
+        "widgets_values": [
+          "t5xxl_fp8_e4m3fn.safetensors",
+          "ltxv",
+          "cpu"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "CLIPTextEncode",
+        "pos": [
+          0,
+          920
+        ],
+        "size": [
+          340,
+          260
+        ],
+        "flags": {},
+        "order": 2,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "clip",
+            "type": "CLIP",
+            "link": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "CONDITIONING",
+            "type": "CONDITIONING",
+            "links": [
+              4,
+              21
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "CLIPTextEncode"
+        },
+        "widgets_values": [
+          "Text, lettering, subtitles, logo, watermark, cartoon, plastic, low polygon, extra geometry, melting solid metal, changing parts, flicker, distorted atoms, disconnected bonds."
+        ]
+      },
+      {
+        "id": 4,
+        "type": "ManualSigmas",
+        "pos": [
+          0,
+          1380
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 3,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "SIGMAS",
+            "type": "SIGMAS",
+            "links": [
+              14,
+              31
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "ManualSigmas"
+        },
+        "widgets_values": [
+          "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "KSamplerSelect",
+        "pos": [
+          0,
+          1840
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 4,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "SAMPLER",
+            "type": "SAMPLER",
+            "links": [
+              13,
+              30
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "KSamplerSelect"
+        },
+        "widgets_values": [
+          "euler_ancestral"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "SWEInput",
+        "pos": [
+          370,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 5,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              5
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SWEInput"
+        },
+        "widgets_values": [
+          "model/guides/reduction.mp4"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "CLIPTextEncode",
+        "pos": [
+          740,
+          0
+        ],
+        "size": [
+          340,
+          260
+        ],
+        "flags": {},
+        "order": 6,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "clip",
+            "type": "CLIP",
+            "link": 2
+          }
+        ],
+        "outputs": [
+          {
+            "name": "CONDITIONING",
+            "type": "CONDITIONING",
+            "links": [
+              3
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "CLIPTextEncode"
+        },
+        "widgets_values": [
+          "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics."
+        ]
+      },
+      {
+        "id": 12,
+        "type": "LTXVConditioning",
+        "pos": [
+          1110,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 7,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 3
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 4
+          }
+        ],
+        "outputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "links": [
+              6
+            ]
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "links": [
+              7
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVConditioning"
+        },
+        "widgets_values": [
+          7.123287671232877
+        ]
+      },
+      {
+        "id": 13,
+        "type": "LTXVPreprocess",
+        "pos": [
+          1480,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 8,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "link": 5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output_image",
+            "type": "IMAGE",
+            "links": [
+              9
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVPreprocess"
+        },
+        "widgets_values": [
+          18
+        ]
+      },
+      {
+        "id": 14,
+        "type": "LTXVImgToVideo",
+        "pos": [
+          1850,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 9,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 6
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 7
+          },
+          {
+            "name": "vae",
+            "type": "VAE",
+            "link": 8
+          },
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "link": 9
+          }
+        ],
+        "outputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "links": [
+              11
+            ]
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "links": [
+              12
+            ]
+          },
+          {
+            "name": "latent",
+            "type": "LATENT",
+            "links": [
+              15
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVImgToVideo"
+        },
+        "widgets_values": [
+          576,
+          1024,
+          65,
+          1,
+          0.93
+        ]
+      },
+      {
+        "id": 15,
+        "type": "SamplerCustom",
+        "pos": [
+          2220,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 10,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "model",
+            "type": "MODEL",
+            "link": 10
+          },
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 11
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 12
+          },
+          {
+            "name": "sampler",
+            "type": "SAMPLER",
+            "link": 13
+          },
+          {
+            "name": "sigmas",
+            "type": "SIGMAS",
+            "link": 14
+          },
+          {
+            "name": "latent_image",
+            "type": "LATENT",
+            "link": 15
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output",
+            "type": "LATENT",
+            "links": [
+              16
+            ]
+          },
+          {
+            "name": "denoised_output",
+            "type": "LATENT",
+            "links": []
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SamplerCustom"
+        },
+        "widgets_values": [
+          true,
+          20261106001,
+          "fixed",
+          1
+        ]
+      },
+      {
+        "id": 16,
+        "type": "VAEDecodeTiled",
+        "pos": [
+          2590,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 11,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "samples",
+            "type": "LATENT",
+            "link": 16
+          },
+          {
+            "name": "vae",
+            "type": "VAE",
+            "link": 17
+          }
+        ],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              18
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "VAEDecodeTiled"
+        },
+        "widgets_values": [
+          256,
+          64,
+          16,
+          8
+        ]
+      },
+      {
+        "id": 17,
+        "type": "SWESave",
+        "pos": [
+          2960,
+          0
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 12,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "images",
+            "type": "IMAGE",
+            "link": 18
+          }
+        ],
+        "outputs": [
+          {
+            "name": "SWE_CLIP",
+            "type": "SWE_CLIP",
+            "links": []
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SWESave"
+        },
+        "widgets_values": [
+          7.123287671232877,
+          "generated/reduction.mp4"
+        ]
+      },
+      {
+        "id": 20,
+        "type": "SWEInput",
+        "pos": [
+          370,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 13,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              22
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SWEInput"
+        },
+        "widgets_values": [
+          "model/guides/polish.mp4"
+        ]
+      },
+      {
+        "id": 21,
+        "type": "CLIPTextEncode",
+        "pos": [
+          740,
+          460
+        ],
+        "size": [
+          340,
+          260
+        ],
+        "flags": {},
+        "order": 14,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "clip",
+            "type": "CLIP",
+            "link": 19
+          }
+        ],
+        "outputs": [
+          {
+            "name": "CONDITIONING",
+            "type": "CONDITIONING",
+            "links": [
+              20
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "CLIPTextEncode"
+        },
+        "widgets_values": [
+          "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics."
+        ]
+      },
+      {
+        "id": 22,
+        "type": "LTXVConditioning",
+        "pos": [
+          1110,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 15,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 20
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 21
+          }
+        ],
+        "outputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "links": [
+              23
+            ]
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "links": [
+              24
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVConditioning"
+        },
+        "widgets_values": [
+          8.167539267015696
+        ]
+      },
+      {
+        "id": 23,
+        "type": "LTXVPreprocess",
+        "pos": [
+          1480,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 16,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "link": 22
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output_image",
+            "type": "IMAGE",
+            "links": [
+              26
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVPreprocess"
+        },
+        "widgets_values": [
+          18
+        ]
+      },
+      {
+        "id": 24,
+        "type": "LTXVImgToVideo",
+        "pos": [
+          1850,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 17,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 23
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 24
+          },
+          {
+            "name": "vae",
+            "type": "VAE",
+            "link": 25
+          },
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "link": 26
+          }
+        ],
+        "outputs": [
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "links": [
+              28
+            ]
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "links": [
+              29
+            ]
+          },
+          {
+            "name": "latent",
+            "type": "LATENT",
+            "links": [
+              32
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LTXVImgToVideo"
+        },
+        "widgets_values": [
+          576,
+          1024,
+          65,
+          1,
+          0.93
+        ]
+      },
+      {
+        "id": 25,
+        "type": "SamplerCustom",
+        "pos": [
+          2220,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 18,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "model",
+            "type": "MODEL",
+            "link": 27
+          },
+          {
+            "name": "positive",
+            "type": "CONDITIONING",
+            "link": 28
+          },
+          {
+            "name": "negative",
+            "type": "CONDITIONING",
+            "link": 29
+          },
+          {
+            "name": "sampler",
+            "type": "SAMPLER",
+            "link": 30
+          },
+          {
+            "name": "sigmas",
+            "type": "SIGMAS",
+            "link": 31
+          },
+          {
+            "name": "latent_image",
+            "type": "LATENT",
+            "link": 32
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output",
+            "type": "LATENT",
+            "links": [
+              33
+            ]
+          },
+          {
+            "name": "denoised_output",
+            "type": "LATENT",
+            "links": []
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SamplerCustom"
+        },
+        "widgets_values": [
+          true,
+          20261106012,
+          "fixed",
+          1
+        ]
+      },
+      {
+        "id": 26,
+        "type": "VAEDecodeTiled",
+        "pos": [
+          2590,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 19,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "samples",
+            "type": "LATENT",
+            "link": 33
+          },
+          {
+            "name": "vae",
+            "type": "VAE",
+            "link": 34
+          }
+        ],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              35
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "VAEDecodeTiled"
+        },
+        "widgets_values": [
+          256,
+          64,
+          16,
+          8
+        ]
+      },
+      {
+        "id": 27,
+        "type": "SWESave",
+        "pos": [
+          2960,
+          460
+        ],
+        "size": [
+          340,
+          210
+        ],
+        "flags": {},
+        "order": 20,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "images",
+            "type": "IMAGE",
+            "link": 35
+          }
+        ],
+        "outputs": [
+          {
+            "name": "SWE_CLIP",
+            "type": "SWE_CLIP",
+            "links": []
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "SWESave"
+        },
+        "widgets_values": [
+          8.167539267015696,
+          "generated/polish.mp4"
+        ]
+      }
+    ],
+    "links": [
+      [
+        1,
+        2,
+        0,
+        3,
+        0,
+        "CLIP"
+      ],
+      [
+        2,
+        2,
+        0,
+        11,
+        0,
+        "CLIP"
+      ],
+      [
+        3,
+        11,
+        0,
+        12,
+        0,
+        "CONDITIONING"
+      ],
+      [
+        4,
+        3,
+        0,
+        12,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        5,
+        10,
+        0,
+        13,
+        0,
+        "IMAGE"
+      ],
+      [
+        6,
+        12,
+        0,
+        14,
+        0,
+        "CONDITIONING"
+      ],
+      [
+        7,
+        12,
+        1,
+        14,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        8,
+        1,
+        2,
+        14,
+        2,
+        "VAE"
+      ],
+      [
+        9,
+        13,
+        0,
+        14,
+        3,
+        "IMAGE"
+      ],
+      [
+        10,
+        1,
+        0,
+        15,
+        0,
+        "MODEL"
+      ],
+      [
+        11,
+        14,
+        0,
+        15,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        12,
+        14,
+        1,
+        15,
+        2,
+        "CONDITIONING"
+      ],
+      [
+        13,
+        5,
+        0,
+        15,
+        3,
+        "SAMPLER"
+      ],
+      [
+        14,
+        4,
+        0,
+        15,
+        4,
+        "SIGMAS"
+      ],
+      [
+        15,
+        14,
+        2,
+        15,
+        5,
+        "LATENT"
+      ],
+      [
+        16,
+        15,
+        0,
+        16,
+        0,
+        "LATENT"
+      ],
+      [
+        17,
+        1,
+        2,
+        16,
+        1,
+        "VAE"
+      ],
+      [
+        18,
+        16,
+        0,
+        17,
+        0,
+        "IMAGE"
+      ],
+      [
+        19,
+        2,
+        0,
+        21,
+        0,
+        "CLIP"
+      ],
+      [
+        20,
+        21,
+        0,
+        22,
+        0,
+        "CONDITIONING"
+      ],
+      [
+        21,
+        3,
+        0,
+        22,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        22,
+        20,
+        0,
+        23,
+        0,
+        "IMAGE"
+      ],
+      [
+        23,
+        22,
+        0,
+        24,
+        0,
+        "CONDITIONING"
+      ],
+      [
+        24,
+        22,
+        1,
+        24,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        25,
+        1,
+        2,
+        24,
+        2,
+        "VAE"
+      ],
+      [
+        26,
+        23,
+        0,
+        24,
+        3,
+        "IMAGE"
+      ],
+      [
+        27,
+        1,
+        0,
+        25,
+        0,
+        "MODEL"
+      ],
+      [
+        28,
+        24,
+        0,
+        25,
+        1,
+        "CONDITIONING"
+      ],
+      [
+        29,
+        24,
+        1,
+        25,
+        2,
+        "CONDITIONING"
+      ],
+      [
+        30,
+        5,
+        0,
+        25,
+        3,
+        "SAMPLER"
+      ],
+      [
+        31,
+        4,
+        0,
+        25,
+        4,
+        "SIGMAS"
+      ],
+      [
+        32,
+        24,
+        2,
+        25,
+        5,
+        "LATENT"
+      ],
+      [
+        33,
+        25,
+        0,
+        26,
+        0,
+        "LATENT"
+      ],
+      [
+        34,
+        1,
+        2,
+        26,
+        1,
+        "VAE"
+      ],
+      [
+        35,
+        26,
+        0,
+        27,
+        0,
+        "IMAGE"
+      ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+      "ds": {
+        "scale": 0.16,
+        "offset": [
+          30,
+          30
+        ]
+      },
+      "note": "Real photos + exact 3D guides -> native LTX diffusion -> word-timed captions. Code MIT; assets retain separate licenses."
+    },
+    "version": 0.4
+  }
+}

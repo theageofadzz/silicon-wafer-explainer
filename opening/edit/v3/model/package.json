@@ -1,0 +1,11 @@
+{
+  "name": "silicon-precise-model-v3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "review": "node render.mjs --review",
+    "render": "node render.mjs --render",
+    "preview": "node server.mjs --background",
+    "check": "npx --yes hyperframes@0.9.15 check"
+  }
+}

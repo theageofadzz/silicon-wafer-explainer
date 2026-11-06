@@ -1,0 +1,10 @@
+*.mp4 binary
+*.wav binary
+*.mp3 binary
+*.jpg binary
+*.png binary
+*.otf binary
+*.py text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.json text eol=lf

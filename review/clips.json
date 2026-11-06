@@ -1,0 +1,229 @@
+{
+  "timing": [
+    {
+      "scene": "silica",
+      "words": 15,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1166666666666671
+    },
+    {
+      "scene": "reduction",
+      "words": 19,
+      "maximumStartError": 0.0,
+      "readingHold": 1.125
+    },
+    {
+      "scene": "distill",
+      "words": 24,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "scene": "deposition",
+      "words": 20,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1041666666666714
+    },
+    {
+      "scene": "polycrystal",
+      "words": 21,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "scene": "melt",
+      "words": 13,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "scene": "doping",
+      "words": 19,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "scene": "seed",
+      "words": 22,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "scene": "growth",
+      "words": 20,
+      "maximumStartError": 0.0,
+      "readingHold": 1.120833333333323
+    },
+    {
+      "scene": "trim",
+      "words": 16,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "scene": "slice",
+      "words": 22,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1500000000000057
+    },
+    {
+      "scene": "lapping",
+      "words": 16,
+      "maximumStartError": 0.0,
+      "readingHold": 1.0916666666666686
+    },
+    {
+      "scene": "polish",
+      "words": 16,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1333333333333542
+    },
+    {
+      "scene": "clean",
+      "words": 18,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1374999999999886
+    },
+    {
+      "scene": "inspect",
+      "words": 19,
+      "maximumStartError": 0.0,
+      "readingHold": 1.1416666666666515
+    },
+    {
+      "scene": "ending",
+      "words": 26,
+      "maximumStartError": 0.0,
+      "readingHold": 1.6999999999999886
+    }
+  ],
+  "clips": [
+    {
+      "scene": "silica",
+      "status": "decoded",
+      "sha256": "38674946c28a985fc44847474e61e0ada4ba4ebdd156090e6ae8a5fd2177d385",
+      "frames": 65,
+      "fps": 8.914285714285715
+    },
+    {
+      "scene": "reduction",
+      "status": "decoded",
+      "sha256": "e3cf4fb39e224f203afb53fda9d83d337926474fd76030908eee38effd6c5048",
+      "frames": 65,
+      "fps": 7.123287671232877
+    },
+    {
+      "scene": "distill",
+      "status": "decoded",
+      "sha256": "60e00295ef7e04a3b86737ff7d58214bacca35dab858fa6c3acf00b560c3658f",
+      "frames": 65,
+      "fps": 6.610169491525424
+    },
+    {
+      "scene": "deposition",
+      "status": "decoded",
+      "sha256": "1e79907f282dab6a5a59298c85db64650e86ac08798aa9b972785fb22a7812ec",
+      "frames": 65,
+      "fps": 7.393364928909953
+    },
+    {
+      "scene": "polycrystal",
+      "status": "decoded",
+      "sha256": "6351fde908b44bd8490c018c621cc6fd898e0da9dc27b565d5e02c660d76875e",
+      "frames": 65,
+      "fps": 6.695278969957082
+    },
+    {
+      "scene": "melt",
+      "status": "decoded",
+      "sha256": "88666e916dc4b60258261b7330dd26658924130eff0133ff8d7fc8ad5a5be750",
+      "frames": 65,
+      "fps": 9.23076923076923
+    },
+    {
+      "scene": "doping",
+      "status": "decoded",
+      "sha256": "fe392eb4127ef3d132416843f684525eef9a68f4ca4d2f0b5b07056c277e964e",
+      "frames": 65,
+      "fps": 7.572815533980583
+    },
+    {
+      "scene": "seed",
+      "status": "decoded",
+      "sha256": "ab9894e5d9d66ccf3b1271078dc9c6683143bd70c5010de3d9087eb69117de9d",
+      "frames": 65,
+      "fps": 7.0588235294117645
+    },
+    {
+      "scene": "growth",
+      "status": "decoded",
+      "sha256": "39666e78589010f4764e8cd761d9f2cebb5e8c38a8d07a3638c468e2fbd0e0df",
+      "frames": 65,
+      "fps": 7.464114832535885
+    },
+    {
+      "scene": "trim",
+      "status": "decoded",
+      "sha256": "562e261c1fc1c334c75cef27eb6f9c752ac00cf8e8a9718c019b969f33b328fc",
+      "frames": 65,
+      "fps": 7.7227722772277225
+    },
+    {
+      "scene": "slice",
+      "status": "decoded",
+      "sha256": "62c850da5bde3a766bfdf8da707a0bf9d4db8dc19778d009ca28eaca9bcab6d8",
+      "frames": 65,
+      "fps": 6.419753086419753
+    },
+    {
+      "scene": "lapping",
+      "status": "decoded",
+      "sha256": "483b200dab0e06a959f95afde649ec368e2891818d3de2c1190c3b72d5703c96",
+      "frames": 65,
+      "fps": 8.478260869565217
+    },
+    {
+      "scene": "polish",
+      "status": "decoded",
+      "sha256": "90b77d85084d8d776e5ce2114fdd99ae51b00a7206bc6b8f2234497c5a185c03",
+      "frames": 65,
+      "fps": 8.167539267015707
+    },
+    {
+      "scene": "clean",
+      "status": "decoded",
+      "sha256": "9460522617458067c9efab8a7e0de9b19b20fedb1dbc9c74173262080403b8a4",
+      "frames": 65,
+      "fps": 6.666666666666667
+    },
+    {
+      "scene": "inspect",
+      "status": "decoded",
+      "sha256": "dad1dbea2b8cb4bddfd24e447d14be36c2c5540bbae75100bb7259cdee85766f",
+      "frames": 65,
+      "fps": 6.473029045643154
+    },
+    {
+      "scene": "ending",
+      "status": "decoded",
+      "sha256": "7e7ef640d3fae79e9756d5de5c2adab5e5b86c74d44d20a7cdf0b168bf92bbc0",
+      "frames": 65,
+      "fps": 5.591397849462366
+    },
+    {
+      "scene": "silicon-seed",
+      "status": "decoded",
+      "sha256": "e04d1d255824305689284e46e9614b3294da780fb537ab820c290273f0412606",
+      "frames": 65,
+      "fps": 24.0
+    },
+    {
+      "scene": "silicon-shoulder",
+      "status": "decoded",
+      "sha256": "83bfa4d7daa7965b3d112aa1da00ee7ce1ea306100a9e6559467141af80b42f5",
+      "frames": 65,
+      "fps": 24.0
+    }
+  ],
+  "limits": "Decoded clips and timestamp checks do not establish scientific or audiovisual acceptance."
+}

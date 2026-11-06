@@ -1,0 +1,694 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "ltxv",
+      "device": "cpu"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "Text, letters, subtitles, logo, watermark, illustration, cartoon, low polygon model, plastic, melting object, morphing geometry, pulsating surface, smeared details, unstable camera, flickering exposure."
+    }
+  },
+  "4": {
+    "class_type": "ManualSigmas",
+    "inputs": {
+      "sigmas": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+    }
+  },
+  "5": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler_ancestral"
+    }
+  },
+  "10": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-chip.png"
+    }
+  },
+  "11": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A macro documentary product shot of the actual circular semiconductor wafer in the photograph, with a dense precise grid of individual rectangular chip dies on its polished silicon surface. The camera tracks slowly sideways and slightly lower, so the rectangular reflections slide across the fixed die grid and reveal the wafer edge. The wafer remains a perfectly rigid solid object and the chip pattern remains unchanged. Neutral silver, black and restrained iridescent metallic reflections, soft studio strip lighting, authentic semiconductor manufacturing photography, crisp machining detail, dimensional perspective, dark uncluttered surroundings. One continuous steady camera move, no cuts. No writing or graphics."
+    }
+  },
+  "12": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "13": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "14": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "13",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 49,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105031,
+      "cfg": 1,
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "14",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "14",
+        2
+      ]
+    }
+  },
+  "16": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "17": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "chip"
+    }
+  },
+  "20": {
+    "class_type": "WV3Guide",
+    "inputs": {
+      "relative_path": "edit/v3/model/wafer-guide.mp4"
+    }
+  },
+  "21": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A studio macro film of a perfectly flat blank silicon wafer, following the supplied motion guide exactly. The circular silicon disk has a completely smooth mirror-polished planar face, with only broad soft horizontal white light reflections across its surface. The disk stays rigid and perfectly flat. Preserve the guide's exact outer silhouette, thin edge, camera framing, stationary position and slow restrained perspective. Neutral silver silicon, charcoal background, soft controlled studio reflections, subtle realistic surface response. A clean unpatterned reflective plane. No structures or objects on the wafer, no ridges, no grooves, no chip patterns, no texture growth, no changing shape, no writing, no graphics."
+    }
+  },
+  "22": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "23": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "24": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "22",
+        0
+      ],
+      "negative": [
+        "22",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "23",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 81,
+      "batch_size": 1,
+      "strength": 0.9
+    }
+  },
+  "25": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105036,
+      "cfg": 1,
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "24",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "24",
+        2
+      ]
+    }
+  },
+  "26": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "25",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "27": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "26",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "blank"
+    }
+  },
+  "30": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-boule.png"
+    }
+  },
+  "31": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A documentary close-up of the real single crystal silicon boule in this photograph. The industrial ingot has a heavy reflective cylindrical body, fine concentric growth striations, a tapered shoulder and a thin seed neck. The camera makes a slow lateral dolly and a slight rise from the cylinder toward its tapered shoulder, creating natural parallax and changing reflections on the fixed solid surface. Preserve the exact shape and position of the silicon boule. Crisp silver metallic ridges, realistic workshop photography, neutral light, authentic manufacturing detail. One controlled continuous camera move. No growth transformation, no bending, no lettering, no overlays."
+    }
+  },
+  "32": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "31",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "33": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "30",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "34": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "32",
+        0
+      ],
+      "negative": [
+        "32",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "33",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 65,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "35": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105033,
+      "cfg": 1,
+      "positive": [
+        "34",
+        0
+      ],
+      "negative": [
+        "34",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "34",
+        2
+      ]
+    }
+  },
+  "36": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "35",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "37": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "36",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "boule"
+    }
+  },
+  "40": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-quartz.png"
+    }
+  },
+  "41": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "An extreme close-up documentary shot of the real rough milky quartz specimen in this photograph, a single stationary irregular white translucent mineral resting on a dark surface. A macro camera makes a small slow lateral arc from left to right and moves slightly closer, revealing natural fracture planes, tiny inclusions and the translucent uneven edges with clear spatial depth. Soft neutral directional light glints naturally on the glassy facets while the internal cloudy structure remains stable. Preserve the exact mineral, its rigid outline and authentic granular imperfections. Shallow depth of field with the main fracture surface sharp, premium mineral photography. No crystal growth, no rotating turntable, no morphing, no text or graphics."
+    }
+  },
+  "42": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "41",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "43": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "40",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "44": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "42",
+        0
+      ],
+      "negative": [
+        "42",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "43",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 65,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "45": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105034,
+      "cfg": 1,
+      "positive": [
+        "44",
+        0
+      ],
+      "negative": [
+        "44",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "44",
+        2
+      ]
+    }
+  },
+  "46": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "45",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "47": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "46",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "quartz"
+    }
+  },
+  "50": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-quartz-macro.png"
+    }
+  },
+  "51": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A scientific documentary macro shot of the actual quartz crystal surface in the reference photograph. The camera glides very slowly across the solid transparent mineral facets, revealing the layered fractures, uneven natural edges and light traveling through the cloudy crystal. A gentle rack focus moves from the front fracture edge to the adjacent inner facet, while the specimen itself stays completely stationary and rigid. Realistic refraction and specular highlights, neutral soft light, sharply detailed authentic mineral surface, dark uncluttered background, one continuous calm macro move. Preserve the photograph's actual mineral shape and color. No transformation, no artificial glow, no writing or graphic overlays."
+    }
+  },
+  "52": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "51",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "53": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "50",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "54": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "52",
+        0
+      ],
+      "negative": [
+        "52",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "53",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 65,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "55": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105035,
+      "cfg": 1,
+      "positive": [
+        "54",
+        0
+      ],
+      "negative": [
+        "54",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "54",
+        2
+      ]
+    }
+  },
+  "56": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "55",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "57": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "56",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "quartz-macro"
+    }
+  },
+  "90": {
+    "class_type": "WV3Assemble",
+    "inputs": {
+      "chip": [
+        "17",
+        0
+      ],
+      "blank": [
+        "27",
+        0
+      ],
+      "boule": [
+        "37",
+        0
+      ],
+      "quartz": [
+        "47",
+        0
+      ],
+      "quartz_macro": [
+        "57",
+        0
+      ],
+      "render_models": true
+    }
+  }
+}

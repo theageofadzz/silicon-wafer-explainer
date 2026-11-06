@@ -1,0 +1,8 @@
+{
+  "file": "sample-9x16-v3.mp4",
+  "sha256": "3b685f426843fda45672efd8c50a233aa381d4fab543616e9b2583c3a1ec7ef2",
+  "duration": 30.375,
+  "frames": 729,
+  "fps": 24,
+  "purpose": "Preserve the user-approved opening when using the cached workflow."
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "pre-polish",
+  "sourceModel": "2f91c30db8f8d4c20f475d51e40e924ff0b20461e19850b3201db44eb6b9a2a6",
+  "protectedSources": {
+    "timing": "a2e9b4abc6e3a5669b9654388bfa4b662e0c332cd89023c568716c5ef28fe6fe",
+    "waferEnvironmentAndMirror": "a63861ff3b29716b2a610f60d5d1502e5c576a9496cdd1b47d5b256af28c3c48",
+    "waferGeometry": "9b656a426362d5d2dd2077d74319a4e649ba35a065be77f55aa0aff940b7c6db",
+    "latticeTopology": "1fa8e3cd571004fe70219828f533c09fb0b852b1a67ff9bfe84c5014ead0a4b6",
+    "latticeInstances": "eaecf5f2349f4b82b74b502201142c11be80d3a83eb07e249a17389043fe11bc",
+    "measurementCameras": "7398275fce3ff0979d3e04ffe5fcd9d50e5174e426ba1823a720f1e46801cdc2",
+    "geometryAudit": "deb1f0e238c355c562fede86bd8a4c4cf397fe5180bbf897c309dae49969658e",
+    "index": "90aa8804d231663dc377d97d4e2457a18c69ed47798aa1a336fd8f3dead6016e"
+  },
+  "existingVideo": "805323b53ebc299964879c539c2df94fd57e3b281f274c3da0f676238289ee67"
+}

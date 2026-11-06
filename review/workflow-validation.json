@@ -1,0 +1,10 @@
+{
+  "validated": true,
+  "nodes": 192,
+  "nodeErrors": {},
+  "validationPrompt": "4c8c0b5e-0e0a-4fba-bd7b-85918f443715",
+  "deletedBeforeExecution": true,
+  "preservedRunning": [
+    "048890f4-44cc-4939-8949-404e3ca7b1ff"
+  ]
+}

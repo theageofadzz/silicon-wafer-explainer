@@ -1,0 +1,573 @@
+{
+  "date": "2026-11-06T05:43:04.733Z",
+  "clips": [
+    {
+      "id": "silica",
+      "file": "generated/silica.mp4",
+      "sha256": "38674946c28a985fc44847474e61e0ada4ba4ebdd156090e6ae8a5fd2177d385",
+      "input": "model/guides/silica.mp4",
+      "inputSHA256AtPackaging": "f381ac0c4d8e8aa4ba809783230638ab92da6df2e7b72a13beccdac667e21a48",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.914285714285716,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106000,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/silica.json"
+    },
+    {
+      "id": "reduction",
+      "file": "generated/reduction.mp4",
+      "sha256": "e3cf4fb39e224f203afb53fda9d83d337926474fd76030908eee38effd6c5048",
+      "input": "model/guides/reduction.mp4",
+      "inputSHA256AtPackaging": "08c499e2cfa434cbec58b90a769499d28bbe06930521b2c72f98034c3bc9f875",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.123287671232877,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106001,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/reduction.json"
+    },
+    {
+      "id": "distill",
+      "file": "generated/distill.mp4",
+      "sha256": "60e00295ef7e04a3b86737ff7d58214bacca35dab858fa6c3acf00b560c3658f",
+      "input": "model/guides/distill.mp4",
+      "inputSHA256AtPackaging": "936c008c4748a9eb6b81be1a61f02ed5448edec12761953a78fe8ac304f800ff",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.610169491525422,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106002,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/distill.json"
+    },
+    {
+      "id": "deposition",
+      "file": "generated/deposition.mp4",
+      "sha256": "1e79907f282dab6a5a59298c85db64650e86ac08798aa9b972785fb22a7812ec",
+      "input": "model/guides/deposition.mp4",
+      "inputSHA256AtPackaging": "a228e854f5fb534ef8c2a08abeb689de32b1675c43cf97c1d94d5abf42f555e8",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.393364928909949,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106003,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "25",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/deposition.json"
+    },
+    {
+      "id": "polycrystal",
+      "file": "generated/polycrystal.mp4",
+      "sha256": "6351fde908b44bd8490c018c621cc6fd898e0da9dc27b565d5e02c660d76875e",
+      "input": "model/guides/polycrystal.mp4",
+      "inputSHA256AtPackaging": "030bccab7ae1b2f187cc82b7e21778555ec43f4d5847d2a5675bd800cf98c1b6",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.6952789699570845,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106004,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "45",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/polycrystal.json"
+    },
+    {
+      "id": "melt",
+      "file": "generated/melt.mp4",
+      "sha256": "88666e916dc4b60258261b7330dd26658924130eff0133ff8d7fc8ad5a5be750",
+      "input": "model/guides/melt.mp4",
+      "inputSHA256AtPackaging": "610e19a22a48f5e1a575eb5a09631e2b9feffbe2539f356ffe870f4a5e040f1c",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 9.230769230769225,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106005,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "35",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/melt.json"
+    },
+    {
+      "id": "doping",
+      "file": "generated/doping.mp4",
+      "sha256": "fe392eb4127ef3d132416843f684525eef9a68f4ca4d2f0b5b07056c277e964e",
+      "input": "model/guides/doping.mp4",
+      "inputSHA256AtPackaging": "ac0a010a074ed48064af3844036a802e0301aff1f88a734151c13ce197a48608",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.572815533980586,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106006,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "45",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/doping.json"
+    },
+    {
+      "id": "seed",
+      "file": "generated/seed.mp4",
+      "sha256": "ab9894e5d9d66ccf3b1271078dc9c6683143bd70c5010de3d9087eb69117de9d",
+      "input": "model/guides/seed.mp4",
+      "inputSHA256AtPackaging": "b7680d8bbb54018d028312eff7dc6cc7235199d97d8c401140a367d5dff05a54",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.058823529411768,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106007,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "55",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 512,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/seed.json"
+    },
+    {
+      "id": "growth",
+      "file": "generated/growth.mp4",
+      "sha256": "39666e78589010f4764e8cd761d9f2cebb5e8c38a8d07a3638c468e2fbd0e0df",
+      "input": "model/guides/growth.mp4",
+      "inputSHA256AtPackaging": "2241daed5d41cac632a72a321b097fadbbfa671a981307629aaf0107a594fec1",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.4641148325358895,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106008,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "85",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/growth.json"
+    },
+    {
+      "id": "trim",
+      "file": "generated/trim.mp4",
+      "sha256": "562e261c1fc1c334c75cef27eb6f9c752ac00cf8e8a9718c019b969f33b328fc",
+      "input": "model/guides/trim.mp4",
+      "inputSHA256AtPackaging": "0bcaa230ca7566ddfb2fb0c0a2404ad25cea3eccb2aa4ca0cfdc577a94994ebb",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.722772277227718,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106009,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "55",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/trim.json"
+    },
+    {
+      "id": "slice",
+      "file": "generated/slice.mp4",
+      "sha256": "62c850da5bde3a766bfdf8da707a0bf9d4db8dc19778d009ca28eaca9bcab6d8",
+      "input": "model/guides/slice.mp4",
+      "inputSHA256AtPackaging": "c3f5beec6236c64b1ed409b8d42031d2d7e749f66961e1f845733a64b4f2cf91",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.419753086419753,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106010,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "105",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/slice.json"
+    },
+    {
+      "id": "lapping",
+      "file": "generated/lapping.mp4",
+      "sha256": "483b200dab0e06a959f95afde649ec368e2891818d3de2c1190c3b72d5703c96",
+      "input": "model/guides/lapping.mp4",
+      "inputSHA256AtPackaging": "471125e32a85ad6a6b54f4ea8a3500f583cb4041f0e8de54ebb34549485aa029",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.478260869565212,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106011,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "65",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/lapping.json"
+    },
+    {
+      "id": "polish",
+      "file": "generated/polish.mp4",
+      "sha256": "90b77d85084d8d776e5ce2114fdd99ae51b00a7206bc6b8f2234497c5a185c03",
+      "input": "model/guides/polish.mp4",
+      "inputSHA256AtPackaging": "3fcdcf4593351a347b1c08468bb542d005a3ab13c03cf1aebee7986a47abf7d5",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.167539267015696,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106012,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "25",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/polish.json"
+    },
+    {
+      "id": "clean",
+      "file": "generated/clean.mp4",
+      "sha256": "9460522617458067c9efab8a7e0de9b19b20fedb1dbc9c74173262080403b8a4",
+      "input": "model/guides/clean.mp4",
+      "inputSHA256AtPackaging": "459bd7bf7e3ae1571031417c5b537ad2c1d9ec5d2cc4d3e354f4798e46a7c87f",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.666666666666667,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106013,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "85",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 512,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/clean.json"
+    },
+    {
+      "id": "inspect",
+      "file": "generated/inspect.mp4",
+      "sha256": "dad1dbea2b8cb4bddfd24e447d14be36c2c5540bbae75100bb7259cdee85766f",
+      "input": "model/guides/inspect.mp4",
+      "inputSHA256AtPackaging": "7f407d54b3d912cb786dd49750c91601e58610ab0846453e03d0d4103a561303",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.47302904564316,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106014,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "95",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 512,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/inspect.json"
+    },
+    {
+      "id": "ending",
+      "file": "generated/ending.mp4",
+      "sha256": "7e7ef640d3fae79e9756d5de5c2adab5e5b86c74d44d20a7cdf0b168bf92bbc0",
+      "input": "model/guides/ending.mp4",
+      "inputSHA256AtPackaging": "af7d355ccb788d4561d39ab4a0376b8df7096916ea2855f248b9d0f25e2e3910",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 5.591397849462366,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106015,
+      "cfg": 1,
+      "guideStrength": 0.93,
+      "decode": {
+        "samples": [
+          "145",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/ending.json"
+    },
+    {
+      "id": "silicon-seed",
+      "file": "generated/silicon-seed.mp4",
+      "sha256": "e04d1d255824305689284e46e9614b3294da780fb537ab820c290273f0412606",
+      "input": "assets/inputs/silicon-seed.png",
+      "inputSHA256AtPackaging": "7786a6f996138e5a4b75be6dea5dd43521f2de6c3b43ec1581764ed68b911970",
+      "kind": "real-photograph",
+      "frames": 65,
+      "fps": 24,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106101,
+      "cfg": 1,
+      "guideStrength": 1,
+      "decode": {
+        "samples": [
+          "25",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      },
+      "record": "generated/silicon-seed.json"
+    },
+    {
+      "id": "silicon-shoulder",
+      "file": "generated/silicon-shoulder.mp4",
+      "sha256": "83bfa4d7daa7965b3d112aa1da00ee7ce1ea306100a9e6559467141af80b42f5",
+      "input": "assets/inputs/silicon-shoulder.png",
+      "inputSHA256AtPackaging": "af17578c24232a843ae08d2e8099c5f39ecb50b98881b2133edd28cb49767b83",
+      "kind": "real-photograph",
+      "frames": 65,
+      "fps": 24,
+      "width": 576,
+      "height": 1024,
+      "samplerNode": "SamplerCustom",
+      "seed": 20261106102,
+      "cfg": 1,
+      "guideStrength": 1,
+      "decode": {
+        "samples": [
+          "75",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      },
+      "record": "generated/silicon-shoulder.json"
+    }
+  ],
+  "opening": {
+    "file": "opening/sample-9x16-v3.mp4",
+    "sha256": "3b685f426843fda45672efd8c50a233aa381d4fab543616e9b2583c3a1ec7ef2"
+  },
+  "film": {
+    "file": "output/silicon-wafer-explainer-9x16.mp4",
+    "sha256": "045bad953fe6866d088e0c57a4886c00125b7e169a0ea5ac90f3dbae334636b1"
+  },
+  "timelineSHA256": "55390700402ac000c8c7b4905e281c124f7a5c252f24fe651c0c64071e60a48f",
+  "scope": "Saved ComfyUI execution graphs and output hashes; input snapshot hashes measured at packaging. The full regeneration workflow may use a newer decode tile configuration. Seeds do not guarantee identical pixels across hardware."
+}

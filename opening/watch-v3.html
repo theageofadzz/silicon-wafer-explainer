@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>硅片 · 真实材质样片</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#090b0d;color:#f4f5f5;font-family:system-ui,sans-serif}
+    body{min-height:100svh;display:flex;align-items:center;justify-content:center;flex-direction:column}
+    video{display:block;width:min(96vw,49vh);max-height:88svh;aspect-ratio:9/16;object-fit:contain;background:#0b0e10}
+    details{width:min(92vw,49vh);padding:12px 0;font-size:12px;line-height:1.6;color:#aeb6b9}
+    summary{cursor:pointer}
+    a{color:#a8d8ce}
+  </style>
+</head>
+<body>
+  <video src="sample-9x16-v3.mp4" controls playsinline preload="metadata"></video>
+  <details>
+    <summary>素材与制作记录</summary>
+    <p>石英、晶棒和加工晶圆来自真实照片，镜头由 ComfyUI 重建；空白硅片由精确三维引导生成。尺寸、切片和晶格为三维讲解示意。</p>
+    <div id="credits"></div>
+    <p><a href="assets/v3-real/sources.json">照片作者与许可</a> · <a href="edit/v3/README.md">工作流说明</a></p>
+  </details>
+  <script type="module">
+    const [data,plan]=await Promise.all(['assets/v3-real/sources.json','edit/v3/shots.json']
+      .map(file=>fetch(file).then(response=>response.json())));
+    const used=new Set(plan.shots.map(shot=>
+      data.active_input_sources[shot.input.split('/').at(-1)]?.source_asset_id));
+    for(const asset of data.assets.filter(asset=>used.has(asset.pageid))){
+      const paragraph=document.createElement('p');
+      const source=document.createElement('a');
+      source.href=asset.source_page_url;source.textContent=asset.source_title??asset.filename;
+      source.target='_blank';source.rel='noreferrer';paragraph.append(source);
+      paragraph.append(document.createTextNode(` · ${asset.author} · ${asset.license}。经裁切、背景处理及 AI 动态重建。`));
+      document.getElementById('credits').append(paragraph);
+    }
+  </script>
+</body>
+</html>

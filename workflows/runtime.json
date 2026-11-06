@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-06",
+  "os": "darwin",
+  "comfyui_version": "0.34.0",
+  "comfyuiCommit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "frontend": "1.49.6",
+  "python_version": "3.13.12 (main, Feb 12 2026, 01:06:02) [Clang 21.1.4 ]",
+  "pytorch_version": "2.12.1",
+  "hardware": "Apple M4 / 16 GB unified memory",
+  "diffusion": "MPS fp16",
+  "textEncoder": "CPU fp16 loading of fp8 source",
+  "vae": "MPS bf16",
+  "seedReproducibility": "Same settings do not promise identical pixels across hardware or ComfyUI versions."
+}

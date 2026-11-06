@@ -1,0 +1,4441 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "id": "silica",
+      "duration": 7.291666666666664,
+      "fps": 8.914285714285716,
+      "frames": 7,
+      "states": [
+        {
+          "id": "silica",
+          "time": 30.475,
+          "stage": 1,
+          "data": {},
+          "camera": [
+            5.402797460840243,
+            3.4,
+            10.398354285714285
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 397,
+          "min": 30,
+          "max": 251,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-00.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 30.875,
+          "stage": 1,
+          "data": {},
+          "camera": [
+            5.413956911402516,
+            3.4,
+            10.39177142857143
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 378,
+          "min": 30,
+          "max": 252,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-01.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 33.345,
+          "stage": 1,
+          "data": {},
+          "camera": [
+            5.47660952730553,
+            3.4,
+            10.351122285714286
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 481,
+          "min": 30,
+          "max": 255,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-02.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 33.8,
+          "stage": 3,
+          "data": {},
+          "camera": [
+            3.885958423093107,
+            2.2,
+            8.043634285714285
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 852,
+          "min": 30,
+          "max": 255,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-03.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 34.199999999999996,
+          "stage": 3,
+          "data": {},
+          "camera": [
+            3.893382258341766,
+            2.2,
+            8.037051428571429
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 902,
+          "min": 30,
+          "max": 255,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-04.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 36.669999999999995,
+          "stage": 3,
+          "data": {},
+          "camera": [
+            3.9193620217000524,
+            2.2,
+            7.996402285714286
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 803,
+          "min": 30,
+          "max": 255,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-05.jpg"
+        },
+        {
+          "id": "silica",
+          "time": 37.516666666666666,
+          "stage": 3,
+          "data": {},
+          "camera": [
+            3.919467611174378,
+            2.2,
+            7.982468571428571
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 36,
+          "bright": 795,
+          "min": 30,
+          "max": 255,
+          "parts": 17,
+          "labels": "",
+          "file": "model-silica-06.jpg"
+        }
+      ]
+    },
+    {
+      "id": "reduction",
+      "duration": 9.125,
+      "fps": 7.123287671232877,
+      "frames": 10,
+      "states": [
+        {
+          "id": "reduction",
+          "time": 37.766666666666666,
+          "stage": 1,
+          "data": {
+            "reactionVisible": false,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            6.002235487116895,
+            4.7,
+            14.99868493150685
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 39,
+          "bright": 1307,
+          "min": 20,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-00.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 38.166666666666664,
+          "stage": 1,
+          "data": {
+            "reactionVisible": false,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            6.011161923740553,
+            4.7,
+            14.993424657534247
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 39,
+          "bright": 1308,
+          "min": 20,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-01.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 40.66166666666666,
+          "stage": 1,
+          "data": {
+            "reactionVisible": false,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            6.063536086167519,
+            4.7,
+            14.960613698630137
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 39,
+          "bright": 1310,
+          "min": 19,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-02.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 40.87916666666666,
+          "stage": 2,
+          "data": {
+            "reactionVisible": false,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.867607781170714,
+            3.9,
+            9.957753424657534
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2660,
+          "min": 21,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-03.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 41.27916666666666,
+          "stage": 2,
+          "data": {
+            "reactionVisible": false,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.874801443887422,
+            3.9,
+            9.952493150684932
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2639,
+          "min": 21,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-04.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 42.986666666666665,
+          "stage": 2,
+          "data": {
+            "reactionVisible": true,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.900397014510592,
+            3.9,
+            9.930038356164383
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2635,
+          "min": 21,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-05.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 43.42916666666667,
+          "stage": 3,
+          "data": {
+            "reactionVisible": true,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.905468596206449,
+            3.9,
+            9.924219178082192
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2637,
+          "min": 21,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-06.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 43.829166666666666,
+          "stage": 3,
+          "data": {
+            "reactionVisible": true,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.909437463392255,
+            3.9,
+            9.918958904109589
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2639,
+          "min": 21,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-07.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 45.78666666666666,
+          "stage": 3,
+          "data": {
+            "reactionVisible": true,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.9197980133825805,
+            3.9,
+            9.893216438356164
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2645,
+          "min": 20,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-08.jpg"
+        },
+        {
+          "id": "reduction",
+          "time": 46.641666666666666,
+          "stage": 3,
+          "data": {
+            "reactionVisible": true,
+            "chargeDoesNotBecomeElectronicGrade": true
+          },
+          "camera": [
+            4.9193853288316856,
+            3.9,
+            9.881972602739726
+          ],
+          "look": [
+            0.4,
+            -0.7,
+            0
+          ],
+          "fov": 39,
+          "bright": 2652,
+          "min": 20,
+          "max": 255,
+          "parts": 59,
+          "labels": "",
+          "file": "model-reduction-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "distill",
+      "duration": 9.833333333333336,
+      "fps": 6.610169491525422,
+      "frames": 10,
+      "states": [
+        {
+          "id": "distill",
+          "time": 46.891666666666666,
+          "stage": 1,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            5.302074472931299,
+            3.7,
+            16.598779661016952
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 38,
+          "bright": 958,
+          "min": 30,
+          "max": 250,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-00.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 47.291666666666664,
+          "stage": 1,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            5.31035996850209,
+            3.7,
+            16.593898305084746
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 38,
+          "bright": 951,
+          "min": 30,
+          "max": 250,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-01.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 50.07416666666666,
+          "stage": 1,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            5.3645013583679395,
+            3.7,
+            16.55994237288136
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 38,
+          "bright": 961,
+          "min": 30,
+          "max": 250,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-02.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 50.516666666666666,
+          "stage": 2,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.472046258073757,
+            1.4,
+            9.954542372881356
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2851,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-03.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 50.916666666666664,
+          "stage": 2,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.4785050172505185,
+            1.4,
+            9.949661016949152
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2866,
+          "min": 30,
+          "max": 253,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-04.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 53.14916666666666,
+          "stage": 2,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.506895481837992,
+            1.4,
+            9.922416949152542
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2920,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-05.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 53.36666666666667,
+          "stage": 3,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.5088698020768625,
+            1.4,
+            9.919762711864406
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2918,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-06.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 53.766666666666666,
+          "stage": 3,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.51209704132697,
+            1.4,
+            9.914881355932204
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2930,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-07.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 55.63666666666666,
+          "stage": 3,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.519895878057638,
+            1.4,
+            9.892061016949153
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2991,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-08.jpg"
+        },
+        {
+          "id": "distill",
+          "time": 56.475,
+          "stage": 3,
+          "data": {
+            "separation": "illustrative boiling-point fractions",
+            "receiver": 628
+          },
+          "camera": [
+            4.519360668719943,
+            1.4,
+            9.881830508474577
+          ],
+          "look": [
+            0,
+            0.3,
+            0
+          ],
+          "fov": 38,
+          "bright": 2968,
+          "min": 30,
+          "max": 254,
+          "parts": 32,
+          "labels": "",
+          "file": "model-distill-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "deposition",
+      "duration": 8.791666666666671,
+      "fps": 7.393364928909949,
+      "frames": 10,
+      "states": [
+        {
+          "id": "deposition",
+          "time": 56.725,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.702320234551346,
+            3.4,
+            13.798635071090048
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3114,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-00.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 57.125,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.711583829395752,
+            3.4,
+            13.793175355450238
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-01.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 58.32,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.738630037597018,
+            3.4,
+            13.776864454976304
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3112,
+          "min": 24,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-02.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 58.4875,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.842288875473572,
+            1.3,
+            9.674578199052132
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4759,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-03.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 58.887499999999996,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.85083986297415,
+            1.3,
+            9.669118483412321
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4762,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-04.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 61.62,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.8083345886891107,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.898704448523162,
+            1.3,
+            9.631821800947867
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6086,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-05.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 62.075,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.0719810803642034,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9043192323472247,
+            1.3,
+            9.625611374407582
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6088,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-06.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 62.475,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.2974089286218944,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.908590049064647,
+            1.3,
+            9.620151658767773
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6092,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-07.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 64.4325,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.919776079681753,
+            1.3,
+            9.59343317535545
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6115,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-08.jpg"
+        },
+        {
+          "id": "deposition",
+          "time": 65.26666666666667,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9193981142410252,
+            1.3,
+            9.582047393364928
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6128,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": "",
+          "file": "model-deposition-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "polycrystal",
+      "duration": 9.708333333333329,
+      "fps": 6.6952789699570845,
+      "frames": 10,
+      "states": [
+        {
+          "id": "polycrystal",
+          "time": 65.51666666666667,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.002101180170516,
+            3,
+            11.498763948497855
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 753,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-00.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 65.91666666666667,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.010493019814939,
+            3,
+            11.49381974248927
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 752,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-01.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.49916666666668,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.042795906467066,
+            3,
+            11.474259227467812
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 751,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-02.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.95416666666667,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.051582880313148,
+            3,
+            11.468635193133048
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 751,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-03.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.35416666666667,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.0590391786265885,
+            3,
+            11.463690987124464
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 751,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-04.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.97416666666668,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.099200071464399,
+            3,
+            11.43130643776824
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 758,
+          "min": 30,
+          "max": 244,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-05.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.42916666666667,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3042595006937874,
+            2.3,
+            5.925682403433476
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4311,
+          "min": 30,
+          "max": 245,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-06.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.82916666666668,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3081619447863218,
+            2.3,
+            5.9207381974248925
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4306,
+          "min": 30,
+          "max": 245,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-07.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.13666666666667,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3198845928192684,
+            2.3,
+            5.892216309012875
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4293,
+          "min": 30,
+          "max": 245,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-08.jpg"
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.975,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3193647924856484,
+            2.3,
+            5.881854077253219
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 245,
+          "parts": 4,
+          "labels": "",
+          "file": "model-polycrystal-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "melt",
+      "duration": 7.041666666666671,
+      "fps": 9.230769230769225,
+      "frames": 10,
+      "states": [
+        {
+          "id": "melt",
+          "time": 75.225,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.002896760011292,
+            4.7,
+            16.198295857988164
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1702,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-00.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 75.625,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.014450055591446,
+            4.7,
+            16.191479289940826
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1706,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-01.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 78.045,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.077759192330596,
+            4.7,
+            16.150239053254438
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1696,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-02.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 78.15,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.4800508085936555,
+            2.4,
+            11.448449704142012
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2849,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-03.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 78.55000000000001,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.488297352579331,
+            2.4,
+            11.441633136094675
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2838,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-04.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 80.07000000000001,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.51157394149355,
+            2.4,
+            11.415730177514792
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2886,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-05.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 80.125,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.512150622754475,
+            2.4,
+            11.414792899408283
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2896,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-06.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 80.525,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.515743966677985,
+            2.4,
+            11.407976331360947
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2866,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-07.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 81.14500000000001,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.519173320024137,
+            2.4,
+            11.397410650887574
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2839,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-08.jpg"
+        },
+        {
+          "id": "melt",
+          "time": 82.01666666666667,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.3,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.519481538047849,
+            2.4,
+            11.382556213017752
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2836,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-melt-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "doping",
+      "duration": 8.583333333333329,
+      "fps": 7.572815533980586,
+      "frames": 10,
+      "states": [
+        {
+          "id": "doping",
+          "time": 82.26666666666667,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            4.802376543647269,
+            3.3,
+            8.798601941747574
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2318,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-00.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 82.66666666666667,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            4.811864081554305,
+            3.3,
+            8.793009708737864
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2335,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-01.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 84.68666666666668,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            4.8574369784772085,
+            3.3,
+            8.764768932038836
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2448,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-02.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 84.74166666666667,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.158581269625949,
+            2.1,
+            5.763999999999999
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5071,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-03.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 85.14166666666668,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.1666858557212088,
+            2.1,
+            5.758407766990291
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5090,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-04.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 85.89916666666667,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.180848279709034,
+            2.1,
+            5.747817475728155
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5106,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-05.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 86.32916666666667,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.1880982858085503,
+            2.1,
+            5.741805825242718
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5145,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-06.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 86.72916666666667,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.1942701827347446,
+            2.1,
+            5.7362135922330095
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5160,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-07.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 89.73666666666668,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2196934354641984,
+            2.1,
+            5.6941669902912615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5317,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-08.jpg"
+        },
+        {
+          "id": "doping",
+          "time": 90.6,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 172,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.219406535283815,
+            2.1,
+            5.682097087378641
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 5376,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": "",
+          "file": "model-doping-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "seed",
+      "duration": 9.208333333333329,
+      "fps": 7.058823529411768,
+      "frames": 10,
+      "states": [
+        {
+          "id": "seed",
+          "time": 90.85,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.08,
+            "solidRadius": 0.055,
+            "solidBottom": 0.24999999999999994,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.002215258773196,
+            4.7,
+            16.198696832579184
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1699,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-00.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 91.25,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.08,
+            "solidRadius": 0.055,
+            "solidBottom": 0.1540336071037744,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.0110611992356855,
+            4.7,
+            16.193484162895928
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1699,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-01.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 92.72,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.08,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.042687293179919,
+            4.7,
+            16.174327601809953
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1688,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-02.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 92.8875,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.08,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.44613437940115,
+            2.4,
+            11.47214479638009
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2820,
+          "min": 17,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-03.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 93.28750000000001,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.08,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.454181692772783,
+            2.4,
+            11.466932126696832
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2819,
+          "min": 17,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-04.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 95.62,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.1415159952817225,
+            "solidRadius": 0.06867022117371611,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.493930333860047,
+            2.4,
+            11.436535746606335
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2809,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-05.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 96.075,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.21747845561083778,
+            "solidRadius": 0.08555076791351951,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            2.799864882236482,
+            1.25,
+            7.130606334841629
+          ],
+          "look": [
+            0,
+            0.15,
+            0
+          ],
+          "fov": 35,
+          "bright": 3286,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-06.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 96.47500000000001,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.3002084290215974,
+            "solidRadius": 0.10393520644924387,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            2.8045016560125626,
+            1.25,
+            7.125393665158371
+          ],
+          "look": [
+            0,
+            0.15,
+            0
+          ],
+          "fov": 35,
+          "bright": 3258,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-07.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 98.94500000000001,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.7833136283694215,
+            "solidRadius": 0.21129191741542702,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            2.8197990973001845,
+            1.25,
+            7.093205429864254
+          ],
+          "look": [
+            0,
+            0.15,
+            0
+          ],
+          "fov": 35,
+          "bright": 3099,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-08.jpg"
+        },
+        {
+          "id": "seed",
+          "time": 99.80833333333332,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.7999999999999999,
+            "solidRadius": 0.215,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            2.819382257297483,
+            1.25,
+            7.081954751131222
+          ],
+          "look": [
+            0,
+            0.15,
+            0
+          ],
+          "fov": 35,
+          "bright": 3112,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-seed-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "duration": 8.708333333333329,
+      "fps": 7.4641148325358895,
+      "frames": 10,
+      "states": [
+        {
+          "id": "growth",
+          "time": 100.05833333333332,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.002342434945618,
+            4.7,
+            16.198622009569377
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1699,
+          "min": 19,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-00.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 100.45833333333333,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.0116943288586535,
+            4.7,
+            16.19311004784689
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1699,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-01.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 102.72833333333334,
+          "stage": 1,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            6.06177312623789,
+            4.7,
+            16.16182966507177
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 1685,
+          "min": 20,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-02.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 103.17083333333333,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.470418716463448,
+            2.4,
+            11.455732057416268
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2815,
+          "min": 17,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-03.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 103.57083333333334,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.055,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.477783735743412,
+            2.4,
+            11.45022009569378
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2815,
+          "min": 17,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-04.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 105.06583333333333,
+          "stage": 2,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.46798806828125605,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.500785606752433,
+            2.4,
+            11.429619138755982
+          ],
+          "look": [
+            0,
+            0.4,
+            0
+          ],
+          "fov": 39,
+          "bright": 2761,
+          "min": 17,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-05.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 105.23333333333333,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.6,
+            "solidRadius": 0.5881200000000065,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.002861096270447,
+            1.8,
+            11.22731100478469
+          ],
+          "look": [
+            0,
+            0.75,
+            0
+          ],
+          "fov": 39,
+          "bright": 3179,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-06.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 105.63333333333334,
+          "stage": 3,
+          "data": {
+            "solidHeight": 0.7137462243028734,
+            "solidRadius": 0.65,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.007368704607668,
+            1.8,
+            11.221799043062202
+          ],
+          "look": [
+            0,
+            0.75,
+            0
+          ],
+          "fov": 39,
+          "bright": 3189,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-07.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 107.66583333333334,
+          "stage": 3,
+          "data": {
+            "solidHeight": 2.585804062492372,
+            "solidRadius": 0.65,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.019737353450358,
+            1.8,
+            11.19379138755981
+          ],
+          "look": [
+            0,
+            0.75,
+            0
+          ],
+          "fov": 39,
+          "bright": 3218,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-08.jpg"
+        },
+        {
+          "id": "growth",
+          "time": 108.51666666666665,
+          "stage": 3,
+          "data": {
+            "solidHeight": 2.7,
+            "solidRadius": 0.65,
+            "solidBottom": -0.45,
+            "meltSurface": -0.45,
+            "timeCompressed": true
+          },
+          "camera": [
+            4.019401441373981,
+            1.8,
+            11.182066985645934
+          ],
+          "look": [
+            0,
+            0.75,
+            0
+          ],
+          "fov": 39,
+          "bright": 3235,
+          "min": 18,
+          "max": 255,
+          "parts": 60,
+          "labels": "",
+          "file": "model-growth-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "trim",
+      "duration": 8.416666666666671,
+      "fps": 7.722772277227718,
+      "frames": 10,
+      "states": [
+        {
+          "id": "trim",
+          "time": 108.76666666666665,
+          "stage": 1,
+          "data": {
+            "endSeparation": 0,
+            "notchIllustrative": true
+          },
+          "camera": [
+            7.002423597579915,
+            4.5,
+            13.198574257425742
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 564,
+          "min": 24,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-00.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 109.16666666666666,
+          "stage": 1,
+          "data": {
+            "endSeparation": 0,
+            "notchIllustrative": true
+          },
+          "camera": [
+            7.012098222422994,
+            4.5,
+            13.192871287128712
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 563,
+          "min": 20,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-01.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 111.82416666666666,
+          "stage": 1,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            7.071446944538105,
+            4.5,
+            13.154982178217821
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 572,
+          "min": 25,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-02.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 111.87916666666666,
+          "stage": 2,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.472513549790763,
+            2.7,
+            8.45419801980198
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1173,
+          "min": 19,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-03.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 112.27916666666667,
+          "stage": 2,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.4799933639457565,
+            2.7,
+            8.44849504950495
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1164,
+          "min": 21,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-04.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 113.41166666666666,
+          "stage": 2,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.498192473390694,
+            2.7,
+            8.432348514851485
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1170,
+          "min": 27,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-05.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 113.61666666666666,
+          "stage": 3,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.5009636773306205,
+            2.7,
+            8.429425742574258
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1169,
+          "min": 20,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-06.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 114.01666666666667,
+          "stage": 3,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.505868517795059,
+            2.7,
+            8.423722772277227
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1172,
+          "min": 27,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-07.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 116.06166666666667,
+          "stage": 3,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.519643024203922,
+            2.7,
+            8.394566336633662
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1172,
+          "min": 20,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-08.jpg"
+        },
+        {
+          "id": "trim",
+          "time": 116.93333333333332,
+          "stage": 3,
+          "data": {
+            "endSeparation": 1,
+            "notchIllustrative": true
+          },
+          "camera": [
+            5.5194135268851605,
+            2.7,
+            8.382138613861386
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 42,
+          "bright": 1181,
+          "min": 28,
+          "max": 255,
+          "parts": 23,
+          "labels": "",
+          "file": "model-trim-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "slice",
+      "duration": 10.125,
+      "fps": 6.419753086419753,
+      "frames": 10,
+      "states": [
+        {
+          "id": "slice",
+          "time": 117.18333333333332,
+          "stage": 1,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            7.602014720150664,
+            4.5,
+            14.398814814814815
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1061,
+          "min": 23,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-00.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 117.58333333333333,
+          "stage": 1,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            7.610062245057593,
+            4.5,
+            14.394074074074075
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1064,
+          "min": 23,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-01.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 120.39083333333333,
+          "stage": 1,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            7.663267188528422,
+            4.5,
+            14.360800000000001
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1089,
+          "min": 23,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-02.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 120.58333333333333,
+          "stage": 2,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.866529244877819,
+            2.8,
+            9.358518518518519
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1751,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-03.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 120.98333333333333,
+          "stage": 2,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.873081484658925,
+            2.8,
+            9.353777777777777
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1742,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-04.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 122.85333333333334,
+          "stage": 2,
+          "data": {
+            "parallelWires": 28,
+            "release": 0,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.898904140055405,
+            2.8,
+            9.331614814814815
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 1779,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-05.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 123.30833333333332,
+          "stage": 3,
+          "data": {
+            "parallelWires": 28,
+            "release": 0.39756849395635474,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.903802096150741,
+            2.8,
+            9.326222222222222
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 2545,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-06.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 123.70833333333333,
+          "stage": 3,
+          "data": {
+            "parallelWires": 28,
+            "release": 0.9058115287412757,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.9076087104501145,
+            2.8,
+            9.321481481481483
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 2560,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-07.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 126.17833333333333,
+          "stage": 3,
+          "data": {
+            "parallelWires": 28,
+            "release": 1,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.919885255385397,
+            2.8,
+            9.292207407407409
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 2591,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-08.jpg"
+        },
+        {
+          "id": "slice",
+          "time": 127.05833333333332,
+          "stage": 3,
+          "data": {
+            "parallelWires": 28,
+            "release": 1,
+            "spacingAndThicknessExaggerated": true
+          },
+          "camera": [
+            5.919351394383253,
+            2.8,
+            9.281777777777778
+          ],
+          "look": [
+            0,
+            -0.2,
+            0
+          ],
+          "fov": 44,
+          "bright": 2590,
+          "min": 24,
+          "max": 255,
+          "parts": 191,
+          "labels": "",
+          "file": "model-slice-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lapping",
+      "duration": 7.666666666666671,
+      "fps": 8.478260869565212,
+      "frames": 10,
+      "states": [
+        {
+          "id": "lapping",
+          "time": 127.30833333333332,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": true,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            3.2026606515201137,
+            1.6,
+            4.598434782608695
+          ],
+          "look": [
+            1.7,
+            0,
+            0.8
+          ],
+          "fov": 38,
+          "bright": 685,
+          "min": 30,
+          "max": 235,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-00.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 127.70833333333333,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": true,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            3.2132771082649483,
+            1.6,
+            4.592173913043478
+          ],
+          "look": [
+            1.7,
+            0,
+            0.8
+          ],
+          "fov": 38,
+          "bright": 835,
+          "min": 30,
+          "max": 237,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-01.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 129.27833333333334,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": true,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            3.2531662199171967,
+            1.6,
+            4.5676
+          ],
+          "look": [
+            1.7,
+            0,
+            0.8
+          ],
+          "fov": 38,
+          "bright": 1243,
+          "min": 30,
+          "max": 244,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-02.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 129.44583333333333,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.157124278454214,
+            5,
+            12.964978260869565
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 1114,
+          "min": 21,
+          "max": 243,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-03.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 129.84583333333333,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.166247613240745,
+            5,
+            12.958717391304347
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 1118,
+          "min": 22,
+          "max": 242,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-04.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 131.85333333333332,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.202874535672641,
+            5,
+            12.927295652173914
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 1126,
+          "min": 28,
+          "max": 242,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-05.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 131.90833333333333,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": true,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            3.30362032008563,
+            2.6,
+            7.626434782608696
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1264,
+          "min": 30,
+          "max": 242,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-06.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 132.30833333333334,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0.03465820392975529,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": true,
+            "damageLayerRemoval": 0.1335449017561178
+          },
+          "camera": [
+            3.3085739427113543,
+            2.6,
+            7.6201739130434785
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1271,
+          "min": 30,
+          "max": 242,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-07.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 133.90333333333334,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": true,
+            "damageLayerRemoval": 1
+          },
+          "camera": [
+            3.3195539034333787,
+            2.6,
+            7.595208695652174
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1369,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-08.jpg"
+        },
+        {
+          "id": "lapping",
+          "time": 134.725,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": true,
+            "damageLayerRemoval": 1
+          },
+          "camera": [
+            3.319448122237921,
+            2.6,
+            7.582347826086957
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1372,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-lapping-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "polish",
+      "duration": 7.958333333333343,
+      "fps": 8.167539267015696,
+      "frames": 10,
+      "states": [
+        {
+          "id": "polish",
+          "time": 134.975,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.102563155845559,
+            5,
+            12.998492146596858
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 987,
+          "min": 20,
+          "max": 237,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-00.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 135.375,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.112792399793314,
+            5,
+            12.992460732984293
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 1046,
+          "min": 20,
+          "max": 237,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-01.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 138.3075,
+          "stage": 1,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            6.180312333713427,
+            5,
+            12.948242931937173
+          ],
+          "look": [
+            0,
+            -0.7,
+            0
+          ],
+          "fov": 40,
+          "bright": 1052,
+          "min": 22,
+          "max": 237,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-02.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 138.5,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.04,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0
+          },
+          "camera": [
+            3.2839098047001474,
+            2.6,
+            7.645340314136126
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1284,
+          "min": 30,
+          "max": 242,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-03.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 138.9,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.03813979484588656,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0.04650512885283613
+          },
+          "camera": [
+            3.290924709219007,
+            2.6,
+            7.63930890052356
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1307,
+          "min": 30,
+          "max": 240,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-04.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 140.10750000000002,
+          "stage": 2,
+          "data": {
+            "microSurfaceAmplitude": 0.018584115521076007,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0.5353971119730998
+          },
+          "camera": [
+            3.3078929767225502,
+            2.6,
+            7.621101570680628
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1758,
+          "min": 30,
+          "max": 251,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-05.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 140.225,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0.01630560920077159,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0.5923597699807103
+          },
+          "camera": [
+            3.3091772596131275,
+            2.6,
+            7.619329842931937
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1803,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-06.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 140.625,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0.009036901799008117,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 0.7740774550247971
+          },
+          "camera": [
+            3.313029190004578,
+            2.6,
+            7.613298429319372
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1958,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-07.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 141.82,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 1
+          },
+          "camera": [
+            3.319543462106902,
+            2.6,
+            7.595279581151833
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1909,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-08.jpg"
+        },
+        {
+          "id": "polish",
+          "time": 142.68333333333334,
+          "stage": 3,
+          "data": {
+            "microSurfaceAmplitude": 0,
+            "microScaleIsIllustrative": true,
+            "edge": false,
+            "etching": false,
+            "damageLayerRemoval": 1
+          },
+          "camera": [
+            3.3194340206794304,
+            2.6,
+            7.582261780104712
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1913,
+          "min": 30,
+          "max": 241,
+          "parts": 97,
+          "labels": "",
+          "file": "model-polish-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clean",
+      "duration": 9.75,
+      "fps": 6.666666666666667,
+      "frames": 10,
+      "states": [
+        {
+          "id": "clean",
+          "time": 142.93333333333334,
+          "stage": 1,
+          "data": {
+            "removedIllustrativeParticles": 0,
+            "edgeHandling": true
+          },
+          "camera": [
+            6.002092201679995,
+            4.2,
+            15.19876923076923
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 1519,
+          "min": 30,
+          "max": 252,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-00.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 143.33333333333334,
+          "stage": 1,
+          "data": {
+            "removedIllustrativeParticles": 0.041228877957631624,
+            "edgeHandling": true
+          },
+          "camera": [
+            6.010448291755874,
+            4.2,
+            15.193846153846152
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 1520,
+          "min": 30,
+          "max": 251,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-01.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 146.20333333333335,
+          "stage": 1,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            6.066522795445237,
+            4.2,
+            15.158523076923077
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 1539,
+          "min": 30,
+          "max": 252,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-02.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 146.65833333333333,
+          "stage": 2,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.07422855507526,
+            2.4,
+            10.152923076923077
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3275,
+          "min": 22,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-03.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 147.05833333333334,
+          "stage": 2,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.080618712994041,
+            2.4,
+            10.148
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3275,
+          "min": 22,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-04.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 148.87833333333336,
+          "stage": 2,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.104328787812194,
+            2.4,
+            10.125599999999999
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3278,
+          "min": 22,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-05.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 148.98333333333335,
+          "stage": 3,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.105396737584966,
+            2.4,
+            10.124307692307692
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3279,
+          "min": 22,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-06.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 149.38333333333335,
+          "stage": 3,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.109138582556586,
+            2.4,
+            10.119384615384615
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3282,
+          "min": 22,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-07.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 151.56583333333336,
+          "stage": 3,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.119860594520016,
+            2.4,
+            10.092523076923076
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3293,
+          "min": 21,
+          "max": 253,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-08.jpg"
+        },
+        {
+          "id": "clean",
+          "time": 152.43333333333334,
+          "stage": 3,
+          "data": {
+            "removedIllustrativeParticles": 1,
+            "edgeHandling": true
+          },
+          "camera": [
+            4.1193634076332755,
+            2.4,
+            10.081846153846152
+          ],
+          "look": [
+            0,
+            -0.15,
+            0
+          ],
+          "fov": 41,
+          "bright": 3293,
+          "min": 21,
+          "max": 254,
+          "parts": 55,
+          "labels": "",
+          "file": "model-clean-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "inspect",
+      "duration": 10.041666666666657,
+      "fps": 6.47302904564316,
+      "frames": 10,
+      "states": [
+        {
+          "id": "inspect",
+          "time": 152.68333333333334,
+          "stage": 1,
+          "data": {
+            "opticalScan": true,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0,
+              0
+            ]
+          },
+          "camera": [
+            5.802031438229185,
+            4.5,
+            13.698804979253111
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 1237,
+          "min": 23,
+          "max": 220,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-00.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 153.08333333333334,
+          "stage": 1,
+          "data": {
+            "opticalScan": true,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.024425358882193927,
+              0.1431120646999369
+            ]
+          },
+          "camera": [
+            5.810145550454218,
+            4.5,
+            13.69402489626556
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 1238,
+          "min": 23,
+          "max": 220,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-01.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 156.67833333333334,
+          "stage": 1,
+          "data": {
+            "opticalScan": true,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            5.876685897097613,
+            4.5,
+            13.651063900414938
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 1268,
+          "min": 27,
+          "max": 222,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-02.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 156.92083333333335,
+          "stage": 2,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.280409492730429,
+            2.4,
+            9.648165975103733
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2471,
+          "min": 26,
+          "max": 246,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-03.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 157.32083333333335,
+          "stage": 2,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.286252537736447,
+            2.4,
+            9.643385892116182
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2557,
+          "min": 26,
+          "max": 246,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-04.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 158.61583333333334,
+          "stage": 2,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.302332622917492,
+            2.4,
+            9.627910373443983
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2557,
+          "min": 26,
+          "max": 237,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-05.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 159.07083333333335,
+          "stage": 3,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.306852127124457,
+            2.4,
+            9.622473029045642
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2559,
+          "min": 26,
+          "max": 235,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-06.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 159.47083333333336,
+          "stage": 3,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.310302699879474,
+            2.4,
+            9.61769294605809
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2560,
+          "min": 26,
+          "max": 237,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-07.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 161.60333333333335,
+          "stage": 3,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.3198851274196315,
+            2.4,
+            9.592209128630705
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2564,
+          "min": 26,
+          "max": 245,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-08.jpg"
+        },
+        {
+          "id": "inspect",
+          "time": 162.475,
+          "stage": 3,
+          "data": {
+            "opticalScan": false,
+            "measurementIsIllustrative": true,
+            "probeAndSpot": [
+              0.19826896640135871,
+              1.436380665757562
+            ]
+          },
+          "camera": [
+            4.319353995929031,
+            2.4,
+            9.581792531120332
+          ],
+          "look": [
+            0,
+            -0.6,
+            0
+          ],
+          "fov": 35,
+          "bright": 2566,
+          "min": 26,
+          "max": 245,
+          "parts": 23,
+          "labels": "",
+          "file": "model-inspect-09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "duration": 11.625,
+      "fps": 5.591397849462366,
+      "frames": 10,
+      "states": [
+        {
+          "id": "ending",
+          "time": 162.725,
+          "stage": 1,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            5.801754776164586,
+            3.1,
+            13.198967741935483
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 3997,
+          "min": 24,
+          "max": 248,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-00.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 163.125,
+          "stage": 1,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            5.8087663774180225,
+            3.1,
+            13.194838709677418
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 3986,
+          "min": 20,
+          "max": 245,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-01.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 164.945,
+          "stage": 1,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            5.8399357212477305,
+            3.1,
+            13.176051612903224
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 3968,
+          "min": 23,
+          "max": 253,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-02.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 165.0875,
+          "stage": 2,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.142284983836654,
+            1.7,
+            10.57458064516129
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5396,
+          "min": 21,
+          "max": 235,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-03.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 165.4875,
+          "stage": 2,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.148778043305496,
+            1.7,
+            10.570451612903225
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5362,
+          "min": 21,
+          "max": 235,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-04.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 169.23250000000002,
+          "stage": 2,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.198731755461836,
+            1.7,
+            10.531793548387096
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5251,
+          "min": 19,
+          "max": 241,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-05.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 169.6875,
+          "stage": 3,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.203048189861405,
+            1.7,
+            10.527096774193549
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5223,
+          "min": 19,
+          "max": 241,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-06.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 170.0875,
+          "stage": 3,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.2064667517811,
+            1.7,
+            10.522967741935483
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5229,
+          "min": 18,
+          "max": 242,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-07.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 172.67000000000002,
+          "stage": 3,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.2193781314025065,
+            1.7,
+            10.496309677419355
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5098,
+          "min": 18,
+          "max": 243,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-08.jpg"
+        },
+        {
+          "id": "ending",
+          "time": 174.1,
+          "stage": 3,
+          "data": {
+            "waferCount": 25
+          },
+          "camera": [
+            4.219310273873184,
+            1.7,
+            10.481548387096774
+          ],
+          "look": [
+            0,
+            0.1,
+            0
+          ],
+          "fov": 35,
+          "bright": 5057,
+          "min": 18,
+          "max": 242,
+          "parts": 90,
+          "labels": "",
+          "file": "model-ending-09.jpg"
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "silica": {
+      "parts": 17,
+      "truth": "Local Si-O tetrahedral coordination; outer network continues beyond view"
+    },
+    "furnace": {
+      "parts": 59
+    },
+    "distill": {
+      "parts": 32
+    },
+    "siemens": {
+      "parts": 65
+    },
+    "grains": {
+      "parts": 4,
+      "atoms": 704
+    },
+    "pull": {
+      "parts": 60
+    },
+    "doping": {
+      "parts": 1356
+    },
+    "trim": {
+      "parts": 23
+    },
+    "wire": {
+      "parts": 191
+    },
+    "lap": {
+      "parts": 97
+    },
+    "polish": {
+      "parts": 97
+    },
+    "wash": {
+      "parts": 55
+    },
+    "scan": {
+      "parts": 23
+    },
+    "cassette": {
+      "parts": 90
+    }
+  },
+  "limits": "Rendered mechanisms are educational 3D; neither factory footage nor human audiovisual approval."
+}

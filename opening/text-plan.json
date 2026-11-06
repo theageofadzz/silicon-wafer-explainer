@@ -1,0 +1,45 @@
+{
+  "revision": 2,
+  "timeUnit": "seconds",
+  "anchorSource": "timeline.json: actual provider word events",
+  "policy": {
+    "persistentBranding": false,
+    "chapterTitles": false,
+    "decorativeScales": false,
+    "captionMaxCharacters": 14,
+    "captionSafeZone": [78, 1510, 936, 1660],
+    "creditLocation": "watch.html and README.md",
+    "missingAnchor": "stop render"
+  },
+  "captions": [
+    {"id":"chip","scene":"wafer","text":"一颗硅芯片","from":"一","to":"芯片","hold":0.20},
+    {"id":"blank","scene":"wafer","text":"最初，只是这样一片硅","from":"最初","to":{"word":"硅","occurrence":2},"hold":0.48},
+    {"id":"diameter","scene":"measure","text":"直径三十厘米","from":"直径","to":"三十厘米","hold":0.25},
+    {"id":"thickness","scene":"measure","text":"厚度却不到一毫米","from":"厚度","to":"一毫米","hold":0.48},
+    {"id":"single-crystal","scene":"boule","text":"它要先长成一整根单晶","from":"它","to":"单晶","hold":0.12},
+    {"id":"slice","scene":"boule","text":"再切成一片片薄片","from":"再","to":"薄片","hold":0.48},
+    {"id":"mirror","scene":"lattice","text":"外面像镜子","from":"外面","to":"镜子","hold":0.20},
+    {"id":"inside","scene":"lattice","text":"里面却是","from":"里面","to":"是","hold":0.02},
+    {"id":"atoms","scene":"lattice","text":"排列整齐的硅原子","from":"排列","to":"硅原子","hold":0.48},
+    {"id":"difficult","scene":"demands","text":"难的，不只是做薄","from":"难","to":"做薄","hold":0.40},
+    {"id":"pure","scene":"demands","text":"还要足够纯","from":"还要","to":"纯","hold":0.15},
+    {"id":"whole","scene":"demands","text":"晶格完整","from":"晶格","to":"完整","hold":0.15},
+    {"id":"flat","scene":"demands","text":"表面足够平","from":"表面","to":"足够平","hold":0.55},
+    {"id":"all","scene":"quartz","text":"而这一切","from":"而","to":"一切","hold":0.20},
+    {"id":"quartz","scene":"quartz","text":"要从一块石英开始","from":"要","to":"开始","hold":0.90}
+  ],
+  "beats": [
+    {"id":"diameter","scene":"measure","anchor":"三十厘米","object":"硅片的两侧边缘","change":"尺寸线随硅片投影定位","fact":"直径为三十厘米","readingHold":0.25},
+    {"id":"thickness","scene":"measure","anchor":"一毫米","object":"硅片薄边","change":"翻转露出薄边，引线连接厚度放大图","fact":"本片示例厚度0.775毫米，小于一毫米","readingHold":0.48},
+    {"id":"slice","scene":"boule","anchor":"切成","object":"单晶硅棒与切片","change":"沿晶棒轴向分离硅片","fact":"硅片由整根单晶切出","readingHold":0.48},
+    {"id":"atoms","scene":"lattice","anchor":"排列","object":"金刚石立方结构球棍模型","change":"镜面推进结束，原子与近邻连接清晰可见","fact":"硅原子有规则排列","readingHold":0.48},
+    {"id":"pure","scene":"demands","anchor":"纯","object":"晶格中的示意杂质","change":"仅高亮一个异色位置，标注随物体转动","fact":"材料需减少非预期杂质","readingHold":0.15},
+    {"id":"whole","scene":"demands","anchor":"晶格","object":"完整硅晶格","change":"结束杂质高亮，回到有序结构","fact":"晶格需完整","readingHold":0.15},
+    {"id":"flat","scene":"demands","anchor":"足够平","object":"硅片镜面","change":"回到硅片表面，让反射随翻转移动","fact":"表面需足够平整","readingHold":0.55},
+    {"id":"quartz","scene":"quartz","anchor":"石英","object":"前景石英晶体","change":"名称及SiO₂标注随晶体定位","fact":"硅片制造从石英原料讲起","readingHold":0.90}
+  ],
+  "limitations": [
+    "球棍、切片间距和厚度放大图为讲解示意。",
+    "保留原旁白与主体资产；不将文字检查表述为用户已认可音画语义。"
+  ]
+}

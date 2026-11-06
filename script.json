@@ -1,0 +1,23 @@
+{
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+0%",
+  "openingDuration": 30.375,
+  "scenes": [
+    {"id":"silica","model":"silica","clauses":["石英的主要成分，是二氧化硅。","硅和氧牢牢结合，先得把氧分开。"],"hold":0.22,"anchor":"把氧"},
+    {"id":"reduction","model":"furnace","clauses":["石英和碳质还原剂进入电炉，","高温反应，得到工业硅。","但这一步，还远不够纯。"],"hold":0.22,"anchor":"高温"},
+    {"id":"distill","model":"distill","clauses":["接着，把硅变成容易分离的氯硅烷。","反复精馏，让不同组分分开，","再把高纯原料送进反应炉。"],"hold":0.22,"anchor":"精馏"},
+    {"id":"deposition","model":"siemens","clauses":["在加热的硅芯表面，","新的硅不断沉积，硅棒逐渐变粗。","得到的，就是高纯多晶硅。"],"hold":0.22,"anchor":"沉积"},
+    {"id":"polycrystal","model":"grains","clauses":["纯，还不等于单晶。","多晶里的小晶粒，方向各不相同。","芯片需要的，是连续有序的晶体。"],"hold":0.22,"anchor":"方向"},
+    {"id":"melt","model":"pull","clauses":["把高纯多晶硅装进石英坩埚，","加热到一千四百多摄氏度，","重新熔化。"],"hold":0.22,"anchor":"熔化"},
+    {"id":"doping","model":"doping","clauses":["还可以加入极微量的硼或磷，","调整电阻率。","高纯，并不等于不能有受控掺杂。"],"hold":0.22,"anchor":"加入"},
+    {"id":"seed","model":"pull","clauses":["一小段籽晶接触熔体，","再一边旋转，一边缓慢向上提拉。","新凝固的硅，沿着籽晶的方向生长。"],"hold":0.22,"anchor":"向上"},
+    {"id":"growth","model":"pull","clauses":["温度和拉速要配合得恰到好处。","先拉细颈，再放肩，","最后长出直径稳定的单晶棒。"],"hold":0.25,"anchor":"放肩"},
+    {"id":"trim","model":"trim","clauses":["冷却后，切去头尾，修整外圆，","再加工定位缺口，","让后续设备认准晶体方向。"],"hold":0.22,"anchor":"切去"},
+    {"id":"slice","model":"wire","clauses":["接下来，金刚线像一排细密的锯，","把晶棒同时切成许多薄片。","切开之后，表面仍有锯痕和损伤。"],"hold":0.22,"anchor":"切成"},
+    {"id":"lapping","model":"lap","clauses":["所以还要倒圆边缘，","研磨，控制厚度和平行度，","再蚀刻掉加工损伤层。"],"hold":0.22,"anchor":"研磨"},
+    {"id":"polish","model":"polish","clauses":["抛光时，抛光垫和抛光液共同作用，","把表面继续整平，","直到形成均匀的镜面。"],"hold":0.22,"anchor":"整平"},
+    {"id":"clean","model":"wash","clauses":["接着清洗，去掉颗粒和残留污染。","这时，任何一次接触，","都要尽量避免重新弄脏表面。"],"hold":0.22,"anchor":"去掉"},
+    {"id":"inspect","model":"scan","clauses":["最后，用光学等方法检查颗粒和缺陷，","测量厚度与平整度。","合格的硅片，才能装盒出厂。"],"hold":0.22,"anchor":"检查"},
+    {"id":"ending","model":"cassette","clauses":["从一块石英，到一片镜面，","真正难的，是把纯度、晶体和表面同时做好。","而光刻与晶体管的故事，才刚刚开始。"],"hold":0.8,"anchor":"同时"}
+  ]
+}

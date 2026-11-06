@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-06",
+  "records": [
+    {
+      "file": "assets/photos/hot-crystal.jpg",
+      "title": "Avogadro_Crystal_(in_the_furnace)_-_SFU_PAMR.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Avogadro_Crystal_(in_the_furnace)_-_SFU_PAMR.jpg",
+      "used": false,
+      "modifications": "EXIF orientation; proportional contain on charcoal background, or central portrait crop. ComfyUI invents camera motion, not an actual recording.",
+      "sha256": "6be10432bed302be94d2a81b61e384bf619c7ab1fe46a1e357ea373f303da84b",
+      "description": "Avogadro Crystal (in the furnace)",
+      "author": "Simon Fraser University Public Affairs and Media Relations",
+      "date": "24 May 2007, 08:17",
+      "license": [
+        {
+          "name": "CC BY 2.0",
+          "url": null
+        }
+      ],
+      "licenseText": [
+        "This file is licensed under the Creative Commons Attribution 2.0 Generic license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "contentUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Avogadro_Crystal_%28in_the_furnace%29_-_SFU_PAMR.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+          "license": "https://creativecommons.org/licenses/by/2.0",
+          "acquireLicensePage": "//commons.wikimedia.org/wiki/File:Avogadro_Crystal_(in_the_furnace)_-_SFU_PAMR.jpg",
+          "name": "Avogadro Crystal (in the furnace) - SFU PAMR",
+          "uploadDate": "2013-02-24 13:20:26",
+          "width": "1200 px",
+          "height": "1800 px",
+          "contentSize": 847480,
+          "encodingFormat": "image/jpeg"
+        }
+      ],
+      "input": "assets/inputs/hot-crystal.png",
+      "inputSHA256": "b43ecd9c46f3316ad6b710a5a95aee0042305b845875d983b8da0b1c2b632470"
+    },
+    {
+      "file": "assets/photos/silicon-seed.jpg",
+      "title": "Silicon_seed_crystal_puller_rod.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Silicon_seed_crystal_puller_rod.jpg",
+      "used": true,
+      "modifications": "EXIF orientation; proportional contain on charcoal background, or central portrait crop. ComfyUI invents camera motion, not an actual recording.",
+      "sha256": "10663d39fcdd87b63798a3f5285194fd6e4d64d7b2ca9b610c82ef9642773ce4",
+      "description": "English:  A puller rod for growing silicon boules by Czochralski process. It is made from single-crystal silicon. The shiny tip is the part to be dipped into molten silicon and acts as a seed crystal. Note the notch for holding by a chuck. The rod weighs 36 grams and is about 14 cm long and 1.2 cm in diameter.",
+      "author": "Warut Roonguthai",
+      "date": "13 November 2007",
+      "license": [
+        {
+          "name": "GFDL",
+          "url": null
+        },
+        {
+          "name": "CC BY-SA 4.0",
+          "url": null
+        }
+      ],
+      "licenseText": [
+        "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled GNU Free Documentation License.",
+        "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International, 3.0 Unported, 2.5 Generic, 2.0 Generic and 1.0 Generic license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original."
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "contentUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Silicon_seed_crystal_puller_rod.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0",
+          "acquireLicensePage": "//commons.wikimedia.org/wiki/File:Silicon_seed_crystal_puller_rod.jpg",
+          "name": "Silicon seed crystal puller rod",
+          "uploadDate": "2007-11-13 02:27:44",
+          "width": "1360 px",
+          "height": "1024 px",
+          "contentSize": 498266,
+          "encodingFormat": "image/jpeg"
+        }
+      ],
+      "input": "assets/inputs/silicon-seed.png",
+      "inputSHA256": "7786a6f996138e5a4b75be6dea5dd43521f2de6c3b43ec1581764ed68b911970"
+    },
+    {
+      "file": "assets/photos/silicon-shoulder.jpg",
+      "title": "FZU_AV_CR_Silicon_Single_Crystal_A.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:FZU_AV_CR_Silicon_Single_Crystal_A.jpg",
+      "used": true,
+      "modifications": "EXIF orientation; proportional contain on charcoal background, or central portrait crop. ComfyUI invents camera motion, not an actual recording.",
+      "sha256": "bf9ef05c85069bc0f3e287fb7fbbd553acf39b8418911776850e192aa2098f58",
+      "description": "Čeština:  Vzorek části monokrystalu křemíku prezentovaný na exkurzi v Oddělení tenkých vrstev a nanostruktur v Sekci fyziky pevných látek ve Fyzikálním ústavu Akademie věd České republiky, v.v.i. sídlícím v areálu bývalého Výzkumného ústavu československého průmyslu cukrovarnického v Praze ve Střešovicích (na adrese: Cukrovarnická 112/10)\nEnglish:  A sample of a silicon single crystal presented during a tour of the Department of Thin Films and Nanostructures in the Solid State Physics Section at the Institute of Physics of the Czech Academy of Sciences, located on the grounds of the former Czechoslovak Sugar Industry Research Institute in Prague-Střešovice (at the address: Cukrovarnická 112/10)",
+      "author": "Mojmir Churavy",
+      "date": "14 May 2026, 15:17:46",
+      "license": [
+        {
+          "name": "CC BY-SA 4.0",
+          "url": null
+        }
+      ],
+      "licenseText": [
+        "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original."
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "contentUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/FZU_AV_CR_Silicon_Single_Crystal_A.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0",
+          "acquireLicensePage": "//commons.wikimedia.org/wiki/File:FZU_AV_CR_Silicon_Single_Crystal_A.jpg",
+          "name": "FZU AV CR Silicon Single Crystal A",
+          "uploadDate": "2026-05-15 07:56:01",
+          "width": "3072 px",
+          "height": "2304 px",
+          "contentSize": 1546557,
+          "encodingFormat": "image/jpeg"
+        }
+      ],
+      "input": "assets/inputs/silicon-shoulder.png",
+      "inputSHA256": "af17578c24232a843ae08d2e8099c5f39ecb50b98881b2133edd28cb49767b83"
+    }
+  ],
+  "openingSources": "opening/assets/v3-real/sources.json",
+  "limits": "The Avogadro photo documents a silicon crystal experiment, not a generic industrial production line. Natural quartz is not evidence of industrial purity."
+}

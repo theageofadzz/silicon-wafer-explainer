@@ -1,0 +1,669 @@
+{
+  "file": "output/silicon-wafer-explainer-9x16.mp4",
+  "sha256": "045bad953fe6866d088e0c57a4886c00125b7e169a0ea5ac90f3dbae334636b1",
+  "duration": 174.25,
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 4182,
+  "shots": [
+    {
+      "name": "opening",
+      "startFrame": 0,
+      "endFrame": 729,
+      "source": "opening/sample-9x16-v3.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 30.375,
+      "timeScale": 1.0,
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "quartz-return",
+      "startFrame": 729,
+      "endFrame": 778,
+      "source": "opening/edit/v3/generated/quartz-macro.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.0416666666666665,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "silica",
+      "startFrame": 778,
+      "endFrame": 904,
+      "source": "generated/silica.mp4",
+      "sourceStart": 2.0416666666666665,
+      "sourceDuration": 5.25,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.914285714285715
+    },
+    {
+      "name": "reduction",
+      "startFrame": 904,
+      "endFrame": 1123,
+      "source": "generated/reduction.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.123287671232877
+    },
+    {
+      "name": "distill",
+      "startFrame": 1123,
+      "endFrame": 1359,
+      "source": "generated/distill.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.833333,
+      "timeScale": 1.0000000338983064,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.610169491525424
+    },
+    {
+      "name": "deposition",
+      "startFrame": 1359,
+      "endFrame": 1570,
+      "source": "generated/deposition.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.791666666666666,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.393364928909953
+    },
+    {
+      "name": "polycrystal",
+      "startFrame": 1570,
+      "endFrame": 1803,
+      "source": "generated/polycrystal.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.708333,
+      "timeScale": 1.0000000343347653,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.695278969957082
+    },
+    {
+      "name": "melt",
+      "startFrame": 1803,
+      "endFrame": 1972,
+      "source": "generated/melt.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 7.041666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 9.23076923076923
+    },
+    {
+      "name": "doping",
+      "startFrame": 1972,
+      "endFrame": 2178,
+      "source": "generated/doping.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.583333,
+      "timeScale": 1.000000038834953,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.572815533980583
+    },
+    {
+      "name": "silicon-seed",
+      "startFrame": 2178,
+      "endFrame": 2203,
+      "source": "generated/silicon-seed.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 1.0416666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "seed",
+      "startFrame": 2203,
+      "endFrame": 2399,
+      "source": "generated/seed.mp4",
+      "sourceStart": 1.0416666666666667,
+      "sourceDuration": 8.166666333333334,
+      "timeScale": 1.000000040816328,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.0588235294117645
+    },
+    {
+      "name": "growth",
+      "startFrame": 2399,
+      "endFrame": 2608,
+      "source": "generated/growth.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 8.708333,
+      "timeScale": 1.0000000382775136,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.464114832535885
+    },
+    {
+      "name": "silicon-shoulder",
+      "startFrame": 2608,
+      "endFrame": 2635,
+      "source": "generated/silicon-shoulder.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 1.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "trim",
+      "startFrame": 2635,
+      "endFrame": 2810,
+      "source": "generated/trim.mp4",
+      "sourceStart": 1.125,
+      "sourceDuration": 7.291666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.7227722772277225
+    },
+    {
+      "name": "slice",
+      "startFrame": 2810,
+      "endFrame": 3053,
+      "source": "generated/slice.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 10.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.419753086419753
+    },
+    {
+      "name": "lapping",
+      "startFrame": 3053,
+      "endFrame": 3237,
+      "source": "generated/lapping.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 7.666666666666667,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.478260869565217
+    },
+    {
+      "name": "polish",
+      "startFrame": 3237,
+      "endFrame": 3404,
+      "source": "generated/polish.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 6.958333333333333,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.167539267015707
+    },
+    {
+      "name": "mirror-result",
+      "startFrame": 3404,
+      "endFrame": 3428,
+      "source": "opening/edit/v3/generated/blank.mp4",
+      "sourceStart": 0.1,
+      "sourceDuration": 1.0,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "clean",
+      "startFrame": 3428,
+      "endFrame": 3662,
+      "source": "generated/clean.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.75,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.666666666666667
+    },
+    {
+      "name": "inspect",
+      "startFrame": 3662,
+      "endFrame": 3903,
+      "source": "generated/inspect.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 10.041666666666666,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 6.473029045643154
+    },
+    {
+      "name": "ending",
+      "startFrame": 3903,
+      "endFrame": 3962,
+      "source": "generated/ending.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.4583333333333335,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 5.591397849462366
+    },
+    {
+      "name": "blank-ending",
+      "startFrame": 3962,
+      "endFrame": 4072,
+      "source": "opening/edit/v3/generated/blank.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 3.375,
+      "timeScale": 1.3580246913580245,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "chip-ending",
+      "startFrame": 4072,
+      "endFrame": 4182,
+      "source": "opening/edit/v3/generated/chip.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.0416666666666665,
+      "timeScale": 2.2448979591836733,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    }
+  ],
+  "captions": [
+    {
+      "text": "石英的主要成分，是二氧化硅",
+      "start": 30.475,
+      "end": 33.345,
+      "scene": "silica"
+    },
+    {
+      "text": "硅和氧牢牢结合，先得把氧分开",
+      "start": 33.8,
+      "end": 36.669999999999995,
+      "scene": "silica"
+    },
+    {
+      "text": "石英和碳质还原剂进入电炉",
+      "start": 37.766666666666666,
+      "end": 40.66166666666666,
+      "scene": "reduction"
+    },
+    {
+      "text": "高温反应，得到工业硅",
+      "start": 40.87916666666666,
+      "end": 42.986666666666665,
+      "scene": "reduction"
+    },
+    {
+      "text": "但这一步，还远不够纯",
+      "start": 43.42916666666667,
+      "end": 45.78666666666666,
+      "scene": "reduction"
+    },
+    {
+      "text": "接着，把硅变成容易分离的氯硅烷",
+      "start": 46.891666666666666,
+      "end": 50.07416666666666,
+      "scene": "distill"
+    },
+    {
+      "text": "反复精馏，让不同组分分开",
+      "start": 50.516666666666666,
+      "end": 53.14916666666666,
+      "scene": "distill"
+    },
+    {
+      "text": "再把高纯原料送进反应炉",
+      "start": 53.36666666666667,
+      "end": 55.63666666666666,
+      "scene": "distill"
+    },
+    {
+      "text": "在加热的硅芯表面",
+      "start": 56.725,
+      "end": 58.32,
+      "scene": "deposition"
+    },
+    {
+      "text": "新的硅不断沉积，硅棒逐渐变粗",
+      "start": 58.4875,
+      "end": 61.62,
+      "scene": "deposition"
+    },
+    {
+      "text": "得到的，就是高纯多晶硅",
+      "start": 62.075,
+      "end": 64.4325,
+      "scene": "deposition"
+    },
+    {
+      "text": "纯，还不等于单晶",
+      "start": 65.51666666666667,
+      "end": 67.49916666666668,
+      "scene": "polycrystal"
+    },
+    {
+      "text": "多晶里的小晶粒，方向各不相同",
+      "start": 67.95416666666667,
+      "end": 70.97416666666668,
+      "scene": "polycrystal"
+    },
+    {
+      "text": "芯片需要的，是连续有序的晶体",
+      "start": 71.42916666666667,
+      "end": 74.13666666666667,
+      "scene": "polycrystal"
+    },
+    {
+      "text": "把高纯多晶硅装进石英坩埚",
+      "start": 75.225,
+      "end": 78.045,
+      "scene": "melt"
+    },
+    {
+      "text": "加热到一千四百多摄氏度",
+      "start": 78.15,
+      "end": 80.07000000000001,
+      "scene": "melt"
+    },
+    {
+      "text": "重新熔化",
+      "start": 80.125,
+      "end": 81.14500000000001,
+      "scene": "melt"
+    },
+    {
+      "text": "还可以加入极微量的硼或磷",
+      "start": 82.26666666666667,
+      "end": 84.68666666666668,
+      "scene": "doping"
+    },
+    {
+      "text": "调整电阻率",
+      "start": 84.74166666666667,
+      "end": 85.89916666666667,
+      "scene": "doping"
+    },
+    {
+      "text": "高纯，并不等于不能有受控掺杂",
+      "start": 86.32916666666667,
+      "end": 89.73666666666668,
+      "scene": "doping"
+    },
+    {
+      "text": "一小段籽晶接触熔体",
+      "start": 90.85,
+      "end": 92.72,
+      "scene": "seed"
+    },
+    {
+      "text": "再一边旋转，一边缓慢向上提拉",
+      "start": 92.8875,
+      "end": 95.62,
+      "scene": "seed"
+    },
+    {
+      "text": "新凝固的硅，沿着籽晶的方向生长",
+      "start": 96.075,
+      "end": 98.94500000000001,
+      "scene": "seed"
+    },
+    {
+      "text": "温度和拉速要配合得恰到好处",
+      "start": 100.05833333333332,
+      "end": 102.72833333333334,
+      "scene": "growth"
+    },
+    {
+      "text": "先拉细颈，再放肩",
+      "start": 103.17083333333333,
+      "end": 105.06583333333333,
+      "scene": "growth"
+    },
+    {
+      "text": "最后长出直径稳定的单晶棒",
+      "start": 105.23333333333333,
+      "end": 107.66583333333334,
+      "scene": "growth"
+    },
+    {
+      "text": "冷却后，切去头尾，修整外圆",
+      "start": 108.76666666666665,
+      "end": 111.82416666666666,
+      "scene": "trim"
+    },
+    {
+      "text": "再加工定位缺口",
+      "start": 111.87916666666666,
+      "end": 113.41166666666666,
+      "scene": "trim"
+    },
+    {
+      "text": "让后续设备认准晶体方向",
+      "start": 113.61666666666666,
+      "end": 116.06166666666667,
+      "scene": "trim"
+    },
+    {
+      "text": "接下来，金刚线像一排细密的锯",
+      "start": 117.18333333333332,
+      "end": 120.39083333333333,
+      "scene": "slice"
+    },
+    {
+      "text": "把晶棒同时切成许多薄片",
+      "start": 120.58333333333333,
+      "end": 122.85333333333334,
+      "scene": "slice"
+    },
+    {
+      "text": "切开之后，表面仍有锯痕和损伤",
+      "start": 123.30833333333332,
+      "end": 126.17833333333333,
+      "scene": "slice"
+    },
+    {
+      "text": "所以还要倒圆边缘",
+      "start": 127.30833333333332,
+      "end": 129.27833333333334,
+      "scene": "lapping"
+    },
+    {
+      "text": "研磨，控制厚度和平行度",
+      "start": 129.44583333333333,
+      "end": 131.85333333333332,
+      "scene": "lapping"
+    },
+    {
+      "text": "再蚀刻掉加工损伤层",
+      "start": 131.90833333333333,
+      "end": 133.90333333333334,
+      "scene": "lapping"
+    },
+    {
+      "text": "抛光时，抛光垫和抛光液共同作用",
+      "start": 134.975,
+      "end": 138.3075,
+      "scene": "polish"
+    },
+    {
+      "text": "把表面继续整平",
+      "start": 138.5,
+      "end": 140.10750000000002,
+      "scene": "polish"
+    },
+    {
+      "text": "直到形成均匀的镜面",
+      "start": 140.225,
+      "end": 141.82,
+      "scene": "polish"
+    },
+    {
+      "text": "接着清洗，去掉颗粒和残留污染",
+      "start": 142.93333333333334,
+      "end": 146.20333333333335,
+      "scene": "clean"
+    },
+    {
+      "text": "这时，任何一次接触",
+      "start": 146.65833333333333,
+      "end": 148.87833333333336,
+      "scene": "clean"
+    },
+    {
+      "text": "都要尽量避免重新弄脏表面",
+      "start": 148.98333333333335,
+      "end": 151.56583333333336,
+      "scene": "clean"
+    },
+    {
+      "text": "最后，用光学等方法检查颗粒和缺陷",
+      "start": 152.68333333333334,
+      "end": 156.67833333333334,
+      "scene": "inspect"
+    },
+    {
+      "text": "测量厚度与平整度",
+      "start": 156.92083333333335,
+      "end": 158.61583333333334,
+      "scene": "inspect"
+    },
+    {
+      "text": "合格的硅片，才能装盒出厂",
+      "start": 159.07083333333335,
+      "end": 161.60333333333335,
+      "scene": "inspect"
+    },
+    {
+      "text": "从一块石英，到一片镜面",
+      "start": 162.725,
+      "end": 164.945,
+      "scene": "ending"
+    },
+    {
+      "text": "真正难的，是把纯度、晶体和表面同时做好",
+      "start": 165.0875,
+      "end": 169.23250000000002,
+      "scene": "ending"
+    },
+    {
+      "text": "而光刻与晶体管的故事，才刚刚开始",
+      "start": 169.6875,
+      "end": 172.67000000000002,
+      "scene": "ending"
+    }
+  ],
+  "captionRendering": {
+    "font": "assets/fonts/NotoSansSC-Bold.otf",
+    "size": 55,
+    "glyphsVerified": true,
+    "maximumWidth": 930,
+    "safeY": [
+      1490,
+      1660
+    ],
+    "cueCount": 47
+  },
+  "soundEvents": [
+    {
+      "scene": "reduction",
+      "word": "高温",
+      "time": 40.87916666666666,
+      "duration": 0.36
+    },
+    {
+      "scene": "seed",
+      "word": "向上",
+      "time": 94.8,
+      "duration": 0.36
+    },
+    {
+      "scene": "slice",
+      "word": "切成",
+      "time": 121.68333333333332,
+      "duration": 0.36
+    },
+    {
+      "scene": "lapping",
+      "word": "研磨",
+      "time": 129.44583333333333,
+      "duration": 0.36
+    },
+    {
+      "scene": "clean",
+      "word": "去掉",
+      "time": 144.09583333333333,
+      "duration": 0.36
+    },
+    {
+      "scene": "inspect",
+      "word": "检查",
+      "time": 155.02083333333334,
+      "duration": 0.36
+    }
+  ],
+  "speechTiming": "Actual provider WordBoundary events /1e7 + verified segment audio offset",
+  "timeInterpolation": "Native 6–9fps guide resynthesis -> 24fps motion-compensated interpolation; I2V photos natively 24fps",
+  "decodeAndOCR": "Run production/verify.py on this output; assembly alone does not imply approval"
+}

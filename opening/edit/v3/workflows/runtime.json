@@ -1,0 +1,32 @@
+{
+  "recordedDate": "2026-11-05",
+  "platform": "darwin / Apple M4",
+  "unifiedMemoryBytes": 17179869184,
+  "comfyUI": {
+    "version": "0.34.0",
+    "gitCommit": "12d5279438bfefc058a269eae805ceab6047777f",
+    "frontendVersion": "1.49.6",
+    "pythonVersion": "3.13.12",
+    "pytorchVersion": "2.12.1",
+    "diffusionDevice": "mps",
+    "diffusionDtype": "float16",
+    "vaeDevice": "mps",
+    "vaeDtype": "bfloat16",
+    "textEncoderDevice": "cpu",
+    "cache": "none"
+  },
+  "nodeVersion": "24.14.0",
+  "playwrightVersion": "1.64.1",
+  "browserChannel": "chrome",
+  "ffmpegVersion": "9.0.1",
+  "ffmpegLibassAvailable": false,
+  "captionFallback": "Pillow FreeType RGBA strip and final FFmpeg overlay",
+  "portability": "Weights are excluded. The bundled guide and relative project paths are required. Different hardware may change diffusion pixels.",
+  "evidence": [
+    "ComfyUI /system_stats",
+    "git rev-parse HEAD",
+    "node --version",
+    "playwright/package.json",
+    "ffmpeg -version and -filters"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "config": {
+    "text": "接着，把硅变成容易分离的氯硅烷。反复精馏，让不同组分分开，再把高纯原料送进反应炉。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 5625000,
+      "text": "接着"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10625000,
+      "duration": 1875000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12500000,
+      "duration": 2375000,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15000000,
+      "duration": 3875000,
+      "text": "变成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19125000,
+      "duration": 2125000,
+      "text": "容易"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21375000,
+      "duration": 2875000,
+      "text": "分离"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24250000,
+      "duration": 1000000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25500000,
+      "duration": 1375000,
+      "text": "氯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26875000,
+      "duration": 4750000,
+      "text": "硅烷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37250000,
+      "duration": 4500000,
+      "text": "反复"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41875000,
+      "duration": 2125000,
+      "text": "精"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 44000000,
+      "duration": 3250000,
+      "text": "馏"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49625000,
+      "duration": 1750000,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51500000,
+      "duration": 3375000,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54875000,
+      "duration": 1250000,
+      "text": "组"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56250000,
+      "duration": 1875000,
+      "text": "分"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58125000,
+      "duration": 4250000,
+      "text": "分开"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 65750000,
+      "duration": 1625000,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 67375000,
+      "duration": 1125000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68750000,
+      "duration": 3625000,
+      "text": "高纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72375000,
+      "duration": 4250000,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 77750000,
+      "duration": 2750000,
+      "text": "送"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80500000,
+      "duration": 1250000,
+      "text": "进"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81875000,
+      "duration": 5375000,
+      "text": "反应炉"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

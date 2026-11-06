@@ -1,0 +1,14 @@
+{
+  "name": "silicon-wafer-explainer",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "preview": "node production/server.mjs",
+    "models": "node production/render.mjs",
+    "workflows": "node production/comfy.mjs all --export-only",
+    "generate": "node production/comfy.mjs all",
+    "verify": "python3 production/verify.py"
+  },
+  "dependencies": {"playwright":"1.64.1"}
+}

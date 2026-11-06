@@ -1,0 +1,156 @@
+{
+  "events": [
+    {
+      "event": "playing",
+      "time": 0,
+      "wallTime": 555
+    },
+    {
+      "event": "pause",
+      "time": 174.25,
+      "wallTime": 178767.90000000224
+    },
+    {
+      "event": "ended",
+      "time": 174.25,
+      "wallTime": 178769.69999999925
+    }
+  ],
+  "startedAt": 552.6000000014901,
+  "checkpoints": [
+    {
+      "time": 14.713645,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 29.767707,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 44.924151,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 59.808626,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 74.537831,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 86.956168,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 101.98897,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 116.549098,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 131.598776,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 146.647439,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 161.669185,
+      "ended": false,
+      "paused": false,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    },
+    {
+      "time": 174.25,
+      "ended": true,
+      "paused": true,
+      "readyState": 4,
+      "muted": false,
+      "rate": 1
+    }
+  ],
+  "elapsed": 180.6935,
+  "quality": {
+    "totalVideoFrames": 4182,
+    "droppedVideoFrames": 1
+  },
+  "info": {
+    "duration": 174.25,
+    "width": 1080,
+    "height": 1920
+  },
+  "errors": [],
+  "viewports": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bounds": {
+        "x": 169,
+        "y": 32,
+        "width": 470,
+        "height": 835.546875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 693.328125
+      }
+    }
+  ],
+  "scope": "Full normal-speed browser playback with audio enabled; no claim of human listening approval."
+}

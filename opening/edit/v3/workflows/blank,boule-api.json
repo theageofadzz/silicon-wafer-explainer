@@ -1,0 +1,290 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "ltxv",
+      "device": "cpu"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "Text, letters, subtitles, logo, watermark, illustration, cartoon, low polygon model, plastic, melting object, morphing geometry, pulsating surface, smeared details, unstable camera, flickering exposure."
+    }
+  },
+  "4": {
+    "class_type": "ManualSigmas",
+    "inputs": {
+      "sigmas": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+    }
+  },
+  "5": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler_ancestral"
+    }
+  },
+  "10": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-wafer.png"
+    }
+  },
+  "11": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "An authentic industrial documentary close-up of the smooth blank silicon wafer shown in the reference photograph. The camera makes a very slow shallow arc around the rigid wafer and moves slightly closer, revealing its thin circular edge and smooth polished face. A broad white studio reflection moves naturally across the silver surface as the viewpoint changes. The solid silicon disk retains exactly the same circular shape and material. Clean neutral silver highlights, realistic surface reflections, restrained black and gray surroundings, detailed premium macro cinematography. The subject is stationary. One stable continuous shot, no transitions. No chip patterns, writing, symbols or graphics."
+    }
+  },
+  "12": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "13": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "14": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "13",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 81,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105032,
+      "cfg": 1,
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "14",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "14",
+        2
+      ]
+    }
+  },
+  "16": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "17": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "blank"
+    }
+  },
+  "20": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-boule.png"
+    }
+  },
+  "21": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A documentary close-up of the real single crystal silicon boule in this photograph. The industrial ingot has a heavy reflective cylindrical body, fine concentric growth striations, a tapered shoulder and a thin seed neck. The camera makes a slow lateral dolly and a slight rise from the cylinder toward its tapered shoulder, creating natural parallax and changing reflections on the fixed solid surface. Preserve the exact shape and position of the silicon boule. Crisp silver metallic ridges, realistic workshop photography, neutral light, authentic manufacturing detail. One controlled continuous camera move. No growth transformation, no bending, no lettering, no overlays."
+    }
+  },
+  "22": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "23": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "24": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "22",
+        0
+      ],
+      "negative": [
+        "22",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "23",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 65,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "25": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105033,
+      "cfg": 1,
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "24",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "24",
+        2
+      ]
+    }
+  },
+  "26": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "25",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "27": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "26",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "boule"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "config": {
+    "text": "从一块石英，到一片镜面，真正难的，是把纯度、晶体和表面同时做好。而光刻与晶体管的故事，才刚刚开始。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 2375000,
+      "text": "从"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3375000,
+      "duration": 2000000,
+      "text": "一块"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5500000,
+      "duration": 5375000,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12750000,
+      "duration": 1750000,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 14625000,
+      "duration": 2750000,
+      "text": "一片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17500000,
+      "duration": 4500000,
+      "text": "镜面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24625000,
+      "duration": 4375000,
+      "text": "真正"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29000000,
+      "duration": 2500000,
+      "text": "难"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 31500000,
+      "duration": 2375000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35500000,
+      "duration": 1875000,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37375000,
+      "duration": 1000000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38625000,
+      "duration": 4500000,
+      "text": "纯度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46375000,
+      "duration": 4250000,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50875000,
+      "duration": 875000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51875000,
+      "duration": 4500000,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56625000,
+      "duration": 4125000,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60875000,
+      "duration": 4000000,
+      "text": "做好"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 70625000,
+      "duration": 1875000,
+      "text": "而"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72625000,
+      "duration": 4125000,
+      "text": "光刻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 77000000,
+      "duration": 1125000,
+      "text": "与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78250000,
+      "duration": 4500000,
+      "text": "晶体管"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82750000,
+      "duration": 750000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 83625000,
+      "duration": 4625000,
+      "text": "故事"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90250000,
+      "duration": 1625000,
+      "text": "才"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 92000000,
+      "duration": 3125000,
+      "text": "刚刚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 95250000,
+      "duration": 4000000,
+      "text": "开始"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

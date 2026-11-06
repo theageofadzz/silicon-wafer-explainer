@@ -1,0 +1,58 @@
+{
+  "1": {
+    "class_type": "WV3ExistingClip",
+    "inputs": {
+      "relative_path": "edit/v3/generated/chip.mp4"
+    }
+  },
+  "2": {
+    "class_type": "WV3ExistingClip",
+    "inputs": {
+      "relative_path": "edit/v3/generated/blank.mp4"
+    }
+  },
+  "3": {
+    "class_type": "WV3ExistingClip",
+    "inputs": {
+      "relative_path": "edit/v3/generated/boule.mp4"
+    }
+  },
+  "4": {
+    "class_type": "WV3ExistingClip",
+    "inputs": {
+      "relative_path": "edit/v3/generated/quartz.mp4"
+    }
+  },
+  "5": {
+    "class_type": "WV3ExistingClip",
+    "inputs": {
+      "relative_path": "edit/v3/generated/quartz-macro.mp4"
+    }
+  },
+  "90": {
+    "class_type": "WV3Assemble",
+    "inputs": {
+      "chip": [
+        "1",
+        0
+      ],
+      "blank": [
+        "2",
+        0
+      ],
+      "boule": [
+        "3",
+        0
+      ],
+      "quartz": [
+        "4",
+        0
+      ],
+      "quartz_macro": [
+        "5",
+        0
+      ],
+      "render_models": false
+    }
+  }
+}

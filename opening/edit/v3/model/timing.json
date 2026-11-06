@@ -1,0 +1,65 @@
+{
+  "fps": 24,
+  "width": 1080,
+  "height": 1920,
+  "duration": 30.375,
+  "frameCount": 729,
+  "timeConvention": "global seconds; zero-based start-inclusive/end-exclusive frame windows",
+  "windows": [
+    {"id": "measure", "startFrame": 115, "endFrame": 222},
+    {"id": "slicing", "startFrame": 277, "endFrame": 341},
+    {"id": "lattice", "startFrame": 375, "endFrame": 450},
+    {"id": "thin", "startFrame": 450, "endFrame": 507},
+    {"id": "purity-integrity", "startFrame": 507, "endFrame": 566}
+  ],
+  "shots": [
+    {"id": "diameter-full", "startFrame": 115, "endFrame": 155},
+    {"id": "thickness-edge", "startFrame": 155, "endFrame": 179},
+    {"id": "thickness-macro", "startFrame": 179, "endFrame": 222},
+    {"id": "cutting-three-quarter", "startFrame": 277, "endFrame": 302},
+    {"id": "cutting-end-face", "startFrame": 302, "endFrame": 341},
+    {"id": "tetrahedral-macro", "startFrame": 375, "endFrame": 407},
+    {"id": "crystal-inside", "startFrame": 407, "endFrame": 450},
+    {"id": "thin-oblique", "startFrame": 450, "endFrame": 484},
+    {"id": "thin-grazing", "startFrame": 484, "endFrame": 507},
+    {"id": "purity-site", "startFrame": 507, "endFrame": 542},
+    {"id": "crystal-continuity", "startFrame": 542, "endFrame": 566}
+  ],
+  "wordAnchors": {
+    "diameter": 4.926,
+    "thirtyCentimetres": 5.3135,
+    "thickness": 6.4385,
+    "oneMillimetre": 7.451,
+    "then": 11.5955,
+    "cutInto": 11.7705,
+    "oneSlice": 12.1205,
+    "thinSlices": 12.583,
+    "inside": 15.667,
+    "arrangement": 16.1795,
+    "siliconAtoms": 16.942,
+    "makingThin": 20.1565,
+    "also": 21.1815,
+    "pure": 21.9065,
+    "lattice": 22.569,
+    "intact": 22.9315
+  },
+  "geometry": {
+    "worldUnitMillimetres": 50,
+    "waferDiameterMillimetres": 300,
+    "waferThicknessMillimetres": 0.775,
+    "thicknessIsRepresentativeSpecification": true,
+    "lattice": "diamond cubic: FCC plus quarter-cell basis; nearest neighbours only",
+    "slicingKerfMillimetres": 0.2,
+    "sliceCount": 6,
+    "separatedSliceSpacingIsExaggerated": true
+  },
+  "handoff": {
+    "output": "model.mp4",
+    "command": "node render.mjs --render",
+    "inactiveFrames": "black; replace with photo/I2V EDL shots",
+    "audio": false,
+    "narrationCaptions": false,
+    "branding": false,
+    "quartzPlaceholder": false
+  }
+}

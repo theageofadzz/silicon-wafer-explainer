@@ -1,0 +1,136 @@
+{
+  "config": {
+    "text": "纯，还不等于单晶。多晶里的小晶粒，方向各不相同。芯片需要的，是连续有序的晶体。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 4750000,
+      "text": "纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10500000,
+      "duration": 1750000,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12250000,
+      "duration": 875000,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13250000,
+      "duration": 1875000,
+      "text": "等于"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15250000,
+      "duration": 4375000,
+      "text": "单晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25375000,
+      "duration": 4500000,
+      "text": "多晶里"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29875000,
+      "duration": 875000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 31000000,
+      "duration": 2125000,
+      "text": "小"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33125000,
+      "duration": 4500000,
+      "text": "晶粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40625000,
+      "duration": 5125000,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46000000,
+      "duration": 2125000,
+      "text": "各"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48125000,
+      "duration": 875000,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49125000,
+      "duration": 5250000,
+      "text": "相同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60125000,
+      "duration": 4375000,
+      "text": "芯片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64625000,
+      "duration": 3250000,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 67875000,
+      "duration": 2625000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72625000,
+      "duration": 2000000,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74750000,
+      "duration": 3125000,
+      "text": "连续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78000000,
+      "duration": 3000000,
+      "text": "有序"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81000000,
+      "duration": 750000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81875000,
+      "duration": 4125000,
+      "text": "晶体"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

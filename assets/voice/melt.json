@@ -1,0 +1,88 @@
+{
+  "config": {
+    "text": "把高纯多晶硅装进石英坩埚，加热到一千四百多摄氏度，重新熔化。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 2625000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3875000,
+      "duration": 5125000,
+      "text": "高纯多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9000000,
+      "duration": 3250000,
+      "text": "晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13250000,
+      "duration": 4250000,
+      "text": "硅装"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17500000,
+      "duration": 1750000,
+      "text": "进"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19500000,
+      "duration": 3625000,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23250000,
+      "duration": 4750000,
+      "text": "坩埚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30250000,
+      "duration": 3125000,
+      "text": "加热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33375000,
+      "duration": 2000000,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35625000,
+      "duration": 7625000,
+      "text": "一千四百多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43375000,
+      "duration": 4875000,
+      "text": "摄氏度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50000000,
+      "duration": 5000000,
+      "text": "重新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55125000,
+      "duration": 3875000,
+      "text": "熔化"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

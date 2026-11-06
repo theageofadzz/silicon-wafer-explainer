@@ -1,0 +1,721 @@
+{
+  "file": "output/silicon-wafer-explainer-9x16.mp4",
+  "sha256": "045bad953fe6866d088e0c57a4886c00125b7e169a0ea5ac90f3dbae334636b1",
+  "fullDecode": "passed",
+  "width": 1080,
+  "height": 1920,
+  "frames": 4182,
+  "fps": 24,
+  "duration": 174.25,
+  "sampleRate": 48000,
+  "pictureCoverage": "contiguous",
+  "fontGlyphs": "passed",
+  "captionLayout": "passed",
+  "speechTiming": [
+    {
+      "scene": "silica",
+      "words": 15,
+      "maximumStartError": 0,
+      "readingHold": 1.1166666666666671
+    },
+    {
+      "scene": "reduction",
+      "words": 19,
+      "maximumStartError": 0,
+      "readingHold": 1.125
+    },
+    {
+      "scene": "distill",
+      "words": 24,
+      "maximumStartError": 0,
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "scene": "deposition",
+      "words": 20,
+      "maximumStartError": 0,
+      "readingHold": 1.1041666666666714
+    },
+    {
+      "scene": "polycrystal",
+      "words": 21,
+      "maximumStartError": 0,
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "scene": "melt",
+      "words": 13,
+      "maximumStartError": 0,
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "scene": "doping",
+      "words": 19,
+      "maximumStartError": 0,
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "scene": "seed",
+      "words": 22,
+      "maximumStartError": 0,
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "scene": "growth",
+      "words": 20,
+      "maximumStartError": 0,
+      "readingHold": 1.120833333333323
+    },
+    {
+      "scene": "trim",
+      "words": 16,
+      "maximumStartError": 0,
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "scene": "slice",
+      "words": 22,
+      "maximumStartError": 0,
+      "readingHold": 1.1500000000000057
+    },
+    {
+      "scene": "lapping",
+      "words": 16,
+      "maximumStartError": 0,
+      "readingHold": 1.0916666666666686
+    },
+    {
+      "scene": "polish",
+      "words": 16,
+      "maximumStartError": 0,
+      "readingHold": 1.1333333333333542
+    },
+    {
+      "scene": "clean",
+      "words": 18,
+      "maximumStartError": 0,
+      "readingHold": 1.1374999999999886
+    },
+    {
+      "scene": "inspect",
+      "words": 19,
+      "maximumStartError": 0,
+      "readingHold": 1.1416666666666515
+    },
+    {
+      "scene": "ending",
+      "words": 26,
+      "maximumStartError": 0,
+      "readingHold": 1.6999999999999886
+    }
+  ],
+  "ocr": {
+    "status": "ran",
+    "exact": 60,
+    "count": 62,
+    "manualReviewRequired": true,
+    "checks": [
+      {
+        "cue": 0,
+        "expected": "一颗硅芯片",
+        "time": 0.90625,
+        "frame": "caption-00.png",
+        "recognized": "一颗硅芯片",
+        "similarity": 1
+      },
+      {
+        "cue": 1,
+        "expected": "最初，只是这样一片硅",
+        "time": 2.79,
+        "frame": "caption-01.png",
+        "recognized": "最初，只是这样一片硅",
+        "similarity": 1
+      },
+      {
+        "cue": 2,
+        "expected": "直径三十厘米",
+        "time": 5.61975,
+        "frame": "caption-02.png",
+        "recognized": "直径三十厘米",
+        "similarity": 1
+      },
+      {
+        "cue": 3,
+        "expected": "厚度却不到一毫米",
+        "time": 7.441000000000001,
+        "frame": "caption-03.png",
+        "recognized": "厚度却不到一毫米",
+        "similarity": 1
+      },
+      {
+        "cue": 4,
+        "expected": "它要先长成一整根单晶",
+        "time": 10.47425,
+        "frame": "caption-04.png",
+        "recognized": "包要先长成一整根单晶",
+        "similarity": 0.9
+      },
+      {
+        "cue": 5,
+        "expected": "再切成一片片薄片",
+        "time": 12.54175,
+        "frame": "caption-05.png",
+        "recognized": "再切成一片片薄片",
+        "similarity": 1
+      },
+      {
+        "cue": 6,
+        "expected": "外面像镜子",
+        "time": 14.960749999999997,
+        "frame": "caption-06.png",
+        "recognized": "外面像镜子",
+        "similarity": 1
+      },
+      {
+        "cue": 7,
+        "expected": "里面却是",
+        "time": 15.92325,
+        "frame": "caption-07.png",
+        "recognized": "里面却是",
+        "similarity": 1
+      },
+      {
+        "cue": 8,
+        "expected": "排列整齐的硅原子",
+        "time": 17.082,
+        "frame": "caption-08.png",
+        "recognized": "排列整齐的硅原子",
+        "similarity": 1
+      },
+      {
+        "cue": 9,
+        "expected": "难的，不只是做薄",
+        "time": 19.95025,
+        "frame": "caption-09.png",
+        "recognized": "难的，不只是做薄",
+        "similarity": 1
+      },
+      {
+        "cue": 10,
+        "expected": "还要足够纯",
+        "time": 21.8315,
+        "frame": "caption-10.png",
+        "recognized": "还要足够纯",
+        "similarity": 1
+      },
+      {
+        "cue": 11,
+        "expected": "晶格完整",
+        "time": 23.0565,
+        "frame": "caption-11.png",
+        "recognized": "晶格完整",
+        "similarity": 1
+      },
+      {
+        "cue": 12,
+        "expected": "表面足够平",
+        "time": 24.45025,
+        "frame": "caption-12.png",
+        "recognized": "表面足够平",
+        "similarity": 1
+      },
+      {
+        "cue": 13,
+        "expected": "而这一切",
+        "time": 26.584000000000003,
+        "frame": "caption-13.png",
+        "recognized": "而这一切",
+        "similarity": 1
+      },
+      {
+        "cue": 14,
+        "expected": "要从一块石英开始",
+        "time": 28.32775,
+        "frame": "caption-14.png",
+        "recognized": "要从一块石英开始",
+        "similarity": 1
+      },
+      {
+        "cue": 15,
+        "expected": "石英的主要成分，是二氧化硅",
+        "time": 31.91,
+        "frame": "caption-15.png",
+        "recognized": "石英的主要成分，是二氧化硅",
+        "similarity": 1
+      },
+      {
+        "cue": 16,
+        "expected": "硅和氧牢牢结合，先得把氧分开",
+        "time": 35.235,
+        "frame": "caption-16.png",
+        "recognized": "硅和氧牢牢结合，先得把氧分开",
+        "similarity": 1
+      },
+      {
+        "cue": 17,
+        "expected": "石英和碳质还原剂进入电炉",
+        "time": 39.214166666666664,
+        "frame": "caption-17.png",
+        "recognized": "石英和碳质还原剂进入电炉",
+        "similarity": 1
+      },
+      {
+        "cue": 18,
+        "expected": "高温反应，得到工业硅",
+        "time": 41.932916666666664,
+        "frame": "caption-18.png",
+        "recognized": "高温反应。得到工业硅",
+        "similarity": 1
+      },
+      {
+        "cue": 19,
+        "expected": "但这一步，还远不够纯",
+        "time": 44.60791666666667,
+        "frame": "caption-19.png",
+        "recognized": "但这一步，还远不够纯",
+        "similarity": 1
+      },
+      {
+        "cue": 20,
+        "expected": "接着，把硅变成容易分离的氯硅烷",
+        "time": 48.48291666666667,
+        "frame": "caption-20.png",
+        "recognized": "接着，把硅变成容易分离的氯硅烷",
+        "similarity": 1
+      },
+      {
+        "cue": 21,
+        "expected": "反复精馏，让不同组分分开",
+        "time": 51.83291666666666,
+        "frame": "caption-21.png",
+        "recognized": "反复精馏，让不同组分分开",
+        "similarity": 1
+      },
+      {
+        "cue": 22,
+        "expected": "再把高纯原料送进反应炉",
+        "time": 54.501666666666665,
+        "frame": "caption-22.png",
+        "recognized": "再把高纯原料送进反应炉",
+        "similarity": 1
+      },
+      {
+        "cue": 23,
+        "expected": "在加热的硅芯表面",
+        "time": 57.5225,
+        "frame": "caption-23.png",
+        "recognized": "在加热的硅芯表面",
+        "similarity": 1
+      },
+      {
+        "cue": 24,
+        "expected": "新的硅不断沉积，硅棒逐渐变粗",
+        "time": 60.053749999999994,
+        "frame": "caption-24.png",
+        "recognized": "新的硅不断沉积，硅棒逐渐变粗",
+        "similarity": 1
+      },
+      {
+        "cue": 25,
+        "expected": "得到的，就是高纯多晶硅",
+        "time": 63.253750000000004,
+        "frame": "caption-25.png",
+        "recognized": "得到的，就是富纯多晶硅",
+        "similarity": 0.9
+      },
+      {
+        "cue": 26,
+        "expected": "纯，还不等于单晶",
+        "time": 66.50791666666667,
+        "frame": "caption-26.png",
+        "recognized": "纯，还不等于单晶",
+        "similarity": 1
+      },
+      {
+        "cue": 27,
+        "expected": "多晶里的小晶粒，方向各不相同",
+        "time": 69.46416666666667,
+        "frame": "caption-27.png",
+        "recognized": "多晶里的小晶粒，方向各不相同",
+        "similarity": 1
+      },
+      {
+        "cue": 28,
+        "expected": "芯片需要的，是连续有序的晶体",
+        "time": 72.78291666666667,
+        "frame": "caption-28.png",
+        "recognized": "芯片需要的。是连续有序的晶体",
+        "similarity": 1
+      },
+      {
+        "cue": 29,
+        "expected": "把高纯多晶硅装进石英坩埚",
+        "time": 76.63499999999999,
+        "frame": "caption-29.png",
+        "recognized": "把高纯多晶硅装进石英坩埚",
+        "similarity": 1
+      },
+      {
+        "cue": 30,
+        "expected": "加热到一千四百多摄氏度",
+        "time": 79.11000000000001,
+        "frame": "caption-30.png",
+        "recognized": "加热到一千四百多摄氏度",
+        "similarity": 1
+      },
+      {
+        "cue": 31,
+        "expected": "重新熔化",
+        "time": 80.635,
+        "frame": "caption-31.png",
+        "recognized": "重新熔化",
+        "similarity": 1
+      },
+      {
+        "cue": 32,
+        "expected": "还可以加入极微量的硼或磷",
+        "time": 83.47666666666667,
+        "frame": "caption-32.png",
+        "recognized": "还可以加入极微量的硼或磷",
+        "similarity": 1
+      },
+      {
+        "cue": 33,
+        "expected": "调整电阻率",
+        "time": 85.32041666666667,
+        "frame": "caption-33.png",
+        "recognized": "调整电阻率",
+        "similarity": 1
+      },
+      {
+        "cue": 34,
+        "expected": "高纯，并不等于不能有受控掺杂",
+        "time": 88.03291666666667,
+        "frame": "caption-34.png",
+        "recognized": "高纯，并不等于不能有受控掺杂",
+        "similarity": 1
+      },
+      {
+        "cue": 35,
+        "expected": "一小段籽晶接触熔体",
+        "time": 91.785,
+        "frame": "caption-35.png",
+        "recognized": "一小段籽晶接触熔体",
+        "similarity": 1
+      },
+      {
+        "cue": 36,
+        "expected": "再一边旋转，一边缓慢向上提拉",
+        "time": 94.25375,
+        "frame": "caption-36.png",
+        "recognized": "再一边旋转，一边缓慢向上提拉",
+        "similarity": 1
+      },
+      {
+        "cue": 37,
+        "expected": "新凝固的硅，沿着籽晶的方向生长",
+        "time": 97.51,
+        "frame": "caption-37.png",
+        "recognized": "新凝固的硅，沿着籽晶的方向生长",
+        "similarity": 1
+      },
+      {
+        "cue": 38,
+        "expected": "温度和拉速要配合得恰到好处",
+        "time": 101.39333333333333,
+        "frame": "caption-38.png",
+        "recognized": "温度和拉速要配合得恰到好处",
+        "similarity": 1
+      },
+      {
+        "cue": 39,
+        "expected": "先拉细颈，再放肩",
+        "time": 104.11833333333334,
+        "frame": "caption-39.png",
+        "recognized": "先拉细颈。再放肩",
+        "similarity": 1
+      },
+      {
+        "cue": 40,
+        "expected": "最后长出直径稳定的单晶棒",
+        "time": 106.44958333333334,
+        "frame": "caption-40.png",
+        "recognized": "最后长出直径稳定的单晶棒",
+        "similarity": 1
+      },
+      {
+        "cue": 41,
+        "expected": "冷却后，切去头尾，修整外圆",
+        "time": 110.29541666666665,
+        "frame": "caption-41.png",
+        "recognized": "冷却后，切去头尾，修整外圆",
+        "similarity": 1
+      },
+      {
+        "cue": 42,
+        "expected": "再加工定位缺口",
+        "time": 112.64541666666666,
+        "frame": "caption-42.png",
+        "recognized": "再加工定位缺口",
+        "similarity": 1
+      },
+      {
+        "cue": 43,
+        "expected": "让后续设备认准晶体方向",
+        "time": 114.83916666666667,
+        "frame": "caption-43.png",
+        "recognized": "让后续设备认准晶体方向",
+        "similarity": 1
+      },
+      {
+        "cue": 44,
+        "expected": "接下来，金刚线像一排细密的锯",
+        "time": 118.78708333333333,
+        "frame": "caption-44.png",
+        "recognized": "接下来，金刚线像一排细密的锯",
+        "similarity": 1
+      },
+      {
+        "cue": 45,
+        "expected": "把晶棒同时切成许多薄片",
+        "time": 121.71833333333333,
+        "frame": "caption-45.png",
+        "recognized": "把晶棒同时切成许多薄片",
+        "similarity": 1
+      },
+      {
+        "cue": 46,
+        "expected": "切开之后，表面仍有锯痕和损伤",
+        "time": 124.74333333333333,
+        "frame": "caption-46.png",
+        "recognized": "切开之后，表面仍有锯痕和损伤",
+        "similarity": 1
+      },
+      {
+        "cue": 47,
+        "expected": "所以还要倒圆边缘",
+        "time": 128.29333333333332,
+        "frame": "caption-47.png",
+        "recognized": "所以还要倒圆边缘",
+        "similarity": 1
+      },
+      {
+        "cue": 48,
+        "expected": "研磨，控制厚度和平行度",
+        "time": 130.64958333333334,
+        "frame": "caption-48.png",
+        "recognized": "研磨，控制厚度和平行度",
+        "similarity": 1
+      },
+      {
+        "cue": 49,
+        "expected": "再蚀刻掉加工损伤层",
+        "time": 132.90583333333333,
+        "frame": "caption-49.png",
+        "recognized": "再蚀刻掉加工损伤层",
+        "similarity": 1
+      },
+      {
+        "cue": 50,
+        "expected": "抛光时，抛光垫和抛光液共同作用",
+        "time": 136.64125,
+        "frame": "caption-50.png",
+        "recognized": "抛光时，抛光垫和抛光液共同作用",
+        "similarity": 1
+      },
+      {
+        "cue": 51,
+        "expected": "把表面继续整平",
+        "time": 139.30375,
+        "frame": "caption-51.png",
+        "recognized": "把表面继续整平",
+        "similarity": 1
+      },
+      {
+        "cue": 52,
+        "expected": "直到形成均匀的镜面",
+        "time": 141.02249999999998,
+        "frame": "caption-52.png",
+        "recognized": "直到形成均匀的镜面",
+        "similarity": 1
+      },
+      {
+        "cue": 53,
+        "expected": "接着清洗，去掉颗粒和残留污染",
+        "time": 144.56833333333333,
+        "frame": "caption-53.png",
+        "recognized": "接着清洗，去掉颗粒和残留污染",
+        "similarity": 1
+      },
+      {
+        "cue": 54,
+        "expected": "这时，任何一次接触",
+        "time": 147.76833333333335,
+        "frame": "caption-54.png",
+        "recognized": "这时，任何一次接触",
+        "similarity": 1
+      },
+      {
+        "cue": 55,
+        "expected": "都要尽量避免重新弄脏表面",
+        "time": 150.27458333333334,
+        "frame": "caption-55.png",
+        "recognized": "都要尽量避免重新弄脏表面",
+        "similarity": 1
+      },
+      {
+        "cue": 56,
+        "expected": "最后，用光学等方法检查颗粒和缺陷",
+        "time": 154.68083333333334,
+        "frame": "caption-56.png",
+        "recognized": "最后，用光学等方法检查颗粒和缺陷",
+        "similarity": 1
+      },
+      {
+        "cue": 57,
+        "expected": "测量厚度与平整度",
+        "time": 157.76833333333335,
+        "frame": "caption-57.png",
+        "recognized": "测量厚度与平整度",
+        "similarity": 1
+      },
+      {
+        "cue": 58,
+        "expected": "合格的硅片，才能装盒出厂",
+        "time": 160.33708333333334,
+        "frame": "caption-58.png",
+        "recognized": "合格的硅片，才能装盒出厂",
+        "similarity": 1
+      },
+      {
+        "cue": 59,
+        "expected": "从一块石英，到一片镜面",
+        "time": 163.83499999999998,
+        "frame": "caption-59.png",
+        "recognized": "从一块石英，到一片镜面",
+        "similarity": 1
+      },
+      {
+        "cue": 60,
+        "expected": "真正难的，是把纯度、晶体和表面同时做好",
+        "time": 167.16000000000003,
+        "frame": "caption-60.png",
+        "recognized": "真正难的，是把纯度、晶体和表面同时做好",
+        "similarity": 1
+      },
+      {
+        "cue": 61,
+        "expected": "而光刻与晶体管的故事，才刚刚开始",
+        "time": 171.17875,
+        "frame": "caption-61.png",
+        "recognized": "而光刻与晶体管的故事，才刚刚开始",
+        "similarity": 1
+      }
+    ]
+  },
+  "actionSequences": [
+    {
+      "scene": "silica",
+      "word": "把氧",
+      "at": 35.825,
+      "contact": "action-silica.jpg"
+    },
+    {
+      "scene": "reduction",
+      "word": "高温",
+      "at": 40.87916666666666,
+      "contact": "action-reduction.jpg"
+    },
+    {
+      "scene": "distill",
+      "word": "精馏",
+      "at": 50.979166666666664,
+      "contact": "action-distill.jpg"
+    },
+    {
+      "scene": "deposition",
+      "word": "沉积",
+      "at": 59.4125,
+      "contact": "action-deposition.jpg"
+    },
+    {
+      "scene": "polycrystal",
+      "word": "方向",
+      "at": 69.47916666666667,
+      "contact": "action-polycrystal.jpg"
+    },
+    {
+      "scene": "melt",
+      "word": "熔化",
+      "at": 80.6375,
+      "contact": "action-melt.jpg"
+    },
+    {
+      "scene": "doping",
+      "word": "加入",
+      "at": 82.66666666666667,
+      "contact": "action-doping.jpg"
+    },
+    {
+      "scene": "seed",
+      "word": "向上",
+      "at": 94.8,
+      "contact": "action-seed.jpg"
+    },
+    {
+      "scene": "growth",
+      "word": "放肩",
+      "at": 104.43333333333332,
+      "contact": "action-growth.jpg"
+    },
+    {
+      "scene": "trim",
+      "word": "切去",
+      "at": 109.79166666666666,
+      "contact": "action-trim.jpg"
+    },
+    {
+      "scene": "slice",
+      "word": "切成",
+      "at": 121.68333333333332,
+      "contact": "action-slice.jpg"
+    },
+    {
+      "scene": "lapping",
+      "word": "研磨",
+      "at": 129.44583333333333,
+      "contact": "action-lapping.jpg"
+    },
+    {
+      "scene": "polish",
+      "word": "整平",
+      "at": 139.45,
+      "contact": "action-polish.jpg"
+    },
+    {
+      "scene": "clean",
+      "word": "去掉",
+      "at": 144.09583333333333,
+      "contact": "action-clean.jpg"
+    },
+    {
+      "scene": "inspect",
+      "word": "检查",
+      "at": 155.02083333333334,
+      "contact": "action-inspect.jpg"
+    },
+    {
+      "scene": "ending",
+      "word": "同时",
+      "at": 168.2875,
+      "contact": "action-ending.jpg"
+    }
+  ],
+  "normalSpeedPlayback": {
+    "status": "completed",
+    "rate": 1,
+    "audioEnabled": true,
+    "report": "review/playback.json"
+  },
+  "humanAudioReview": "not performed; automated decoding and playback do not constitute listening approval."
+}

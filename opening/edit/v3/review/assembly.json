@@ -1,0 +1,383 @@
+{
+  "revision": 3,
+  "fps": 24,
+  "duration": 30.375,
+  "frames": 729,
+  "nativeI2VFramesInFinal": 424,
+  "nativeI2VSecondsInFinal": 17.666666666666668,
+  "nativeDiffusionSecondsInFinal": 17.666666666666668,
+  "realPhotoI2VSecondsInFinal": 8.25,
+  "guidedDiffusionSecondsInFinal": 9.416666666666666,
+  "shots": [
+    {
+      "source": "chip",
+      "file": "edit/v3/generated/chip.mp4",
+      "startFrame": 0,
+      "endFrame": 36,
+      "sourceStartFrame": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "speechAnchor": "芯片",
+      "pictureAction": "加工晶圆的真实芯片阵列，近景侧移",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX real-photo I2V",
+      "inputKind": "real photograph"
+    },
+    {
+      "source": "blank",
+      "file": "edit/v3/generated/blank.mp4",
+      "startFrame": 36,
+      "endFrame": 115,
+      "sourceStartFrame": 0,
+      "start": 1.5,
+      "end": 4.791666666666667,
+      "speechAnchor": "最初",
+      "pictureAction": "三维运动约束的空白硅片，由ComfyUI生成镜面变化",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX guided video",
+      "inputKind": "guide-video"
+    },
+    {
+      "source": "model",
+      "file": "edit/v3/model/model.mp4",
+      "startFrame": 115,
+      "endFrame": 222,
+      "sourceStartFrame": 115,
+      "start": 4.791666666666667,
+      "end": 9.25,
+      "speechAnchor": "直径／厚度",
+      "pictureAction": "全貌尺寸测量→侧面薄边→局部厚度",
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "method": "exact modeled geometry",
+      "inputKind": "exact 3D"
+    },
+    {
+      "source": "boule",
+      "file": "edit/v3/generated/boule.mp4",
+      "startFrame": 222,
+      "endFrame": 277,
+      "sourceStartFrame": 0,
+      "start": 9.25,
+      "end": 11.541666666666666,
+      "speechAnchor": "长成／单晶",
+      "pictureAction": "真实晶棒的实体形状及生长纹",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX real-photo I2V",
+      "inputKind": "real photograph"
+    },
+    {
+      "source": "model",
+      "file": "edit/v3/model/model.mp4",
+      "startFrame": 277,
+      "endFrame": 341,
+      "sourceStartFrame": 277,
+      "start": 11.541666666666666,
+      "end": 14.208333333333334,
+      "speechAnchor": "再切成",
+      "pictureAction": "切口与原有片体连续分离，切至端面机位",
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "method": "exact modeled geometry",
+      "inputKind": "exact 3D"
+    },
+    {
+      "source": "blank",
+      "file": "edit/v3/generated/blank.mp4",
+      "startFrame": 341,
+      "endFrame": 375,
+      "sourceStartFrame": 8,
+      "start": 14.208333333333334,
+      "end": 15.625,
+      "speechAnchor": "外面像镜子",
+      "pictureAction": "平面约束下的硅片长条反射",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX guided video",
+      "inputKind": "guide-video"
+    },
+    {
+      "source": "model",
+      "file": "edit/v3/model/model.mp4",
+      "startFrame": 375,
+      "endFrame": 450,
+      "sourceStartFrame": 375,
+      "start": 15.625,
+      "end": 18.75,
+      "speechAnchor": "里面／排列整齐",
+      "pictureAction": "尺度切换进入晶格，沿晶向推进",
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "method": "exact modeled geometry",
+      "inputKind": "exact 3D"
+    },
+    {
+      "source": "blank",
+      "file": "edit/v3/generated/blank.mp4",
+      "startFrame": 450,
+      "endFrame": 507,
+      "sourceStartFrame": 18,
+      "start": 18.75,
+      "end": 21.125,
+      "speechAnchor": "不只是做薄",
+      "pictureAction": "回到引导生成的硅片外观，再转向内部要求",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX guided video",
+      "inputKind": "guide-video"
+    },
+    {
+      "source": "model",
+      "file": "edit/v3/model/model.mp4",
+      "startFrame": 507,
+      "endFrame": 566,
+      "sourceStartFrame": 507,
+      "start": 21.125,
+      "end": 23.583333333333332,
+      "speechAnchor": "纯／完整",
+      "pictureAction": "突出非预期杂质的位置，再展示完整晶格",
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "method": "exact modeled geometry",
+      "inputKind": "exact 3D"
+    },
+    {
+      "source": "blank",
+      "file": "edit/v3/generated/blank.mp4",
+      "startFrame": 566,
+      "endFrame": 622,
+      "sourceStartFrame": 23,
+      "start": 23.583333333333332,
+      "end": 25.916666666666668,
+      "speechAnchor": "表面足够平",
+      "pictureAction": "在受平面约束的硅片上观察连续镜面反射",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX guided video",
+      "inputKind": "guide-video"
+    },
+    {
+      "source": "quartz",
+      "file": "edit/v3/generated/quartz.mp4",
+      "startFrame": 622,
+      "endFrame": 666,
+      "sourceStartFrame": 0,
+      "start": 25.916666666666668,
+      "end": 27.75,
+      "speechAnchor": "而这一切／一块",
+      "pictureAction": "真实乳白石英全貌与浅角度视差",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX real-photo I2V",
+      "inputKind": "real photograph"
+    },
+    {
+      "source": "quartz-macro",
+      "file": "edit/v3/generated/quartz-macro.mp4",
+      "startFrame": 666,
+      "endFrame": 729,
+      "sourceStartFrame": 0,
+      "start": 27.75,
+      "end": 30.375,
+      "speechAnchor": "石英／开始",
+      "pictureAction": "同一真实石英的断口、内部裂纹与透光细节",
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "method": "native ComfyUI LTX real-photo I2V",
+      "inputKind": "real photograph"
+    }
+  ],
+  "captions": [
+    {
+      "id": "chip",
+      "scene": "wafer",
+      "text": "一颗硅芯片",
+      "from": "一",
+      "to": "芯片",
+      "hold": 0.2,
+      "start": 0.30000000000000004,
+      "end": 1.5125
+    },
+    {
+      "id": "blank",
+      "scene": "wafer",
+      "text": "最初，只是这样一片硅",
+      "from": "最初",
+      "to": {
+        "word": "硅",
+        "occurrence": 2
+      },
+      "hold": 0.48,
+      "start": 1.5875,
+      "end": 3.9925
+    },
+    {
+      "id": "diameter",
+      "scene": "measure",
+      "text": "直径三十厘米",
+      "from": "直径",
+      "to": "三十厘米",
+      "hold": 0.25,
+      "start": 4.926,
+      "end": 6.3135
+    },
+    {
+      "id": "thickness",
+      "scene": "measure",
+      "text": "厚度却不到一毫米",
+      "from": "厚度",
+      "to": "一毫米",
+      "hold": 0.48,
+      "start": 6.4385,
+      "end": 8.4435
+    },
+    {
+      "id": "single-crystal",
+      "scene": "boule",
+      "text": "它要先长成一整根单晶",
+      "from": "它",
+      "to": "单晶",
+      "hold": 0.12,
+      "start": 9.408,
+      "end": 11.5405
+    },
+    {
+      "id": "slice",
+      "scene": "boule",
+      "text": "再切成一片片薄片",
+      "from": "再",
+      "to": "薄片",
+      "hold": 0.48,
+      "start": 11.5955,
+      "end": 13.488
+    },
+    {
+      "id": "mirror",
+      "scene": "lattice",
+      "text": "外面像镜子",
+      "from": "外面",
+      "to": "镜子",
+      "hold": 0.2,
+      "start": 14.341999999999999,
+      "end": 15.579499999999998
+    },
+    {
+      "id": "inside",
+      "scene": "lattice",
+      "text": "里面却是",
+      "from": "里面",
+      "to": "是",
+      "hold": 0.02,
+      "start": 15.667,
+      "end": 16.179499999999997
+    },
+    {
+      "id": "atoms",
+      "scene": "lattice",
+      "text": "排列整齐的硅原子",
+      "from": "排列",
+      "to": "硅原子",
+      "hold": 0.48,
+      "start": 16.179499999999997,
+      "end": 17.9845
+    },
+    {
+      "id": "difficult",
+      "scene": "demands",
+      "text": "难的，不只是做薄",
+      "from": "难",
+      "to": "做薄",
+      "hold": 0.4,
+      "start": 18.894000000000002,
+      "end": 21.0065
+    },
+    {
+      "id": "pure",
+      "scene": "demands",
+      "text": "还要足够纯",
+      "from": "还要",
+      "to": "纯",
+      "hold": 0.15,
+      "start": 21.1815,
+      "end": 22.4815
+    },
+    {
+      "id": "whole",
+      "scene": "demands",
+      "text": "晶格完整",
+      "from": "晶格",
+      "to": "完整",
+      "hold": 0.15,
+      "start": 22.569,
+      "end": 23.543999999999997
+    },
+    {
+      "id": "flat",
+      "scene": "demands",
+      "text": "表面足够平",
+      "from": "表面",
+      "to": "足够平",
+      "hold": 0.55,
+      "start": 23.6065,
+      "end": 25.294
+    },
+    {
+      "id": "all",
+      "scene": "quartz",
+      "text": "而这一切",
+      "from": "而",
+      "to": "一切",
+      "hold": 0.2,
+      "start": 26.084000000000003,
+      "end": 27.084
+    },
+    {
+      "id": "quartz",
+      "scene": "quartz",
+      "text": "要从一块石英开始",
+      "from": "要",
+      "to": "开始",
+      "hold": 0.9,
+      "start": 27.146500000000003,
+      "end": 29.509
+    }
+  ],
+  "captionSource": "actual word events, text-plan revision 2",
+  "captionRendering": "Pillow FreeType RGBA strip, overlaid last",
+  "segmentColorNormalization": {
+    "framesChecked": 729,
+    "pixelFormat": "yuv420p",
+    "range": "tv",
+    "matrix": "bt709",
+    "continuousPTS": true
+  },
+  "sha256": "3b685f426843fda45672efd8c50a233aa381d4fab543616e9b2583c3a1ec7ef2",
+  "limits": "Native diffusion is upscaled. Quartz, boule and patterned wafer use real photos; blank wafer uses a precise 3D video guide. This explanatory sample is not documentary footage."
+}

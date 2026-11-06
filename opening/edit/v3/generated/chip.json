@@ -1,0 +1,173 @@
+{
+  "file": "edit/v3/generated/chip.mp4",
+  "frames": 49,
+  "width": 576,
+  "height": 1024,
+  "fps": 24.0,
+  "method": "Native LTXVImgToVideo -> diffusion sampling -> VAE decoding",
+  "sha256": "262187859f4f9cc90363475e01dacb7ec3ae68ac7d0d431c057afda89b2e8728",
+  "prompt": {
+    "1": {
+      "class_type": "CheckpointLoaderSimple",
+      "inputs": {
+        "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors"
+      }
+    },
+    "2": {
+      "class_type": "CLIPLoader",
+      "inputs": {
+        "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+        "type": "ltxv",
+        "device": "cpu"
+      }
+    },
+    "3": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "Text, letters, subtitles, logo, watermark, illustration, cartoon, low polygon model, plastic, melting object, morphing geometry, pulsating surface, smeared details, unstable camera, flickering exposure."
+      }
+    },
+    "4": {
+      "class_type": "ManualSigmas",
+      "inputs": {
+        "sigmas": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+      }
+    },
+    "5": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler_ancestral"
+      }
+    },
+    "10": {
+      "class_type": "WV3Photo",
+      "inputs": {
+        "relative_path": "assets/v3-real/input-chip.png"
+      }
+    },
+    "11": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "A macro documentary product shot of the actual circular semiconductor wafer in the photograph, with a dense precise grid of individual rectangular chip dies on its polished silicon surface. The camera tracks slowly sideways and slightly lower, so the rectangular reflections slide across the fixed die grid and reveal the wafer edge. The wafer remains a perfectly rigid solid object and the chip pattern remains unchanged. Neutral silver, black and restrained iridescent metallic reflections, soft studio strip lighting, authentic semiconductor manufacturing photography, crisp machining detail, dimensional perspective, dark uncluttered surroundings. One continuous steady camera move, no cuts. No writing or graphics."
+      }
+    },
+    "12": {
+      "class_type": "LTXVConditioning",
+      "inputs": {
+        "positive": [
+          "11",
+          0
+        ],
+        "negative": [
+          "3",
+          0
+        ],
+        "frame_rate": 24.0
+      }
+    },
+    "13": {
+      "class_type": "LTXVPreprocess",
+      "inputs": {
+        "image": [
+          "10",
+          0
+        ],
+        "img_compression": 18
+      }
+    },
+    "14": {
+      "class_type": "LTXVImgToVideo",
+      "inputs": {
+        "positive": [
+          "12",
+          0
+        ],
+        "negative": [
+          "12",
+          1
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "image": [
+          "13",
+          0
+        ],
+        "width": 576,
+        "height": 1024,
+        "length": 49,
+        "batch_size": 1,
+        "strength": 1.0
+      }
+    },
+    "15": {
+      "class_type": "SamplerCustom",
+      "inputs": {
+        "model": [
+          "1",
+          0
+        ],
+        "add_noise": true,
+        "noise_seed": 20261105031,
+        "cfg": 1.0,
+        "positive": [
+          "14",
+          0
+        ],
+        "negative": [
+          "14",
+          1
+        ],
+        "sampler": [
+          "5",
+          0
+        ],
+        "sigmas": [
+          "4",
+          0
+        ],
+        "latent_image": [
+          "14",
+          2
+        ]
+      }
+    },
+    "16": {
+      "class_type": "VAEDecodeTiled",
+      "inputs": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "tile_size": 256,
+        "overlap": 64,
+        "temporal_size": 16,
+        "temporal_overlap": 8
+      }
+    },
+    "17": {
+      "class_type": "WV3SaveShot",
+      "inputs": {
+        "images": [
+          "16",
+          0
+        ],
+        "fps": 24.0,
+        "shot_name": "chip"
+      }
+    }
+  }
+}

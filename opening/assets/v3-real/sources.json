@@ -1,0 +1,311 @@
+{
+  "scope": "Real photo sourcing only. No video or production-code changes.",
+  "source_method": "Official MediaWiki API imageinfo and revision wikitext; original URL only.",
+  "minimum_short_edge_px": 1200,
+  "review_contact": "opening/review/v3-assets/contact.jpg",
+  "assets": [
+    {
+      "pageid": 97716671,
+      "filename": "quartz-milky-primary.jpg",
+      "subject": "Natural milky quartz specimen from Pribram, Czech Republic",
+      "priority": 1,
+      "contact_note": "PRIMARY / milky translucency, natural fractures, isolated specimen",
+      "visual_reason_zh": "单颗乳白石英完整呈现，断口、内部絮状包裹体、半透明边缘与局部黄褐色杂质可辨；深色背景让轮廓明确，适合先跑真实石英图生视频小样。",
+      "limitations_zh": "背景为有纹理的黑色布面；这是天然石英标本，不能据此宣称已达到工业高纯石英等级。",
+      "path": "opening/assets/v3-real/quartz-milky-primary.jpg",
+      "source": "Wikimedia Commons",
+      "source_title": "File:Milky quartz SiO2 locality - Příbram, Czech Republic (50585167016).jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Milky_quartz_SiO2_locality_-_P%C5%99%C3%ADbram,_Czech_Republic_(50585167016).jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Milky_quartz_SiO2_locality_-_P%C5%99%C3%ADbram%2C_Czech_Republic_%2850585167016%29.jpg",
+      "source_revision_id": 1023836996,
+      "source_revision_timestamp": "2025-04-23T05:39:26Z",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3AMilky+quartz+SiO2+locality+-+P%C5%99%C3%ADbram%2C+Czech+Republic+%2850585167016%29.jpg&oldid=1023836996",
+      "author": "Jan Helebrant",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "license_template": "cc-by-sa-2.0",
+      "attribution_required": true,
+      "source_credit": "IMGP2020736",
+      "source_description": "milky quartz SiO2 locality: Příbram, Czech Republic photo (c) 2020 Jan Helebrant <a href=\" http://www.juhele.blogspot.com \" rel=\"noreferrer nofollow\">www.juhele.blogspot.com</a>",
+      "date_taken": "2020-10-30 16:00",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "bytes": 18024228,
+      "mime": "image/jpeg",
+      "sha1": "8a042afda1228e33d4eec9ffe0ba90fc13cb29b6",
+      "sha256": "9c16db556ada36683e5f6cb6efbf5943199c339656f5893609a2bc2a515b7edd",
+      "camera_exif": {
+        "make": "RICOH IMAGING COMPANY, LTD.  ",
+        "model": "PENTAX K-70        ",
+        "datetime": "2020:11:10 00:36:45"
+      },
+      "original_unchanged": true,
+      "original_size_and_sha1_match_official_api": true,
+      "retrieved_at_utc": "2026-11-05T08:08:32.430608+00:00",
+      "credit_line": "Milky quartz SiO2 locality - Příbram, Czech Republic (50585167016).jpg - Jan Helebrant - CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Milky_quartz_SiO2_locality_-_P%C5%99%C3%ADbram,_Czech_Republic_(50585167016).jpg"
+    },
+    {
+      "pageid": 97718979,
+      "filename": "quartz-crystal-facets-macro.jpg",
+      "subject": "Natural quartz crystal cluster from Pribram, Czech Republic",
+      "priority": 2,
+      "contact_note": "MACRO / real crystal facets, inclusions and natural matrix",
+      "visual_reason_zh": "透明至乳白色晶面、天然六角柱端面和内部裂隙可辨；近景直接呈现真实石英的玻璃光泽与生长形态，适合作为晶面微距的图生视频输入。",
+      "limitations_zh": "原片为浅景深微距，后排晶体存在失焦；这是天然晶簇，不是工业高纯石英的纯度证据。",
+      "path": "opening/assets/v3-real/quartz-crystal-facets-macro.jpg",
+      "source": "Wikimedia Commons",
+      "source_title": "File:Milky quartz - SiO2 locality - Příbram, Czech Repubic (50605886743).jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Milky_quartz_-_SiO2_locality_-_P%C5%99%C3%ADbram,_Czech_Repubic_(50605886743).jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Milky_quartz_-_SiO2_locality_-_P%C5%99%C3%ADbram%2C_Czech_Repubic_%2850605886743%29.jpg",
+      "source_revision_id": 919646897,
+      "source_revision_timestamp": "2024-09-05T09:15:18Z",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3AMilky+quartz+-+SiO2+locality+-+P%C5%99%C3%ADbram%2C+Czech+Repubic+%2850605886743%29.jpg&oldid=919646897",
+      "author": "Jan Helebrant",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "license_template": "cc-by-sa-2.0",
+      "attribution_required": true,
+      "source_credit": "IMGP2021004",
+      "source_description": "milky quartz - SiO2 locality: Příbram, Czech Republic photo (c) 2020 Jan Helebrant <a href=\" http://www.juhele.blogspot.com \" rel=\"noreferrer nofollow\">www.juhele.blogspot.com</a>",
+      "date_taken": "2020-10-25 12:58",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "bytes": 20379651,
+      "mime": "image/jpeg",
+      "sha1": "05c5da49b9b40e9c22c63fa1ddc5608994ae1c8f",
+      "sha256": "a4f89e3fe597d6bce3020314a2df30ac6baf7255ebae641a6bf13237978f8e0b",
+      "camera_exif": {
+        "make": "RICOH IMAGING COMPANY, LTD.  ",
+        "model": "PENTAX K-70        ",
+        "datetime": "2020:11:15 00:48:30"
+      },
+      "original_unchanged": true,
+      "original_size_and_sha1_match_official_api": true,
+      "retrieved_at_utc": "2026-11-05T08:08:38.854604+00:00",
+      "credit_line": "Milky quartz - SiO2 locality - Příbram, Czech Repubic (50605886743).jpg - Jan Helebrant - CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Milky_quartz_-_SiO2_locality_-_P%C5%99%C3%ADbram,_Czech_Repubic_(50605886743).jpg"
+    },
+    {
+      "pageid": 152547840,
+      "filename": "chip-patterned-wafer-original.jpg",
+      "subject": "Photographed silicon wafer with repeated chip die patterns",
+      "contact_note": "CHIP / real die grid, wafer edge and diffraction colors",
+      "limitations": "The source is a close view of part of a wafer; the original already crops the wafer at the right and bottom. No missing outline or circuitry is reconstructed.",
+      "path": "opening/assets/v3-real/chip-patterned-wafer-original.jpg",
+      "source": "Wikimedia Commons",
+      "source_title": "File:Silicon Wafer 20190210.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Silicon_Wafer_20190210.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Silicon_Wafer_20190210.jpg",
+      "source_revision_id": 1022263371,
+      "source_revision_timestamp": "2025-04-18T12:49:42Z",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASilicon+Wafer+20190210.jpg&oldid=1022263371",
+      "source_metadata_file": "opening/review/v3-assets/api-completed-originals.json",
+      "source_wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{de|1=Ansicht eines Wafers aus Silizium mit Farbgradienten.}}\n{{en|1=View of a silicon wafer with color gradients.}}\n|date=2019-02-10 16:10:17\n|source=https://www.flickr.com/photos/36338618@N02/32126624767/\n|author=Enrique Jiménez\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{cc-by-sa-2.0}}{{FlickreviewR|status=passed|author=Quics|sourceurl=https://flickr.com/photos/36338618@N02/32126624767|archive=|reviewdate=2024-09-12 17:04:03|reviewlicense=cc-by-sa-2.0|reviewer=FlickreviewR 2}}\n\n[[Category:Silicon wafers]]\n[[Category:Files uploaded by PantheraLeo1359531]]",
+      "author": "Enrique Jiménez",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "license_template": "cc-by-sa-2.0",
+      "attribution_required": true,
+      "source_credit": "https://www.flickr.com/photos/36338618@N02/32126624767/",
+      "source_description": "View of a silicon wafer with color gradients.",
+      "date_taken": "2019-02-10 16:10:17",
+      "dimensions": {
+        "width": 6028,
+        "height": 4012
+      },
+      "bytes": 5126791,
+      "mime": "image/jpeg",
+      "sha1": "90362f17a83170501997bbb7f5c04fd5c30eae81",
+      "official_api_sha1": "90362f17a83170501997bbb7f5c04fd5c30eae81",
+      "sha256": "04698f08dc34fe2385f43910fc5f07f0af9b4259724a491fbdb2484a6dd469c5",
+      "camera_exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON D5200",
+        "datetime": "2019:02:10 16:10:17"
+      },
+      "original_unchanged": true,
+      "original_size_and_sha1_match_official_api": true,
+      "retrieved_at_utc": "2026-11-05T08:43:59.114777+00:00",
+      "credit_line": "Silicon Wafer 20190210.jpg - Enrique Jiménez - CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Silicon_Wafer_20190210.jpg"
+    },
+    {
+      "pageid": 9045190,
+      "filename": "wafer-blank-original.jpg",
+      "subject": "Plain silicon wafers without IC circuits, Siltronic",
+      "contact_note": "BLANK / larger unpatterned wafer, full rim preserved",
+      "limitations": "Original is 1264 x 702 pixels, below the earlier 1200-pixel short-edge target. The larger wafer is used without upscaling; its dark surface retains photographed room reflections. The second smaller wafer is excluded by the rectangular crop.",
+      "minimum_short_edge_exception": true,
+      "path": "opening/assets/v3-real/wafer-blank-original.jpg",
+      "source": "Wikimedia Commons",
+      "source_title": "File:Siliziumwafer.JPG",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Siliziumwafer.JPG",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Siliziumwafer.JPG",
+      "source_revision_id": 1257643877,
+      "source_revision_timestamp": "2026-08-07T01:23:01Z",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASiliziumwafer.JPG&oldid=1257643877",
+      "source_metadata_file": "opening/review/v3-assets/api-completed-originals.json",
+      "source_wikitext": "== {{int:filedesc}} ==\n{{Information\n|Description={{de|Silizium-Wafer ohne IC-Schaltkreise.<br />\n2 verschiedene Größen}}\n|Source=Foto selber erstellt\n|Date=2007-07-30\n|Author={{user at project|Hebbe|wikipedia|de}}\n|Permission=\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{PD-self}}\n\n== {{Original upload log}} ==\n{{transferred from|de.wikipedia|Leyo|CommonsHelper}} {{original description page|de.wikipedia|Siliziumwafer.JPG}}\n* 2007-07-30 17:05 [[:de:User:Hebbe|Hebbe]] 1264×702× (96742 bytes) ''<nowiki>{{Information |Beschreibung = Silizium Wafer der Wacker Chemie bzw. Siltronic AG |Quelle = |Urheber = H.S. |Datum = 30. Juli 2007 |Genehmigung = |Andere Versionen = |Anmerkungen = 300mm und 150mm Wafer der Siltronic AG }}</nowiki>''\n\n[[Category:Wafers]]\n[[Category:Taken with Konica Revio KD-500Z]]\n[[Category:Siltronic]]",
+      "author": "Hebbe at German Wikipedia",
+      "license": "Public domain",
+      "license_url": null,
+      "license_template": "pd",
+      "attribution_required": false,
+      "source_credit": "Foto selber erstellt",
+      "source_description": "Silizium-Wafer ohne IC-Schaltkreise. 2 verschiedene Größen",
+      "date_taken": "2007-07-30",
+      "dimensions": {
+        "width": 1264,
+        "height": 702
+      },
+      "bytes": 96742,
+      "mime": "image/jpeg",
+      "sha1": "c94d45305b2324eb5b10398d274b5e7a773fc966",
+      "official_api_sha1": "c94d45305b2324eb5b10398d274b5e7a773fc966",
+      "sha256": "af71dcca494218de4f8a70a82427b5df442129bd50fe271e895cc21544256602",
+      "camera_exif": {
+        "make": "Konica Corporation",
+        "model": "Konica Digital Camera KD-500Z"
+      },
+      "original_unchanged": true,
+      "original_size_and_sha1_match_official_api": true,
+      "retrieved_at_utc": "2026-11-05T08:43:59.118727+00:00",
+      "credit_line": "Siliziumwafer.JPG - Hebbe at German Wikipedia - Public domain - https://commons.wikimedia.org/wiki/File:Siliziumwafer.JPG"
+    },
+    {
+      "pageid": 6200539,
+      "filename": "silicon-boule-original.jpg",
+      "subject": "Single-crystal silicon boule, Museum fuer Naturkunde Berlin",
+      "contact_note": "BOULE / existing genuine photograph, full shoulder and body",
+      "limitations": "Museum display photograph with real glass reflections and nearby exhibits; no cleanup, generative fill or reshaping.",
+      "copied_from": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/photographic/assets/silicon-boule.jpg",
+      "path": "opening/assets/v3-real/silicon-boule-original.jpg",
+      "source": "Wikimedia Commons",
+      "source_title": "File:Single-crystal silicon boule.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Single-crystal_silicon_boule.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Single-crystal_silicon_boule.jpg",
+      "source_revision_id": 1253435315,
+      "source_revision_timestamp": "2026-07-28T23:13:11Z",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASingle-crystal+silicon+boule.jpg&oldid=1253435315",
+      "source_metadata_file": "opening/review/v3-assets/api-completed-originals.json",
+      "source_wikitext": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|1=Single-crystal silicon boule in Museum für Naturkunde Berlin, Germany.}}\n{{de|1=Silizium-Einkristall im Museum für Naturkunde Berlin, Deutschland.}}\n|Source={{Own}}\n|Author=[[User:Sebastian Wallroth|Sebastian Wallroth]]\n|Date=\n|Permission=\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{PD-self}}\n\n[[Category:Silicon ingots]]\n[[Category:Czochralski method]]\n[[Category:Minerals in Museum für Naturkunde Berlin]]\n[[Category:Taken with Fujifilm FinePix F31fd]]",
+      "author": "Sebastian Wallroth",
+      "license": "Public domain",
+      "license_url": null,
+      "license_template": "pd",
+      "attribution_required": false,
+      "source_credit": "Own work",
+      "source_description": "Single-crystal silicon boule in Museum für Naturkunde Berlin, Germany.",
+      "date_taken": null,
+      "dimensions": {
+        "width": 2848,
+        "height": 2136
+      },
+      "bytes": 3135803,
+      "mime": "image/jpeg",
+      "sha1": "6313bbdcd11fc51c99c489a35bcbd5a9b966fd0a",
+      "official_api_sha1": "6313bbdcd11fc51c99c489a35bcbd5a9b966fd0a",
+      "sha256": "c2ab2017cb5f28d2b168bfcd23699d3a2599ad9a06d8ded3894fb60c564190c0",
+      "camera_exif": {
+        "make": "FUJIFILM",
+        "model": "FinePix F31fd  ",
+        "datetime": "2009:02:28 15:55:39"
+      },
+      "original_unchanged": true,
+      "original_size_and_sha1_match_official_api": true,
+      "retrieved_at_utc": "2026-11-05T08:43:59.151694+00:00",
+      "credit_line": "Single-crystal silicon boule.jpg - Sebastian Wallroth - Public domain - https://commons.wikimedia.org/wiki/File:Single-crystal_silicon_boule.jpg"
+    },
+    {
+      "pageid": 162844680,
+      "filename": "silicon-boule-2025-original.jpg",
+      "path": "opening/assets/v3-real/silicon-boule-2025-original.jpg",
+      "subject": "Single-crystal silicon boule photographed at COEX, Seoul, February 2025",
+      "source": "Wikimedia Commons, reused from existing licensed project photograph",
+      "copied_from": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/photographic/assets/silicon-boule-2025.jpg",
+      "source_title": "File:Single Crystal Silicon Boule.jpeg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Single_Crystal_Silicon_Boule.jpeg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Single_Crystal_Silicon_Boule.jpeg",
+      "source_metadata_file": "opening/review/v3-assets/boule-2025-existing-source-details.json",
+      "source_credit": "Own work",
+      "source_description": "COEX Mall, Seoul, South Korea, February 2025",
+      "date_taken": "2025-02-20 12:52:17",
+      "author": "Thingreenline4546",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_template": "cc-by-sa-4.0",
+      "attribution_required": true,
+      "dimensions": {
+        "width": 4032,
+        "height": 3024
+      },
+      "exif_orientation": 6,
+      "oriented_dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "bytes": 2301852,
+      "sha1": "9d77b6cc807d89fbbc10d59cae48ed62d5522eb4",
+      "sha256": "3fb609616e39ea1df064e63cca86482739d5366c5ee715b6f64a0705abeebd65",
+      "mime": "image/jpeg",
+      "original_unchanged": true,
+      "sha256_matches_existing_licensed_manifest": true,
+      "credit_line": "Single Crystal Silicon Boule - Thingreenline4546 - CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Single_Crystal_Silicon_Boule.jpeg",
+      "modifications": "Reuse existing exact photographic alpha cutout, proportional downscale and charcoal composite."
+    }
+  ],
+  "minimum_short_edge_exceptions": [
+    {
+      "filename": "wafer-blank-original.jpg",
+      "source_dimensions_px": [
+        1264,
+        702
+      ],
+      "reason": "Existing candidate explicitly documents wafers without IC circuits. The photo-derived mask uses the 1264 x 702 original; its 755 x 647 masked crop is downscaled to 544 x 466 without enlargement."
+    }
+  ],
+  "completion_review_contact": "opening/review/v3-assets/completed-inputs-contact.jpg",
+  "active_input_sources": {
+    "input-quartz.png": {
+      "source_asset_id": 97716671,
+      "source": "opening/assets/v3-real/quartz-milky-primary.jpg"
+    },
+    "input-chip.png": {
+      "source_asset_id": 152547840,
+      "source": "opening/assets/v3-real/chip-patterned-wafer-original.jpg"
+    },
+    "input-wafer.png": {
+      "source_asset_id": 9045190,
+      "source": "opening/assets/v3-real/wafer-blank-original.jpg"
+    },
+    "input-boule.png": {
+      "source_asset_id": 162844680,
+      "source": "opening/assets/v3-real/silicon-boule-2025-original.jpg"
+    },
+    "input-quartz-macro.png": {
+      "source_asset_id": 97716671,
+      "source": "opening/assets/v3-real/quartz-milky-primary.jpg"
+    }
+  },
+  "clean_object_revision": {
+    "inputs": [
+      "input-wafer.png",
+      "input-boule.png"
+    ],
+    "authoritative_crop_records": "opening/assets/v3-real/input-crops.json",
+    "background_rgb": [
+      27,
+      27,
+      29
+    ],
+    "generated_pixels_in_subject": false,
+    "historical_pd_boule_note": "silicon-boule-original.jpg is retained for provenance but no longer drives input-boule.png.",
+    "wafer_color_correction": {
+      "method": "Foreground-only grayscale + gamma exponent 0.80.",
+      "crop_record": "opening/assets/v3-real/input-crops.json",
+      "license_unchanged": "Public domain"
+    }
+  }
+}

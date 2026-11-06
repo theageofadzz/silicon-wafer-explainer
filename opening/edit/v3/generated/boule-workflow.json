@@ -1,0 +1,1235 @@
+{
+  "last_node_id": 27,
+  "last_link_id": 35,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            10,
+            27
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": []
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            17,
+            25,
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "ltxv-2b-0.9.8-distilled.safetensors"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            2,
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "t5xxl_fp8_e4m3fn.safetensors",
+        "ltxv",
+        "cpu"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        0,
+        1020
+      ],
+      "size": [
+        340,
+        270
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4,
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Text, letters, subtitles, logo, watermark, illustration, cartoon, low polygon model, plastic, melting object, morphing geometry, pulsating surface, smeared details, unstable camera, flickering exposure."
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ManualSigmas",
+      "pos": [
+        0,
+        1530
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            14,
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ManualSigmas"
+      },
+      "widgets_values": [
+        "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "KSamplerSelect",
+      "pos": [
+        0,
+        2040
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            13,
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler_ancestral"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "WV3Photo",
+      "pos": [
+        370,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3Photo"
+      },
+      "widgets_values": [
+        "assets/v3-real/input-wafer.png"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CLIPTextEncode",
+      "pos": [
+        740,
+        0
+      ],
+      "size": [
+        340,
+        270
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "An authentic industrial documentary close-up of the smooth blank silicon wafer shown in the reference photograph. The camera makes a very slow shallow arc around the rigid wafer and moves slightly closer, revealing its thin circular edge and smooth polished face. A broad white studio reflection moves naturally across the silver surface as the viewpoint changes. The solid silicon disk retains exactly the same circular shape and material. Clean neutral silver highlights, realistic surface reflections, restrained black and gray surroundings, detailed premium macro cinematography. The subject is stationary. One stable continuous shot, no transitions. No chip patterns, writing, symbols or graphics."
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LTXVConditioning",
+      "pos": [
+        1110,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVConditioning"
+      },
+      "widgets_values": [
+        24
+      ]
+    },
+    {
+      "id": 13,
+      "type": "LTXVPreprocess",
+      "pos": [
+        1480,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_image",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVPreprocess"
+      },
+      "widgets_values": [
+        18
+      ]
+    },
+    {
+      "id": 14,
+      "type": "LTXVImgToVideo",
+      "pos": [
+        1850,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVImgToVideo"
+      },
+      "widgets_values": [
+        576,
+        1024,
+        81,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SamplerCustom",
+      "pos": [
+        2220,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 10
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 11
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 13
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 14
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustom"
+      },
+      "widgets_values": [
+        true,
+        20261105032,
+        "fixed",
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        2590,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 16
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        256,
+        64,
+        16,
+        8
+      ]
+    },
+    {
+      "id": 17,
+      "type": "WV3SaveShot",
+      "pos": [
+        2960,
+        0
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_clip",
+          "type": "WV3_CLIP",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3SaveShot"
+      },
+      "widgets_values": [
+        24,
+        "blank"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "WV3Photo",
+      "pos": [
+        370,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3Photo"
+      },
+      "widgets_values": [
+        "assets/v3-real/input-boule.png"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "CLIPTextEncode",
+      "pos": [
+        740,
+        510
+      ],
+      "size": [
+        340,
+        270
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "A documentary close-up of the real single crystal silicon boule in this photograph. The industrial ingot has a heavy reflective cylindrical body, fine concentric growth striations, a tapered shoulder and a thin seed neck. The camera makes a slow lateral dolly and a slight rise from the cylinder toward its tapered shoulder, creating natural parallax and changing reflections on the fixed solid surface. Preserve the exact shape and position of the silicon boule. Crisp silver metallic ridges, realistic workshop photography, neutral light, authentic manufacturing detail. One controlled continuous camera move. No growth transformation, no bending, no lettering, no overlays."
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LTXVConditioning",
+      "pos": [
+        1110,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 20
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            23
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVConditioning"
+      },
+      "widgets_values": [
+        24
+      ]
+    },
+    {
+      "id": 23,
+      "type": "LTXVPreprocess",
+      "pos": [
+        1480,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_image",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVPreprocess"
+      },
+      "widgets_values": [
+        18
+      ]
+    },
+    {
+      "id": 24,
+      "type": "LTXVImgToVideo",
+      "pos": [
+        1850,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 23
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVImgToVideo"
+      },
+      "widgets_values": [
+        576,
+        1024,
+        65,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 25,
+      "type": "SamplerCustom",
+      "pos": [
+        2220,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 27
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 28
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 29
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 30
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 31
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustom"
+      },
+      "widgets_values": [
+        true,
+        20261105033,
+        "fixed",
+        1
+      ]
+    },
+    {
+      "id": 26,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        2590,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 33
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        256,
+        64,
+        16,
+        8
+      ]
+    },
+    {
+      "id": 27,
+      "type": "WV3SaveShot",
+      "pos": [
+        2960,
+        510
+      ],
+      "size": [
+        340,
+        210
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_clip",
+          "type": "WV3_CLIP",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WV3SaveShot"
+      },
+      "widgets_values": [
+        24,
+        "boule"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      2,
+      0,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      11,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      3,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      10,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      12,
+      0,
+      14,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      12,
+      1,
+      14,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      1,
+      2,
+      14,
+      2,
+      "VAE"
+    ],
+    [
+      9,
+      13,
+      0,
+      14,
+      3,
+      "IMAGE"
+    ],
+    [
+      10,
+      1,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      11,
+      14,
+      0,
+      15,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      12,
+      14,
+      1,
+      15,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      5,
+      0,
+      15,
+      3,
+      "SAMPLER"
+    ],
+    [
+      14,
+      4,
+      0,
+      15,
+      4,
+      "SIGMAS"
+    ],
+    [
+      15,
+      14,
+      2,
+      15,
+      5,
+      "LATENT"
+    ],
+    [
+      16,
+      15,
+      0,
+      16,
+      0,
+      "LATENT"
+    ],
+    [
+      17,
+      1,
+      2,
+      16,
+      1,
+      "VAE"
+    ],
+    [
+      18,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      2,
+      0,
+      21,
+      0,
+      "CLIP"
+    ],
+    [
+      20,
+      21,
+      0,
+      22,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      3,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      20,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      22,
+      0,
+      24,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      24,
+      22,
+      1,
+      24,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      1,
+      2,
+      24,
+      2,
+      "VAE"
+    ],
+    [
+      26,
+      23,
+      0,
+      24,
+      3,
+      "IMAGE"
+    ],
+    [
+      27,
+      1,
+      0,
+      25,
+      0,
+      "MODEL"
+    ],
+    [
+      28,
+      24,
+      0,
+      25,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      29,
+      24,
+      1,
+      25,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      30,
+      5,
+      0,
+      25,
+      3,
+      "SAMPLER"
+    ],
+    [
+      31,
+      4,
+      0,
+      25,
+      4,
+      "SIGMAS"
+    ],
+    [
+      32,
+      24,
+      2,
+      25,
+      5,
+      "LATENT"
+    ],
+    [
+      33,
+      25,
+      0,
+      26,
+      0,
+      "LATENT"
+    ],
+    [
+      34,
+      1,
+      2,
+      26,
+      1,
+      "VAE"
+    ],
+    [
+      35,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3,
+      "offset": [
+        20,
+        20
+      ]
+    },
+    "note": "Native LTX diffusion makes real-photo camera motion. Code only renders precise explanatory geometry and assembles captions."
+  },
+  "version": 0.4
+}

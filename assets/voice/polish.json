@@ -1,0 +1,106 @@
+{
+  "config": {
+    "text": "抛光时，抛光垫和抛光液共同作用，把表面继续整平，直到形成均匀的镜面。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 3750000,
+      "text": "抛光"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4750000,
+      "duration": 3875000,
+      "text": "时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12625000,
+      "duration": 6000000,
+      "text": "抛光垫"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 18875000,
+      "duration": 1125000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20125000,
+      "duration": 5500000,
+      "text": "抛光液"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25875000,
+      "duration": 3500000,
+      "text": "共同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29500000,
+      "duration": 3625000,
+      "text": "作用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36250000,
+      "duration": 1500000,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37875000,
+      "duration": 4375000,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42500000,
+      "duration": 3125000,
+      "text": "继续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45750000,
+      "duration": 5375000,
+      "text": "整平"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53500000,
+      "duration": 3125000,
+      "text": "直到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56750000,
+      "duration": 3500000,
+      "text": "形成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60500000,
+      "duration": 3250000,
+      "text": "均匀"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63750000,
+      "duration": 750000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64625000,
+      "duration": 3625000,
+      "text": "镜面"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

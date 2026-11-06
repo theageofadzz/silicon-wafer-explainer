@@ -1,0 +1,5081 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "id": "deposition",
+      "duration": 8.791666666666671,
+      "fps": 7.393364928909949,
+      "frames": 65,
+      "states": [
+        {
+          "id": "deposition",
+          "time": 56.625,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.7,
+            3.4,
+            13.8
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3114,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 56.76025641025641,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.703138103753703,
+            3.4,
+            13.798153846153847
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3115,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 56.89551282051282,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.706274061092517,
+            3.4,
+            13.796307692307693
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3114,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.03076923076923,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.7094057270696705,
+            3.4,
+            13.794461538461539
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.16602564102564,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.7125309596736145,
+            3.4,
+            13.792615384615384
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.30128205128205,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.71564762129313,
+            3.4,
+            13.790769230769232
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.43653846153846,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.718753580179422,
+            3.4,
+            13.788923076923078
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.57179487179487,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.721846711904198,
+            3.4,
+            13.787076923076924
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.70705128205128,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.7249249008127485,
+            3.4,
+            13.78523076923077
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.84230769230769,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.727986041471022,
+            3.4,
+            13.783384615384616
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 57.9775641025641,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.731028040105708,
+            3.4,
+            13.781538461538462
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.11282051282051,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.734048816036347,
+            3.4,
+            13.779692307692308
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 25,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.24807692307692,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.737046303098486,
+            3.4,
+            13.777846153846154
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3113,
+          "min": 24,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.38333333333333,
+          "stage": 1,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            5.740018451056898,
+            3.4,
+            13.776000000000002
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 3114,
+          "min": 24,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.51858974358974,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8429632270079157,
+            1.3,
+            9.674153846153846
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4759,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.65384615384615,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8458786167699075,
+            1.3,
+            9.672307692307692
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4760,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.78910256410256,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.848762626260943,
+            1.3,
+            9.670461538461538
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4762,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 58.924358974358974,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8516132828627163,
+            1.3,
+            9.668615384615384
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4762,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.059615384615384,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8544286367697875,
+            1.3,
+            9.66676923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4765,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.194871794871794,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8572067623232185,
+            1.3,
+            9.664923076923076
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4768,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.330128205128204,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.859945759327695,
+            1.3,
+            9.663076923076922
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4768,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.465384615384615,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.000658066317452,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8626437543512306,
+            1.3,
+            9.661230769230768
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4768,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.600641025641025,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.0081744689175736,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8652989020065656,
+            1.3,
+            9.659384615384615
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4772,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.735897435897435,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.0236969575556807,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8679093862133835,
+            1.3,
+            9.657538461538461
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4776,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 59.871153846153845,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.0467472186042475,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8704734214404826,
+            1.3,
+            9.655692307692307
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4781,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.006410256410255,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.0768469384357477,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.872989253927052,
+            1.3,
+            9.653846153846153
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4790,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.141666666666666,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.1135178034226558,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.875455162882216,
+            1.3,
+            9.652
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4799,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.276923076923076,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.1562814999374458,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.87786946166203,
+            1.3,
+            9.650153846153845
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4811,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.412179487179486,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.2046597143525912,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8802304989231184,
+            1.3,
+            9.648307692307691
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4854,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.5474358974359,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.2581741330405691,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8825366597521684,
+            1.3,
+            9.646461538461537
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 4946,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.68269230769231,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.316346442373845,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.884786366770506,
+            1.3,
+            9.644615384615385
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 5182,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.817948717948724,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.3786983287249046,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8869780812129995,
+            1.3,
+            9.64276923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 5511,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 60.95320512820513,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.4447514784662092,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.889110303980549,
+            1.3,
+            9.640923076923077
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 5623,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.088461538461544,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.5140275779702466,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.89118157666545,
+            1.3,
+            9.639076923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 5698,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.22371794871795,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.5860483136094758,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.89319048254892,
+            1.3,
+            9.637230769230769
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 5711,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.358974358974365,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.6603353717563867,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.895135647570114,
+            1.3,
+            9.635384615384615
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6188,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.494230769230775,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.7364104387834411,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.8970157412659594,
+            1.3,
+            9.63353846153846
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6223,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.629487179487185,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.8137952010631173,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.898829477681174,
+            1.3,
+            9.631692307692306
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6238,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.764743589743595,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.892011344967889,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.900575616247837,
+            1.3,
+            9.629846153846152
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6244,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 61.900000000000006,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 1.97058055687023,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9022529626339235,
+            1.3,
+            9.628
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6252,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.035256410256416,
+          "stage": 2,
+          "data": {
+            "radiusFactor": 2.0490245231426147,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.903860369560203,
+            1.3,
+            9.626153846153846
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6259,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.170512820512826,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.126864930157517,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9053967375849656,
+            1.3,
+            9.624307692307692
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6266,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.305769230769236,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.2036234642874106,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.906861015856022,
+            1.3,
+            9.622461538461538
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6271,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.44102564102565,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.27882181190477,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9082522028294684,
+            1.3,
+            9.620615384615384
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6279,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.57628205128206,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.351981659382069,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9095693469547297,
+            1.3,
+            9.61876923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6290,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.71153846153847,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.422624693091781,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.910811547325405,
+            1.3,
+            9.616923076923076
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6294,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.84679487179488,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.490272599406381,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.911977954295472,
+            1.3,
+            9.615076923076922
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6303,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 62.98205128205129,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.5544470646983424,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.913067770060434,
+            1.3,
+            9.613230769230768
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6308,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.1173076923077,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.614669775340139,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9140802492030056,
+            1.3,
+            9.611384615384615
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6311,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.25256410256411,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.6704624177042455,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9150146992029646,
+            1.3,
+            9.609538461538461
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6311,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.38782051282052,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.721346678163135,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9158704809108293,
+            1.3,
+            9.607692307692307
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6313,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.52307692307693,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.766844243089283,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.916647008985022,
+            1.3,
+            9.605846153846153
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6315,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.65833333333334,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.8064767988551615,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9173437522922376,
+            1.3,
+            9.604
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6319,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.79358974358975,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.8397660318332454,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9179602342707294,
+            1.3,
+            9.602153846153845
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6322,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 63.92884615384616,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.8662336283960093,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.918496033256268,
+            1.3,
+            9.600307692307691
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6324,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.06410256410257,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.8854012749159264,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.918950782770558,
+            1.3,
+            9.598461538461537
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6326,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.19935897435897,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.8967906577654707,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9193241717718976,
+            1.3,
+            9.596615384615385
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6328,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.33461538461539,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9196159448679317,
+            1.3,
+            9.59476923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6329,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.4698717948718,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9198259024903317,
+            1.3,
+            9.592923076923077
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6329,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.60512820512821,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.919953901031302,
+            1.3,
+            9.591076923076923
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6332,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.74038461538461,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9199998529418005,
+            1.3,
+            9.589230769230769
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6333,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 64.87564102564103,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9199637267914254,
+            1.3,
+            9.587384615384615
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6335,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 65.01089743589745,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9198455472899094,
+            1.3,
+            9.58553846153846
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6336,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 65.14615384615385,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.919645395270221,
+            1.3,
+            9.583692307692306
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6338,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        },
+        {
+          "id": "deposition",
+          "time": 65.28141025641025,
+          "stage": 3,
+          "data": {
+            "radiusFactor": 2.9,
+            "rodLengthUnchanged": true,
+            "timeCompressed": true
+          },
+          "camera": [
+            3.9193634076332757,
+            1.3,
+            9.581846153846154
+          ],
+          "look": [
+            0,
+            0.25,
+            0
+          ],
+          "fov": 35,
+          "bright": 6340,
+          "min": 30,
+          "max": 255,
+          "parts": 65,
+          "labels": ""
+        }
+      ]
+    },
+    {
+      "id": "polycrystal",
+      "duration": 9.708333333333329,
+      "fps": 6.6952789699570845,
+      "frames": 65,
+      "states": [
+        {
+          "id": "polycrystal",
+          "time": 65.41666666666667,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5,
+            3,
+            11.5
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 65.56602564102565,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.003138103753702,
+            3,
+            11.498153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 65.71538461538462,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.006274061092517,
+            3,
+            11.496307692307692
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 65.8647435897436,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.00940572706967,
+            3,
+            11.494461538461538
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.01410256410257,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.012530959673614,
+            3,
+            11.492615384615384
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.16346153846155,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.01564762129313,
+            3,
+            11.490769230769232
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.31282051282052,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.018753580179422,
+            3,
+            11.488923076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.4621794871795,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.021846711904198,
+            3,
+            11.487076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.61153846153847,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.024924900812749,
+            3,
+            11.48523076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.76089743589743,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.027986041471022,
+            3,
+            11.483384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 66.91025641025641,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.031028040105708,
+            3,
+            11.481538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.05961538461538,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.034048816036347,
+            3,
+            11.479692307692307
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 742,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.20897435897436,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.037046303098486,
+            3,
+            11.477846153846153
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.35833333333333,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.0400184510568975,
+            3,
+            11.476
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.50769230769231,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.042963227007916,
+            3,
+            11.474153846153847
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.65705128205128,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.045878616769908,
+            3,
+            11.472307692307693
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.80641025641026,
+          "stage": 1,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.0487626262609435,
+            3,
+            11.470461538461539
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 67.95576923076923,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.051613282862717,
+            3,
+            11.468615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.10512820512821,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.054428636769788,
+            3,
+            11.46676923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.25448717948719,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.057206762323219,
+            3,
+            11.464923076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.40384615384616,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.059945759327695,
+            3,
+            11.463076923076922
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.55320512820514,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.062643754351231,
+            3,
+            11.461230769230768
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 743,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.70256410256411,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.065298902006566,
+            3,
+            11.459384615384616
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 744,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 68.85192307692309,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.067909386213384,
+            3,
+            11.457538461538462
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.00128205128206,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.070473421440483,
+            3,
+            11.455692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.15064102564102,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.0729892539270525,
+            3,
+            11.453846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.3,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.075455162882216,
+            3,
+            11.452
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.44935897435897,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.07786946166203,
+            3,
+            11.450153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 748,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.59871794871795,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.080230498923118,
+            3,
+            11.448307692307692
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.74807692307692,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.082536659752169,
+            3,
+            11.446461538461538
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 69.8974358974359,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.084786366770507,
+            3,
+            11.444615384615386
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 745,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.04679487179487,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.086978081212999,
+            3,
+            11.442769230769231
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 746,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.19615384615385,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.089110303980549,
+            3,
+            11.440923076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.34551282051282,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.09118157666545,
+            3,
+            11.439076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 748,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.4948717948718,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.09319048254892,
+            3,
+            11.43723076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 749,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.64423076923077,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.095135647570114,
+            3,
+            11.435384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 749,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.79358974358975,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.09701574126596,
+            3,
+            11.433538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 750,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 70.94294871794872,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.098829477681174,
+            3,
+            11.431692307692307
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 748,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.0923076923077,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.100575616247838,
+            3,
+            11.429846153846153
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.24166666666667,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.102252962633924,
+            3,
+            11.428
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.39102564102565,
+          "stage": 2,
+          "data": {
+            "single": false,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            5.103860369560203,
+            3,
+            11.426153846153847
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 747,
+          "min": 30,
+          "max": 217,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.54038461538461,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.305396737584966,
+            2.3,
+            5.924307692307693
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4301,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.68974358974359,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3068610158560223,
+            2.3,
+            5.922461538461539
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4300,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.83910256410256,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3082522028294687,
+            2.3,
+            5.920615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4293,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 71.98846153846154,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.30956934695473,
+            2.3,
+            5.918769230769231
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4293,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.13782051282051,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.310811547325405,
+            2.3,
+            5.916923076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.28717948717949,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.311977954295472,
+            2.3,
+            5.915076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.43653846153846,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3130677700604343,
+            2.3,
+            5.913230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.58589743589744,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3140802492030055,
+            2.3,
+            5.911384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.73525641025641,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.315014699202965,
+            2.3,
+            5.909538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4290,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 72.88461538461539,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3158704809108297,
+            2.3,
+            5.907692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4290,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.03397435897436,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.316647008985022,
+            2.3,
+            5.905846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4293,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.18333333333334,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.317343752292238,
+            2.3,
+            5.904
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4291,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.33269230769231,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3179602342707297,
+            2.3,
+            5.902153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4296,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.48205128205129,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3184960332562685,
+            2.3,
+            5.900307692307692
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4294,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.63141025641026,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.318950782770558,
+            2.3,
+            5.898461538461539
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4292,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.78076923076924,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.319324171771898,
+            2.3,
+            5.896615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4285,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 73.9301282051282,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3196159448679317,
+            2.3,
+            5.8947692307692305
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4277,
+          "min": 30,
+          "max": 218,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.07948717948719,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.319825902490332,
+            2.3,
+            5.8929230769230765
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4274,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.22884615384615,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3199539010313024,
+            2.3,
+            5.891076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4277,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.37820512820512,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.319999852941801,
+            2.3,
+            5.889230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4285,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.5275641025641,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3199637267914257,
+            2.3,
+            5.887384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4280,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.67692307692307,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3198455472899098,
+            2.3,
+            5.885538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4283,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.82628205128205,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.3196453952702214,
+            2.3,
+            5.883692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4284,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        },
+        {
+          "id": "polycrystal",
+          "time": 74.97564102564102,
+          "stage": 3,
+          "data": {
+            "single": true,
+            "crystalGrainsDoNotRotateIntoAlignment": true
+          },
+          "camera": [
+            3.319363407633276,
+            2.3,
+            5.881846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 41,
+          "bright": 4280,
+          "min": 30,
+          "max": 219,
+          "parts": 4,
+          "labels": ""
+        }
+      ]
+    },
+    {
+      "id": "doping",
+      "duration": 8.583333333333329,
+      "fps": 7.572815533980586,
+      "frames": 65,
+      "states": [
+        {
+          "id": "doping",
+          "time": 82.16666666666667,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2,
+            2.2,
+            6
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1546,
+          "min": 30,
+          "max": 218,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.29871794871795,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2031381037537026,
+            2.2,
+            5.998153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1547,
+          "min": 30,
+          "max": 218,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.43076923076923,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.206274061092517,
+            2.2,
+            5.996307692307693
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1546,
+          "min": 30,
+          "max": 218,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.56282051282052,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.20940572706967,
+            2.2,
+            5.994461538461539
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1544,
+          "min": 30,
+          "max": 218,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.6948717948718,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2125309596736145,
+            2.2,
+            5.992615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1548,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.82692307692308,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.215647621293131,
+            2.2,
+            5.990769230769231
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1550,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 82.95897435897436,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2187535801794223,
+            2.2,
+            5.988923076923077
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1546,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.09102564102565,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2218467119041985,
+            2.2,
+            5.987076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1546,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.22307692307693,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.224924900812749,
+            2.2,
+            5.985230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1542,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.35512820512821,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.227986041471022,
+            2.2,
+            5.983384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1540,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.48717948717949,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.231028040105708,
+            2.2,
+            5.981538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1536,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.61923076923077,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2340488160363474,
+            2.2,
+            5.979692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1531,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.75128205128206,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.237046303098486,
+            2.2,
+            5.977846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1527,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 83.88333333333334,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.240018451056898,
+            2.2,
+            5.976
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1527,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.01538461538462,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.242963227007916,
+            2.2,
+            5.974153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1523,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.1474358974359,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.245878616769908,
+            2.2,
+            5.972307692307693
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1520,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.27948717948718,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.2487626262609433,
+            2.2,
+            5.970461538461539
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1515,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.41153846153847,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.251613282862717,
+            2.2,
+            5.968615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1513,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.54358974358975,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.254428636769788,
+            2.2,
+            5.966769230769231
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1503,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.67564102564103,
+          "stage": 1,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            3.257206762323219,
+            2.2,
+            5.9649230769230766
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 1502,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.8076923076923,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2599457593276955,
+            1.4,
+            4.263076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3026,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 84.9397435897436,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.262643754351231,
+            1.4,
+            4.261230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3028,
+          "min": 30,
+          "max": 244,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.07179487179488,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.265298902006566,
+            1.4,
+            4.259384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3030,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.20384615384616,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.267909386213384,
+            1.4,
+            4.257538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3034,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.33589743589744,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.270473421440483,
+            1.4,
+            4.255692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3036,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.46794871794872,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.272989253927052,
+            1.4,
+            4.253846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3032,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.60000000000001,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2754551628822166,
+            1.4,
+            4.252
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3028,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.73205128205129,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2778694616620303,
+            1.4,
+            4.250153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3028,
+          "min": 30,
+          "max": 245,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.86410256410257,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.280230498923119,
+            1.4,
+            4.248307692307693
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3020,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 85.99615384615385,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.282536659752169,
+            1.4,
+            4.2464615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3017,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.12820512820512,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2847863667705064,
+            1.4,
+            4.2446153846153845
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3018,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.26025641025642,
+          "stage": 2,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.286978081213,
+            1.4,
+            4.24276923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3018,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.3923076923077,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.289110303980549,
+            1.4,
+            4.240923076923076
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3013,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.52435897435898,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.29118157666545,
+            1.4,
+            4.239076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3012,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.65641025641025,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2931904825489204,
+            1.4,
+            4.237230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3012,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.78846153846155,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2951356475701146,
+            1.4,
+            4.235384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3008,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 86.92051282051283,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.2970157412659598,
+            1.4,
+            4.233538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3010,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.0525641025641,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.298829477681174,
+            1.4,
+            4.231692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 3007,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.18461538461538,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3005756162478375,
+            1.4,
+            4.229846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2999,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.31666666666666,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.302252962633924,
+            1.4,
+            4.228
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2989,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.44871794871796,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3038603695602036,
+            1.4,
+            4.226153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2982,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.58076923076923,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.305396737584966,
+            1.4,
+            4.224307692307692
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2979,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.71282051282051,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3068610158560223,
+            1.4,
+            4.2224615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2973,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.84487179487179,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3082522028294687,
+            1.4,
+            4.220615384615384
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2969,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 87.97692307692307,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.30956934695473,
+            1.4,
+            4.21876923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2972,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.10897435897436,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.310811547325405,
+            1.4,
+            4.216923076923076
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2966,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.24102564102564,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.311977954295472,
+            1.4,
+            4.215076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2959,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.37307692307692,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3130677700604343,
+            1.4,
+            4.213230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2960,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.5051282051282,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3140802492030055,
+            1.4,
+            4.211384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2960,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.6371794871795,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3150146992029654,
+            1.4,
+            4.209538461538461
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2956,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.76923076923077,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3158704809108297,
+            1.4,
+            4.207692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2937,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 88.90128205128205,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.316647008985022,
+            1.4,
+            4.205846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2942,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.03333333333333,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.317343752292238,
+            1.4,
+            4.204
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2931,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.16538461538461,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3179602342707297,
+            1.4,
+            4.202153846153846
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2925,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.2974358974359,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3184960332562685,
+            1.4,
+            4.200307692307692
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2911,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.42948717948718,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.318950782770558,
+            1.4,
+            4.1984615384615385
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2904,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.56153846153846,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.319324171771898,
+            1.4,
+            4.196615384615384
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2900,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.69358974358974,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.319615944867932,
+            1.4,
+            4.19476923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2890,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.82564102564103,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.319825902490332,
+            1.4,
+            4.192923076923076
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2886,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 89.95769230769231,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3199539010313024,
+            1.4,
+            4.191076923076923
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2883,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 90.08974358974359,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.319999852941801,
+            1.4,
+            4.189230769230769
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2882,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 90.22179487179487,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3199637267914257,
+            1.4,
+            4.187384615384615
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2882,
+          "min": 30,
+          "max": 247,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 90.35384615384615,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3198455472899098,
+            1.4,
+            4.185538461538462
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2883,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 90.48589743589744,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.3196453952702214,
+            1.4,
+            4.183692307692308
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2879,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        },
+        {
+          "id": "doping",
+          "time": 90.61794871794872,
+          "stage": 3,
+          "data": {
+            "highlightedSubstitutionalSite": 336,
+            "retainedNearestNeighbours": 4,
+            "concentrationNotToScale": true
+          },
+          "camera": [
+            2.319363407633276,
+            1.4,
+            4.181846153846154
+          ],
+          "look": [
+            0,
+            0,
+            0
+          ],
+          "fov": 40,
+          "bright": 2873,
+          "min": 30,
+          "max": 246,
+          "parts": 1356,
+          "labels": ""
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "silica": {
+      "parts": 17,
+      "truth": "Local Si-O tetrahedral coordination; outer network continues beyond view"
+    },
+    "furnace": {
+      "parts": 59
+    },
+    "distill": {
+      "parts": 32
+    },
+    "siemens": {
+      "parts": 65
+    },
+    "grains": {
+      "parts": 4,
+      "atoms": 704
+    },
+    "pull": {
+      "parts": 60
+    },
+    "doping": {
+      "parts": 1356
+    },
+    "trim": {
+      "parts": 23
+    },
+    "wire": {
+      "parts": 191
+    },
+    "lap": {
+      "parts": 97
+    },
+    "polish": {
+      "parts": 97
+    },
+    "wash": {
+      "parts": 55
+    },
+    "scan": {
+      "parts": 23
+    },
+    "cassette": {
+      "parts": 90
+    }
+  },
+  "limits": "Rendered mechanisms are educational 3D; neither factory footage nor human audiovisual approval."
+}

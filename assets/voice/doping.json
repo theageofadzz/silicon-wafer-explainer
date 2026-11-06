@@ -1,0 +1,124 @@
+{
+  "config": {
+    "text": "还可以加入极微量的硼或磷，调整电阻率。高纯，并不等于不能有受控掺杂。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 1875000,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3000000,
+      "duration": 1875000,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5000000,
+      "duration": 3875000,
+      "text": "加入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9125000,
+      "duration": 5250000,
+      "text": "极微量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 14375000,
+      "duration": 2000000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16625000,
+      "duration": 2375000,
+      "text": "硼"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19125000,
+      "duration": 1750000,
+      "text": "或"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20875000,
+      "duration": 3125000,
+      "text": "磷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25750000,
+      "duration": 4375000,
+      "text": "调整"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30375000,
+      "duration": 3875000,
+      "text": "电阻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34250000,
+      "duration": 1875000,
+      "text": "率"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41625000,
+      "duration": 6375000,
+      "text": "高纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51625000,
+      "duration": 2125000,
+      "text": "并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53750000,
+      "duration": 750000,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54625000,
+      "duration": 4500000,
+      "text": "等于"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60125000,
+      "duration": 2875000,
+      "text": "不能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63125000,
+      "duration": 1500000,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64625000,
+      "duration": 4125000,
+      "text": "受控"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68875000,
+      "duration": 5625000,
+      "text": "掺杂"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

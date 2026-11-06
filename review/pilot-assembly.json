@@ -1,0 +1,151 @@
+{
+  "file": "output/pilot.mp4",
+  "sha256": "6a5971833d1da854bc92a3de83ad648bbf7fc67fff7a2ea92475b39e0eb6765e",
+  "duration": 46.791666666666664,
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 1123,
+  "shots": [
+    {
+      "name": "opening",
+      "startFrame": 0,
+      "endFrame": 729,
+      "source": "opening/sample-9x16-v3.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 30.375,
+      "timeScale": 1.0,
+      "nativeSize": [
+        1080,
+        1920
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "quartz-return",
+      "startFrame": 729,
+      "endFrame": 778,
+      "source": "opening/edit/v3/generated/quartz-macro.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 2.0416666666666665,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 24.0
+    },
+    {
+      "name": "silica",
+      "startFrame": 778,
+      "endFrame": 904,
+      "source": "generated/silica.mp4",
+      "sourceStart": 2.0416666666666665,
+      "sourceDuration": 5.25,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 8.914285714285715
+    },
+    {
+      "name": "reduction",
+      "startFrame": 904,
+      "endFrame": 1123,
+      "source": "generated/reduction.mp4",
+      "sourceStart": 0,
+      "sourceDuration": 9.125,
+      "timeScale": 1.0,
+      "nativeSize": [
+        576,
+        1024
+      ],
+      "nativeFrameRate": 7.123287671232877
+    }
+  ],
+  "captions": [
+    {
+      "text": "石英的主要成分，是二氧化硅",
+      "start": 30.475,
+      "end": 33.345,
+      "scene": "silica"
+    },
+    {
+      "text": "硅和氧牢牢结合，先得把氧分开",
+      "start": 33.8,
+      "end": 36.669999999999995,
+      "scene": "silica"
+    },
+    {
+      "text": "石英和碳质还原剂进入电炉",
+      "start": 37.766666666666666,
+      "end": 40.66166666666666,
+      "scene": "reduction"
+    },
+    {
+      "text": "高温反应，得到工业硅",
+      "start": 40.87916666666666,
+      "end": 42.986666666666665,
+      "scene": "reduction"
+    },
+    {
+      "text": "但这一步，还远不够纯",
+      "start": 43.42916666666667,
+      "end": 45.78666666666666,
+      "scene": "reduction"
+    }
+  ],
+  "captionRendering": {
+    "font": "assets/fonts/NotoSansSC-Bold.otf",
+    "size": 55,
+    "glyphsVerified": true,
+    "maximumWidth": 930,
+    "safeY": [
+      1490,
+      1660
+    ],
+    "cueCount": 5
+  },
+  "soundEvents": [
+    {
+      "scene": "reduction",
+      "word": "高温",
+      "time": 40.87916666666666,
+      "duration": 0.36
+    },
+    {
+      "scene": "seed",
+      "word": "向上",
+      "time": 94.8,
+      "duration": 0.36
+    },
+    {
+      "scene": "slice",
+      "word": "切成",
+      "time": 121.68333333333332,
+      "duration": 0.36
+    },
+    {
+      "scene": "lapping",
+      "word": "研磨",
+      "time": 129.44583333333333,
+      "duration": 0.36
+    },
+    {
+      "scene": "clean",
+      "word": "去掉",
+      "time": 144.09583333333333,
+      "duration": 0.36
+    },
+    {
+      "scene": "inspect",
+      "word": "检查",
+      "time": 155.02083333333334,
+      "duration": 0.36
+    }
+  ],
+  "speechTiming": "Actual provider WordBoundary events /1e7 + verified segment audio offset",
+  "timeInterpolation": "Native 6–9fps guide resynthesis -> 24fps motion-compensated interpolation; I2V photos natively 24fps",
+  "decodeAndOCR": "Run production/verify.py on this output; assembly alone does not imply approval"
+}

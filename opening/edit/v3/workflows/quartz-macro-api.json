@@ -1,0 +1,164 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "ltxv",
+      "device": "cpu"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "Text, letters, subtitles, logo, watermark, illustration, cartoon, low polygon model, plastic, melting object, morphing geometry, pulsating surface, smeared details, unstable camera, flickering exposure."
+    }
+  },
+  "4": {
+    "class_type": "ManualSigmas",
+    "inputs": {
+      "sigmas": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0"
+    }
+  },
+  "5": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler_ancestral"
+    }
+  },
+  "10": {
+    "class_type": "WV3Photo",
+    "inputs": {
+      "relative_path": "assets/v3-real/input-quartz-macro.png"
+    }
+  },
+  "11": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A scientific documentary macro shot of the actual quartz crystal surface in the reference photograph. The camera glides very slowly across the solid transparent mineral facets, revealing the layered fractures, uneven natural edges and light traveling through the cloudy crystal. A gentle rack focus moves from the front fracture edge to the adjacent inner facet, while the specimen itself stays completely stationary and rigid. Realistic refraction and specular highlights, neutral soft light, sharply detailed authentic mineral surface, dark uncluttered background, one continuous calm macro move. Preserve the photograph's actual mineral shape and color. No transformation, no artificial glow, no writing or graphic overlays."
+    }
+  },
+  "12": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "frame_rate": 24
+    }
+  },
+  "13": {
+    "class_type": "LTXVPreprocess",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ],
+      "img_compression": 18
+    }
+  },
+  "14": {
+    "class_type": "LTXVImgToVideo",
+    "inputs": {
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image": [
+        "13",
+        0
+      ],
+      "width": 576,
+      "height": 1024,
+      "length": 65,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustom",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 20261105035,
+      "cfg": 1,
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "14",
+        1
+      ],
+      "sampler": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "14",
+        2
+      ]
+    }
+  },
+  "16": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 8
+    }
+  },
+  "17": {
+    "class_type": "WV3SaveShot",
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ],
+      "fps": 24,
+      "shot_name": "quartz-macro"
+    }
+  }
+}

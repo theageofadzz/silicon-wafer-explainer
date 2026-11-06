@@ -1,0 +1,450 @@
+{
+  "format": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1080,
+        "height": 1920,
+        "coded_width": 1080,
+        "coded_height": 1920,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "9:16",
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 373248,
+        "duration": "30.375000",
+        "bit_rate": "4963827",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "729",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1458000,
+        "duration": "30.375000",
+        "bit_rate": "169742",
+        "nb_frames": "1424",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/vertical-sample-9x16/sample-9x16-v3.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "30.375000",
+      "size": "19514714",
+      "bit_rate": "5139677",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "title": "Silicon wafer vertical sample - real materials revision 3",
+        "encoder": "Lavf63.1.101",
+        "comment": "Real-photo source credits and adaptation licenses: assets/v3-real/sources.json. AI camera motion is illustrative."
+      }
+    }
+  },
+  "videoSHA256": "3b685f426843fda45672efd8c50a233aa381d4fab543616e9b2583c3a1ec7ef2",
+  "fullDecode": true,
+  "captionCues": 15,
+  "captionOCRPassed": 14,
+  "captionVisualReview": [
+    "chip"
+  ],
+  "captionChecksPassed": true,
+  "encodedPictureMatchesEDL": true,
+  "pictureAlignmentFrames": 21,
+  "boundaryAndSemanticFrames": [
+    {
+      "time": 0.25,
+      "file": "encoded-0006.jpg"
+    },
+    {
+      "time": 1,
+      "file": "encoded-0024.jpg"
+    },
+    {
+      "time": 1.4166666666666667,
+      "file": "encoded-0034.jpg"
+    },
+    {
+      "time": 1.4583333333333333,
+      "file": "encoded-0035.jpg"
+    },
+    {
+      "time": 1.5,
+      "file": "encoded-0036.jpg"
+    },
+    {
+      "time": 1.5416666666666667,
+      "file": "encoded-0037.jpg"
+    },
+    {
+      "time": 1.5833333333333333,
+      "file": "encoded-0038.jpg"
+    },
+    {
+      "time": 2.7,
+      "file": "encoded-0065.jpg"
+    },
+    {
+      "time": 4.708333333333334,
+      "file": "encoded-0113.jpg"
+    },
+    {
+      "time": 4.75,
+      "file": "encoded-0114.jpg"
+    },
+    {
+      "time": 4.791666666666667,
+      "file": "encoded-0115.jpg"
+    },
+    {
+      "time": 4.833333333333334,
+      "file": "encoded-0116.jpg"
+    },
+    {
+      "time": 4.875,
+      "file": "encoded-0117.jpg"
+    },
+    {
+      "time": 5.8,
+      "file": "encoded-0139.jpg"
+    },
+    {
+      "time": 7.9,
+      "file": "encoded-0190.jpg"
+    },
+    {
+      "time": 9.166666666666666,
+      "file": "encoded-0220.jpg"
+    },
+    {
+      "time": 9.208333333333334,
+      "file": "encoded-0221.jpg"
+    },
+    {
+      "time": 9.25,
+      "file": "encoded-0222.jpg"
+    },
+    {
+      "time": 9.291666666666666,
+      "file": "encoded-0223.jpg"
+    },
+    {
+      "time": 9.333333333333334,
+      "file": "encoded-0224.jpg"
+    },
+    {
+      "time": 10.4,
+      "file": "encoded-0250.jpg"
+    },
+    {
+      "time": 11.458333333333332,
+      "file": "encoded-0275.jpg"
+    },
+    {
+      "time": 11.5,
+      "file": "encoded-0276.jpg"
+    },
+    {
+      "time": 11.541666666666666,
+      "file": "encoded-0277.jpg"
+    },
+    {
+      "time": 11.583333333333332,
+      "file": "encoded-0278.jpg"
+    },
+    {
+      "time": 11.625,
+      "file": "encoded-0279.jpg"
+    },
+    {
+      "time": 12.2,
+      "file": "encoded-0293.jpg"
+    },
+    {
+      "time": 13.5,
+      "file": "encoded-0324.jpg"
+    },
+    {
+      "time": 14.125,
+      "file": "encoded-0339.jpg"
+    },
+    {
+      "time": 14.166666666666668,
+      "file": "encoded-0340.jpg"
+    },
+    {
+      "time": 14.208333333333334,
+      "file": "encoded-0341.jpg"
+    },
+    {
+      "time": 14.25,
+      "file": "encoded-0342.jpg"
+    },
+    {
+      "time": 14.291666666666668,
+      "file": "encoded-0343.jpg"
+    },
+    {
+      "time": 14.9,
+      "file": "encoded-0358.jpg"
+    },
+    {
+      "time": 15.541666666666666,
+      "file": "encoded-0373.jpg"
+    },
+    {
+      "time": 15.583333333333334,
+      "file": "encoded-0374.jpg"
+    },
+    {
+      "time": 15.625,
+      "file": "encoded-0375.jpg"
+    },
+    {
+      "time": 15.666666666666666,
+      "file": "encoded-0376.jpg"
+    },
+    {
+      "time": 15.708333333333334,
+      "file": "encoded-0377.jpg"
+    },
+    {
+      "time": 16.3,
+      "file": "encoded-0391.jpg"
+    },
+    {
+      "time": 17.4,
+      "file": "encoded-0418.jpg"
+    },
+    {
+      "time": 18.666666666666668,
+      "file": "encoded-0448.jpg"
+    },
+    {
+      "time": 18.708333333333332,
+      "file": "encoded-0449.jpg"
+    },
+    {
+      "time": 18.75,
+      "file": "encoded-0450.jpg"
+    },
+    {
+      "time": 18.791666666666668,
+      "file": "encoded-0451.jpg"
+    },
+    {
+      "time": 18.833333333333332,
+      "file": "encoded-0452.jpg"
+    },
+    {
+      "time": 19.5,
+      "file": "encoded-0468.jpg"
+    },
+    {
+      "time": 21.041666666666668,
+      "file": "encoded-0505.jpg"
+    },
+    {
+      "time": 21.083333333333332,
+      "file": "encoded-0506.jpg"
+    },
+    {
+      "time": 21.125,
+      "file": "encoded-0507.jpg"
+    },
+    {
+      "time": 21.166666666666668,
+      "file": "encoded-0508.jpg"
+    },
+    {
+      "time": 21.208333333333332,
+      "file": "encoded-0509.jpg"
+    },
+    {
+      "time": 21.95,
+      "file": "encoded-0527.jpg"
+    },
+    {
+      "time": 23.1,
+      "file": "encoded-0554.jpg"
+    },
+    {
+      "time": 23.5,
+      "file": "encoded-0564.jpg"
+    },
+    {
+      "time": 23.541666666666664,
+      "file": "encoded-0565.jpg"
+    },
+    {
+      "time": 23.583333333333332,
+      "file": "encoded-0566.jpg"
+    },
+    {
+      "time": 23.625,
+      "file": "encoded-0567.jpg"
+    },
+    {
+      "time": 23.666666666666664,
+      "file": "encoded-0568.jpg"
+    },
+    {
+      "time": 24.5,
+      "file": "encoded-0588.jpg"
+    },
+    {
+      "time": 25.833333333333336,
+      "file": "encoded-0620.jpg"
+    },
+    {
+      "time": 25.875,
+      "file": "encoded-0621.jpg"
+    },
+    {
+      "time": 25.916666666666668,
+      "file": "encoded-0622.jpg"
+    },
+    {
+      "time": 25.958333333333336,
+      "file": "encoded-0623.jpg"
+    },
+    {
+      "time": 26.0,
+      "file": "encoded-0624.jpg"
+    },
+    {
+      "time": 26.7,
+      "file": "encoded-0641.jpg"
+    },
+    {
+      "time": 27.666666666666668,
+      "file": "encoded-0664.jpg"
+    },
+    {
+      "time": 27.708333333333332,
+      "file": "encoded-0665.jpg"
+    },
+    {
+      "time": 27.75,
+      "file": "encoded-0666.jpg"
+    },
+    {
+      "time": 27.791666666666668,
+      "file": "encoded-0667.jpg"
+    },
+    {
+      "time": 27.833333333333332,
+      "file": "encoded-0668.jpg"
+    },
+    {
+      "time": 28.3,
+      "file": "encoded-0679.jpg"
+    },
+    {
+      "time": 29.7,
+      "file": "encoded-0713.jpg"
+    }
+  ],
+  "nativeI2VSecondsInFinal": 17.666666666666668,
+  "limits": "OCR and frame export verify technical delivery only. Continuous visual review and human listening remain distinct."
+}

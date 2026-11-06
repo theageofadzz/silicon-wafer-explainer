@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"model-render-layer\"> is a timeline element that contains nested <canvas id=\"model-canvas\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#model-render-layer",
+        "dataAttributes": {},
+        "sourceFile": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/vertical-sample-9x16/edit/v3/model/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"model-render-layer\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "canvas_content_at_edge",
+        "severity": "warning",
+        "time": 8.333,
+        "selector": "#model-canvas",
+        "message": "Canvas content touches the frame edge (left).",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "containerSelector": "#model-v3",
+        "fixHint": "Keep drawn text inside the visible part of the canvas, or mark intentional full-bleed art with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-engine": "three.js r183"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 23.083,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          22.042,
+          23.083
+        ]
+      }
+    ],
+    "duration": 30.375,
+    "samples": [
+      5.583,
+      8.333,
+      16.25,
+      17.833,
+      22.042,
+      23.083
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 1,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      5.583,
+      8.333,
+      16.25,
+      17.833,
+      23.083
+    ],
+    "checked": 2,
+    "passed": 2
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 4.75 s (0.00–4.75 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "seconds": 4.75,
+        "floorSeconds": 3,
+        "until": 4.75
+      },
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 30 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"示意杂质\" (2 words) is on screen 0.56 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "示意杂质",
+        "selector": "#model-site-label",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 695,
+          "y": 769,
+          "width": 160,
+          "height": 58
+        },
+        "time": 21.938,
+        "words": 2,
+        "seconds": 0.563,
+        "floorSeconds": 2
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.75 s (23.63–27.38 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 23.625,
+        "seconds": 3.75,
+        "floorSeconds": 3,
+        "until": 27.375
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 243
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "41a38623-470c-41da-9fa3-fcbff76b35be",
+    "revision": null,
+    "report": "/Volumes/联想硬盘/视频/videos/silicon-wafer-replica/vertical-sample-9x16/edit/v3/model/.hyperframes/artifacts/checks/41a38623-470c-41da-9fa3-fcbff76b35be.json",
+    "attribution": "inputs-changed"
+  },
+  "_meta": {
+    "version": "0.9.15",
+    "latestVersion": "0.9.15",
+    "updateAvailable": false,
+    "checkedAt": "2026-11-05T07:08:06.658Z"
+  }
+}

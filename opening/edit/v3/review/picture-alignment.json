@@ -1,0 +1,191 @@
+[
+  {
+    "frame": 18,
+    "time": 0.75,
+    "source": "chip",
+    "sourceFrame": 18,
+    "meanAbsoluteError255": 1.6067475080490112,
+    "correlation": 0.999809360755088,
+    "pass": true
+  },
+  {
+    "frame": 75,
+    "time": 3.125,
+    "source": "blank",
+    "sourceFrame": 39,
+    "meanAbsoluteError255": 2.1149637699127197,
+    "correlation": 0.9998993045899089,
+    "pass": true
+  },
+  {
+    "frame": 138,
+    "time": 5.75,
+    "source": "model",
+    "sourceFrame": 138,
+    "meanAbsoluteError255": 4.277990818023682,
+    "correlation": 0.9996139892180518,
+    "pass": true
+  },
+  {
+    "frame": 168,
+    "time": 7.0,
+    "source": "model",
+    "sourceFrame": 168,
+    "meanAbsoluteError255": 4.158131122589111,
+    "correlation": 0.9931878698686614,
+    "pass": true
+  },
+  {
+    "frame": 186,
+    "time": 7.75,
+    "source": "model",
+    "sourceFrame": 186,
+    "meanAbsoluteError255": 4.097935199737549,
+    "correlation": 0.9966254413136288,
+    "pass": true
+  },
+  {
+    "frame": 228,
+    "time": 9.5,
+    "source": "boule",
+    "sourceFrame": 6,
+    "meanAbsoluteError255": 1.8005746603012085,
+    "correlation": 0.999831866480156,
+    "pass": true
+  },
+  {
+    "frame": 249,
+    "time": 10.375,
+    "source": "boule",
+    "sourceFrame": 27,
+    "meanAbsoluteError255": 2.0943379402160645,
+    "correlation": 0.9998634173937028,
+    "pass": true
+  },
+  {
+    "frame": 288,
+    "time": 12.0,
+    "source": "model",
+    "sourceFrame": 288,
+    "meanAbsoluteError255": 4.184929847717285,
+    "correlation": 0.9995760629677759,
+    "pass": true
+  },
+  {
+    "frame": 309,
+    "time": 12.875,
+    "source": "model",
+    "sourceFrame": 309,
+    "meanAbsoluteError255": 4.2327375411987305,
+    "correlation": 0.9995694862910824,
+    "pass": true
+  },
+  {
+    "frame": 358,
+    "time": 14.916666666666666,
+    "source": "blank",
+    "sourceFrame": 25,
+    "meanAbsoluteError255": 2.1199233531951904,
+    "correlation": 0.9998963395335311,
+    "pass": true
+  },
+  {
+    "frame": 408,
+    "time": 17.0,
+    "source": "model",
+    "sourceFrame": 408,
+    "meanAbsoluteError255": 4.426053524017334,
+    "correlation": 0.9996427263925385,
+    "pass": true
+  },
+  {
+    "frame": 412,
+    "time": 17.166666666666668,
+    "source": "model",
+    "sourceFrame": 412,
+    "meanAbsoluteError255": 4.367879867553711,
+    "correlation": 0.9996396168663555,
+    "pass": true
+  },
+  {
+    "frame": 426,
+    "time": 17.75,
+    "source": "model",
+    "sourceFrame": 426,
+    "meanAbsoluteError255": 4.429757118225098,
+    "correlation": 0.9996474861054224,
+    "pass": true
+  },
+  {
+    "frame": 478,
+    "time": 19.916666666666668,
+    "source": "blank",
+    "sourceFrame": 46,
+    "meanAbsoluteError255": 2.1274585723876953,
+    "correlation": 0.9998990280702903,
+    "pass": true
+  },
+  {
+    "frame": 522,
+    "time": 21.75,
+    "source": "model",
+    "sourceFrame": 522,
+    "meanAbsoluteError255": 4.342039108276367,
+    "correlation": 0.9996591321270919,
+    "pass": true
+  },
+  {
+    "frame": 536,
+    "time": 22.333333333333332,
+    "source": "model",
+    "sourceFrame": 536,
+    "meanAbsoluteError255": 4.323648452758789,
+    "correlation": 0.9996588835735616,
+    "pass": true
+  },
+  {
+    "frame": 552,
+    "time": 23.0,
+    "source": "model",
+    "sourceFrame": 552,
+    "meanAbsoluteError255": 4.348062992095947,
+    "correlation": 0.9996763588819756,
+    "pass": true
+  },
+  {
+    "frame": 588,
+    "time": 24.5,
+    "source": "blank",
+    "sourceFrame": 45,
+    "meanAbsoluteError255": 2.106130361557007,
+    "correlation": 0.9998984305633045,
+    "pass": true
+  },
+  {
+    "frame": 594,
+    "time": 24.75,
+    "source": "blank",
+    "sourceFrame": 51,
+    "meanAbsoluteError255": 2.133652687072754,
+    "correlation": 0.9998964795357546,
+    "pass": true
+  },
+  {
+    "frame": 644,
+    "time": 26.833333333333332,
+    "source": "quartz",
+    "sourceFrame": 22,
+    "meanAbsoluteError255": 1.7360366582870483,
+    "correlation": 0.9998928783993499,
+    "pass": true
+  },
+  {
+    "frame": 697,
+    "time": 29.041666666666668,
+    "source": "quartz-macro",
+    "sourceFrame": 31,
+    "meanAbsoluteError255": 1.9532567262649536,
+    "correlation": 0.9998228291260236,
+    "pass": true
+  }
+]

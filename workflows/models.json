@@ -1,0 +1,32 @@
+{
+  "downloaded": "2026-11-05",
+  "runtime": "ComfyUI 0.34.0, native LTXV nodes, Apple M4 16 GB, MPS diffusion and BF16 VAE, CPU text encoder",
+  "weightsIncludedInDeliveryZip": false,
+  "models": [
+    {
+      "filename": "ltxv-2b-0.9.8-distilled.safetensors",
+      "role": "video diffusion model and video VAE",
+      "officialRepository": "https://huggingface.co/Lightricks/LTX-Video",
+      "download": "https://hf-mirror.com/Lightricks/LTX-Video/resolve/main/ltxv-2b-0.9.8-distilled.safetensors",
+      "bytes": 6340744492,
+      "sha256": "76aa8c4786af752fa6f951947129d5290c3c6c0b2fadcadea6b5e114ae2cad8f",
+      "sha256Verified": true,
+      "comfyDirectory": "models/checkpoints",
+      "workspaceDirectory": "models/video",
+      "license": "LTX-Video-Open-Weights-License-0.X.txt"
+    },
+    {
+      "filename": "t5xxl_fp8_e4m3fn.safetensors",
+      "role": "T5 XXL text encoder",
+      "officialRepository": "https://huggingface.co/comfyanonymous/flux_text_encoders",
+      "download": "https://hf-mirror.com/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors",
+      "bytes": 4893934904,
+      "sha256": "7d330da4816157540d6bb7838bf63a0f02f573fc48ca4d8de34bb0cbfd514f09",
+      "sha256Verified": true,
+      "comfyDirectory": "models/text_encoders",
+      "workspaceDirectory": "models/text_encoders"
+    }
+  ],
+  "sigmaReference": "https://github.com/Lightricks/ComfyUI-LTXVideo/blob/864ffa6183ba39a9d799c465465d157f7cf93ba0/example_workflows/low_level/ltxvideo-i2v-distilled.json",
+  "note": "Downloaded through a public mirror of the official repositories and verified against the official repository LFS SHA-256 values. No paid generation API was used."
+}

@@ -1,0 +1,124 @@
+{
+  "config": {
+    "text": "石英和碳质还原剂进入电炉，高温反应，得到工业硅。但这一步，还远不够纯。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+0%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 1000000,
+      "duration": 6125000,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 7375000,
+      "duration": 1750000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9250000,
+      "duration": 3125000,
+      "text": "碳质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12500000,
+      "duration": 6000000,
+      "text": "还原剂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19500000,
+      "duration": 3500000,
+      "text": "进入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23125000,
+      "duration": 5625000,
+      "text": "电炉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32125000,
+      "duration": 3625000,
+      "text": "高温"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35875000,
+      "duration": 4375000,
+      "text": "反应"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42125000,
+      "duration": 3125000,
+      "text": "得到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45500000,
+      "duration": 3500000,
+      "text": "工业"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49000000,
+      "duration": 3000000,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57625000,
+      "duration": 1750000,
+      "text": "但"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59500000,
+      "duration": 2000000,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61500000,
+      "duration": 1375000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62875000,
+      "duration": 3375000,
+      "text": "步"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69750000,
+      "duration": 2125000,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71875000,
+      "duration": 1875000,
+      "text": "远"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73875000,
+      "duration": 2625000,
+      "text": "不够"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76500000,
+      "duration": 3500000,
+      "text": "纯"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio start"
+}

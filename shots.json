@@ -1,0 +1,540 @@
+{
+  "nativeWidth": 576,
+  "nativeHeight": 1024,
+  "sampler": "euler_ancestral",
+  "cfg": 1,
+  "sigmaSchedule": "1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0",
+  "decodeTileSize": 256,
+  "decodeTemporalSize": 32,
+  "decodeTemporalOverlap": 8,
+  "negative": "Text, lettering, subtitles, logo, watermark, cartoon, plastic, low polygon, extra geometry, melting solid metal, changing parts, flicker, distorted atoms, disconnected bonds.",
+  "shots": [
+    {
+      "id": "silica",
+      "input": "model/guides/silica.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.914285714285716,
+      "guideStrength": 0.93,
+      "seed": 20261106000,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 30.375,
+      "end": 37.666666666666664,
+      "action": "石英断口切到硅氧结构；强调连接在硅上的氧",
+      "fact": "二氧化硅是化合物，必须经过化学还原",
+      "wordAnchors": [
+        {
+          "text": "石英的主要成分，是二氧化硅",
+          "start": 30.475,
+          "end": 33.345
+        },
+        {
+          "text": "硅和氧牢牢结合，先得把氧分开",
+          "start": 33.8,
+          "end": 36.669999999999995
+        }
+      ],
+      "readingHold": 1.1166666666666671
+    },
+    {
+      "id": "reduction",
+      "input": "model/guides/reduction.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.123287671232877,
+      "guideStrength": 0.93,
+      "seed": 20261106001,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 37.666666666666664,
+      "end": 46.791666666666664,
+      "action": "炉体剖面切到电极下方的反应区域，再看熔融产物出料",
+      "fact": "碳质还原剂在电炉中还原石英，产物还需提纯",
+      "wordAnchors": [
+        {
+          "text": "石英和碳质还原剂进入电炉",
+          "start": 37.766666666666666,
+          "end": 40.66166666666666
+        },
+        {
+          "text": "高温反应，得到工业硅",
+          "start": 40.87916666666666,
+          "end": 42.986666666666665
+        },
+        {
+          "text": "但这一步，还远不够纯",
+          "start": 43.42916666666667,
+          "end": 45.78666666666666
+        }
+      ],
+      "readingHold": 1.125
+    },
+    {
+      "id": "distill",
+      "input": "model/guides/distill.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.610169491525422,
+      "guideStrength": 0.93,
+      "seed": 20261106002,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 46.791666666666664,
+      "end": 56.625,
+      "action": "总览精馏塔，再切内部塔盘及不同组分的分流",
+      "fact": "改变化学形态后，可借沸点差异进行分离",
+      "wordAnchors": [
+        {
+          "text": "接着，把硅变成容易分离的氯硅烷",
+          "start": 46.891666666666666,
+          "end": 50.07416666666666
+        },
+        {
+          "text": "反复精馏，让不同组分分开",
+          "start": 50.516666666666666,
+          "end": 53.14916666666666
+        },
+        {
+          "text": "再把高纯原料送进反应炉",
+          "start": 53.36666666666667,
+          "end": 55.63666666666666
+        }
+      ],
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "id": "deposition",
+      "input": "model/guides/deposition.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.393364928909949,
+      "guideStrength": 0.93,
+      "seed": 20261106003,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 56.625,
+      "end": 65.41666666666667,
+      "action": "加热硅芯上径向沉积，保持硅芯长度和端部支座不变",
+      "fact": "沉积增加棒体半径，产物为多晶硅",
+      "wordAnchors": [
+        {
+          "text": "在加热的硅芯表面",
+          "start": 56.725,
+          "end": 58.32
+        },
+        {
+          "text": "新的硅不断沉积，硅棒逐渐变粗",
+          "start": 58.4875,
+          "end": 61.62
+        },
+        {
+          "text": "得到的，就是高纯多晶硅",
+          "start": 62.075,
+          "end": 64.4325
+        }
+      ],
+      "readingHold": 1.1041666666666714
+    },
+    {
+      "id": "polycrystal",
+      "input": "model/guides/polycrystal.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.6952789699570845,
+      "guideStrength": 0.93,
+      "seed": 20261106004,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 65.41666666666667,
+      "end": 75.125,
+      "action": "分别观察三个晶粒的取向，再切到独立的有序单晶结构",
+      "fact": "纯度和结晶取向是不同要求；不演示晶粒自行转正",
+      "wordAnchors": [
+        {
+          "text": "纯，还不等于单晶",
+          "start": 65.51666666666667,
+          "end": 67.49916666666668
+        },
+        {
+          "text": "多晶里的小晶粒，方向各不相同",
+          "start": 67.95416666666667,
+          "end": 70.97416666666668
+        },
+        {
+          "text": "芯片需要的，是连续有序的晶体",
+          "start": 71.42916666666667,
+          "end": 74.13666666666667
+        }
+      ],
+      "readingHold": 1.1083333333333343
+    },
+    {
+      "id": "melt",
+      "input": "model/guides/melt.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 9.230769230769225,
+      "guideStrength": 0.93,
+      "seed": 20261106005,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 75.125,
+      "end": 82.16666666666667,
+      "action": "石英坩埚剖面显示装料，颗粒体积逐渐减小，留下熔体",
+      "fact": "高纯硅在坩埚中熔化，示意温度为1400多摄氏度",
+      "wordAnchors": [
+        {
+          "text": "把高纯多晶硅装进石英坩埚",
+          "start": 75.225,
+          "end": 78.045
+        },
+        {
+          "text": "加热到一千四百多摄氏度",
+          "start": 78.15,
+          "end": 80.07000000000001
+        },
+        {
+          "text": "重新熔化",
+          "start": 80.125,
+          "end": 81.14500000000001
+        }
+      ],
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "id": "doping",
+      "input": "model/guides/doping.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.572815533980586,
+      "guideStrength": 0.93,
+      "seed": 20261106006,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 82.16666666666667,
+      "end": 90.75,
+      "action": "晶格剖面中一个已有位点在“加入”时变色，保留四个近邻",
+      "fact": "受控掺杂用于调节电阻率；标记比例不代表实际浓度",
+      "wordAnchors": [
+        {
+          "text": "还可以加入极微量的硼或磷",
+          "start": 82.26666666666667,
+          "end": 84.68666666666668
+        },
+        {
+          "text": "调整电阻率",
+          "start": 84.74166666666667,
+          "end": 85.89916666666667
+        },
+        {
+          "text": "高纯，并不等于不能有受控掺杂",
+          "start": 86.32916666666667,
+          "end": 89.73666666666668
+        }
+      ],
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "id": "seed",
+      "input": "model/guides/seed.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.058823529411768,
+      "guideStrength": 0.93,
+      "seed": 20261106007,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 90.75,
+      "end": 99.95833333333333,
+      "action": "籽晶接触液面，旋转提拉，凝固界面保持与液面相接",
+      "fact": "籽晶确定新生晶体的取向",
+      "wordAnchors": [
+        {
+          "text": "一小段籽晶接触熔体",
+          "start": 90.85,
+          "end": 92.72
+        },
+        {
+          "text": "再一边旋转，一边缓慢向上提拉",
+          "start": 92.8875,
+          "end": 95.62
+        },
+        {
+          "text": "新凝固的硅，沿着籽晶的方向生长",
+          "start": 96.075,
+          "end": 98.94500000000001
+        }
+      ],
+      "readingHold": 1.1333333333333258
+    },
+    {
+      "id": "growth",
+      "input": "model/guides/growth.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.4641148325358895,
+      "guideStrength": 0.93,
+      "seed": 20261106008,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 99.95833333333333,
+      "end": 108.66666666666666,
+      "action": "细颈、放肩与等径段依次出现，镜头转向凝固界面",
+      "fact": "温度和提拉速度共同控制形状，时间明显压缩",
+      "wordAnchors": [
+        {
+          "text": "温度和拉速要配合得恰到好处",
+          "start": 100.05833333333332,
+          "end": 102.72833333333334
+        },
+        {
+          "text": "先拉细颈，再放肩",
+          "start": 103.17083333333333,
+          "end": 105.06583333333333
+        },
+        {
+          "text": "最后长出直径稳定的单晶棒",
+          "start": 105.23333333333333,
+          "end": 107.66583333333334
+        }
+      ],
+      "readingHold": 1.120833333333323
+    },
+    {
+      "id": "trim",
+      "input": "model/guides/trim.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 7.722772277227718,
+      "guideStrength": 0.93,
+      "seed": 20261106009,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 108.66666666666666,
+      "end": 117.08333333333333,
+      "action": "端部沿切口分离，外圆磨削，再切定位缺口的近景",
+      "fact": "修整形状与晶向定位是切片前的不同动作",
+      "wordAnchors": [
+        {
+          "text": "冷却后，切去头尾，修整外圆",
+          "start": 108.76666666666665,
+          "end": 111.82416666666666
+        },
+        {
+          "text": "再加工定位缺口",
+          "start": 111.87916666666666,
+          "end": 113.41166666666666
+        },
+        {
+          "text": "让后续设备认准晶体方向",
+          "start": 113.61666666666666,
+          "end": 116.06166666666667
+        }
+      ],
+      "readingHold": 1.1416666666666657
+    },
+    {
+      "id": "slice",
+      "input": "model/guides/slice.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.419753086419753,
+      "guideStrength": 0.93,
+      "seed": 20261106010,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 117.08333333333333,
+      "end": 127.20833333333333,
+      "action": "从多线锯滚轮总览切到线网与晶棒接触，再看分离薄片",
+      "fact": "并行切割获得薄片，表面仍有损伤",
+      "wordAnchors": [
+        {
+          "text": "接下来，金刚线像一排细密的锯",
+          "start": 117.18333333333332,
+          "end": 120.39083333333333
+        },
+        {
+          "text": "把晶棒同时切成许多薄片",
+          "start": 120.58333333333333,
+          "end": 122.85333333333334
+        },
+        {
+          "text": "切开之后，表面仍有锯痕和损伤",
+          "start": 123.30833333333332,
+          "end": 126.17833333333333
+        }
+      ],
+      "readingHold": 1.1500000000000057
+    },
+    {
+      "id": "lapping",
+      "input": "model/guides/lapping.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.478260869565212,
+      "guideStrength": 0.93,
+      "seed": 20261106011,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 127.20833333333333,
+      "end": 134.875,
+      "action": "边缘局部倒圆，双面研磨旋转，然后在剖面去掉损伤层",
+      "fact": "研磨改善几何精度，蚀刻去除加工损伤",
+      "wordAnchors": [
+        {
+          "text": "所以还要倒圆边缘",
+          "start": 127.30833333333332,
+          "end": 129.27833333333334
+        },
+        {
+          "text": "研磨，控制厚度和平行度",
+          "start": 129.44583333333333,
+          "end": 131.85333333333332
+        },
+        {
+          "text": "再蚀刻掉加工损伤层",
+          "start": 131.90833333333333,
+          "end": 133.90333333333334
+        }
+      ],
+      "readingHold": 1.0916666666666686
+    },
+    {
+      "id": "polish",
+      "input": "model/guides/polish.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 8.167539267015696,
+      "guideStrength": 0.93,
+      "seed": 20261106012,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 134.875,
+      "end": 142.83333333333334,
+      "action": "抛光头接触旋转抛光垫，微距表面凸起减小，再看镜面",
+      "fact": "化学机械作用共同整平表面",
+      "wordAnchors": [
+        {
+          "text": "抛光时，抛光垫和抛光液共同作用",
+          "start": 134.975,
+          "end": 138.3075
+        },
+        {
+          "text": "把表面继续整平",
+          "start": 138.5,
+          "end": 140.10750000000002
+        },
+        {
+          "text": "直到形成均匀的镜面",
+          "start": 140.225,
+          "end": 141.82
+        }
+      ],
+      "readingHold": 1.1333333333333542
+    },
+    {
+      "id": "clean",
+      "input": "model/guides/clean.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.666666666666667,
+      "guideStrength": 0.93,
+      "seed": 20261106013,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 142.83333333333334,
+      "end": 152.58333333333334,
+      "action": "夹具保持边缘接触，晶圆浸入清洗槽，示意颗粒随液流离开",
+      "fact": "清洗去除污染；液体及颗粒尺寸均为示意",
+      "wordAnchors": [
+        {
+          "text": "接着清洗，去掉颗粒和残留污染",
+          "start": 142.93333333333334,
+          "end": 146.20333333333335
+        },
+        {
+          "text": "这时，任何一次接触",
+          "start": 146.65833333333333,
+          "end": 148.87833333333336
+        },
+        {
+          "text": "都要尽量避免重新弄脏表面",
+          "start": 148.98333333333335,
+          "end": 151.56583333333336
+        }
+      ],
+      "readingHold": 1.1374999999999886
+    },
+    {
+      "id": "inspect",
+      "input": "model/guides/inspect.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 6.47302904564316,
+      "guideStrength": 0.93,
+      "seed": 20261106014,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 152.58333333333334,
+      "end": 162.625,
+      "action": "扫描光点与探头关联运动，再切双面测量和入盒",
+      "fact": "光学检查与几何测量分别完成，不伪造检测实测数据",
+      "wordAnchors": [
+        {
+          "text": "最后，用光学等方法检查颗粒和缺陷",
+          "start": 152.68333333333334,
+          "end": 156.67833333333334
+        },
+        {
+          "text": "测量厚度与平整度",
+          "start": 156.92083333333335,
+          "end": 158.61583333333334
+        },
+        {
+          "text": "合格的硅片，才能装盒出厂",
+          "start": 159.07083333333335,
+          "end": 161.60333333333335
+        }
+      ],
+      "readingHold": 1.1416666666666515
+    },
+    {
+      "id": "ending",
+      "input": "model/guides/ending.mp4",
+      "kind": "precise-3d-motion-guide",
+      "frames": 65,
+      "fps": 5.591397849462366,
+      "guideStrength": 0.93,
+      "seed": 20261106015,
+      "prompt": "A premium scientific technical film of the semiconductor manufacturing mechanism in the supplied precise motion guide. Preserve every mechanical part, material boundary, object silhouette, cutaway, atom position and physical action in the guide. Follow its exact camera angles, cuts and timing. Brushed silver steel, dark graphite, credible quartz glass, controlled soft studio strip reflections, crisp machining details and restrained realistic material response. Gray silicon atoms with green bonds remain rigid and connected exactly as shown. Hot silicon is softly amber. The mechanism moves only as in the guide. No extra structures, no morphing, no writing or graphics.",
+      "start": 162.625,
+      "end": 174.25,
+      "action": "洁净载具中的硅片逐层可见，再以空白片匹配加工晶圆",
+      "fact": "硅片制备完成后才进入器件加工",
+      "wordAnchors": [
+        {
+          "text": "从一块石英，到一片镜面",
+          "start": 162.725,
+          "end": 164.945
+        },
+        {
+          "text": "真正难的，是把纯度、晶体和表面同时做好",
+          "start": 165.0875,
+          "end": 169.23250000000002
+        },
+        {
+          "text": "而光刻与晶体管的故事，才刚刚开始",
+          "start": 169.6875,
+          "end": 172.67000000000002
+        }
+      ],
+      "readingHold": 1.6999999999999886
+    },
+    {
+      "id": "silicon-seed",
+      "input": "assets/inputs/silicon-seed.png",
+      "prompt": "A premium scientific macro photograph of this real silicon seed crystal rod, kept exactly rigid with its true narrow shape and shiny tip. A very small sideways camera move reveals the real tip and notch with changing reflections. Preserve every edge and background. No bending, no growing, no added objects, no lettering.",
+      "kind": "real-photograph",
+      "frames": 65,
+      "fps": 24,
+      "guideStrength": 1,
+      "seed": 20261106101
+    },
+    {
+      "id": "silicon-shoulder",
+      "input": "assets/inputs/silicon-shoulder.png",
+      "prompt": "A documentary macro shot of the actual single crystal silicon sample in this photograph. A small controlled lateral camera movement reveals the real metallic crystal surface, shoulder and subtle machining detail. Preserve its silhouette, true surface features and photographed surroundings. No morphing, no melting, no extra parts, no text.",
+      "kind": "real-photograph",
+      "frames": 65,
+      "fps": 24,
+      "guideStrength": 1,
+      "seed": 20261106102
+    }
+  ]
+}

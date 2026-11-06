@@ -1,0 +1,46 @@
+{
+  "silica": {
+    "parts": 17,
+    "truth": "Local Si-O tetrahedral coordination; outer network continues beyond view"
+  },
+  "furnace": {
+    "parts": 59
+  },
+  "distill": {
+    "parts": 32
+  },
+  "siemens": {
+    "parts": 65
+  },
+  "grains": {
+    "parts": 4,
+    "atoms": 704
+  },
+  "pull": {
+    "parts": 60
+  },
+  "doping": {
+    "parts": 1356
+  },
+  "trim": {
+    "parts": 23
+  },
+  "wire": {
+    "parts": 191
+  },
+  "lap": {
+    "parts": 97
+  },
+  "polish": {
+    "parts": 97
+  },
+  "wash": {
+    "parts": 55
+  },
+  "scan": {
+    "parts": 23
+  },
+  "cassette": {
+    "parts": 90
+  }
+}

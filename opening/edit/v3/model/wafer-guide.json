@@ -1,0 +1,16 @@
+{
+  "file": "wafer-guide.mp4",
+  "method": "Precise 3D motion guide, not a real photograph",
+  "frames": 81,
+  "fps": 24,
+  "width": 576,
+  "height": 1024,
+  "sourceGlobalFrames": [
+    115,
+    154
+  ],
+  "annotations": false,
+  "modelSourceSHA256": "2f91c30db8f8d4c20f475d51e40e924ff0b20461e19850b3201db44eb6b9a2a6",
+  "sha256": "c31965584da28076df7ea147692b5533121d0290651c476d5066a9a49a91b480",
+  "purpose": "Constrain the blank wafer plane and reflection during native ComfyUI diffusion."
+}

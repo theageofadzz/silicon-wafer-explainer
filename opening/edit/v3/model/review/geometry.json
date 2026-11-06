@@ -1,0 +1,15 @@
+{
+  "diameterMillimetres": 300,
+  "thicknessMillimetres": 0.775,
+  "thicknessRatio": 0.0025833333333333333,
+  "atoms": 2520,
+  "bonds": 4489,
+  "interiorAtoms": 997,
+  "coordinationFailures": 0,
+  "maxAngleError": 1.609823385706477e-15,
+  "maxBondLengthError": 6.661338147750939e-16,
+  "nearestNeighbourDistance": 0.6928203230275509,
+  "chainHasMissingBonds": false,
+  "residualBouleScaleY": 1,
+  "separatedSliceSpacingIsExaggerated": true
+}
