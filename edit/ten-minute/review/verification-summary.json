@@ -1,8 +1,11 @@
 {
   "date": "2026-11-07",
   "status": "automated-evidence-recorded",
-  "film": "output/silicon-wafer-10min-9x16.mp4",
-  "sha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7",
+  "film": "output/silicon-wafer-10min-9x16-v3.mp4",
+  "sha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
+  "timelineSha256": "508552f1cb812834cc75300d13c30ed0f11405381c7cf1a7d0459c38df111cdf",
+  "semanticVersion": 3,
+  "semanticActionCount": 306,
   "duration": 598.0,
   "width": 1080,
   "height": 1920,
@@ -14,20 +17,27 @@
   "captionOCR": {
     "status": "mismatches-need-visual-review",
     "count": 335,
-    "matched": 330
+    "matched": 331,
+    "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf"
   },
   "explanatoryOCR": {
     "status": "mismatches-need-visual-review",
     "beatCount": 84,
-    "exactlyMatchedBeats": 71
+    "exactlyMatchedBeats": 72,
+    "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf"
   },
-  "ocrMismatchImageReview": "review/visual-review.md; all 5 caption and 13 explanatory mismatches inspected",
+  "ocrMismatchImageReview": {
+    "captionMismatchCount": 4,
+    "explanatoryMismatchBeatCount": 12,
+    "status": "requires-visual-review",
+    "humanReviewApprovedByAudit": false
+  },
   "fontMissingGlyphs": {
     "Regular": [],
     "Bold": []
   },
   "allWordAnchorsCalibrated": true,
-  "minimumActionReadingHold": 1.0231645604776531,
+  "minimumActionReadingHold": 0.542715750219827,
   "projectionUpdateFPS": 24,
   "audio": {
     "integratedLUFS": -17.33,
@@ -43,7 +53,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 150,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "01-start-02",
@@ -51,7 +63,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 138,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "01-start-03",
@@ -59,7 +73,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 180,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "02-purity-01",
@@ -67,7 +83,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 160,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "02-purity-02",
@@ -75,7 +93,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 170,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "02-purity-03",
@@ -83,7 +103,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 178,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "03-order-01",
@@ -91,7 +113,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 170,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "03-order-02",
@@ -99,7 +123,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 168,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "03-order-03",
@@ -107,7 +133,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 185,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "04-quartz-01",
@@ -115,7 +143,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 150,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "04-quartz-02",
@@ -123,7 +153,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 155,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "04-quartz-03",
@@ -131,7 +163,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 184,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "05-furnace-01",
@@ -139,7 +173,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 167,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "05-furnace-02",
@@ -147,7 +183,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 177,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "05-furnace-03",
@@ -155,7 +193,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 177,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "06-transform-01",
@@ -163,7 +203,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 164,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "06-transform-02",
@@ -171,7 +213,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 141,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "06-transform-03",
@@ -179,7 +223,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 194,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "07-distill-01",
@@ -187,7 +233,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 179,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "07-distill-02",
@@ -195,7 +243,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 172,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "07-distill-03",
@@ -203,7 +253,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 183,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "08-siemens-01",
@@ -211,7 +263,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 144,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "08-siemens-02",
@@ -219,7 +273,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 153,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "08-siemens-03",
@@ -227,7 +283,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 192,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "09-feedstock-01",
@@ -235,7 +293,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 168,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 6
     },
     {
       "beat": "09-feedstock-02",
@@ -243,7 +303,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 175,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "09-feedstock-03",
@@ -251,7 +313,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 178,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "10-melt-01",
@@ -259,7 +323,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 172,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "10-melt-02",
@@ -267,7 +333,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 154,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "10-melt-03",
@@ -275,7 +343,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 182,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "11-seed-01",
@@ -283,7 +353,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 156,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "11-seed-02",
@@ -291,7 +363,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 158,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "11-seed-03",
@@ -299,7 +373,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 178,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "12-neck-01",
@@ -307,7 +383,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 159,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "12-neck-02",
@@ -315,7 +393,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 166,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "12-neck-03",
@@ -323,7 +403,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 172,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "13-growth-01",
@@ -331,7 +413,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 148,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "13-growth-02",
@@ -339,7 +423,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 159,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "13-growth-03",
@@ -347,7 +433,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 186,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "14-load-01",
@@ -355,7 +443,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 169,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "14-load-02",
@@ -363,7 +453,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 144,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "14-load-03",
@@ -371,7 +463,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 179,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "15-magnetic-01",
@@ -379,7 +473,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 157,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "15-magnetic-02",
@@ -387,7 +483,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 142,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "15-magnetic-03",
@@ -395,7 +493,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 186,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "16-control-01",
@@ -403,7 +503,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 162,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "16-control-02",
@@ -411,7 +513,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 194,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 2
     },
     {
       "beat": "16-control-03",
@@ -419,7 +523,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 186,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "17-defects-01",
@@ -427,7 +533,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 145,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "17-defects-02",
@@ -435,7 +543,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 180,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "17-defects-03",
@@ -443,7 +553,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 176,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "18-trim-01",
@@ -451,7 +563,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 164,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "18-trim-02",
@@ -459,7 +573,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 157,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "18-trim-03",
@@ -467,7 +583,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 159,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "19-slice-01",
@@ -475,7 +593,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 163,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "19-slice-02",
@@ -483,7 +603,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 176,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "19-slice-03",
@@ -491,7 +613,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 180,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "20-edge-01",
@@ -499,7 +623,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 167,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "20-edge-02",
@@ -507,7 +633,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 164,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "20-edge-03",
@@ -515,7 +643,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 192,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "21-polish-01",
@@ -523,7 +653,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 185,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "21-polish-02",
@@ -531,7 +663,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 168,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "21-polish-03",
@@ -539,7 +673,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 187,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "22-flatness-01",
@@ -547,7 +683,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 172,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "22-flatness-02",
@@ -555,7 +693,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 168,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "22-flatness-03",
@@ -563,7 +703,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 187,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "23-clean-01",
@@ -571,7 +713,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 168,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "23-clean-02",
@@ -579,7 +723,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 166,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "23-clean-03",
@@ -587,7 +733,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 187,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "24-epitaxy-01",
@@ -595,7 +743,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 166,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "24-epitaxy-02",
@@ -603,7 +753,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 157,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     },
     {
       "beat": "24-epitaxy-03",
@@ -611,7 +763,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 191,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "25-inspect-01",
@@ -619,7 +773,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 177,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "25-inspect-02",
@@ -627,7 +783,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 165,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "25-inspect-03",
@@ -635,7 +793,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 192,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "26-shipping-01",
@@ -643,7 +803,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 171,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "26-shipping-02",
@@ -651,7 +813,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 155,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "26-shipping-03",
@@ -659,7 +823,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 219,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "27-industry-01",
@@ -667,7 +833,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 173,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 4
     },
     {
       "beat": "27-industry-02",
@@ -675,7 +843,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 197,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 6
     },
     {
       "beat": "27-industry-03",
@@ -683,7 +853,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 210,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "28-recap-01",
@@ -691,7 +863,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 140,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 5
     },
     {
       "beat": "28-recap-02",
@@ -699,7 +873,9 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 169,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 6
     },
     {
       "beat": "28-recap-03",
@@ -707,10 +883,12 @@
       "height": 1920,
       "captureFps": 24,
       "frames": 198,
-      "duplicatedFrames": false
+      "duplicatedFrames": false,
+      "semanticVersion": 3,
+      "semanticActionCount": 3
     }
   ],
-  "newComfyPhotography": [
+  "comfyPhotography": [
     {
       "frames": 65,
       "fps": 24.0,
@@ -719,7 +897,8 @@
       "sha256": "7a873e34171b80e6ffb17ec61227d0da1b96bf43f8783e8878186f27f67c6b26",
       "sourcePhotoSha256": "ec5fa1721fdb84f1842e7fd2fd256e7e6a3e3df52dcdf40d60efda7ba29eea24",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
-      "key": "quartz"
+      "key": "quartz",
+      "cachedFromPriorRender": true
     },
     {
       "frames": 65,
@@ -729,7 +908,8 @@
       "sha256": "deab79724083ff89a3c0ebb5302348d23934bb2e1c1c1dbc1712c445e2e883db",
       "sourcePhotoSha256": "a0d09bcf710cc8dad561bcc712613a183400150a1d26716de2fc16982971b619",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
-      "key": "boule"
+      "key": "boule",
+      "cachedFromPriorRender": true
     },
     {
       "frames": 65,
@@ -739,15 +919,17 @@
       "sha256": "60dcaadd229eb56dab6d168bf2b2a400d7c23a539614734cc9ee3093c0d08420",
       "sourcePhotoSha256": "c19da7de99fe5d24553c34fb4b98a0e071a973e60b6d4faa0cdf46195e77f993",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
-      "key": "blank"
+      "key": "blank",
+      "cachedFromPriorRender": true
     }
   ],
   "humanAudioReview": "not performed by this automated system",
   "normalSpeedPlayback": {
     "status": "normal-speed-browser-playback-completed",
     "duration": 598,
-    "wallSeconds": 598.543,
+    "wallSeconds": 598.74,
     "pageErrors": []
   },
-  "semanticReview": "see critic and visual review records; technical checks alone do not approve meaning"
+  "semanticMeaningApprovedByAudit": false,
+  "semanticReview": "not granted; phrase plans and action counts do not establish scientific meaning or synchrony"
 }

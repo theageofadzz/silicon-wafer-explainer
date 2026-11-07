@@ -1,5 +1,5 @@
 {
-  "duration": 598.0,
+  "duration": 598,
   "scenes": 28,
   "beats": 84,
   "captions": 335,
@@ -8,6 +8,46 @@
   "captionTimingChecked": true,
   "sourceRecordingCount": 28,
   "tempo": 1.003483835005574,
-  "minimumReadingHold": 1.0231645604776531,
+  "minimumReadingHold": 0.542715750219827,
+  "semanticVersion": 3,
+  "semanticActionCount": 306,
+  "shortFinalHoldsRequireVisualReview": [
+    {
+      "beat": "04-quartz-02",
+      "seconds": 0.5567481531268754,
+      "finalPhrase": "\u628a\u5b83\u4eec\u5206\u5f00"
+    },
+    {
+      "beat": "09-feedstock-01",
+      "seconds": 0.542715750219827,
+      "finalPhrase": "\u53bb\u6389"
+    },
+    {
+      "beat": "09-feedstock-02",
+      "seconds": 0.6909247026801211,
+      "finalPhrase": "\u518d\u91cd\u65b0\u5efa\u7acb"
+    },
+    {
+      "beat": "18-trim-02",
+      "seconds": 0.8803688376614787,
+      "finalPhrase": "\u8bc6\u522b\u53c2\u7167"
+    },
+    {
+      "beat": "26-shipping-01",
+      "seconds": 0.7788412720454971,
+      "finalPhrase": "\u52a0\u5de5\u73af\u8282"
+    },
+    {
+      "beat": "27-industry-01",
+      "seconds": 0.8156420867471752,
+      "finalPhrase": "\u9002\u914d\u81ea\u5df1\u7684\u5de5\u827a"
+    },
+    {
+      "beat": "27-industry-02",
+      "seconds": 0.8618351617831195,
+      "finalPhrase": "\u56fd\u5185\u4e5f\u5728\u53d1\u5c55"
+    }
+  ],
+  "semanticMeaningApprovedByTimingCheck": false,
   "humanListeningReview": false
 }

@@ -174,7 +174,8 @@ function uiGraph(graph) {
   }).filter(g => Object.values(graph).some(n => n.class_type === 'WTPhoto'));
   return {last_node_id: 500, last_link_id: linkID, nodes, links, groups, config: {},
     extra: {ds: {scale: .24, offset: [50, 50]}, note: 'Narration and timestamps are external immutable inputs. '
-      + 'Photography <=2.5 seconds per eligible beat before its action. Exact 24fps code handles every mechanism. No diffusion on explanatory type.'},
+      + 'Photography <=2.5 seconds per eligible beat: introductions precede mechanisms; appearance inserts follow the actual spoken phrase. '
+      + 'Exact 24fps code handles every mechanism. No diffusion on explanatory type.'},
     version: .4};
 }
 

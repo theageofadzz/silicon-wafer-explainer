@@ -1,0 +1,125 @@
+{
+  "6": {
+    "class_type": "WTPrepare",
+    "inputs": {
+      "only": "10-melt-01,10-melt-02,10-melt-03,11-seed-01,11-seed-02,11-seed-03",
+      "pilot": false,
+      "render_missing": true,
+      "render_command": ""
+    },
+    "_meta": {
+      "title": "Validate actual narration, render only missing exact beats"
+    }
+  },
+  "150": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "quartz"
+    }
+  },
+  "151": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "quartz-macro"
+    }
+  },
+  "152": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "boule"
+    }
+  },
+  "153": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "blank"
+    }
+  },
+  "154": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "chip"
+    }
+  },
+  "155": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "silicon-seed"
+    }
+  },
+  "156": {
+    "class_type": "WTExisting",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "photo": "silicon-shoulder"
+    }
+  },
+  "500": {
+    "class_type": "WTAssemble",
+    "inputs": {
+      "project": [
+        "6",
+        0
+      ],
+      "picture_only": false,
+      "quartz": [
+        "150",
+        0
+      ],
+      "quartz_macro": [
+        "151",
+        0
+      ],
+      "boule": [
+        "152",
+        0
+      ],
+      "blank": [
+        "153",
+        0
+      ],
+      "chip": [
+        "154",
+        0
+      ],
+      "silicon_seed": [
+        "155",
+        0
+      ],
+      "silicon_shoulder": [
+        "156",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Exact 3D + short photographs -> code text -> subtitles LAST"
+    }
+  }
+}

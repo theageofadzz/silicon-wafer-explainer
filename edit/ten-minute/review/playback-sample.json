@@ -1,0 +1,11 @@
+{
+  "status": "normal-speed-browser-playback-completed",
+  "encodedSha256": "8cfe21be8f5aa5faa4574233ee439b76c35663d226b443acaf3966e98416e238",
+  "wallSeconds": 42.04,
+  "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4",
+  "duration": 41.666667,
+  "time": 41.666667,
+  "rate": 1,
+  "ended": true,
+  "limits": "Browser decode completion only; no human listening approval"
+}

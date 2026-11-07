@@ -1,0 +1,327 @@
+{
+  "status": "overview-extracted-final-evidence-recorded",
+  "generatedAt": "2026-11-07T07:11:01.498737+00:00",
+  "file": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/review/overview.jpg",
+  "sha256": "127b3b3ef10c189937441ac3b6a54eaf92378d17ddecbffd4ef9ef123a8edb2a",
+  "size": [
+    1500,
+    2912
+  ],
+  "encodedFile": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/output/silicon-wafer-10min-9x16-v3.mp4",
+  "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
+  "timelineSha256": "508552f1cb812834cc75300d13c30ed0f11405381c7cf1a7d0459c38df111cdf",
+  "assemblySha256": "8c224db6aa70bb70e2d1a211725b1d9ae707369c78cb66654a38a67f767d2152",
+  "sourceHashesMeasured": true,
+  "panelCount": 16,
+  "panels": [
+    {
+      "beat": "01-start-01",
+      "phrase": "表面亮得像镜子",
+      "title": "镜面外观",
+      "phraseWordStart": 4.740443078461326,
+      "phraseWordEnd": 5.813081184279962,
+      "actionStart": 4.740443078461326,
+      "actionEnd": 5.240443078461326,
+      "outputFrame": 127,
+      "outputSeconds": 5.291666666666667,
+      "timecode": "00:05:07",
+      "shotKind": "photographic-i2v",
+      "imageRegion": [
+        12,
+        88,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "02-purity-02",
+      "phrase": "剩余杂质",
+      "title": "纯度与剩余杂质",
+      "phraseWordStart": 31.199181532564925,
+      "phraseWordEnd": 32.04116520038884,
+      "actionStart": 31.199181532564925,
+      "actionEnd": 32.149181532564924,
+      "outputFrame": 773,
+      "outputSeconds": 32.208333333333336,
+      "timecode": "00:32:05",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        384,
+        88,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "03-order-02",
+      "phrase": "连续的网",
+      "title": "单晶的连续取向",
+      "phraseWordStart": 50.78835342313568,
+      "phraseWordEnd": 51.41118358561312,
+      "actionStart": 50.78835342313568,
+      "actionEnd": 51.58835342313568,
+      "outputFrame": 1240,
+      "outputSeconds": 51.666666666666664,
+      "timecode": "00:51:16",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        756,
+        88,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "07-distill-02",
+      "phrase": "分别收集",
+      "title": "精馏与分别收集",
+      "phraseWordStart": 135.87845488237747,
+      "phraseWordEnd": 136.5820456880989,
+      "actionStart": 135.87845488237747,
+      "actionEnd": 136.67845488237748,
+      "outputFrame": 3282,
+      "outputSeconds": 136.75,
+      "timecode": "02:16:18",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        1128,
+        88,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "10-melt-01",
+      "phrase": "多晶硅装进",
+      "title": "装料：多晶硅进入坩埚",
+      "phraseWordStart": 189.76850218247472,
+      "phraseWordEnd": 190.58739928010002,
+      "actionStart": 189.76850218247472,
+      "actionEnd": 190.9685021824747,
+      "outputFrame": 4585,
+      "outputSeconds": 191.04166666666666,
+      "timecode": "03:11:01",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        12,
+        794,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "10-melt-01",
+      "phrase": "石墨支撑",
+      "title": "支撑：石墨支撑坩埚",
+      "phraseWordStart": 192.34838928148875,
+      "phraseWordEnd": 193.086567590057,
+      "actionStart": 192.34838928148875,
+      "actionEnd": 193.04838928148874,
+      "outputFrame": 4635,
+      "outputSeconds": 193.125,
+      "timecode": "03:13:03",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        384,
+        794,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "10-melt-01",
+      "phrase": "热场",
+      "title": "热场：外围加热结构",
+      "phraseWordStart": 193.21345951951122,
+      "phraseWordEnd": 193.62867896347737,
+      "actionStart": 193.21345951951122,
+      "actionEnd": 193.9134595195112,
+      "outputFrame": 4655,
+      "outputSeconds": 193.95833333333334,
+      "timecode": "03:13:23",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        756,
+        794,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "10-melt-01",
+      "phrase": "固体逐渐变成熔体",
+      "title": "熔化：固体变为熔体",
+      "phraseWordStart": 194.88588307179563,
+      "phraseWordEnd": 196.36219783474522,
+      "actionStart": 194.88588307179563,
+      "actionEnd": 195.78588307179564,
+      "outputFrame": 4700,
+      "outputSeconds": 195.83333333333334,
+      "timecode": "03:15:20",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        1128,
+        794,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "12-neck-02",
+      "phrase": "位错在侧壁终止",
+      "title": "缩颈与位错终止",
+      "phraseWordStart": 241.60736281183173,
+      "phraseWordEnd": 243.04908907540627,
+      "actionStart": 241.60736281183173,
+      "actionEnd": 242.75736281183174,
+      "outputFrame": 5828,
+      "outputSeconds": 242.83333333333334,
+      "timecode": "04:02:20",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        12,
+        1500,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "17-defects-01",
+      "phrase": "挤进正常位置之间",
+      "title": "空位与间隙原子",
+      "phraseWordStart": 340.16583502291354,
+      "phraseWordEnd": 341.480712207749,
+      "actionStart": 340.16583502291354,
+      "actionEnd": 340.8158350229135,
+      "outputFrame": 8181,
+      "outputSeconds": 340.875,
+      "timecode": "05:40:21",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        384,
+        1500,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "19-slice-01",
+      "phrase": "逐步去除硅",
+      "title": "金刚线切片",
+      "phraseWordStart": 378.4975845321484,
+      "phraseWordEnd": 379.37415570281905,
+      "actionStart": 378.4975845321484,
+      "actionEnd": 379.5975845321484,
+      "outputFrame": 9112,
+      "outputSeconds": 379.6666666666667,
+      "timecode": "06:19:16",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        756,
+        1500,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "21-polish-02",
+      "phrase": "突起逐渐被削低",
+      "title": "抛光削低突起",
+      "phraseWordStart": 428.892392668796,
+      "phraseWordEnd": 429.9765735614498,
+      "actionStart": 428.892392668796,
+      "actionEnd": 430.092392668796,
+      "outputFrame": 10324,
+      "outputSeconds": 430.1666666666667,
+      "timecode": "07:10:04",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        1128,
+        1500,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "22-flatness-02",
+      "phrase": "同时处在合适的焦点",
+      "title": "表面高低与光刻焦点",
+      "phraseWordStart": 454.92669379252885,
+      "phraseWordEnd": 456.3915066263019,
+      "actionStart": 454.92669379252885,
+      "actionEnd": 455.5266937925289,
+      "outputFrame": 10934,
+      "outputSeconds": 455.5833333333333,
+      "timecode": "07:35:14",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        12,
+        2206,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "24-epitaxy-02",
+      "phrase": "电阻率",
+      "title": "外延层与衬底",
+      "phraseWordStart": 497.1314925704764,
+      "phraseWordEnd": 497.6274308034996,
+      "actionStart": 497.1314925704764,
+      "actionEnd": 497.83149257047637,
+      "outputFrame": 11949,
+      "outputSeconds": 497.875,
+      "timecode": "08:17:21",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        384,
+        2206,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "25-inspect-02",
+      "phrase": "关联运动",
+      "title": "表面扫描与检测",
+      "phraseWordStart": 519.5880071123456,
+      "phraseWordEnd": 520.210795420636,
+      "actionStart": 519.5880071123456,
+      "actionEnd": 520.3380071123456,
+      "outputFrame": 12490,
+      "outputSeconds": 520.4166666666666,
+      "timecode": "08:40:10",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        756,
+        2206,
+        360,
+        640
+      ]
+    },
+    {
+      "beat": "26-shipping-03",
+      "phrase": "互连",
+      "title": "后续器件制造与互连",
+      "phraseWordStart": 548.8679180669351,
+      "phraseWordEnd": 549.3638562999585,
+      "actionStart": 548.8679180669351,
+      "actionEnd": 549.5179180669351,
+      "outputFrame": 13190,
+      "outputSeconds": 549.5833333333334,
+      "timecode": "09:09:14",
+      "shotKind": "exact-code",
+      "imageRegion": [
+        1128,
+        2206,
+        360,
+        640
+      ]
+    }
+  ],
+  "humanListeningPerformed": false,
+  "semanticAcceptanceGranted": false,
+  "semanticCorrectionReport": "review/semantic-correction-v3.md",
+  "verificationSummary": "review/verification-summary.json",
+  "limits": "Sixteen selected encoded frames only. Separate full verification, OCR, image-review and 1x playback evidence is recorded for this encoded SHA; the overview itself grants no final-film or human-audio approval."
+}

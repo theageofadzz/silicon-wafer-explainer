@@ -369,6 +369,9 @@ def anchor_position(anchors, bid):
 
 
 def mechanism_labels(beat):
+    if beat["id"] == "11-seed-01":
+        # The direction is already labeled at the lattice axis itself.
+        return []
     labels = beat["labels"][1:]
     if beat["visual"] == "trim" and "定位缺口" in beat["text"]:
         return ["缺口尺寸放大 · 晶向参照"]
@@ -668,6 +671,14 @@ def picture_plan(items, code, photos):
         beat, bid = item["beat"], item["beat"]["id"]
         data = media_info(code[bid])
         metadata = json.loads(code[bid].with_suffix(".json").read_text())
+        if metadata.get("semanticVersion") != 3 or not beat.get("semanticPlan"):
+            raise ValueError(f"Legacy generic footage cannot enter the semantic revision: {bid}")
+        if metadata.get("semanticPlan") != beat["semanticPlan"]:
+            raise ValueError(f"Semantic action plan changed; rerender {bid}")
+        expected_sources = {f"model/{p.name}": sha(p) for p in (ROOT / "model").glob("*.mjs")
+                            if not p.name.startswith(".")}
+        if metadata.get("modelSources") != expected_sources:
+            raise ValueError(f"Model source changed; rerender {bid}")
         if metadata.get("visual") != beat["visual"]:
             raise ValueError(f"Model visual changed; rerender {bid}")
         for state in metadata.get("states", []):
@@ -694,17 +705,15 @@ def picture_plan(items, code, photos):
         if key and key in photos:
             photo = media_info(photos[key])
             available = math.floor(photo["duration"] * FPS + 1e-6)
-            if key == "chip":
-                lithography = word_window(beat, "光刻")
-                manufacture = word_window(beat, "器件制造")
-                future = any(term in norm(beat["text"]) for term in ("后续", "接下来", "接下来的"))
-                if lithography and manufacture and future and manufacture[1] > lithography[0]:
-                    photo_start = max(1, math.ceil(lithography[0]*FPS-1e-7)-item["sourceStartFrame"])
-                    last = min(needed-1, math.floor(manufacture[1]*FPS)-item["sourceStartFrame"])
-                    count = max(0, min(60, available, last-photo_start))
-                    note = "patterned wafer only from actual 光刻 word during subsequent device manufacture"
-                else:
-                    note = "patterned wafer omitted: no calibrated subsequent-device-manufacture speech window"
+            if bid == "01-start-01" and key == "blank":
+                mirror = word_window(beat, "表面亮得像镜子")
+                if mirror is None:
+                    raise ValueError("Opening mirror appearance needs its spoken phrase")
+                photo_start = max(1, math.ceil(mirror[0]*FPS-1e-7)-item["sourceStartFrame"])
+                count = max(0, min(60, available, needed-photo_start))
+                note = "real blank-wafer appearance at the spoken mirror-reflection phrase; no repeated introductory insert"
+            elif key == "chip":
+                note = "patterned-wafer photograph omitted so each subsequent fabrication action remains visible"
             else:
                 # Introductory photos end before the modeled semantic action starts.
                 before_action = max(0, math.floor(beat["actionStart"] * FPS + 1e-7)
@@ -911,7 +920,7 @@ def build(args):
                              "targetLUFS": -16, "targetTruePeakDBTP": -1.5,
                              "method": "whole continuous narration; no beat-based voice cuts"}
     output = OUT / ("pilot.mp4" if args.pilot else "only.mp4" if args.only
-                    else "silicon-wafer-10min-9x16.mp4")
+                    else "silicon-wafer-10min-9x16-v3.mp4")
     temp = output.with_suffix(".part.mp4")
     run(["ffmpeg", "-y", "-v", "warning", "-i", picture, "-i", text_track, "-i", object_track, "-i", caption_track,
          "-i", ROOT / "assets/narration.wav", "-filter_complex", ";".join(filters),

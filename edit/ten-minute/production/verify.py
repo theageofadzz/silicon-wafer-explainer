@@ -1,7 +1,8 @@
 """Verify timing, explicit fonts, bounds, encoded frames and review evidence.
 
 --preflight is read-only. Encoded verification writes evidence under output/review-*.
-Glyph coverage and planned bounds do not imply OCR, semantic or listening approval.
+Every semanticPlan event is sampled from the final encode using assembly offsets.
+Glyph coverage, pixel changes and planned bounds do not imply semantic approval.
 """
 import argparse
 import json
@@ -15,6 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 from assemble import (CAPTION_HEIGHT, CAPTION_Y, FONTS, FPS, HEIGHT, LIMITS, OUT, ROOT, WIDTH,
                       audio_ranges, inside, label_kind, label_track, load_timeline, mapped_captions, media_info,
                       picture_plan, preflight, probe, resolve_inputs, run, select_beats, sha)
+import semantic_encoded
 
 
 def extract(file, at, target):
@@ -40,6 +42,11 @@ def strip(images, target, columns=8, thumb=(180, 320)):
 def verify(args):
     timeline = load_timeline()
     items = select_beats(timeline, args.only, args.pilot)
+    tag = "pilot" if args.pilot else "only" if args.only else "full"
+    record_file = OUT / f"{tag}-assembly.json"
+    window = semantic_encoded.review_window(args.semantic_window)
+    # Validate every spoken semantic event before inspecting render availability.
+    semantic_preflight = semantic_encoded.preflight(timeline, items, record_file, window)
     # Check every expected string and every layout, even for a short pilot delivery.
     all_items = select_beats(timeline)
     all_validation = preflight(timeline, all_items)
@@ -52,21 +59,27 @@ def verify(args):
               "narration": selected["audio"], "uncalibratedAnchors": timeline["uncalibratedAnchors"],
               "ocr": {"status": "not-run", "reason": "Font coverage and bounding boxes do not inspect encoded letters"},
               "humanAudioReview": "not performed; requires normal-speed listening",
-              "semanticActionReview": "not performed; inspect continuity strips and listen at normal speed",
+              "semanticActionReview": "pending independent critic; encoded samples do not approve meaning",
+              "semanticEncoded": semantic_preflight,
               "normalSpeedPlayback": "not performed",
               "limitations": LIMITS}
     if args.preflight:
         missing = [item["beat"]["id"] for item in items
                    if not (ROOT / "model/renders" / f"{item['beat']['id']}.mp4").is_file()]
         report["missingExactCodeRenders"] = missing
+        inputs_okay = not missing
         if not missing:
-            code, photos = resolve_inputs(items)
-            report["picturePlan"] = picture_plan(items, code, photos)
-        report["status"] = "input-preflight-only" if not missing else "blocked-missing-code-renders"
-        return report, not missing
+            try:
+                code, photos = resolve_inputs(items)
+                report["picturePlan"] = picture_plan(items, code, photos)
+            except (ValueError, KeyError, FileNotFoundError, RuntimeError) as error:
+                inputs_okay = False
+                report["picturePlanError"] = str(error)
+        report["status"] = ("input-preflight-only" if inputs_okay else
+                            "blocked-missing-code-renders" if missing else "blocked-stale-code-renders")
+        return report, inputs_okay
 
-    tag = "pilot" if args.pilot else "only" if args.only else "full"
-    record_file = inside(f"output/{tag}-assembly.json")
+    record_file = inside(record_file)
     assembly = json.loads(record_file.read_text())
     file = inside(args.file or assembly["file"])
     review = OUT / f"review-{tag}"
@@ -83,6 +96,8 @@ def verify(args):
         raise ValueError("Assembly caption/audio mapping differs from the current timeline selection")
     if assembly["validation"]["glyphs"] != all_validation["glyphs"]:
         raise ValueError("Font files or expected strings changed after assembly")
+    if args.semantic_only and assembly.get("pictureOnly"):
+        raise ValueError("Semantic encoded review requires the final composited encode")
     data = probe(file)
     video = next(s for s in data["streams"] if s["codec_type"] == "video")
     audio = next((s for s in data["streams"] if s["codec_type"] == "audio"), None)
@@ -135,6 +150,16 @@ def verify(args):
                    "duration": float(video["duration"]), "pictureCoverage": "contiguous",
                    "firstFrame": str(review / "first-frame.png"),
                    "pictureOnly": assembly.get("pictureOnly", False)})
+    if not assembly.get("pictureOnly"):
+        manifest = OUT / "semantic-encoded.json" if tag == "full" else review / "semantic-encoded.json"
+        report["semanticEncoded"] = semantic_encoded.write_evidence(
+            timeline, items, assembly, file, record_file, review, manifest, window)
+    else:
+        report["semanticEncoded"] = {**semantic_preflight,
+                                    "status": "waiting-for-final-composited-encode"}
+    if args.semantic_only:
+        report["status"] = "technical-checks-passed-human-review-pending"
+        return report, True
     evidence, contact = [], []
     cues = assembly["captions"] if not assembly.get("pictureOnly") else []
     if args.captions == "first":
@@ -206,6 +231,10 @@ def main():
     parser.add_argument("--preflight", action="store_true", help="Read-only, no decoding/extraction or file creation")
     parser.add_argument("--captions", choices=["first", "pilot", "all"], default="all")
     parser.add_argument("--continuity", choices=["first", "all", "none"], default="all")
+    parser.add_argument("--semantic-only", action="store_true",
+                        help="Run technical checks and all semantic encoded evidence; skip legacy caption/action sampling")
+    parser.add_argument("--semantic-window", default="188:207",
+                        help="Continuous encoded frames in absolute timeline seconds START:END (default 188:207)")
     parser.add_argument("--details", action="store_true", help="Include all layout records in read-only preflight stdout")
     args = parser.parse_args()
     try:

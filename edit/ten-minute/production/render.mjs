@@ -11,10 +11,10 @@ import {flattenBeats,validateTimeline,syntheticTimeline} from '../model/timeline
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2);
-const allowed=/^(--review|--render|--fixture|--only=[^=]+|--limit=\d+|--w=\d+|--h=\d+|--capture-fps=(12|24))$/;
+const allowed=/^(--review|--render|--calibrate|--fixture|--family=(atomic|growth|finishing)|--only=[^=]+|--limit=\d+|--w=\d+|--h=\d+|--capture-fps=(12|24))$/;
 for(const arg of args)if(!allowed.test(arg))throw new Error(`Unknown option ${arg}`);
 if(args.includes('--review')&&args.includes('--render'))throw new Error('Choose --review or --render');
-const mode=args.includes('--render')?'render':'review';
+const mode=args.includes('--calibrate')?'calibrate':args.includes('--render')?'render':'review';
 const option=(name,fallback)=>args.find(a=>a.startsWith(`--${name}=`))?.slice(name.length+3)??fallback;
 const W=Number(option('w',1080)),H=Number(option('h',1920)),limit=Number(option('limit',Infinity));
 const captureFps=Number(option('capture-fps',24)),repeatCount=24/captureFps;
@@ -39,6 +39,10 @@ const server=makeServer();server.listen(0,'127.0.0.1');await once(server,'listen
 let browser;
 const errors=[],results=[];
 function hash(buffer){return createHash('sha256').update(buffer).digest('hex');}
+const modelSources=Object.fromEntries(await Promise.all((await fs.readdir(path.join(root,'model')))
+  .filter(name=>name.endsWith('.mjs')&&!name.startsWith('.')).sort().map(async name=>[
+    `model/${name}`,hash(await fs.readFile(path.join(root,'model',name))),
+  ])));
 async function processOutput(command,commandArgs){
   const child=spawn(command,commandArgs,{stdio:['ignore','pipe','pipe']});
   let stdout='',stderr='';
@@ -57,6 +61,11 @@ function checkState(state,beat){
   if(d.detectorTracksSpot)assert(Math.abs(d.spot[0]-d.detector[0])+Math.abs(d.spot[2]-d.detector[2])<1e-8);
 }
 function reviewTimes(b){
+  if(b.semanticPlan?.length){
+    return [...new Set([b.start,b.end-1/24,...b.semanticPlan.flatMap(event=>[
+      Math.max(b.start,event.start-1/24),(event.start+event.end)/2,event.end,
+    ])])].sort((a,b)=>a-b);
+  }
   const frame=1/24,mid=(b.actionStart+b.actionEnd)/2;
   return [...new Set([b.start,Math.max(b.start,b.actionStart-frame),b.actionStart+frame,mid,
     b.actionEnd-frame,b.actionEnd,Math.max(b.actionEnd,b.end-frame)])].sort((a,b)=>a-b);
@@ -67,11 +76,45 @@ try{
     headless:true,args:[...(process.platform==='darwin'?['--use-angle=metal']:[]),'--disable-background-networking','--disable-extensions'],
   });
   const page=await browser.newPage({viewport:{width:W,height:H},deviceScaleFactor:1});
-  page.on('pageerror',e=>errors.push(String(e)));
+  page.on('pageerror',e=>{errors.push(String(e));console.error(`Browser: ${String(e)}`);});
   page.on('requestfailed',r=>errors.push(`${r.url()}: ${r.failure()?.errorText}`));
   if(fixture)await page.route('**/edit/ten-minute/timeline.json',route=>route.fulfill({json:timeline}));
-  await page.goto(`http://127.0.0.1:${server.address().port}/edit/ten-minute/model/index.html?w=${W}&h=${H}`,{waitUntil:'networkidle'});
+  await page.goto(`http://127.0.0.1:${server.address().port}/edit/ten-minute/model/index.html?w=${W}&h=${H}&beat=${beats[0].id}&family=${option('family','all')}`,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.__ready===true,null,{timeout:60000});
+  if(mode==='calibrate'){
+    for(const beat of beats){
+      const plan=await page.evaluate(id=>window.semanticPlanFor(id),beat.id),labels=new Set();
+      const labelTimes=new Set([beat.start,beat.end,
+        ...beat.words.flatMap(word=>[word.start,word.end]),
+        ...plan.flatMap(event=>[event.start,(event.start+event.end)/2,event.end])]);
+      for(const time of [...labelTimes].sort((a,b)=>a-b)){
+        const state=await page.evaluate(([id,t])=>window.renderBeat(id,t),[beat.id,time]);
+        state.extraAnchors.forEach(a=>labels.add(a.text));
+      }
+      const original=timeline.scenes.flatMap(s=>s.beats).find(b=>b.id===beat.id);
+      Object.assign(original,{semanticVersion:3,semanticPlan:plan,
+        actionStart:Math.min(...plan.map(p=>p.start)),actionEnd:Math.max(...plan.map(p=>p.end)),
+        localLabels:[...labels]});
+      original.actionAnchor=plan[0].phrase;
+      original.readingHold=original.end-original.actionEnd;
+      console.log(`calibrated ${beat.id}: ${plan.length} specific actions; ${original.readingHold.toFixed(3)}s final hold`);
+    }
+    const complete=timeline.scenes.every(s=>s.beats.every(b=>b.semanticVersion===3));
+    timeline.semanticVersion=complete?3:'partial';
+    timeline.timingMethod='Actual WordBoundary /1e7 + segment offset, then measured global tempo transform; each visual action separately bound to its spoken phrase';
+    validateTimeline(timeline);
+    await fs.writeFile(path.join(root,'timeline.json'),JSON.stringify(timeline,null,2)+'\n');
+    const lines=['# 逐句画面执行表','',
+      '每个动作使用独立的实际配音词组时间。此表是执行计划，不代替对最终编码逐句观看。','',
+      '|节拍 / 时间|台词词组|画面对象|实际变化|解释的事实|',
+      '|---|---|---|---|---|'];
+    for(const scene of timeline.scenes)for(const beat of scene.beats)for(const event of beat.semanticPlan||[]){
+      lines.push(`|${beat.id} / ${event.start.toFixed(3)}–${event.end.toFixed(3)}|${event.phrase}|${event.object}|${event.action}|${event.fact}|`);
+    }
+    await fs.writeFile(path.join(root,'SEMANTIC-STORYBOARD.md'),lines.join('\n')+'\n');
+    console.log(`Saved ${beats.length} calibrated semantic storyboards`);
+    process.exitCode=0;
+  }else{
   async function seek(beat,time){
     const state=await page.evaluate(([id,t])=>window.renderBeat(id,t),[beat.id,time]);
     checkState(state,beat);return state;
@@ -79,7 +122,8 @@ try{
   for(const beat of beats){
     const frameCount=Math.round((beat.end-beat.start)*24),states=[];
     assert(frameCount>0,`Empty beat ${beat.id}`);
-    const record={id:beat.id,visual:beat.visual,synthetic:fixture,width:W,height:H,fps:24,
+    const record={id:beat.id,visual:beat.visual,semanticVersion:3,semanticPlan:beat.semanticPlan,modelSources,
+      synthetic:fixture,width:W,height:H,fps:24,
       start:beat.start,end:beat.end,frameCount,duration:frameCount/24,
       sourceDuration:beat.end-beat.start,captureFps:mode==='render'?captureFps:undefined,
       outputFps:24,duplicatedFrames:mode==='render'?captureFps!==24:undefined,states};
@@ -148,6 +192,7 @@ try{
     limits:'Engine geometry and seeking checks only. Narration synchrony and compositor text require parent audiovisual review.'};
   await fs.writeFile(path.join(outputDir,'last-run.json'),JSON.stringify(report,null,2));
   console.log(`Saved ${results.length} ${mode} records in ${outputDir}`);
+  }
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

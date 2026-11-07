@@ -3,14 +3,32 @@
 当前版本：**9 分 58 秒，1080×1920，24fps，9:16 中文科普视频**，
 以及可重复运行的代码与 ComfyUI 工程。
 
-新版以 28 个问题、8 个章节、84 个语义节拍讲解硅片制造。口播重新撰写和配音，
-实际词时间戳驱动动作、物体标注和 335 条字幕。实物照片由 ComfyUI LTX 生成短镜头；
+当前工程修订为 **v2.1.0，逐句画面修正版**。冻结成片 SHA-256：
+`487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf`。
+全量编码验证、两类 OCR、598秒整片和41.667秒样段的1x浏览器播放、
+audit 与 content_check 均已完成，独立编码图像复核已记录；
+具体纠正与证据范围见 [语义纠正报告](edit/ten-minute/review/semantic-correction-v3.md)。
+
+字幕 OCR 为331/335直接匹配，解释文字按节拍为72/84直接匹配；差异已作图像复看，
+原始 OCR 结果保留，不记为全数通过。7个节拍的最后阅读停留不足1秒，最短0.543秒。
+程序正常播放不等于人耳全片听审，本轮未授予人耳验收。
+
+新版以 28 个问题、8 个章节、84 个语义节拍讲解硅片制造，包含306个独立词组动作。
+每个动作分别绑定实际配音词组，记录画面对象、变化及解释的事实；更换字幕或角度
+不能代替不同的机制动作。实际词时间戳同时驱动物体标注和 335 条字幕。
+实物照片经 ComfyUI LTX 动态重建为短镜头；本轮复用此前已生成且哈希匹配的摄影缓存，
+本轮未再次运行照片扩散生成；全部84段代码镜头已重新制作语义动作并原生重渲染。
 晶格、长晶和加工机制由 Three.js 精确解释，ComfyUI 最终合成节点调用 FFmpeg。
+合成纠正包括 `26-shipping-03` 禁用 chip 摄影覆盖，让“光刻、刻蚀、沉积、互连”
+依实际配音词组展示对应代码动作；最终编码图像复核已确认该摄影遮盖问题关闭。
 说明文字在生成画面后叠加，旁白字幕最后合成；画面内没有额外署名水印。
 
-**[下载完整视频与工程包](https://github.com/theageofadzz/silicon-wafer-explainer/releases/latest)**
+**[下载已发布版本的视频与工程包](https://github.com/theageofadzz/silicon-wafer-explainer/releases/latest)**
 
 新版入口：[完整制作说明](edit/ten-minute/README.md)、
+[逐词组语义执行表](edit/ten-minute/SEMANTIC-STORYBOARD.md)、
+[最终编码纠正记录](edit/ten-minute/review/semantic-correction-v3.md)、
+[v2.1 发布状态](edit/ten-minute/RELEASE.md)、
 [旁白全文](edit/ten-minute/NARRATION.md)、
 [台词与动作](edit/ten-minute/BEATS.md)、
 [科学依据](edit/ten-minute/FACTS.md)。
@@ -19,14 +37,14 @@
 
 | 工作流 | 用途 |
 | --- | --- |
-| [full.json](edit/ten-minute/workflows/full.json) | 准备真实时间轴与模型镜头，生成三段新实物镜头，合成全片 |
-| [cached.json](edit/ten-minute/workflows/cached.json) | 复用已生成实物镜头，重建代码镜头并合成全片 |
-| [photos.json](edit/ten-minute/workflows/photos.json) | 单独生成石英、晶棒、空白硅片，便于控制设备资源 |
+| [full.json](edit/ten-minute/workflows/full.json) | 可选：准备时间轴与模型，重新生成三段实物镜头后合成 |
+| [cached.json](edit/ten-minute/workflows/cached.json) | 本轮入口：复用此前已生成的实物镜头，重建代码镜头并合成 |
+| [photos.json](edit/ten-minute/workflows/photos.json) | 可选：单独重新生成石英、晶棒、空白硅片镜头 |
 | `*-api.json` | 对应的 ComfyUI API 图 |
 
 缓存口播 MP3、词事件、字体、照片、生成片段、脚本、节点源码和工作流都在仓库里。
 Release 工程包另带模型渲染片段和完整视频。未打包模型权重、ComfyUI 运行时或参考片。
-原生代码镜头为 1080×1920、24fps；新实物扩散镜头原生为 576×1024、24fps，
+原生代码镜头为 1080×1920、24fps；此前生成的实物扩散镜头原生为 576×1024、24fps，
 合成时放大。照片动态重建属于 AI 生成画面，设备剖面属于教学图解。
 
 ```sh
@@ -37,6 +55,11 @@ npm ci
 
 # 原文未变时，从仓库中的录音缓存离线恢复 WAV 和统一时间轴。
 python edit/ten-minute/production/narrate.py --fit
+
+# 修改词组动作或 rig 后，先校准再审图；模型源或计划变化会令旧片段失效。
+node edit/ten-minute/production/render.mjs --calibrate
+python edit/ten-minute/production/content_check.py
+node edit/ten-minute/production/render.mjs --review
 
 # 安装独立 ComfyUI 和模型后启动；也向 ComfyUI 的 Python 安装 requirements.txt。
 python edit/ten-minute/production/launch_comfy.py \

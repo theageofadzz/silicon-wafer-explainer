@@ -93,6 +93,9 @@ async def main():
                         help="Fit total duration with <=10 percent measured audio tempo change")
     args = parser.parse_args()
     plan = json.loads((ROOT / "script.json").read_text())
+    previous_path = ROOT / "timeline.json"
+    previous = json.loads(previous_path.read_text()) if previous_path.is_file() else {}
+    previous_beats = {b["id"]: b for s in previous.get("scenes", []) for b in s["beats"]}
     specs = plan["scenes"][:3] if args.pilot else plan["scenes"]
     semaphore = asyncio.Semaphore(2)
     recordings = await asyncio.gather(*(record(s, plan, semaphore) for s in specs))
@@ -207,6 +210,37 @@ async def main():
                 "timingMethod": "Actual WordBoundary /1e7 + segment offset, then measured global tempo transform",
                 "tempo": tempo, "voice": plan["voice"], "rate": plan["rate"],
                 "originalTextSHA256": hashlib.sha256((ROOT / "script.json").read_bytes()).hexdigest()}
+    for scene in scenes:
+        for beat in scene["beats"]:
+            old = previous_beats.get(beat["id"], {})
+            if old.get("semanticVersion") != 3:
+                continue
+            if beat["text"] != old["text"]:
+                raise ValueError(f"Rewrite requires a new semantic storyboard: {beat['id']}")
+            joined = "".join(norm(w["text"]) for w in beat["words"])
+            events = []
+            for entry in old["semanticPlan"]:
+                needle = norm(entry["phrase"])
+                at = joined.find(needle)
+                if at < 0:
+                    raise ValueError(f"Missing semantic phrase after narration: {beat['id']}/{entry['phrase']}")
+                position, matches = 0, []
+                for word in beat["words"]:
+                    stop = position + len(norm(word["text"]))
+                    if position < at + len(needle) and stop > at:
+                        matches.append(word)
+                    position = stop
+                start = matches[0]["start"] - entry.get("lead", 0)
+                events.append({**entry, "start": start, "end": start + entry["seconds"],
+                               "wordStart": matches[0]["start"], "wordEnd": matches[-1]["end"]})
+            beat.update(semanticVersion=3, semanticPlan=events, localLabels=old.get("localLabels", []),
+                        actionAnchor=events[0]["phrase"],
+                        actionStart=min(e["start"] for e in events),
+                        actionEnd=max(e["end"] for e in events))
+            beat["readingHold"] = beat["end"] - beat["actionEnd"]
+    if all(b.get("semanticVersion") == 3 for s in scenes for b in s["beats"]):
+        timeline["semanticVersion"] = 3
+        timeline["timingMethod"] += "; each visual action separately bound to its spoken phrase"
     save_json(ROOT / "timeline.json", timeline)
     lines = ["# 台词与动作台账", "", f"真实录音时长：{cursor:.3f} 秒；语速换算：{tempo:.6f}。", "",
              "|时间|台词锚点|对象|动作目标|画面短标注|动作后阅读秒数|",

@@ -1,32 +1,158 @@
 {
   "date": "2026-11-07",
-  "photography": {
-    "promptId": "118a9d53-10b5-4107-bdc8-8dfaeb6d9188",
-    "workflow": "workflows/photos-api.json",
-    "status": "success",
-    "completed": true,
-    "outputNodes": ["27", "51", "63"],
-    "nativeSize": [576, 1024],
-    "fps": 24,
-    "framesPerClip": 65,
-    "clips": ["blank", "boule", "quartz"]
+  "version": "2.1.0",
+  "status": "cached-composition-and-final-evidence-recorded",
+  "timelineSha256": "508552f1cb812834cc75300d13c30ed0f11405381c7cf1a7d0459c38df111cdf",
+  "comfyPhotography": {
+    "cachedFromPriorRender": true,
+    "regeneratedThisRun": false,
+    "diffusionExecutedThisRun": false,
+    "scope": "Both current full and sample cached composition prompts reuse previously generated photograph clips via WTExisting; no photography diffusion was run in either prompt.",
+    "existingNodes": {
+      "150": "quartz",
+      "151": "quartz-macro",
+      "152": "boule",
+      "153": "blank",
+      "154": "chip",
+      "155": "silicon-seed",
+      "156": "silicon-shoulder"
+    },
+    "usedInFinalAssembly": ["blank", "quartz", "silicon-seed", "boule", "silicon-shoulder", "quartz-macro"],
+    "usedInSampleAssembly": ["silicon-seed"],
+    "chipUsedInEitherAssembly": false,
+    "limits": "A WTExisting node names an available cached input; actual photograph use is taken from assembly shots, not inferred from graph connectivity."
   },
   "finalAssembly": {
-    "promptId": "b0aef069-667b-4eee-ad78-02d3206292db",
+    "promptId": "e6ff8787-8960-423a-9de8-120ea3ee97d2",
     "workflow": "workflows/cached-api.json",
+    "history": "workflows/cached-history.json",
+    "historySha256": "394738917b5738a5d85309f2e50b0d6c451e1287fe5520e44d3069f3ef092cf9",
     "status": "success",
     "completed": true,
     "outputNode": "500",
-    "startedUnixMs": 1794025567886,
-    "completedUnixMs": 1794025682377,
-    "output": "output/silicon-wafer-10min-9x16.mp4",
-    "sha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7"
+    "outputNodeClass": "WTAssemble",
+    "nodeClasses": ["WTPrepare", "WTExisting", "WTAssemble"],
+    "startedUnixMs": 1794034972351,
+    "completedUnixMs": 1794035203333,
+    "startedAtUTC": "2026-11-07T07:02:52.351Z",
+    "completedAtUTC": "2026-11-07T07:06:43.333Z",
+    "output": "output/silicon-wafer-10min-9x16-v3.mp4",
+    "sha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
+    "duration": 598,
+    "beatCount": 84,
+    "assembly": "output/full-assembly.json",
+    "assemblySha256": "8c224db6aa70bb70e2d1a211725b1d9ae707369c78cb66654a38a67f767d2152",
+    "verification": "output/full-verification.json",
+    "checks": {
+      "promptAndSuccessMessageMatch": true,
+      "historyOutputMatchesAssemblyFile": true,
+      "actualOutputShaMatchesAssemblyAndVerification": true,
+      "timelineShaMatchesAssemblyAndVerification": true
+    }
+  },
+  "sampleAssembly": {
+    "promptId": "7f8b86bb-2a1e-499d-ae4b-216bea6e3fb7",
+    "workflow": "workflows/cached-only-api.json",
+    "history": "workflows/cached-only-history.json",
+    "historySha256": "98181b4891bb70475f37672ba4e6242d5bdd41a6a1151b093fee6dea0a4f08bd",
+    "status": "success",
+    "completed": true,
+    "outputNode": "500",
+    "outputNodeClass": "WTAssemble",
+    "nodeClasses": ["WTPrepare", "WTExisting", "WTAssemble"],
+    "startedUnixMs": 1794034874929,
+    "completedUnixMs": 1794034898632,
+    "startedAtUTC": "2026-11-07T07:01:14.929Z",
+    "completedAtUTC": "2026-11-07T07:01:38.632Z",
+    "output": "output/only.mp4",
+    "sha256": "8cfe21be8f5aa5faa4574233ee439b76c35663d226b443acaf3966e98416e238",
+    "duration": 41.666666666666664,
+    "beatCount": 6,
+    "selectedBeats": ["10-melt-01", "10-melt-02", "10-melt-03", "11-seed-01", "11-seed-02", "11-seed-03"],
+    "assembly": "output/only-assembly.json",
+    "assemblySha256": "d6ef99f2a572e0fe6af4c205717672defb7a6edffb5ce7464946e4cfd6538014",
+    "verification": "output/only-verification.json",
+    "checks": {
+      "promptAndSuccessMessageMatch": true,
+      "historyOutputMatchesAssemblyFile": true,
+      "actualOutputShaMatchesAssemblyAndVerification": true,
+      "timelineShaMatchesAssemblyAndVerification": true
+    }
   },
   "divisionOfWork": {
-    "ComfyUI": "Native LTX photography, input validation, model rendering dispatch and final compositing dispatch",
-    "code": "Original narration timing, deterministic Three.js mechanisms, per-frame local labels, subtitles, FFmpeg encode and measured verification"
+    "ComfyUIThisRun": "Validate prepared narration and exact code clips, load existing photographic clips, and dispatch full/sample composition. WTPrepare render_missing was false in both executed graphs; no diffusion or model rendering was requested by these prompts.",
+    "code": "Original narration timing, 84 separately rendered native Three.js beat clips with 306 phrase actions, per-frame local labels, subtitles and FFmpeg encoding."
   },
-  "runtime": "../workflows/runtime.json",
+  "finalEvidence": {
+    "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
+    "semanticCorrectionReport": "review/semantic-correction-v3.md",
+    "verificationSummary": "review/verification-summary.json",
+    "fullDecode": "passed",
+    "pictureCoverage": "contiguous",
+    "frames": 14352,
+    "nativeCodeClipsRerendered": 84,
+    "semanticVersion": 3,
+    "semanticActionCount": 306,
+    "captionOCR": {
+      "report": "review/ocr-full.json",
+      "matched": 331,
+      "count": 335,
+      "allMatched": false
+    },
+    "explanatoryOCR": {
+      "report": "review/ocr-labels-full.json",
+      "exactlyMatchedBeats": 72,
+      "beatCount": 84,
+      "allMatched": false
+    },
+    "ocrMismatchImageReview": {
+      "report": "review/visual-review.md",
+      "captionMismatchCount": 4,
+      "explanatoryMismatchBeatCount": 12,
+      "status": "image-reinspection-recorded",
+      "rawOCRResultsPreserved": true,
+      "limits": "The report records encoded-image reinspection; it does not turn OCR mismatches into automatic matches or grant human audio approval."
+    },
+    "fullPlayback": {
+      "report": "review/playback.json",
+      "status": "normal-speed-browser-playback-completed",
+      "duration": 598,
+      "wallSeconds": 598.74,
+      "rate": 1
+    },
+    "samplePlayback": {
+      "report": "review/playback-sample.json",
+      "status": "normal-speed-browser-playback-completed",
+      "encodedSha256": "8cfe21be8f5aa5faa4574233ee439b76c35663d226b443acaf3966e98416e238",
+      "duration": 41.666667,
+      "wallSeconds": 42.04,
+      "rate": 1
+    },
+    "contentCheck": {
+      "report": "review/content-check.json",
+      "status": "completed",
+      "shortFinalHoldBeatCount": 7,
+      "minimumReadingHoldSeconds": 0.542715750219827
+    },
+    "late36ImageReview": {
+      "report": "review/semantic-encoded-late-v3.md",
+      "status": "final-encoded-review-completed",
+      "closedFindings": [
+        "26-shipping-03 photography overlay P1",
+        "23-clean-02 stale rinse label P2"
+      ],
+      "newSubstantiveP1P2FoundWithinReviewedScope": false,
+      "limits": "Conclusion applies to the encoded images and timing ranges listed by the reviewer, not to human listening or every possible scientific detail."
+    }
+  },
+  "acceptanceLimits": {
+    "semanticAcceptanceGranted": false,
+    "humanAudioReviewGranted": false,
+    "publicationStatus": "release-candidate-final-evidence-recorded",
+    "scope": "These flags describe approval by ComfyUI execution and automated checks; bounded image-review conclusions are recorded separately in the linked reports.",
+    "note": "Execution success and matching output hashes establish file identity. Final verification and image-review evidence are recorded, with OCR discrepancies and seven short holds preserved. Programmatic playback is not human full-film listening; no human audio approval is granted."
+  },
+  "runtime": "workflows/runtime.json",
   "weightsIncluded": false,
   "referenceMediaIncluded": false
 }

@@ -55,7 +55,7 @@ def main():
             test.bind(("127.0.0.1", args.port))
         except OSError as error:
             parser.exit(1, f"Port {args.port} is occupied; use --port with a free port. No process was stopped. ({error})\n")
-    runtime = ROOT / "output/comfy-runtime"
+    runtime = ROOT / "output/comfy-runtime" / str(args.port)
     config_file = runtime / "extra-model-paths.yaml"
     config = {
         "tenminute_nodes": {"base_path": str(ROOT / "comfyui"), "custom_nodes": "custom_nodes"},

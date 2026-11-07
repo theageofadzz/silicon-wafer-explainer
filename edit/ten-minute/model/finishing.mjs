@@ -1,445 +1,810 @@
-import {T,M,group,box,cyl,ball,ring,segment,dynamicLine,setSegment,tube,arrow,wafer,lathe,marker,rigResult,mix,phase,buildDiamond} from './core.mjs';
+import {T,M,group,box,cyl,ball,ring,segment,dynamicLine,setSegment,tube,arrow,wafer,marker,rigResult,mix,buildDiamond} from './core.mjs';
+import {finishingPlan,phraseWindow} from './finishing-plan.mjs';
 
 export const finishingKeys=['wafer','wafer-measure','trim','wire','kerf','edge','lap','etch','polish','flatness','focus','wash','scan','cassette','industry','recap'];
-const phraseCache=new WeakMap();
-function wordWindow(beat,text){
-  let cache=phraseCache.get(beat);
-  if(!cache){cache=new Map();phraseCache.set(beat,cache);}
-  if(cache.has(text))return cache.get(text);
-  const normalize=s=>s.replace(/[\s、，。！？；：,.!?;:]/g,'');
-  let offset=0;
-  const words=beat.words.map(word=>{
-    const value=normalize(word.text),entry={...word,from:offset,to:offset+value.length};
-    offset+=value.length;return entry;
-  });
-  const joined=beat.words.map(word=>normalize(word.text)).join(''),at=joined.indexOf(normalize(text));
-  if(at<0)throw new Error(`Missing real word anchor ${beat.id}: ${text}`);
-  const matched=words.filter(word=>word.to>at&&word.from<at+normalize(text).length);
-  const window={text,start:matched[0].start,end:matched.at(-1).end};
-  cache.set(text,window);return window;
+const v=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
+const at=(parent,xyz)=>{const g=group(parent);g.position.set(...xyz);return g;};
+const target=(parent,xyz,text)=>{const o=marker(parent,xyz);if(text)o.userData.objectLabel=text;return o;};
+const label=(text,object,phrase,offset=[0,-75])=>({text,object,phrase,offset});
+const active=u=>u>1e-7;
+const scaleReveal=(o,u)=>{o.visible=active(u);o.scale.setScalar(Math.max(.001,u));};
+function bracket(parent,a,b,material=M.green,r=.012){
+  const g=group(parent),line=dynamicLine(g,material,r);
+  setSegment(line,a,b);
+  const d=v(...b).sub(v(...a)).normalize(),tick=Math.abs(d.y)>.8?v(.14,0,0):v(0,.13,0);
+  for(const p of [v(...a),v(...b)])segment(g,p.clone().sub(tick).toArray(),p.clone().add(tick).toArray(),r,material);
+  return {g,line,anchor:target(g,v(...a).add(v(...b)).multiplyScalar(.5).toArray())};
 }
-function waferRig(key,parent){
-  const g=group(parent),w=wafer(g,1.65),lift=group(g);
-  w.g.rotation.x=.24;
-  const diameter=dynamicLine(w.g,M.green,.013);
-  const tickA=segment(w.g,[-1.65,-.04,-.13],[-1.65,-.04,.13],.013,M.green);
-  const tickB=segment(w.g,[1.65,-.04,-.13],[1.65,-.04,.13],.013,M.green);
-  const endA=marker(w.g,[-1.65,0,0]),endB=marker(w.g,[1.65,0,0]);
-  const diameterAnchor=marker(w.g,[0,.13,.12]),sectionHalf=.09;
-  const edgeShape=new T.Shape();
-  edgeShape.moveTo(-1.1,-sectionHalf);edgeShape.lineTo(.72,-sectionHalf);
-  edgeShape.quadraticCurveTo(.88,-sectionHalf,.88,0);edgeShape.quadraticCurveTo(.88,sectionHalf,.72,sectionHalf);
-  edgeShape.lineTo(-1.1,sectionHalf);edgeShape.closePath();
-  const section=new T.Mesh(new T.ExtrudeGeometry(edgeShape,{depth:.38,bevelEnabled:false}),M.silicon);
-  section.position.set(0,-1.6,-.19);lift.add(section);
-  const sectionAnchor=marker(lift,[1.15,-1.6,0]);
-  const thick=dynamicLine(lift,M.green,.013);
-  setSegment(thick,[1.15,-1.6-sectionHalf,0],[1.15,-1.6+sectionHalf,0]);
-  for(const y of [-1.6-sectionHalf,-1.6+sectionHalf])segment(lift,[1.03,y,0],[1.27,y,0],.009,M.green);
-  lift.position.y=-.85;
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.03,.85);
-    w.g.rotation.y=mix(-.35,.45,u);
-    w.g.rotation.x=key==='wafer'?mix(.2,.9,u):.35;
-    setSegment(diameter,[-1.65,.02,0],[mix(-1.65,1.65,u),.02,0]);
-    diameterAnchor.position.x=mix(-1.65,0,u);
-    const measure=key==='wafer-measure';
-    diameter.visible=tickA.visible=tickB.visible=measure;
-    lift.visible=measure;
-    return {...w.g.userData,sectionExaggeration:measure?(2*sectionHalf/w.h):undefined,
-      sectionSchematic:measure,diameterEndpoints:[[-1.65,.02,0],[1.65,.02,0]],
-      thicknessEndpoints:[[1.15,-1.6-sectionHalf,0],[1.15,-1.6+sectionHalf,0]],
-      measurementTargets:{diameter:'midpoint of the drawn diameter line',thickness:'midpoint of the magnified section dimension'},
-      action:'orient wafer and extend physical diameter measure'};
-  },key==='wafer-measure'?[diameterAnchor,sectionAnchor]:[endA,endB],
-  {view:{eye:[3,5.7,9],look:[0,-.5,0],span:8.0},
-    semanticAnchors:key==='wafer-measure'?[
-      {text:'直径 300 mm',object:diameterAnchor,offset:[0,-80]},
-      {text:'截面放大 · 0.775 mm',object:sectionAnchor,offset:[-80,-30]},
-    ]:[]});
+function surface(parent,{length=3,depth=1.2,bottom=-.48,height=x=>.1*Math.cos(x*5),material=M.silicon}={}){
+  const shape=new T.Shape();shape.moveTo(-length/2,bottom);shape.lineTo(length/2,bottom);
+  for(let i=64;i>=0;i--){const x=-length/2+length*i/64;shape.lineTo(x,height(x));}shape.closePath();
+  const geo=new T.ExtrudeGeometry(shape,{depth,bevelEnabled:false,steps:1});
+  geo.translate(0,0,-depth/2);
+  const mesh=new T.Mesh(geo,material);parent.add(mesh);
+  const pos=geo.attributes.position,original=pos.array.slice();
+  return {mesh,height,length,depth,
+    deform(fn){
+      for(let i=0;i<pos.count;i++)if(original[i*3+1]>bottom+1e-5)pos.setY(i,fn(original[i*3]));
+      pos.needsUpdate=true;geo.computeVertexNormals();
+    },
+    anchor:(x,text)=>target(parent,[x,height(x),depth/2+.01],text),
+  };
 }
-function sawRig(key,parent){
-  const g=group(parent),axis=group(g);axis.rotation.z=Math.PI/2;
-  const n=key==='kerf'?5:9,r=.95,pitch=.24,kerf=.055,thickness=pitch-kerf;
-  const pieces=[],web=group(g),wires=[];
-  // All sections share the original cylinder axis; gaps are removed material.
+function rod(parent,r=.65,length=2.2,xyz=[0,0,0]){
+  const o=cyl(parent,r,length,M.silicon,xyz);o.rotation.z=Math.PI/2;return o;
+}
+function mineral(parent,xyz=[0,0,0],r=.6){
+  const o=new T.Mesh(new T.IcosahedronGeometry(r,0),M.ceramic);o.position.set(...xyz);o.rotation.set(.3,.6,.2);parent.add(o);return o;
+}
+function particles(parent,n=12,material=M.green,r=.055){
+  return Array.from({length:n},(_,i)=>ball(parent,r,material,[(i%4-1.5)*.35,.1+Math.floor(i/4)*.12,Math.sin(i*2.4)*.35]));
+}
+function plant(parent,xyz=[0,0,0]){
+  const g=at(parent,xyz);box(g,1.2,.65,.7,M.dark,[0,0,0]);
+  for(let i=0;i<3;i++)box(g,.22,.16,.03,M.ceramic,[(i-1)*.32,.1,.37]);
+  cyl(g,.08,.5,M.ceramic,[.43,.55,-.2]);return g;
+}
+function carrier(parent,{n=7,scale=1}={}){
+  const g=group(parent),body=group(g),disks=[];
+  box(body,2.9,.12,2.5,M.dark,[0,-1.1,0]);box(body,2.9,.12,2.5,M.dark,[0,1.1,0]);
+  for(const x of [-1.4,1.4])box(body,.1,2.2,2.5,M.ceramic,[x,0,0]);
+  box(body,2.9,2.2,.08,M.dark,[0,0,-1.24]);
   for(let i=0;i<n;i++){
-    const o=cyl(axis,r,thickness,M.silicon,[0,(i-(n-1)/2)*pitch,0]);pieces.push(o);
-    if(i<n-1){
-      const x=-(i-(n-1)/2+.5)*pitch;
-      const line=segment(web,[x,-1.65,-1.35],[x,-1.65,1.35],.009,M.bright);wires.push(line);
-    }
+    const y=(i-(n-1)/2)*1.8/Math.max(1,n-1),w=wafer(body,1.22,[0,y,0]);
+    disks.push(w);
+    for(const x of [-1.25,1.25])box(body,.16,.035,1.8,M.dark,[x,y-.04,0]);
   }
-  const original=cyl(axis,r,n*pitch-kerf,M.silicon);
-  for(const z of [-1.4,1.4]){
-    const roller=cyl(web,.19,n*pitch+.7,M.dark,[0,-1.65,z]);roller.rotation.z=Math.PI/2;
-  }
-  const debris=[];
-  for(let i=0;i<20;i++)debris.push(ball(g,.025,M.silver));
-  const kerfMarker=marker(axis,[0,thickness/2+kerf/2,r*.75]);
-  return rigResult(g,ctx=>{
-    const cut=ctx.a(.02,.65),release=ctx.a(.66,.89);
-    web.position.y=2.9*cut;
-    // A rising cut front separates lower cut disks from the remaining connected cap.
-    const front=mix(-r,r,cut);
-    const plane=new T.Plane(new T.Vector3(0,1,0),-front);
-    const reverse=new T.Plane(new T.Vector3(0,-1,0),front);
-    if(!original.material.userData.saw){
-      original.material=M.silicon.clone();original.material.userData.saw=true;
-      for(const o of pieces){o.material=M.silicon.clone();o.material.clippingPlanes=[reverse];}
-    }
-    original.material.clippingPlanes=[plane];
-    original.visible=cut<.999;
-    pieces.forEach((o,i)=>{
-      o.visible=cut>0;o.position.y=(i-(n-1)/2)*(pitch+release*.075);
-      o.material.clippingPlanes=cut<.999?[reverse]:[];
-      o.position.x=-release*.18;
-    });
-    debris.forEach((o,i)=>{
-      o.visible=cut>.02&&cut<.98;
-      o.position.set((i%(n-1)-(n-2)/2)*pitch,mix(front-.1,-1.8,(i%5)/5),Math.sin(i*2.4)*.5);
-    });
-    return {cutFront:front,release,separateDisks:cut===1?n:0,kerf,sectionThickness:thickness,pitch,
-      conservation:{pitch,solid:thickness,removed:kerf},thicknessAndKerfExaggerated:true,physicalWaferScale:false};
-  },[pieces[0],kerfMarker],{view:{eye:[4,3,8],look:[0,-.1,0],span:6.9}});
+  const cover=box(g,2.9,2.2,.09,M.glass,[0,0,1.3]);
+  const anchor=target(body,[-1.4,.6,.8],'专用洁净运输盒');
+  g.scale.setScalar(scale);return {g,body,disks,cover,anchor};
 }
-function trimRig(parent){
-  const g=group(parent),rod=cyl(g,.7,2.5,M.silicon);rod.rotation.z=Math.PI/2;
-  const ends=[];
-  for(const sign of [-1,1]){
-    const end=cyl(g,.7,.55,M.silicon,[sign*1.525,0,0],.18);end.rotation.z=sign*Math.PI/2;ends.push(end);
-    box(g,.4,.35,1.2,M.dark,[sign*.8,-.9,0]);
-  }
-  const blade=cyl(g,.85,.035,M.ceramic);blade.rotation.z=Math.PI/2;
-  const radius=.7,length=2.5,notchDepth=.23,angle=2.42,opening=.22,shape=new T.Shape();
+function finish(g,beat,kind,update,anchors,labels=[],view={}){
+  const semanticPlan=finishingPlan(beat);
+  // These exact declarations are the only clocks allowed to drive explanatory actions.
+  for(const entry of semanticPlan)phraseWindow(beat,entry.phrase);
+  const rig=rigResult(g,ctx=>{
+    if(ctx.beat.id!==beat.id)throw new Error(`Finishing rig reused across beats: ${beat.id}/${ctx.beat.id}`);
+    const progress={},timing=[];
+    for(const entry of semanticPlan){
+      progress[entry.phrase]=ctx.q(entry.phrase);
+      const window=ctx.window(entry.phrase);
+      timing.push({...entry,start:window.start-entry.lead,end:window.start-entry.lead+entry.seconds});
+    }
+    const data=update(progress,ctx);
+    const lastActionEnd=Math.max(...timing.map(t=>t.end));
+    return {...data,semanticScene:kind,beatId:beat.id,progress,semanticTiming:timing,lastActionEnd,
+      readingHold:beat.end-lastActionEnd,
+      holdLimitation:lastActionEnd>beat.end-1?'Real spoken anchor leaves less than one second; narration was not moved.':null};
+  },anchors,{semanticPlan,view:{eye:[2.6,2.4,10],look:[0,0,0],span:8.3,...view}});
+  rig.semanticAnchors=ctx=>{
+    const entries=typeof labels==='function'?labels(ctx):labels;
+    return entries.filter(entry=>{
+      const w=ctx.window(entry.phrase);
+      if(ctx.time<w.start)return false;
+      for(let o=entry.object;o;o=o.parent)if(!o.visible)return false;
+      return true;
+    }).sort((a,b)=>ctx.window(a.phrase).start-ctx.window(b.phrase).start).slice(-2)
+      .map(({phrase,...entry})=>({...entry,visibleFrom:ctx.window(phrase).start}));
+  };
+  return rig;
+}
+
+function openingWafer(parent,beat){
+  const g=group(parent),w=wafer(g,1.65),edge=target(w.g,[-1.5,.01,.5],'空白硅片');
+  return finish(g,beat,'blank-material-introduction',p=>{
+    w.g.rotation.set(.25+p['一片薄薄的硅']*.25, -.32+p['表面亮得像镜子']*.55,0);
+    return {...w.g.userData,blank:true,patterned:false,reflectionOnly:true};
+  },[edge,w.g],[label('空白硅片',edge,'一片薄薄的硅',[-90,-80])],
+  {eye:[3,5.7,9],span:7.5});
+}
+function dimensions(parent,beat){
+  const g=group(parent),w=wafer(g,1.65,[0,.6,0]);w.g.rotation.x=.3;
+  const d=bracket(w.g,[-1.65,.025,0],[1.65,.025,0]),line=dynamicLine(w.g,M.green,.015);
+  const plate=ring(g,1.75,M.ceramic,[0,.54,0],.035);plate.rotation.x=Math.PI/2+.3;
+  const section=at(g,[0,-1.6,0]),s=surface(section,{length:2.4,depth:.65,bottom:-.09,height:()=>.09});
+  const t=bracket(section,[1.4,-.09,0],[1.4,.09,0]);
+  return finish(g,beat,'diameter-versus-magnified-thickness',p=>{
+    const a=p['三百毫米'],b=p['厚度'];d.g.visible=active(a);line.visible=active(a);
+    setSegment(line,[-1.65,.025,0],[mix(-1.65,1.65,a),.025,0]);
+    d.line.visible=false;plate.visible=active(p['餐盘']);
+    section.visible=active(b);
+    return {...w.g.userData,physicalWaferScale:true,sectionSchematic:true,
+      sectionExaggeration:.18/w.h,diameterProgress:a,thicknessProgress:b,materialRemoval:0};
+  },[d.anchor,t.anchor],[
+    label('直径 300 mm',d.anchor,'三百毫米',[0,-85]),
+    label('截面放大 · 0.775 mm',t.anchor,'厚度',[-80,-40]),
+  ],{eye:[2,5.2,10],look:[0,-.2,0],span:8.1});
+}
+function quality(parent,beat){
+  const g=group(parent),sample=at(g,[0,2.1,0]),lattice=buildDiamond(g,{cells:2,spacing:1.03,atomRadius:.07});
+  for(let i=0;i<18;i++)ball(sample,.075,M.atom,[(i%6-2.5)*.33,(Math.floor(i/6)-1)*.33,0]);
+  const foreign=ball(sample,.11,M.green,[.3,0,.1]),highlight=ring(sample,.19,M.green,[.3,0,.1],.015);highlight.rotation.x=Math.PI/2;
+  const latticeTarget=target(lattice.atoms[58],[0,0,0],'原子排列');
+  const patch=at(g,[0,-1.9,0]),s=surface(patch,{length:2.8,depth:.9,height:x=>.16*Math.cos(x*5),bottom:-.25});
+  const probe=ball(patch,.055,M.green),surfaceTarget=target(patch,[0,0,.46],'表面高低');
+  const limits=[segment(patch,[-1.4,.19,.48],[1.4,.19,.48],.012,M.green),
+    segment(patch,[-1.4,-.19,.48],[1.4,-.19,.48],.012,M.green)];
+  return finish(g,beat,'three-independent-quality-controls',p=>{
+    highlight.visible=active(p['杂质']);highlight.scale.setScalar(1+.2*p['杂质']);
+    lattice.bonds.forEach(({o},i)=>o.visible=p['原子的排列']>i/lattice.bonds.length);
+    const x=mix(-1.2,1.2,p['表面的高低']);probe.position.set(x,s.height(x)+.04,.35);
+    probe.visible=active(p['表面的高低']);surfaceTarget.position.set(x,s.height(x),.46);
+    limits.forEach(o=>o.visible=active(p['控制']));
+    return {qualityControls:true,surfaceGeometryFixed:true,surfaceAmplitude:.16,materialRemoval:0,
+      impurityControl:p['杂质'],latticeProgress:p['原子的排列'],surfaceProgress:p['表面的高低']};
+  },[foreign,surfaceTarget],[
+    label('杂质',foreign,'杂质',[115,-65]),label('原子排列',latticeTarget,'原子的排列',[190,-70]),
+    label('表面高低',surfaceTarget,'表面的高低',[-100,-85]),
+  ],{eye:[1.5,1.5,10],look:[0,.1,0],span:8.5});
+}
+function roadmap(parent,beat){
+  const g=group(parent),rock=mineral(g,[0,2.1,0],.65),silicon=at(g,[0,.7,0]);
+  for(let i=0;i<5;i++)mineral(silicon,[(i-2)*.28,0,Math.sin(i)*.15],.2);
+  const foreign=particles(silicon,4,M.amber,.05),crystal=rod(g,.45,2,[0,-.7,0]);
+  const w=wafer(g,1.05,[0,-2,0]),pad=cyl(g,.4,.15,M.ceramic,[0,-1.7,0]);
+  const links=[arrow(g,[.95,1.8,0],[.95,1,0]),arrow(g,[-.95,.35,0],[-.95,-.4,0]),arrow(g,[1,-1,0],[1,-1.75,0])];
+  const rockRing=ring(g,.82,M.green,[0,2.1,0]);rockRing.rotation.x=Math.PI/2;
+  return finish(g,beat,'material-route-and-return-to-quartz',p=>{
+    silicon.visible=links[0].visible=active(p['从石头中取出硅']);
+    foreign.forEach((o,i)=>o.position.x=(i-1.5)*.35+p['提纯']*1.2);
+    crystal.visible=links[1].visible=active(p['长成单晶']);crystal.scale.y=Math.max(.001,p['长成单晶']);
+    w.g.visible=pad.visible=links[2].visible=active(p['加工表面']);pad.position.x=mix(-.6,.6,p['加工表面']);
+    rockRing.visible=active(p['石英开始']);
+    return {route:['quartz','purified-feedstock','single-crystal','surface-processing'],finalAttention:'quartz'};
+  },[rock,w.g],[label('石英',rock,'石英开始',[140,-65]),label('单晶',crystal,'长成单晶',[-130,-65])],
+  {eye:[1.4,1.8,10],span:8.9});
+}
+function endTrimming(parent,beat){
+  const g=group(parent),body=rod(g,.72,2.3),ends=[rod(g,.72,.5,[-1.4,0,0]),rod(g,.72,.5,[1.4,0,0])];
+  const blades=[cyl(g,.85,.045,M.ceramic,[-1.17,1.2,0]),cyl(g,.85,.045,M.ceramic,[1.17,1.2,0])];
+  blades.forEach(o=>o.rotation.z=Math.PI/2);
+  const wheel=cyl(g,.43,.35,M.ceramic,[0,1.1,0]);wheel.rotation.z=Math.PI/2;
+  const tray=box(g,3.8,.12,1.6,M.dark,[0,-1.25,0]),debris=particles(g,16,M.silver,.035);
+  const outline=ring(g,.72,M.green,[1.16,0,0]);outline.rotation.z=Math.PI/2;
+  return finish(g,beat,'end-removal-then-cylindrical-grinding',p=>{
+    const cut=p['切去'],grind=p['外圆加工'],loss=p['材料也在这里损耗'];
+    blades.forEach(o=>{o.visible=cut>0&&cut<1;o.position.y=mix(1.2,-1,cut);});
+    ends.forEach((o,i)=>{o.position.x=(i?1:-1)*(1.4+.5*cut);o.position.y=-.9*loss;});
+    body.scale.x=body.scale.z=mix(1,.9,grind);
+    wheel.visible=grind>0&&grind<1;wheel.position.set(mix(-1.1,1.1,grind),mix(1.1,.65,grind),0);wheel.rotation.y=grind*12;
+    debris.forEach((o,i)=>{o.visible=active(loss);o.position.set((i%8-3.5)*.35,-1.12+(i%2)*.08,Math.sin(i)*.5);});
+    outline.visible=active(grind);outline.scale.setScalar(mix(1,.9,grind));
+    return {operation:'end-trimming-and-outer-grinding',offcutRelease:cut,outerRadius:.72*mix(1,.9,grind),removedMaterialInTray:loss};
+  },[body,ends[1]],[label('外圆加工',body,'外圆加工',[0,-100]),label('材料损耗',tray,'材料也在这里损耗',[0,-75])],
+  {span:7.5});
+}
+function notch(parent,beat){
+  const g=group(parent),radius=.72,length=2.5,depth=.23,angle=2.42,opening=.24;
+  const original=rod(g,radius,length),shape=new T.Shape();
   for(let i=0;i<=96;i++){
     const a=angle+opening+(Math.PI*2-2*opening)*i/96;
-    if(i===0)shape.moveTo(radius*Math.cos(a),radius*Math.sin(a));
-    else shape.lineTo(radius*Math.cos(a),radius*Math.sin(a));
+    if(!i)shape.moveTo(radius*Math.cos(a),radius*Math.sin(a));else shape.lineTo(radius*Math.cos(a),radius*Math.sin(a));
   }
-  shape.lineTo((radius-notchDepth)*Math.cos(angle),(radius-notchDepth)*Math.sin(angle));shape.closePath();
-  const grooved=new T.Mesh(new T.ExtrudeGeometry(shape,{depth:length,bevelEnabled:false,steps:1}),M.silicon.clone());
-  grooved.rotation.y=Math.PI/2;grooved.position.x=-length/2;g.add(grooved);
-  const radial=[0,Math.sin(angle),-Math.cos(angle)];
-  const machining=group(g),wheelHub=group(machining);
-  wheelHub.rotation.z=Math.PI/2;
-  const wheel=cyl(wheelHub,.34,.1,M.ceramic);
-  segment(wheel,[.05,0,0],[.29,0,0],.012,M.dark);
-  const direction=arrow(g,[length/2+.06,0,0],
-    [length/2+.06,radial[1]*1.02,radial[2]*1.02],M.amber,.028);
-  const notchTarget=marker(g,[0,0,0]),directionTarget=marker(g,[length/2+.06,radial[1]*.72,radial[2]*.72]);
-  const grooveLine=dynamicLine(g,M.green,.009);
-  rod.material=M.silicon.clone();
-  return rigResult(g,ctx=>{
-    const notch=/定位缺口/.test(ctx.beat.text)||ctx.beat.id==='18-trim-02';
-    grooved.visible=machining.visible=direction.visible=grooveLine.visible=notch;
-    ends.forEach(o=>o.visible=!notch);blade.visible=!notch&&ctx.raw<.9;
-    if(notch){
-      const u=ctx.a(.03,.83),front=mix(-length/2,length/2,u);
-      const referenceEnd=ctx.beat.index%3===1?-1:1;
-      direction.position.x=referenceEnd*(length/2+.08);
-      rod.visible=u<1;
-      rod.material.clippingPlanes=u>1e-7&&u<1?[new T.Plane(new T.Vector3(1,0,0),-front)]:[];
-      grooved.visible=u>0;
-      grooved.material.clippingPlanes=u<1?[new T.Plane(new T.Vector3(-1,0,0),front)]:[];
-      machining.position.set(front,radial[1]*(radius-notchDepth+.34),radial[2]*(radius-notchDepth+.34));
-      machining.visible=u>0&&u<1;wheel.rotation.y=u*22;
-      const targetX=Math.max(-length/2,Math.min(.85,front-.06)),root=radius-notchDepth;
-      notchTarget.position.set(targetX,radial[1]*root,radial[2]*root);
-      notchTarget.visible=u>0;notchTarget.userData.objectLabel='定位缺口';
-      directionTarget.position.set(direction.position.x,radial[1]*.72,radial[2]*.72);
-      grooveLine.visible=u>0;
-      setSegment(grooveLine,[-length/2,radial[1]*(root+.006),radial[2]*(root+.006)],
-        [front,radial[1]*(root+.006),radial[2]*(root+.006)]);
-      return {operation:'orientation-groove',removedSeedAndTail:0,notchDepth,notchDepthExaggerated:true,
-        grooveAxis:[1,0,0],grooveLength:length*u,cutFront:front,notchWorld:notchTarget.position.toArray(),
-        crystalDirection:radial,orientationSchematic:true,
-        orientationConvention:'Geometric reference only; no particular Miller index or notch specification implied'};
-    }
-    rod.visible=true;rod.material.clippingPlanes=[];notchTarget.visible=true;
-    delete notchTarget.userData.objectLabel;
-    notchTarget.position.set(0,0,0);
-    const pass=ctx.a(.03,.65),release=ctx.a(.65,.9),side=pass<.5?-1:1;
-    blade.position.set(side*1.26,mix(1.65,-.9,phase(pass,side<0?0:.5,side<0?.5:1)),0);
-    blade.visible=ctx.raw<.9;
-    ends.forEach((o,i)=>o.position.x=(i?1:-1)*(1.525+.5*release));
-    directionTarget.position.copy(ends[1].position);
-    return {removedSeedAndTail:release,retainedCylinderLength:2.5};
-  },[notchTarget,directionTarget],{view:{eye:[3,2.8,9],look:[0,0,0],span:6.8},
-    semanticAnchors:ctx=>/定位缺口/.test(ctx.beat.text)?[
-      {text:'定位缺口',object:notchTarget,offset:[-90,-80]},
-      {text:'晶向参照',object:directionTarget,offset:[0,-80]},
-    ]:[]});
+  shape.lineTo((radius-depth)*Math.cos(angle),(radius-depth)*Math.sin(angle));shape.closePath();
+  const cut=new T.Mesh(new T.ExtrudeGeometry(shape,{depth:length,bevelEnabled:false}),M.silicon.clone());
+  cut.rotation.y=Math.PI/2;cut.position.x=-length/2;g.add(cut);original.material=M.silicon.clone();
+  const radial=[0,Math.sin(angle),-Math.cos(angle)],end=beat.index%3===1?-1:1;
+  const direction=arrow(g,[end*1.35,0,0],[end*1.35,radial[1]*1.1,radial[2]*1.1],M.amber,.028);
+  const wheel=cyl(g,.34,.1,M.ceramic);wheel.rotation.z=Math.PI/2;
+  const floor=target(g,[0,radial[1]*(radius-depth),radial[2]*(radius-depth)],'定位缺口');
+  const floorLine=dynamicLine(g,M.green,.01),relation=dynamicLine(g,M.amber,.012),probe=ball(g,.06,M.green);
+  return finish(g,beat,'orientation-groove-machining-and-recognition',p=>{
+    const u=p['制作定位缺口'],front=mix(-length/2,length/2,u),r=radius-depth;
+    direction.visible=active(p['确定晶向']);original.visible=u<1;
+    original.material.clippingPlanes=u>1e-7&&u<1?[new T.Plane(v(1,0,0),-front)]:[];
+    cut.visible=active(u);cut.material.clippingPlanes=u<1?[new T.Plane(v(-1,0,0),front)]:[];
+    wheel.visible=u>0&&u<1;wheel.position.set(front,radial[1]*(r+.34),radial[2]*(r+.34));wheel.rotation.y=u*18;
+    floor.visible=active(u);floor.position.x=Math.min(.8,front-.04);
+    floorLine.visible=active(u);setSegment(floorLine,[-1.25,radial[1]*(r+.006),radial[2]*(r+.006)],
+      [front,radial[1]*(r+.006),radial[2]*(r+.006)]);
+    relation.visible=active(p['晶格方向']);
+    setSegment(relation,[end*1.35,radial[1]*.95,radial[2]*.95],[.8,radial[1]*r,radial[2]*r]);
+    probe.visible=active(p['识别参照']);probe.position.set(.8,radial[1]*(r+.3*(1-p['识别参照'])),radial[2]*(r+.3*(1-p['识别参照'])));
+    return {operation:'orientation-groove',grooveAxis:[1,0,0],grooveLength:length*u,notchDepth:depth,
+      notchDepthExaggerated:true,crystalDirection:radial,noMillerIndexImplied:true,materialRemoval:u*depth};
+  },[floor,direction],[
+    label('定位缺口',floor,'制作定位缺口',[-100,-85]),label('晶向参照',direction,'确定晶向',[80,-80]),
+  ],{span:7.1});
 }
-function surfaceRig(key,parent){
-  const g=group(parent),section=group(g),length=3.1,depth=1.5;
-  const substrate=box(section,length,.46,depth,M.silver,[0,-.23,0]);
-  const resolution=64,geo=new T.PlaneGeometry(length,depth,resolution,12);geo.rotateX(-Math.PI/2);
-  const top=new T.Mesh(geo,M.silicon);section.add(top);
-  const bottomGeo=geo.clone(),bottom=new T.Mesh(bottomGeo,M.silicon);bottom.material=M.silicon.clone();bottom.material.side=T.DoubleSide;section.add(bottom);
-  const topPos=geo.attributes.position,bottomPos=bottomGeo.attributes.position,original=topPos.array.slice();
-  const damageTop=box(section,length,.11,depth,M.dark,[0,.045,0]);
-  const damageBottom=box(section,length,.11,depth,M.dark,[0,-.505,0]);
-  const cracks=[];
-  for(let i=0;i<12;i++){
-    const x=-1.4+i*.25,z=.76,sign=i%2?1:-1;
-    cracks.push(segment(section,[x,.08,z],[x+.08,-.04,z],.009,M.green));
-    cracks.push(segment(section,[x,-.54,z],[x-.06,-.43,z],.009,M.green));
+function multiwire(parent,beat){
+  const g=group(parent),axis=group(g),r=.76,n=8,pitch=.25,gap=.04;axis.rotation.z=Math.PI/2;
+  const stock=cyl(axis,r,n*pitch-gap,M.silicon),pieces=[];
+  stock.material=M.silicon.clone();
+  for(let i=0;i<n;i++)pieces.push(cyl(axis,r,pitch-gap,M.silicon.clone(),[0,(i-(n-1)/2)*pitch,0]));
+  const web=group(g),beads=[];
+  for(let i=0;i<n-1;i++){
+    const x=-(i-(n-2)/2)*pitch;
+    segment(web,[x,-1.8,-1.1],[x,-1.8,1.1],.009,M.bright);
+    beads.push(ball(web,.025,M.green,[x,-1.8,-.8]));
   }
-  const upper=box(g,3.5,.18,1.8,M.ceramic,[0,.44,0]),lower=box(g,3.5,.18,1.8,M.ceramic,[0,-.88,0]);
-  const pad=cyl(g,1.05,.18,M.ceramic,[0,.35,0]);
-  const nozzle=tube(g,[[1.85,1.35,0],[1.85,.8,0],[1.2,.6,0]],.045);
-  const drops=Array.from({length:12},()=>ball(g,.03,M.liquid));
-  const bath=box(g,3.6,.68,1.9,M.liquid,[0,-.2,0]);
-  const removed=[];
-  for(let i=0;i<16;i++)removed.push(ball(g,.023,M.green));
-  const surfaceMarker=marker(section,[.65,.1,.76]),padMarker=marker(pad,[.8,.1,.1]);
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.04,.86),isLap=key==='lap',isEtch=key==='etch',isCmp=key==='polish';
-    upper.visible=lower.visible=isLap;pad.visible=nozzle.visible=isCmp;bath.visible=isEtch;
-    const surfaceHeight=isCmp?.1-.1*u:.09-.09*u;
-    upper.position.set(.13*Math.sin(u*8),surfaceHeight+.09,0);
-    lower.position.set(-.13*Math.sin(u*8),-.46-surfaceHeight-.09,0);
-    pad.position.set(mix(-.65,.65,u),surfaceHeight+.09,0);pad.rotation.y=u*9;
-    for(let i=0;i<topPos.count;i++){
-      const x=original[i*3],z=original[i*3+2],wave=(Math.sin(x*7+z*2)*.043+Math.cos(x*14)*.014);
-      const topY=surfaceHeight+wave*(1-u);
-      topPos.setY(i,topY);bottomPos.setY(i,-.46-surfaceHeight-wave*(1-u));
-    }
-    topPos.needsUpdate=bottomPos.needsUpdate=true;geo.computeVertexNormals();bottomGeo.computeVertexNormals();
-    damageTop.visible=damageBottom.visible=isEtch;
-    damageTop.scale.y=damageBottom.scale.y=Math.max(.001,1-u);
-    damageTop.position.y=.055*(1-u);damageBottom.position.y=-.46-.055*(1-u);
-    cracks.forEach(o=>{o.visible=isEtch&&u<.999;o.scale.y=Math.max(.001,1-u);});
-    drops.forEach((o,i)=>{
-      o.visible=isCmp&&ctx.raw<.94;
-      const p=(i/12+u*2)%1;
-      o.position.set(mix(1.2,pad.position.x,p),mix(.6,surfaceHeight+.025,p),.2+Math.sin(i)*.35);
+  for(const z of [-1.15,1.15]){const o=cyl(web,.15,2.4,M.dark,[0,-1.8,z]);o.rotation.z=Math.PI/2;}
+  const wireTarget=target(web,[0,-1.8,.65],'多线切割');
+  return finish(g,beat,'rod-feed-and-simultaneous-wire-cuts',p=>{
+    const feed=p['送向'],run=p['运动的线网'],cut=p['同时加工许多平行切面'],front=mix(-r,r,cut);
+    axis.position.y=mix(.6,0,feed);web.position.y=mix(0,.96+r,cut);
+    beads.forEach((o,i)=>o.position.z=mix(-.8,.8,run)+(i%2)*.08);
+    stock.visible=cut<1;stock.material.clippingPlanes=active(cut)?[new T.Plane(v(0,1,0),-front)]:[];
+    pieces.forEach(o=>{o.visible=active(cut);o.material.clippingPlanes=cut<1?[new T.Plane(v(0,-1,0),front)]:[];});
+    return {operation:'multiwire-overview',feed,wireMotion:run,cutFront:front,simultaneousSections:n,pitch,gap,spacingExaggerated:true};
+  },[wireTarget,pieces[0]],[label('运动线网',wireTarget,'运动的线网',[120,-70]),label('平行切面',pieces[0],'同时加工许多平行切面',[-100,-80])],
+  {eye:[3,2.5,9],span:7.8});
+}
+function abrasiveCut(parent,beat){
+  const g=group(parent),left=box(g,1.5,1.1,1.15,M.silicon,[-.82,-.4,0]),right=box(g,1.5,1.1,1.15,M.silicon,[.82,-.4,0]);
+  const removed=box(g,.14,1.1,1.15,M.silicon,[0,-.4,0]);
+  const wire=cyl(g,.075,2.9,M.bright,[0,1,0]);wire.rotation.x=Math.PI/2;
+  const grains=Array.from({length:14},(_,i)=>ball(g,.105,M.ceramic,[0,1,-1.3+i*.2]));
+  const chips=particles(g,12,M.silver,.035),diameter=bracket(g,[-.075,.65,1.1],[.075,.65,1.1]);
+  const pitch=bracket(g,[-1.55,-1.2,.65],[1.55,-1.2,.65]);
+  const contact=target(g,[0,.1,.6],'金刚线');
+  return finish(g,beat,'magnified-abrasive-grain-removal',p=>{
+    const u=p['逐步去除硅'],y=mix(1,-.8,u);wire.position.y=y;
+    grains.forEach((o,i)=>o.position.set(.025*Math.sin(i*2),y,(-1.3+i*.2+p['金刚线']*.18)));
+    removed.scale.y=Math.max(.001,1-u);removed.position.y=-.95+.55*(1-u);
+    chips.forEach((o,i)=>{o.visible=u>0;o.position.set(Math.sin(i*2.4)*u*.65,y-u*(i%4)*.12,.65+(i%3)*u*.15);});
+    contact.position.y=y;diameter.g.visible=active(p['线径']);diameter.g.position.y=y-.65;
+    pitch.g.visible=active(p['片间距']);
+    return {operation:'abrasive-wire-closeup',removedDepth:1.1*u,grainContact:true,wireDiameterExaggerated:true,pitchExaggerated:true};
+  },[contact,left],[label('金刚线',contact,'金刚线',[130,-85]),label('片间距示意',pitch.anchor,'片间距',[0,-80])],
+  {eye:[2,2,10],span:7.6});
+}
+function kerfAccounting(parent,beat){
+  const g=group(parent),solids=[],waste=[],n=5,w=.47,gap=.12;
+  for(let i=0;i<n;i++){
+    solids.push(box(g,w,.85,1.2,M.silicon,[(i-(n-1)/2)*(w+gap),.4,0]));
+    if(i<n-1)waste.push(box(g,gap,.85,1.2,M.silicon.clone(),[(i-(n-2)/2)*(w+gap),.4,0]));
+  }
+  const original=bracket(g,[-1.45,1.2,.65],[1.45,1.2,.65]),tray=box(g,3.2,.1,1.5,M.dark,[0,-1.4,0]);
+  const accounting=group(g);
+  arrow(accounting,[-1.55,.3,.65],[-1.55,1.12,.65],M.green,.014);
+  arrow(accounting,[1.6,-1.25,.65],[1.6,1.12,.65],M.amber,.014);
+  const kerfTarget=target(waste[1],[0,.45,.61],'切缝材料');
+  return finish(g,beat,'product-plus-kerf-volume-accounting',p=>{
+    const remove=p['消耗材料'],spread=p['切缝损耗'];
+    waste.forEach((o,i)=>{
+      o.material.color.copy(M.silicon.color).lerp(M.amber.color,p['切口']);
+      o.position.y=mix(.4,-1.15,remove);o.position.z=remove*(i%2?.3:-.3);
     });
-    removed.forEach((o,i)=>{
-      o.visible=isEtch&&u>.03&&u<.97;
-      o.position.set((i%8-3.5)*.39,(i<8?.1:-.58)+(i<8?1:-1)*u*.3,depth/2+u*.22);
-    });
-    surfaceMarker.position.y=surfaceHeight;
-    return {sectionExaggerated:true,surfaceHeight,topAmplitude:.057*(1-u),bottomAmplitude:isLap?.057*(1-u):undefined,
-      topAndBottomLevelled:isLap,damageLayerRemaining:isEtch?.11*(1-u):undefined,
-      materialRemoval:isEtch?u*.11:u*.09,padContact:isCmp,slurry:isCmp};
-  },key==='polish'?[surfaceMarker,padMarker]:[surfaceMarker,substrate],
-  {view:{eye:[3.2,2.4,8],look:[0,-.1,0],span:8.4}});
+    solids.forEach((o,i)=>o.position.x=(i-(n-1)/2)*(w+gap+.08*spread));
+    original.g.visible=accounting.visible=active(p['原料用量']);
+    return {operation:'kerf-volume-conservation',solidPerPitch:w,removedPerPitch:gap,pitch:w+gap,
+      productVolume:n*w*.85*1.2,kerfVolume:(n-1)*gap*.85*1.2,removedMaterialRetainedInTray:true};
+  },[solids[2],kerfTarget],[label('成品薄片',solids[2],'切缝损耗',[0,-90]),label('切缝材料',kerfTarget,'消耗材料',[90,-80]),
+    label('原料用量',original.anchor,'原料用量',[0,-75])],
+  {span:7.6});
 }
-function edgeRig(parent){
-  const g=group(parent),w=wafer(g,1.45,[0,.85,0]);
-  const section=group(g);section.position.y=-1.1;
-  const rounded=lathe(section,[[1.1,-.19],[1.55,-.19],[1.64,-.14],[1.68,-.06],[1.69,0],[1.68,.06],[1.64,.14],[1.55,.19],[1.1,.19]]);
-  rounded.geometry.dispose();
-  const shape=new T.Shape();
-  shape.moveTo(-1.35,-.19);shape.lineTo(.8,-.19);shape.quadraticCurveTo(1.15,-.19,1.15,0);
-  shape.quadraticCurveTo(1.15,.19,.8,.19);shape.lineTo(-1.35,.19);shape.closePath();
-  rounded.geometry=new T.ExtrudeGeometry(shape,{depth:.85,bevelEnabled:false});rounded.position.z=-.425;
-  const edgePos=rounded.geometry.attributes.position,edgeOriginal=edgePos.array.slice();
-  const wheel=cyl(section,.44,.6,M.ceramic,[1.57,.7,0]);wheel.rotation.x=Math.PI/2;
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.05,.87);
-    w.g.rotation.y=u*1.5;
-    for(let i=0;i<edgePos.count;i++){
-      const x=edgeOriginal[i*3],y=edgeOriginal[i*3+1];
-      edgePos.setX(i,x>.79?mix(1.15,x,u):x);
-      edgePos.setY(i,x>.79?mix(Math.sign(y)*.19,y,u):y);
-    }
-    edgePos.needsUpdate=true;rounded.geometry.computeVertexNormals();
-    wheel.position.set(1.55,mix(.65,-.65,u),0);wheel.rotation.z=u*8;
-    return {edgeSectionExaggerated:true,physicalWafer:w.g.userData,roundedEdge:u>=.5};
-  },[w.g,rounded],{view:{eye:[2.5,2.6,8],look:[0,0,0],span:8.0}});
-}
-function diagramRig(key,parent){
-  const g=group(parent),geo=new T.PlaneGeometry(3.2,1.45,100,12);geo.rotateX(-Math.PI/2);
-  const surface=new T.Mesh(geo,M.silicon);g.add(surface);
-  box(g,3.2,.16,1.45,M.dark,[0,-.4,0]);
-  const amplitude=.22,focalPlaneY=0,heightAt=x=>amplitude*Math.cos(x*2.8);
-  const pos=geo.attributes.position;
-  // Metrology does not remove material: this geometry is constructed only once.
-  for(let i=0;i<pos.count;i++)pos.setY(i,heightAt(pos.getX(i)));
-  geo.computeVertexNormals();
-  const reference=box(g,3.45,.012,.045,M.green,[0,.31,.78]);
-  const focalPlane=box(g,3.45,.012,1.6,M.glass,[0,focalPlaneY,0]);
-  const focalEdge=segment(g,[-1.72,focalPlaneY,.8],[1.72,focalPlaneY,.8],.012,M.green);
-  const probes=[dynamicLine(g,M.green,.013),dynamicLine(g,M.green,.013)];
-  const lens=cyl(g,.4,.16,M.ceramic,[0,2.25,0]),beams=[];
-  for(const x of [-.3,.3])beams.push(dynamicLine(g,M.green,.012));
-  const spot=ball(g,.045,M.green),detector=box(g,.4,.16,.4,M.dark,[0,.52,0]);
-  const focalTarget=marker(g,[0,focalPlaneY,.8]),differenceTarget=marker(g,[0,0,.8]);
-  focalTarget.userData.objectLabel='焦平面';
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.04,.85),x=mix(-1.3,1.3,u),focus=key==='focus';
-    const h=heightAt(x);
-    reference.visible=!focus;lens.visible=focus;detector.visible=!focus;
-    focalPlane.visible=focalEdge.visible=focus;
-    detector.position.set(x,.62,.25);spot.position.set(x,h,.25);
-    const referenceY=focus?focalPlaneY:.31,spotRadius=focus?.045+.12*Math.abs(h-focalPlaneY)/amplitude:.045;
-    spot.scale.set(spotRadius,.025,spotRadius);
-    setSegment(probes[0],[x,referenceY,.78],[x,h,.78]);probes[0].visible=true;
-    setSegment(probes[1],[x,.62,.25],[x,h,.25]);probes[1].visible=key==='flatness';
-    beams.forEach((o,i)=>{
-      const aperture=i?.3:-.3;o.visible=focus;
-      setSegment(o,[x+aperture,2.17,.25],[x+aperture*(h-focalPlaneY)/(2.17-focalPlaneY),h,.25]);
-    });
-    lens.position.x=x;
-    focalTarget.position.x=x;differenceTarget.position.set(x,(referenceY+h)/2,.78);
-    return {heightExaggerated:true,qualitativeDiagram:true,surfaceGeometryFixed:true,materialRemoval:0,
-      surfaceAmplitude:amplitude,surfaceSamples:[-1.3,-.65,0,.65,1.3].map(q=>[q,heightAt(q)]),
-      probeX:x,surfaceHeight:h,referenceHeight:referenceY,heightDifference:referenceY-h,
-      focalPlaneY,focusError:focus?h-focalPlaneY:undefined,spotRadius,
-      opticalModel:focus?'Fixed focal plane; changing local surface height changes defocus footprint':undefined};
-  },key==='focus'?[focalTarget,differenceTarget]:[spot,reference],
-  {view:{eye:[2.3,1.9,8],look:[0,.75,0],span:7.0}});
-}
-function cleaningRig(parent){
-  const g=group(parent),w=wafer(g,1.35);w.g.rotation.x=Math.PI/2;
-  const tank=box(g,3.2,1.55,1.1,M.liquid,[0,-.9,0]);
-  const nozzles=[];
-  for(const sign of [-1,1]){
-    tube(g,[[sign*1.8,1.8,.2],[sign*1.1,1.8,.2],[sign*.95,1.35,.2]],.045);
-    nozzles.push(segment(g,[sign*.95,1.35,.2],[sign*.7,.55,.05],.022,M.liquid));
+function asSawn(parent,beat){
+  const g=group(parent),s=surface(g,{height:x=>.08*Math.cos(x*2)+.035*Math.cos(x*23),bottom:-.55});
+  const reference=segment(g,[-1.5,.19,.63],[1.5,.19,.63],.012,M.green);
+  const grooves=[];
+  for(let i=0;i<13;i++){
+    const x=-1.4+i*.22;grooves.push(segment(g,[x,s.height(x)+.008,-.5],[x,s.height(x)+.008,.5],.01,M.dark));
   }
-  const particles=[];
-  for(let i=0;i<18;i++){
-    const a=i*2.4,r=1.1*Math.sqrt((i+.5)/18);
-    particles.push({o:ball(g,.032,M.green),x:Math.cos(a)*r,y:Math.sin(a)*r,i});
-  }
-  const grips=[box(g,.13,.3,.3,M.ceramic,[-1.4,0,0]),box(g,.13,.3,.3,M.ceramic,[1.4,0,0])];
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.04,.85);
-    particles.forEach(({o,x,y,i})=>{
-      o.position.set(x+u*(i%2?.6:-.6),y-u*1.6,.04+u*.25);
-      o.visible=u<.95;
-    });
-    return {particlesRemoved:u,edgeHandling:true,cleaningSchematic:true};
-  },[w.g,tank],{view:{eye:[3,1.8,8],look:[0,.15,0],span:7.0}});
+  const damage=box(g,3,.13,.035,M.amber,[0,-.17,.62]),cracks=[];
+  for(let i=0;i<10;i++){const x=-1.3+i*.29;cracks.push(segment(g,[x,-.08,.65],[x+.08,-.27,.65],.012,M.dark));}
+  const sawTarget=s.anchor(.44,'锯痕'),damageTarget=target(damage,[.5,0,.025],'受损层');
+  const next=arrow(g,[0,-1,.5],[0,-1.7,.5],M.green,.025);
+  return finish(g,beat,'as-sawn-damage-diagnosis-without-removal',p=>{
+    reference.visible=active(p['不够平']);damage.visible=active(p['受损层']);cracks.forEach(o=>o.visible=active(p['受损层']));
+    grooves.forEach(o=>o.material=active(p['锯痕'])?M.green:M.dark);next.visible=active(p['继续加工']);
+    return {surfaceGeometryFixed:true,materialRemoval:0,sawGroovesRemain:true,damageLayerRemains:true,futureProcessingOnly:true};
+  },[sawTarget,damageTarget],[label('锯痕',sawTarget,'锯痕',[-95,-75]),label('受损层',damageTarget,'受损层',[100,-75])],
+  {eye:[2.4,2.5,10],look:[0,-.1,0],span:7.3});
 }
-function scanRig(parent){
-  const g=group(parent),w=wafer(g,1.6,[0,-.7,0]);
-  cyl(g,1.45,.18,M.dark,[0,-.81,0]);
-  const detector=group(g);box(detector,.55,.35,.55,M.dark,[0,1.1,0]);cyl(detector,.16,.16,M.bright,[0,.85,0]);
-  const beam=dynamicLine(g,M.green,.012),spot=ball(g,.035,M.green);
-  box(g,.18,2.5,.3,M.dark,[-1.95,.35,-.8]);box(g,3.8,.18,.3,M.silver,[-.1,1.65,-.8]);
-  const marks=[];
-  for(const [x,z]of [[.5,.4],[-.75,-.3],[.1,-.95]])marks.push(ball(w.g,.018,M.amber,[x,w.h/2+.005,z]));
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.04,.88),angle=u*18,r=1.4*Math.sqrt(u),x=Math.cos(angle)*r,z=Math.sin(angle)*r,y=-.7+w.h/2;
-    detector.position.set(x,0,z);spot.position.set(x,y+.02,z);setSegment(beam,[x,.77,z],[x,y,z]);
-    return {spot:[x,y,z],detector:[x,1.1,z],detectorTracksSpot:true,defectSizesExaggerated:true,scanProgress:u};
-  },[spot,detector],{view:{eye:[3.6,3.4,8],look:[0,.3,0],span:8.8}});
-}
-function cassetteRig(key,parent){
-  const g=group(parent),disks=[];
-  box(g,3.1,.16,2.8,M.dark,[0,-2,0]);box(g,3.1,.16,2.8,M.dark,[0,2,0]);
-  for(const x of [-1.48,1.48])box(g,.12,4,2.5,M.ceramic,[x,0,-.1]);
-  box(g,3.1,4,.1,M.dark,[0,0,-1.4]);
-  for(let i=0;i<25;i++){
-    const y=-1.8+i*.15,w=wafer(g,1.35,[0,y,0]);disks.push(w);
-    for(const x of [-1.4,1.4])box(g,.16,.035,2.25,M.dark,[x,y-.03,0]);
-  }
-  const arm=box(g,.22,.07,1.2,M.ceramic,[0,.0,2.2]);
-  const stations=[],links=[],transfer=wafer(g,.6);
-  transfer.g.visible=false;
-  if(key==='industry'||key==='recap'){
-    // Functional input/output stations, shown sequentially along a material path.
-    for(let i=0;i<3;i++){
-      const station=group(g);station.position.set(0,3.3-i*3.3,0);
-      box(station,2.6,.15,2.1,M.dark);
-      if(i===0)cyl(station,.65,.85,M.silicon,[0,.5,0]);
-      if(i===1)wafer(station,1.05,[0,.15,0]);
-      if(i===2)for(let j=0;j<3;j++)box(station,.5,.1,.5,M.silver,[(j-1)*.7,.15,0]);
-      stations.push(station);
+function edgeRounding(parent,beat){
+  const g=group(parent),bad=at(g,[0,1.2,0]),good=at(g,[0,-1.1,0]);
+  box(bad,2.1,.24,.75,M.silicon,[-.2,0,0]);
+  const shard=box(bad,.23,.19,.75,M.silver,[.965,0,0]),debris=particles(bad,6,M.silver,.025);
+  const shape=new T.Shape();shape.moveTo(-1.2,-.16);shape.lineTo(.7,-.16);
+  shape.quadraticCurveTo(1.12,-.16,1.12,0);shape.quadraticCurveTo(1.12,.16,.7,.16);shape.lineTo(-1.2,.16);shape.closePath();
+  const geo=new T.ExtrudeGeometry(shape,{depth:.75,bevelEnabled:false});geo.translate(0,0,-.375);
+  const rounded=new T.Mesh(geo,M.silicon);good.add(rounded);
+  const pos=geo.attributes.position,original=pos.array.slice(),wheel=cyl(good,.4,.5,M.ceramic,[1.45,.5,0]);wheel.rotation.x=Math.PI/2;
+  const edgeTarget=target(good,[1.12,0,.4],'边缘倒圆');
+  return finish(g,beat,'brittle-edge-example-versus-rounded-production-edge',p=>{
+    shard.position.set(.965+.3*p['崩缺'],-.45*p['崩缺'],.12*p['崩缺']);
+    debris.forEach((o,i)=>{o.visible=active(p['颗粒']);o.position.set(1.05+.08*i,-.3-p['颗粒']*.1*i,.2);});
+    const u=p['加工成圆滑轮廓'];
+    for(let i=0;i<pos.count;i++)if(original[i*3]>.69){
+      pos.setX(i,mix(1.12,original[i*3],u));pos.setY(i,mix(Math.sign(original[i*3+1])*.16,original[i*3+1],u));
     }
-    for(let i=0;i<2;i++)links.push(arrow(g,[1.1,2.1-i*2.6,.25],[1.1,.65-i*2.6,.25],M.green,.018));
-  }
-  return rigResult(g,ctx=>{
-    const u=ctx.a(.04,.87),cassette=key==='cassette';
-    for(const o of g.children)o.visible=cassette;
-    if(cassette){
-      disks[12].g.position.z=mix(1.5,0,u);arm.position.z=mix(2.2,.6,u);
-    }else{
-      stations.forEach((s,i)=>{s.visible=ctx.raw>=i*.28;s.position.y=(1-i)*2.6;});
-      links.forEach((o,i)=>o.visible=ctx.raw>=.22+i*.3);
-      arm.visible=false;transfer.g.visible=true;transfer.g.position.set(0,mix(2.8,-2.4,u),.85);
-    }
-    return {waferCount:cassette?25:undefined,edgeSlotHandling:cassette,materialPath:!cassette?u:undefined,
-      industrySchematic:!cassette,physicalWaferScale:true};
-  },key==='cassette'?[disks[12].g,arm]:[stations[1],transfer.g],
-  {view:{eye:[3,1.8,9],look:[0,0,0],span:key==='cassette'?7.5:9.0}});
-}
-function recapRig(parent){
-  const g=group(parent),quality=group(g),process=cassetteRig('industry',g);
-  const sample=group(quality);sample.position.y=2.05;
-  for(let i=0;i<24;i++)ball(sample,.085,M.silver,[(i%6-2.5)*.36,(Math.floor(i/6)-1.5)*.36,0]);
-  const impurity=ball(sample,.11,M.green,[.18,.18,.12]);
-  const crystal=buildDiamond(quality,{cells:2,spacing:1.12,atomRadius:.072});
-  const latticeTarget=marker(crystal.g,crystal.points[58]);
-  const geo=new T.PlaneGeometry(2.8,1.35,48,8);geo.rotateX(-Math.PI/2);
-  const surface=new T.Mesh(geo,M.silicon);surface.position.y=-1.95;quality.add(surface);
-  const pos=geo.attributes.position,original=pos.array.slice();
-  const surfaceTarget=marker(quality,[0,-1.77,.5]),surfaceProbe=ball(quality,.055,M.green);
-  const qualityAnchor=marker(quality,[0,1.95,0]),processAnchor=marker(g,[0,0,0]);
-  return rigResult(g,ctx=>{
-    const isQuality=/杂质.*原子.*表面/.test(ctx.beat.text);
-    quality.visible=isQuality;process.g.visible=!isQuality;
-    if(!isQuality){
-      const data=process.update(ctx);
-      qualityAnchor.position.set(0,0,0);processAnchor.position.set(0,0,0);
-      return {...data,qualityControls:false,schematic:true};
-    }
-    const impurityWords=wordWindow(ctx.beat,'杂质'),latticeWords=wordWindow(ctx.beat,'原子的排列');
-    const surfaceWords=wordWindow(ctx.beat,'表面的高低'),controlWords=wordWindow(ctx.beat,'控制');
-    const impurityProgress=phase(ctx.time,impurityWords.start,impurityWords.end);
-    const latticeProgress=phase(ctx.time,latticeWords.start,latticeWords.end);
-    const surfaceProgress=phase(ctx.time,surfaceWords.start,surfaceWords.end);
-    const surfaceControl=phase(ctx.time,controlWords.start,controlWords.end),amplitude=.18*(1-surfaceControl);
-    impurity.position.set(.18+impurityProgress*.78,.18,.12+impurityProgress*.45);
-    crystal.atoms.forEach((o,i)=>{
-      const target=crystal.points[i],scatter=.17*(1-latticeProgress);
-      o.position.set(target[0]+Math.sin(i*2.1)*scatter,target[1]+Math.cos(i*1.7)*scatter,
-        target[2]+Math.sin(i*3.4)*scatter);
-    });
-    latticeTarget.position.copy(crystal.atoms[58].position);
-    crystal.bonds.forEach(({o},i)=>o.visible=latticeProgress>=.6+.4*(i+1)/crystal.bonds.length);
-    for(let i=0;i<pos.count;i++)pos.setY(i,amplitude*Math.cos(original[i*3]*5));
     pos.needsUpdate=true;geo.computeVertexNormals();
-    const probeX=mix(-1.2,1.2,surfaceProgress);
-    surfaceTarget.position.set(probeX,-1.95+amplitude*Math.cos(probeX*5),.5);
-    surfaceProbe.position.copy(surfaceTarget.position);surfaceProbe.visible=ctx.time>=surfaceWords.start;
-    const active=ctx.time<latticeWords.start?'impurity':ctx.time<surfaceWords.start?'lattice':'surface';
-    if(active==='impurity')qualityAnchor.position.copy(impurity.position).add(sample.position);
-    else if(active==='lattice')qualityAnchor.position.copy(latticeTarget.position);
-    else qualityAnchor.position.copy(surfaceTarget.position);
-    processAnchor.position.copy(surfaceTarget.position);
-    return {qualityControls:true,schematic:true,activeQuality:active,impurityControl:impurityProgress,
-      latticeProgress,surfaceProgress,surfaceControl,surfaceAmplitude:amplitude,lattice:'coherent diamond cubic',
-      subactions:{
-        impurity:{...impurityWords,progress:impurityProgress},
-        lattice:{...latticeWords,progress:latticeProgress},
-        surface:{...surfaceWords,progress:surfaceProgress},
-        surfaceControl:{...controlWords,progress:surfaceControl},
-      },localActionEnd:controlWords.end,
-      semanticTargets:{impurity:impurity.getWorldPosition(new T.Vector3()).toArray(),
-        lattice:latticeTarget.getWorldPosition(new T.Vector3()).toArray(),
-        surface:surfaceTarget.getWorldPosition(new T.Vector3()).toArray()}};
-  },[qualityAnchor,processAnchor],{view:{eye:[1.5,1.4,10],look:[0,.15,0],span:8.6},
-    semanticAnchors:ctx=>/杂质.*原子.*表面/.test(ctx.beat.text)?[
-      {text:'杂质',object:impurity,offset:[120,-65]},
-      {text:'原子排列',object:latticeTarget,offset:[210,-65]},
-      {text:'表面高低',object:surfaceTarget,offset:[-150,-85]},
-    ]:[]});
+    wheel.visible=u>0&&u<1;wheel.position.y=mix(.6,-.6,u);wheel.rotation.z=u*10;
+    return {comparisonSpecimensSeparate:true,sharpEdgeChipped:p['崩缺'],roundedEdge:u,edgeScaleExaggerated:true};
+  },[edgeTarget,shard],[label('崩边示意',shard,'崩缺',[100,-80]),label('边缘倒圆',edgeTarget,'加工成圆滑轮廓',[-80,-80])],
+  {look:[0,.1,0],span:7.7});
 }
-export function finishingRig(key,parent){
-  if(['wafer','wafer-measure'].includes(key))return waferRig(key,parent);
-  if(['wire','kerf'].includes(key))return sawRig(key,parent);
-  if(key==='trim')return trimRig(parent);
-  if(key==='edge')return edgeRig(parent);
-  if(['lap','etch','polish'].includes(key))return surfaceRig(key,parent);
-  if(['flatness','focus'].includes(key))return diagramRig(key,parent);
-  if(key==='wash')return cleaningRig(parent);
-  if(key==='scan')return scanRig(parent);
-  if(key==='recap')return recapRig(parent);
-  return cassetteRig(key,parent);
+function doubleLapping(parent,beat){
+  const g=group(parent),section=box(g,3,.5,1.25,M.silicon),pos=section.geometry.attributes.position,original=pos.array.slice();
+  const top=box(g,3.3,.14,1.5,M.ceramic,[0,.55,0]),bottom=box(g,3.3,.14,1.5,M.ceramic,[0,-.55,0]);
+  const gauge=bracket(g,[1.8,-.25,.65],[1.8,.25,.65]);
+  const footprint=ring(g,1.65,M.green,[0,0,0]);
+  const targetLimits=group(g);
+  for(const y of [-.23,.23])segment(targetLimits,[1.62,y,.68],[1.95,y,.68],.012,M.amber);
+  return finish(g,beat,'opposed-lapping-parallelism-and-thickness',p=>{
+    const parallel=p['两面更平行'],thickness=p['厚度接近目标'],h=mix(.36,.23,thickness);
+    for(let i=0;i<pos.count;i++){
+      const x=original[i*3],sign=Math.sign(original[i*3+1]);
+      pos.setY(i,sign*h+(sign>0?.10:-.07)*x*(1-parallel));
+    }
+    pos.needsUpdate=true;section.geometry.computeVertexNormals();
+    top.position.set(.1*Math.sin(parallel*8),h+.1,0);bottom.position.set(-.1*Math.sin(parallel*8),-h-.1,0);
+    top.rotation.z=.1*(1-parallel);bottom.rotation.z=-.07*(1-parallel);
+    gauge.g.visible=targetLimits.visible=active(thickness);gauge.g.scale.y=h/.25;footprint.visible=active(p['整片几何']);
+    return {materialRemoval:.26*thickness,parallelismError:.17*(1-parallel),sectionThickness:2*h,targetThickness:.46,bothFacesProcessed:true};
+  },[gauge.anchor,section],[label('厚度',gauge.anchor,'厚度接近目标',[-90,-65]),label('两面平行度',section,'两面更平行',[0,-115])],
+  {span:7.7});
+}
+function chemicalEtching(parent,beat){
+  const g=group(parent),body=box(g,3,.4,1.3,M.silicon,[0,-.2,0]);
+  const shells=[box(g,3,.13,1.3,M.amber,[0,.065,0]),box(g,3,.13,1.3,M.amber,[0,-.465,0])];
+  const cracks=Array.from({length:12},(_,i)=>segment(g,[(i%6-2.5)*.45,i<6?.11:-.51,.66],
+    [(i%6-2.5)*.45+.06,i<6?.015:-.415,.66],.012,M.dark));
+  const bath=box(g,3.6,.95,1.8,M.liquid,[0,-.15,0]),removed=particles(g,14,M.amber,.035);
+  const damageTarget=target(shells[0],[.7,0,.66],'受损层');
+  return finish(g,beat,'chemical-removal-of-damaged-shells',p=>{
+    bath.visible=active(p['化学蚀刻']);
+    const u=.75*p['移除一定材料']+.25*p['去掉受损层'];
+    shells.forEach((o,i)=>{o.scale.y=Math.max(.001,1-u);o.position.y=i?-.4-.065*(1-u):.065*(1-u);o.visible=u<1;});
+    cracks.forEach(o=>{o.visible=p['留下损伤']>0&&u<1;o.scale.y=Math.max(.001,1-u);});
+    removed.forEach((o,i)=>{o.visible=active(u);o.position.set((i%7-3)*.4,(i<7?.25:-.65)+u*.1,Math.sin(i)*.55);});
+    return {chemicalEtch:true,removedTopDepth:.13*u,removedBottomDepth:.13*u,
+      substrateGeometryFixed:true,damagedLayerRemaining:.13*(1-u),flattening:false};
+  },[bath,body],[label('受损层',damageTarget,'留下损伤',[90,-85]),label('化学蚀刻',bath,'化学蚀刻',[-130,-85])],
+  {span:7.9});
+}
+function cmpContact(parent,beat){
+  const g=group(parent),s=surface(g,{height:x=>.08+.025*Math.cos(x*9),bottom:-.5});
+  const pad=cyl(g,1,.22,M.ceramic,[0,1,0]),reaction=box(g,2.8,.035,1,M.amber,[0,.12,0]);
+  const nozzle=tube(g,[[1.7,1.2,0],[1.7,.8,0],[.9,.65,0]],.04),drops=particles(g,12,M.liquid,.035),chips=particles(g,10,M.silver,.028);
+  const face=s.anchor(.7,'化学作用区');
+  return finish(g,beat,'pad-slurry-reaction-and-material-transport',p=>{
+    pad.position.y=mix(1,.23,p['抛光垫']);pad.rotation.y=p['移走材料']*9;pad.position.x=mix(-.5,.5,p['移走材料']);
+    nozzle.visible=active(p['抛光液']);
+    drops.forEach((o,i)=>{o.visible=active(p['抛光液']);o.position.set(mix(.9,.3,p['抛光液']),mix(.65,.15,p['抛光液'])+(i%3)*.03,(i%4-1.5)*.2);});
+    reaction.visible=active(p['化学作用']);reaction.scale.y=Math.max(.001,1-p['移走材料']);
+    chips.forEach((o,i)=>{o.visible=active(p['移走材料']);o.position.set(mix(.2,1.7,p['移走材料']),.17+(i%3)*.04,(i%5-2)*.19);});
+    return {padContact:p['抛光垫']===1,slurry:p['抛光液'],surfaceReaction:p['化学作用'],removedMaterial:p['移走材料'],contactSchematic:true};
+  },[face,pad],[label('抛光垫',pad,'抛光垫',[-130,-90]),label('化学作用区',face,'化学作用',[130,-75])],
+  {look:[0,.3,0],span:7.8});
+}
+function asperityPolish(parent,beat){
+  const g=group(parent),height=x=>.04+.2*(.5+.5*Math.cos(x*7))**3,s=surface(g,{height,bottom:-.35});
+  const pad=box(g,2.2,.22,1.35,M.ceramic,[0,.38,0]),load=arrow(g,[0,1.7,0],[0,.65,0],M.amber,.03);
+  const nozzle=tube(g,[[1.7,1.2,0],[1.7,.7,0],[1,.45,0]],.045),drops=particles(g,9,M.liquid,.035);
+  const peak=target(g,[0,.24,.62],'表面突起');
+  const result=bracket(g,[-1.4,-.6,.7],[1.4,-.6,.7]);
+  const conditions=[arrow(g,[-1.5,.4,.7],[-1.5,-.4,.7],M.green,.014),
+    arrow(g,[0,-.36,.7],[0,-.5,.7],M.green,.014),
+    arrow(g,[1.5,.4,.7],[1.5,-.4,.7],M.green,.014)];
+  return finish(g,beat,'asperity-removal-and-three-process-variables',p=>{
+    const u=p['突起逐渐被削低'];
+    s.deform(x=>mix(height(x),Math.min(height(x),.07),u));peak.position.y=mix(.24,.07,u);
+    pad.position.set(mix(-.4,.4,p['运动']),mix(.38,.2,u),0);load.visible=active(p['压力']);
+    nozzle.visible=active(p['供液']);drops.forEach((o,i)=>{o.visible=active(p['供液']);o.position.set(1-i*.16,.35-i*.02,(i%3-1)*.25);});
+    const values=[p['压力'],p['运动'],p['供液']];
+    conditions.forEach((o,i)=>o.visible=active(values[i]));result.g.visible=values.every(active);
+    return {asperityHeight:.2*(1-u)+.03,materialRemovedFromPeaks:true,pressure:p['压力'],relativeMotion:p['运动'],slurrySupply:p['供液'],
+      jointConditions:values.every(active)};
+  },[peak,pad],[label('表面突起',peak,'突起逐渐被削低',[110,-75]),label('供液',nozzle,'供液',[110,-85]),
+    label('加工结果',result.anchor,'加工结果',[0,-65])],
+  {look:[0,.4,0],span:7.5});
+}
+function finalPolish(parent,beat){
+  const g=group(parent),section=box(g,2.4,.2,1.1,M.silicon,[0,.8,0]);
+  const pads=[box(g,2.7,.13,1.3,M.ceramic,[0,1.15,0]),box(g,2.7,.13,1.3,M.ceramic,[0,.45,0])];
+  const fine=cyl(g,.35,.14,M.ceramic,[0,1.35,0]),w=wafer(g,1.25,[0,-1.1,0]);w.g.rotation.x=.25;
+  const gauge=box(g,.35,.25,.35,M.dark,[-1,-.1,0]),beam=dynamicLine(g,M.green,.012),spot=target(w.g,[0,.02,0],'测量点');
+  return finish(g,beat,'double-polish-fine-pass-and-independent-metrology',p=>{
+    pads.forEach((o,i)=>{o.position.x=(i?-1:1)*.25*Math.sin(p['双面抛光']*6);o.visible=p['精抛']<1;});
+    fine.visible=active(p['精抛']);fine.position.x=mix(-.9,.9,p['精抛']);fine.position.y=1.02;
+    w.g.rotation.y=mix(-.3,.4,p['镜面反光']);
+    const x=mix(-1,1,p['实际测量']);gauge.visible=beam.visible=active(p['实际测量']);gauge.position.x=x;
+    setSegment(beam,[x,-.25,0],[x,-1.05,0]);spot.position.x=x;
+    return {doubleSidedTreatment:true,finePass:p['精抛'],mirrorAppearance:p['镜面反光'],measurement:p['实际测量'],measurementDoesNotChangeSurface:true};
+  },[section,spot],[label('精抛',fine,'精抛',[90,-80]),label('实际测量',spot,'实际测量',[100,-75])],
+  {span:8.3});
+}
+function scaleComparison(parent,beat){
+  const g=group(parent),whole=at(g,[0,1.7,0]),local=at(g,[0,0,0]),micro=at(g,[0,-1.6,0]);
+  const bow=surface(whole,{length:2.8,depth:1.1,bottom:-.25,height:x=>.12*x*x-.12});
+  const patch=surface(local,{length:2,depth:.85,bottom:-.22,height:x=>.055*Math.cos(x*4)});
+  const rough=surface(micro,{length:2.8,depth:.75,bottom:-.25,height:x=>.1*Math.cos(x*24)+.025*Math.cos(x*41)});
+  const refs=[segment(whole,[-1.4,.25,.6],[1.4,.25,.6],.012,M.green),
+    bracket(local,[-.9,.15,.5],[.9,.15,.5]).g,segment(micro,[-1.4,.18,.45],[1.4,.18,.45],.012,M.green)];
+  return finish(g,beat,'global-bow-local-flatness-micro-roughness',p=>{
+    refs[0].visible=active(p['整片翘曲']);refs[1].visible=active(p['局部平坦度']);refs[2].visible=active(p['微观粗糙度']);
+    return {surfaceGeometryFixed:true,materialRemoval:0,scales:['whole-wafer','local-area','microscopic'],
+      heightExaggerated:true,oneNumericScaleWouldBeInvalid:true};
+  },[bow.mesh,rough.mesh],[
+    label('整片翘曲',bow.anchor(.6),'整片翘曲',[100,-75]),label('局部平坦度',patch.anchor(.4),'局部平坦度',[-110,-75]),
+    label('微观粗糙度',rough.anchor(.35),'微观粗糙度',[100,-75]),
+  ],{eye:[1.6,2,10],span:8.5});
+}
+function opticalFocus(parent,beat){
+  const g=group(parent),height=x=>.22*Math.cos(x*2.8),s=surface(g,{height,bottom:-.4});
+  const plane=box(g,3.3,.012,1.4,M.glass),edge=segment(g,[-1.6,0,.75],[1.6,0,.75],.012,M.green);
+  const lens=cyl(g,.36,.17,M.ceramic,[0,1.9,0]),beams=[dynamicLine(g,M.green,.012),dynamicLine(g,M.green,.012)];
+  const spot=ball(g,.06,M.green),errors=[bracket(g,[0,0,.78],[0,height(0),.78]),bracket(g,[1.1,0,.78],[1.1,height(1.1),.78])];
+  const focus=target(g,[0,0,.75],'焦平面');
+  return finish(g,beat,'fixed-focal-plane-versus-unequal-heights',p=>{
+    const optical=p['光刻需要清楚成像'],high=p['有些地方高'],low=p['有些地方低'];
+    const x=mix(-.5,0,high)+1.1*low,h=height(x);
+    plane.visible=edge.visible=lens.visible=active(optical);beams.forEach((o,i)=>{
+      o.visible=active(optical);const a=i?.3:-.3;
+      setSegment(o,[x+a,1.8,0],[x+a*h/1.8,h,0]);
+    });
+    lens.position.x=x;spot.visible=active(optical);
+    spot.position.set(x,h+.018,0);spot.scale.set(.045+Math.abs(h)*.6,.025,.045+Math.abs(h)*.6);
+    focus.position.x=x;errors.forEach(o=>o.g.visible=active(p['同时处在合适的焦点']));
+    return {surfaceGeometryFixed:true,surfaceAmplitude:.22,focalPlaneY:0,probeX:x,surfaceHeight:h,focusError:h,
+      heightExaggerated:true,qualitativeOptics:true,materialRemoval:0};
+  },[focus,spot],[label('焦平面',focus,'光刻需要清楚成像',[-120,-75]),label('表面高度差',errors[0].anchor,'同时处在合适的焦点',[90,-90])],
+  {look:[0,.65,0],span:7.7});
+}
+function productTolerance(parent,beat){
+  const g=group(parent),samples=[],limits=[],targets=[];
+  for(let i=0;i<2;i++){
+    const row=at(g,[0,1.2-i*2.1,0]),s=surface(row,{length:2.6,depth:.8,bottom:-.24,height:x=>.13*Math.cos(x*3)});
+    samples.push(s);targets.push(s.anchor(.35));
+    const band=group(row),half=i?.11:.22;
+    for(const y of [-half,half])segment(band,[-1.4,y,.5],[1.4,y,.5],.013,i?M.amber:M.green);
+    limits.push(band);
+  }
+  const downstream=group(g);cyl(downstream,.3,.15,M.ceramic,[0,-2.15,0]);
+  const link=arrow(g,[1.2,-1.2,0],[1.2,-2.2,0],M.green,.02);
+  return finish(g,beat,'identical-surfaces-different-product-specifications',p=>{
+    limits[0].visible=active(p['容许多少起伏']);limits[1].visible=active(p['器件和产品规格']);
+    downstream.visible=link.visible=active(p['下一阶段的加工']);
+    return {surfaceGeometryFixed:true,identicalProfiles:true,toleranceExamples:[.22,.11],
+      numericUnitsNotImplied:true,productDependent:true,materialRemoval:0};
+  },targets,[label('产品规格示意',targets[1],'器件和产品规格',[100,-80])],{span:8.2});
+}
+function contamination(parent,beat){
+  const g=group(parent),rows=[],objects=[],collectors=[];
+  for(let i=0;i<3;i++){
+    const row=at(g,[0,1.8-i*1.8,0]);box(row,2.2,.12,.9,M.silicon);
+    rows.push(row);collectors.push(box(row,.45,.3,.55,M.glass,[1.5,-.2,0]));
+  }
+  const grains=particles(rows[0],8,M.ceramic,.07),film=box(rows[1],1.5,.045,.7,M.amber,[0,.1,0]);
+  const ions=particles(rows[2],7,M.amber,.04);objects.push(grains[3],film,ions[3]);
+  const routes=rows.map(row=>arrow(row,[.7,.22,.2],[1.35,-.02,.2],M.green,.018));
+  return finish(g,beat,'three-contaminant-types-and-distinct-removal-paths',p=>{
+    const u=p['清洗'],finish=p['分别解决'];
+    grains.forEach((o,i)=>{o.visible=active(p['磨粒']);o.position.set((i%4-1.5)*.3+u*1.5,.12-u*.2,(i%2-.5)*.4);});
+    film.visible=active(p['有机残留'])&&u<.995;film.scale.set(Math.max(.001,1-u),Math.max(.001,1-u),1);
+    ions.forEach((o,i)=>{o.visible=active(p['金属污染']);o.position.set((i%4-1.5)*.3+u*1.3,.13-u*.35,(i%2-.5)*.3);});
+    routes.forEach(o=>o.visible=active(u));collectors.forEach(o=>o.visible=active(finish));
+    return {contaminantTypes:['abrasive-particles','organic-film','metal-sites'],distinctTreatmentPaths:true,
+      particlesRemoved:u,filmDissolved:u,metalSitesTransported:u,scaleSchematic:true};
+  },objects.slice(0,2),[
+    label('磨粒',objects[0],'磨粒',[110,-75]),label('有机残留',objects[1],'有机残留',[-110,-75]),
+    label('金属污染',objects[2],'金属污染',[110,-75]),
+  ],{eye:[1.2,3,10],span:8.8});
+}
+function rinseDry(parent,beat){
+  const g=group(parent),w=wafer(g,1.3),film=cyl(g,1.28,.025,M.liquid,[0,.03,0]);
+  const nozzle=tube(g,[[-1.7,1.5,0],[-.9,1.5,0],[-.5,1.1,0]],.045),water=dynamicLine(g,M.liquid,.035);
+  const drain=box(g,3.1,.25,1.9,M.dark,[0,-.5,0]),residue=particles(g,12,M.amber,.035);
+  const air=Array.from({length:3},(_,i)=>arrow(g,[-.8+i*.8,1.2,.2],[-.8+i*.8,.35,.2],M.green,.018));
+  const boundary=ring(g,1.46,M.green,[0,.03,0]);
+  return finish(g,beat,'high-purity-rinse-then-liquid-removal',p=>{
+    const rinse=p['高纯水漂洗'],dry=p['干燥'];
+    nozzle.visible=water.visible=rinse>0&&!active(dry);setSegment(water,[-.5,1.1,0],[0,.04,0]);
+    w.g.rotation.y=dry*8;film.visible=dry<1;film.scale.y=Math.max(.001,1-dry);film.scale.x=film.scale.z=1+.15*dry;
+    residue.forEach((o,i)=>o.position.set((i%4-1.5)*.4, mix(.07,-.32,rinse),(i%3-1)*.35));
+    air.forEach(o=>o.visible=active(dry));boundary.visible=active(p['避免新的残留']);
+    drain.material=active(p['去掉旧污染'])?M.green:M.dark;
+    return {rinseProgress:rinse,dryProgress:dry,waterFilmRemaining:1-dry,usedWaterIsolated:true,
+      oldResidueInDrain:p['去掉旧污染'],newResidueAvoidance:p['避免新的残留']};
+  },[w.g,drain],[label('高纯水漂洗',nozzle,'高纯水漂洗',[0,-100]),label('干燥',air[1],'干燥',[100,-75])],
+  {eye:[2.6,4.5,10],span:7.8});
+}
+function cleanHandling(parent,beat){
+  const g=group(parent),moving=group(g),w=wafer(moving,1.2),grips=[];
+  for(const sign of [-1,1])grips.push(box(moving,.16,.18,.5,M.ceramic,[sign*1.4,0,0]));
+  const air=Array.from({length:4},(_,i)=>arrow(g,[-1.2+i*.8,1.8,0],[-1.2+i*.8,.6,0],M.green,.015));
+  box(g,3,.13,1.5,M.ceramic,[0,1.95,0]);
+  const enclosure=group(g);box(enclosure,3.2,.12,2,M.dark,[0,-.5,0]);
+  for(const x of [-1.55,1.55])box(enclosure,.08,2,2,M.glass,[x,.4,0]);
+  const face=target(w.g,[.4,.025,.4],'清洁表面');
+  return finish(g,beat,'edge-only-handling-filtered-air-and-protection',p=>{
+    grips.forEach((o,i)=>o.position.x=(i?1:-1)*mix(1.4,1.2,p['夹具']));
+    air.forEach(o=>o.visible=active(p['空气']));enclosure.visible=active(p['包装']);
+    moving.position.z=mix(.7,-.4,p['每一次接触']);
+    return {edgeContactOnly:true,faceContact:false,filteredAir:p['空气'],enclosure:p['包装'],
+      cleanSurfaceRetained:true,transfer:p['每一次接触'],washing:false};
+  },[grips[1],face],[label('边缘夹持',grips[1],'夹具',[100,-75]),label('清洁表面',face,'清洁表面能否保住',[-100,-80])],
+  {eye:[2.3,3,10],look:[0,.5,0],span:8});
+}
+function inspectionTypes(parent,beat){
+  const g=group(parent),specimens=[],instruments=[],targets=[],phrases=['颗粒','缺陷','厚度','平整度','电学性质'];
+  for(let i=0;i<5;i++){
+    const row=at(g,[i%2?.9:-.9,1.7-Math.floor(i/2)*1.6,0]);
+    const pit=i===1?surface(row,{length:1.25,depth:.7,bottom:-.14,
+      height:x=>.07-.15*Math.max(0,1-Math.abs(x-.2)/.18)}):null;
+    const sample=pit?.mesh||box(row,1.25,.14,.7,M.silicon);
+    specimens.push(sample);
+    if(i===0){
+      targets.push(ball(row,.065,M.amber,[.2,.14,.1]));
+      instruments.push(segment(row,[0,.8,0],[.2,.18,.1],.012,M.green));
+    }
+    if(i===1){
+      targets.push(pit.anchor(.2,'表面缺陷'));
+      const inspection=group(row);
+      segment(inspection,[-.25,.65,.4],[.2,-.08,.4],.012,M.amber);
+      segment(inspection,[.2,-.08,.4],[.5,.55,.4],.012,M.amber);
+      instruments.push(inspection);
+    }
+    if(i===2){
+      const gauge=bracket(row,[.75,-.1,0],[.75,.1,0]);instruments.push(gauge.g);targets.push(gauge.anchor);
+    }
+    if(i===3){
+      const reference=segment(row,[-.6,.3,.4],[.6,.3,.4],.013,M.green);
+      instruments.push(reference);targets.push(target(row,[0,.3,.4]));
+    }
+    if(i===4){
+      const contacts=group(row);for(let j=0;j<4;j++)segment(contacts,[(j-1.5)*.2,.7,0],[(j-1.5)*.2,.08,0],.02,M.bright);
+      box(contacts,.95,.2,.4,M.dark,[0,.8,0]);instruments.push(contacts);targets.push(target(contacts,[0,.08,.12]));
+    }
+  }
+  return finish(g,beat,'separate-particle-defect-geometry-and-electrical-instruments',p=>{
+    instruments.forEach((o,i)=>o.visible=active(p[phrases[i]]));
+    return {independentMeasurements:phrases,appearanceIsNotApproval:true,noSingleUniversalScan:true};
+  },[specimens[0],specimens[4]],phrases.map((text,i)=>label(text,targets[i],text,[i%2?100:-100,-75])),
+  {eye:[1.3,2.7,10],span:8.5});
+}
+function opticalScan(parent,beat){
+  const g=group(parent),w=wafer(g,1.45,[0,-.65,0]),detector=group(g);
+  box(detector,.42,.28,.42,M.dark,[0,1.1,0]);cyl(detector,.13,.15,M.bright,[0,.87,0]);
+  const beam=dynamicLine(g,M.green,.012),spot=ball(g,.045,M.green),particle=ball(w.g,.04,M.amber,[.4,.03,.25]);
+  const collector=box(g,.3,.3,.3,M.dark,[1.7,.55,.3]),scatter=dynamicLine(g,M.amber,.013);
+  const path=[];for(let i=0;i<18;i++)path.push(ball(w.g,.015,M.green,[0,.025,0]));
+  const point=target(g,[0,-.62,0],'光点');
+  return finish(g,beat,'linked-light-probe-and-anomalous-scattering',p=>{
+    const first=p['扫描表面'],linked=p['关联运动'],coverage=p['覆盖检查区域'];
+    let x=mix(-1,.4,first),z=mix(-.4,.25,first);
+    if(active(linked)){
+      const u=.55*linked+.45*coverage,a=u*11,r=.5+.7*u;
+      x=mix(.4,Math.cos(a)*r,linked);z=mix(.25,Math.sin(a)*r,linked);
+    }
+    detector.position.set(x,0,z);spot.position.set(x,-.61,z);point.position.copy(spot.position);
+    setSegment(beam,[x,.8,z],[x,-.62,z]);scatter.visible=active(p['异常散射'])&&!active(linked);
+    setSegment(scatter,[.4,-.62,.25],[1.7,.55,.3]);
+    path.forEach((o,i)=>{const u=i/17,a=u*11,r=.5+.7*u;o.position.set(Math.cos(a)*r,.03,Math.sin(a)*r);o.visible=coverage>u;});
+    return {spot:[x,-.62,z],detector:[x,1.1,z],detectorTracksSpot:true,anomalousScattering:p['异常散射'],
+      scanProgress:.5*first+.3*linked+.2*coverage,defectSizesExaggerated:true,geometryUnchanged:true};
+  },[point,detector],[label('异常散射',particle,'异常散射',[-110,-80]),label('关联运动',point,'关联运动',[100,-80])],
+  {eye:[2.8,3,10],span:8.3});
+}
+function geometricMeasurement(parent,beat){
+  const g=group(parent),rows=[at(g,[0,1.6,0]),at(g,[0,0,0]),at(g,[0,-1.6,0])];
+  const thickness=box(rows[0],2.5,.28,.85,M.silicon),gauge=bracket(rows[0],[1.45,-.14,.5],[1.45,.14,.5]);
+  const local=surface(rows[1],{length:2.6,depth:.8,bottom:-.22,height:x=>.07*Math.cos(x*5)});
+  const probe=ball(rows[1],.045,M.green),localRef=segment(rows[1],[-1.3,.2,.5],[1.3,.2,.5],.012,M.green);
+  const bowed=surface(rows[2],{length:2.6,depth:.8,bottom:-.23,height:x=>.12*x*x-.1});
+  const globalRef=segment(rows[2],[-1.3,.25,.5],[1.3,.25,.5],.012,M.green);
+  const optical=at(g,[0,-3.15,0]),opticalSample=wafer(optical,.65);
+  const particle=ball(opticalSample.g,.04,M.amber,[.15,.045,.1]);
+  segment(optical,[-.5,.7,0],[.15,.06,.1],.012,M.green);
+  segment(optical,[.15,.06,.1],[.6,.6,.1],.012,M.amber);
+  return finish(g,beat,'fixed-thickness-local-flatness-and-global-bow-metrology',p=>{
+    gauge.g.visible=active(p['厚不厚']);localRef.visible=probe.visible=active(p['平不平']);
+    const x=mix(-1.2,1.2,p['平不平']);probe.position.set(x,local.height(x)+.03,.25);
+    globalRef.visible=active(p['有没有翘曲']);optical.visible=active(p['颗粒检查']);
+    return {surfaceGeometryFixed:true,sectionThickness:.28,materialRemoval:0,
+      separateTasks:['thickness','local-flatness','global-bow','particle-inspection']};
+  },[gauge.anchor,bowed.mesh],[
+    label('厚度',gauge.anchor,'厚不厚',[-95,-65]),label('局部平坦度',probe,'平不平',[105,-75]),
+    label('整片翘曲',bowed.anchor(.4),'有没有翘曲',[100,-70]),
+    label('颗粒检查',particle,'颗粒检查',[100,-70]),
+  ],{eye:[1.6,2.4,10],look:[0,-.6,0],span:9.6});
+}
+function traceability(parent,beat){
+  const g=group(parent),r=rod(g,.45,1.9,[0,1.8,0]),w=wafer(g,1.1,[0,-1.3,0]);
+  const batch=at(g,[0,.4,0]);for(let i=0;i<3;i++)box(batch,.65,.12,.65,M.ceramic,[(i-1)*.8,0,0]);
+  const identity=box(g,.4,.06,.27,M.amber,[1,-1.25,.5]);
+  const raw=mineral(g,[-1.3,2.9,0],.32),process=box(g,.7,.4,.65,M.dark,[1.25,2.9,0]);
+  const paths=[dynamicLine(g,M.green,.015),dynamicLine(g,M.green,.015),dynamicLine(g,M.amber,.015),dynamicLine(g,M.amber,.015)];
+  const ends=[[[.7,-1.3,.2],[.7,1.8,.2]],[[0,1.8,.2],[0,.4,.2]],
+    [[0,1.8,.2],[-1.3,2.9,.2]],[[0,1.8,.2],[1.25,2.9,.2]]];
+  return finish(g,beat,'identity-to-rod-lot-feedstock-and-process-records',p=>{
+    identity.visible=active(p['身份记录']);
+    const values=[p['追溯到晶棒'],p['批次'],p['回查原料'],p['加工环节']];
+    paths.forEach((o,i)=>{const [a,b]=ends[i];o.visible=active(values[i]);setSegment(o,a,a.map((q,j)=>mix(q,b[j],values[i])));});
+    raw.visible=active(p['回查原料']);process.visible=active(p['加工环节']);
+    return {operation:'record-traceability',machining:false,sourceRodLinked:p['追溯到晶棒'],batchLinked:p['批次'],
+      feedstockRecord:p['回查原料'],processRecord:p['加工环节'],identityTokenIsSchematic:true};
+  },[identity,r],[label('批次记录',batch,'批次',[120,-70]),label('原料记录',raw,'回查原料',[90,-70]),
+    label('加工记录',process,'加工环节',[-90,-70])],
+  {eye:[1.3,2.7,10],look:[0,.6,0],span:9.3});
+}
+function protectedTransport(parent,beat){
+  const g=group(parent),c=carrier(g),cart=box(g,3.2,.2,2.6,M.dark,[0,-1.35,0]);
+  const dust=particles(g,9,M.amber,.035),receiver=plant(g,[0,-2.65,-.4]);
+  const travel=arrow(g,[1.7,-1.1,.5],[1.7,-2.7,.5],M.green,.025);
+  return finish(g,beat,'slotted-container-protection-and-sealed-delivery',p=>{
+    c.cover.position.set(mix(2.3,0,p['保护硅片']),0,1.3);c.cover.visible=active(p['专用运输盒']);
+    dust.forEach((o,i)=>{o.visible=active(p['减少颗粒和接触污染']);o.position.set(1.8+(i%3)*.1,.8-Math.floor(i/3)*.5,.5);});
+    const move=p['送往后续工厂'];c.g.position.y=-.5*move;cart.position.y=-1.35-.5*move;
+    receiver.visible=travel.visible=active(move);
+    return {slotSupportsOnly:true,waferFacesSeparated:true,coverClosed:p['保护硅片']===1,
+      externalParticlesBlocked:true,sealedDelivery:move,waferCount:7,countSchematic:true};
+  },[c.anchor,c.disks[3].g],[label('专用洁净运输盒',c.anchor,'专用运输盒',[90,-80]),
+    label('送往后续工厂',receiver,'送往后续工厂',[0,-75])],
+  {eye:[2.7,2,10],look:[0,-.4,0],span:9.5});
+}
+function deviceFabrication(parent,beat){
+  const g=group(parent),input=wafer(g,1.1,[0,1.85,0]),detail=at(g,[0,-.7,0]);
+  const base=box(detail,3,.4,1.15,M.silicon,[0,-.3,0]),ridges=[],etched=[],mask=[],coating=[],metal=[];
+  for(let i=0;i<6;i++){
+    const x=(i-2.5)*.5;
+    ridges.push(box(detail,.27,.18,1.15,M.silicon,[x,-.01,0]));
+    etched.push(box(detail,.23,.18,1.15,M.silicon,[x+.25,-.01,0]));
+    mask.push(box(detail,.27,.055,1.15,M.amber,[x,.11,0]));
+    coating.push(box(detail,.27,.035,1.15,M.ceramic,[x,.095,0]));
+    coating.push(box(detail,.23,.035,1.15,M.ceramic,[x+.25,-.09,0]));
+    coating.push(box(detail,.025,.18,1.15,M.ceramic,[x+.145,0,0]));
+    metal.push(box(detail,.2,.05,.8,M.bright,[x,.17,.1]));
+  }
+  const bridge=box(detail,2.9,.05,.12,M.bright,[0,.2,.43]);
+  const lens=cyl(g,.4,.16,M.ceramic,[0,.8,0]),exposure=[dynamicLine(g,M.green,.015),dynamicLine(g,M.green,.015)];
+  const material=target(input.g,[.4,.01,.5],'空白硅片'),pattern=target(detail,[.5,.15,.58],'后续器件制造');
+  return finish(g,beat,'blank-input-then-lithography-etch-deposition-interconnect',p=>{
+    const photo=p['光刻'],etch=p['刻蚀'],deposit=p['沉积'],interconnect=p['互连'];
+    detail.visible=active(photo);lens.visible=active(photo)&&etch<1;
+    exposure.forEach((o,i)=>{o.visible=active(photo)&&etch<1;setSegment(o,[i?.28:-.28,.72,0],[i?.9:-.9,-.45,0]);});
+    mask.forEach(o=>{o.visible=active(photo)&&deposit<1;o.scale.y=Math.max(.001,photo);});
+    etched.forEach(o=>{o.scale.y=Math.max(.001,1-etch);o.position.y=-.1+.09*(1-etch);o.visible=etch<1;});
+    coating.forEach(o=>o.visible=active(deposit));metal.forEach(o=>o.visible=active(interconnect));bridge.visible=active(interconnect);
+    return {blankInputAlwaysUnpatterned:true,deviceDetailIsSeparateMagnification:true,
+      lithography:photo,etchRemoval:etch,deposition:deposit,interconnect,patternAppearsOnlyAtLithography:true};
+  },[material,pattern],[label('空白硅片',material,'材料起点',[-100,-70]),label('后续器件制造',pattern,'光刻',[0,-90])],
+  {eye:[2,2.7,10],look:[0,.2,0],span:8.9});
+}
+function repeatedProduction(parent,beat){
+  const g=group(parent),sample=wafer(g,1.05,[0,2,0]),batches=[],gauges=[];
+  for(let i=0;i<3;i++){
+    const row=at(g,[(i-1)*.9,0,0]);
+    for(let j=0;j<4;j++)wafer(row,.38,[0,(j-1.5)*.15,0]);
+    batches.push(row);gauges.push(bracket(row,[-.45,.65,.3],[.45,.65,.3]).g);
+  }
+  const receiving=at(g,[0,-1.8,0]);box(receiving,2.4,.14,1.5,M.dark);
+  const fixture=ring(receiving,.85,M.green,[0,.12,0],.025),incoming=wafer(receiving,.8,[0,1,0]);
+  return finish(g,beat,'single-sample-repeated-batches-and-customer-interface',p=>{
+    batches.forEach((o,i)=>scaleReveal(o,Math.max(0,Math.min(1,p['持续量产']*3-i))));
+    gauges.forEach(o=>o.visible=active(p['每批都稳定']));
+    receiving.visible=active(p['适配自己的工艺']);incoming.g.position.y=mix(1,.14,p['适配自己的工艺']);
+    return {sampleCount:1,batchCount:3,batchSizeSchematic:true,stableComparison:p['每批都稳定'],
+      customerCompatibility:p['适配自己的工艺'],waferGeometryUnchanged:true};
+  },[batches[1],fixture],[label('样品',sample.g,'样品',[-100,-75]),
+    label('批次一致性',batches[1],'每批都稳定',[100,-80]),
+    label('客户工艺适配',fixture,'适配自己的工艺',[-100,-75])],{eye:[2.6,4,10],span:8.6});
+}
+function supplierExamples(parent,beat){
+  const g=group(parent),names=['信越','胜高','环球晶圆','世创','爱思开矽特隆','国内发展'];
+  const phrases=['信越','胜高','环球晶圆','世创','爱思开矽特隆','国内也在发展'],stations=[];
+  const common=wafer(g,1.1);
+  for(let i=0;i<6;i++){
+    const station=at(g,[i%2?.9:-.9,1.9-Math.floor(i/2)*1.8,0]);
+    const factory=plant(station);factory.scale.setScalar(.85);
+    const w=wafer(station,.45,[0,.55,.1]);stations.push({g:station,target:w.g});
+  }
+  return finish(g,beat,'equal-scale-named-supplier-examples',p=>{
+    stations.forEach((o,i)=>scaleReveal(o.g,p[phrases[i]]));
+    common.g.visible=p['信越']<1;
+    return {supplierExamples:names,equalSymbolArea:true,marketShareEncoded:false,capacityEncoded:false};
+  },[stations[0].target,stations[4].target],
+  names.map((text,i)=>label(text,stations[i].target,phrases[i],[i%2?80:-80,-70])),
+  {eye:[1.3,2,10],look:[0,.2,0],span:8.8});
+}
+function productionCapability(parent,beat){
+  const g=group(parent),factory=plant(g,[0,2.3,0]),planning=box(g,2.5,.08,1,M.glass,[0,1.7,0]);
+  const quality=at(g,[-.95,.3,0]),validation=at(g,[.95,.3,0]),delivery=at(g,[0,-1.6,0]);
+  box(quality,1.1,.18,.85,M.silicon);const qg=bracket(quality,[-.6,-.1,.5],[-.6,.1,.5]);
+  const socket=ring(validation,.55,M.green,[0,0,0]),tested=wafer(validation,.5,[0,.8,0]);
+  const parcels=Array.from({length:3},(_,i)=>box(delivery,.55,.35,.65,M.ceramic,[(i-1)*.75,0,0]));
+  const links=[arrow(g,[-.9,-.2,0],[0,-.9,0]),arrow(g,[.9,-.2,0],[0,-.9,0])];
+  return finish(g,beat,'quality-customer-validation-and-repeatable-delivery',p=>{
+    planning.visible=active(p['厂房和规划产能']);qg.g.visible=quality.visible=active(p['量产质量']);
+    validation.visible=active(p['客户验证']);tested.g.position.y=mix(.8,.08,p['客户验证']);
+    parcels.forEach((o,i)=>o.visible=p['稳定交付']>(i/3));
+    delivery.visible=active(p['稳定交付']);links.forEach(o=>o.visible=active(p['共同决定生产能力']));
+    return {plannedFactoryIsNotCapacityProof:true,quality:p['量产质量'],customerValidation:p['客户验证'],
+      repeatableDelivery:p['稳定交付'],allConditionsRequired:true};
+  },[quality,delivery],[label('量产质量',qg.anchor,'量产质量',[-80,-75]),
+    label('客户验证',socket,'客户验证',[85,-75]),label('稳定交付',delivery,'稳定交付',[0,-85])],
+  {look:[0,.3,0],span:9});
+}
+function chemicalRecap(parent,beat){
+  const g=group(parent),reaction=at(g,[0,1.9,0]),si=ball(reaction,.22,M.atom);
+  reaction.scale.setScalar(1.35);
+  const oxygen=[ball(reaction,.13,M.amber,[-.38,0,0]),ball(reaction,.13,M.amber,[.38,0,0])];
+  const carbon=[ball(reaction,.12,M.dark,[-.85,.2,0]),ball(reaction,.12,M.dark,[.85,.2,0])];
+  const carrierGroup=at(g,[0,.35,0]);ball(carrierGroup,.2,M.atom);
+  for(let i=0;i<3;i++){const a=i*Math.PI*2/3;ball(carrierGroup,.14,M.green,[Math.cos(a)*.38,Math.sin(a)*.38,0]);segment(carrierGroup,[0,0,0],[Math.cos(a)*.38,Math.sin(a)*.38,0],.015,M.dark);}
+  ball(carrierGroup,.075,M.bright,[0,0,.35]);
+  const clean=box(g,.65,.35,.6,M.glass,[-.8,-1,0]),reject=box(g,.65,.35,.6,M.glass,[.8,-1,0]);
+  const foreign=ball(g,.09,M.amber,[.1,.35,0]),separated=ball(g,.08,M.amber,[.45,.45,0]);
+  const core=cyl(g,.07,1.3,M.silicon,[0,-2.3,0]);
+  const deposit=cyl(g,.28,1.3,M.silicon,[0,-2.3,0]);
+  const branches=[arrow(g,[-.2,.05,0],[-.8,-.65,0]),arrow(g,[.2,.05,0],[.8,-.65,0],M.amber,.025)];
+  return finish(g,beat,'chemical-reduction-carrier-separation-and-redeposition',p=>{
+    oxygen.forEach((o,i)=>{const sign=i?1:-1;o.position.set(sign*mix(.38,.85,p['还原']),mix(0,.45,p['还原']),0);});
+    carbon.forEach((o,i)=>o.position.y=mix(.2,.22,p['还原']));
+    carrierGroup.visible=active(p['转化']);branches.forEach(o=>o.visible=active(p['分离']));
+    carrierGroup.position.set(-.8*p['分离'],mix(.35,-.8,p['分离']),0);
+    carrierGroup.scale.setScalar(mix(1,.55,p['分离']));
+    separated.visible=active(p['转化']);separated.position.set(mix(.45,.8,p['分离']),mix(.45,-.8,p['分离']),.2);
+    clean.visible=reject.visible=active(p['分离']);foreign.position.set(mix(.1,.8,p['降低不需要的杂质']),mix(.35,-.8,p['降低不需要的杂质']),0);
+    const u=p['沉积'];deposit.visible=active(u);deposit.scale.x=deposit.scale.z=mix(.25,1,u);
+    return {molecularSymbolsQualitative:true,oxygenLeavesWithCarbon:p['还原'],chemicalCarrier:p['转化'],
+      separation:p['分离'],depositedSilicon:p['沉积'],unwantedSpeciesRejected:p['降低不需要的杂质']};
+  },[si,deposit],[label('化学转化',carrierGroup,'转化',[130,-75]),label('硅沉积',deposit,'沉积',[-100,-75])],
+  {eye:[1.4,1.8,10],look:[0,-.1,0],span:9.3});
+}
+function manufacturingRecap(parent,beat){
+  const g=group(parent),seed=cyl(g,.34,.95,M.silicon,[0,2.1,0]),lattice=buildDiamond(g,{cells:2,spacing:.65,atomRadius:.045});
+  lattice.g.position.y=1.25;
+  const interfaceRing=ring(g,.52,M.green,[0,.7,0]),defect=ball(g,.07,M.amber,[.35,1.3,.4]);
+  const slices=at(g,[0,-.3,0]),sliceObjects=[];
+  for(let i=0;i<5;i++)sliceObjects.push(wafer(slices,.65,[0,(i-2)*.13,0]));
+  const pad=cyl(g,.4,.12,M.ceramic,[.9,-.1,0]),rinse=dynamicLine(g,M.liquid,.035),gauge=box(g,.3,.2,.3,M.dark,[0,-1.1,0]);
+  const residue=particles(slices,7,M.amber,.035),drain=box(g,.5,.14,.7,M.dark,[-1.2,-.9,0]);
+  const beam=dynamicLine(g,M.green,.012),checkPoint=target(slices,[0,.29,.3]);
+  const output=wafer(g,1.05,[0,-2.15,0]),cleanTarget=target(slices,[.4,.3,.2]);
+  return finish(g,beat,'seed-growth-defect-control-and-finished-wafer-route',p=>{
+    lattice.g.scale.y=Math.max(.001,p['籽晶建立取向']);interfaceRing.visible=defect.visible=active(p['生长与缺陷']);
+    interfaceRing.scale.setScalar(mix(.6,1,p['生长与缺陷']));
+    slices.visible=pad.visible=active(p['切磨抛']);pad.position.x=mix(-.7,.7,p['切磨抛']);
+    sliceObjects.forEach((o,i)=>o.g.position.y=(i-2)*mix(.03,.13,p['切磨抛']));
+    rinse.visible=active(p['清洗']);setSegment(rinse,[-1,.5,0],[-.3,-.1,0]);
+    residue.forEach((o,i)=>o.position.set(mix((i-3)*.13,-1.2,p['清洗']),mix(.3,-.52,p['清洗']),(i%3-1)*.17));
+    drain.visible=active(p['清洗']);
+    const scanX=mix(-.45,.45,p['检测']);gauge.visible=beam.visible=active(p['检测']);gauge.position.set(scanX,.65,0);
+    checkPoint.position.x=scanX;setSegment(beam,[scanX,.55,0],[scanX,0,0]);
+    output.g.visible=active(p['得到合格硅片']);output.g.position.y=mix(-1.3,-2.15,p['得到合格硅片']);
+    return {orientationFromSeed:p['籽晶建立取向'],defectControlIsSeparate:p['生长与缺陷'],
+      cuttingAndFinishing:p['切磨抛'],cleaning:p['清洗'],inspection:p['检测'],qualifiedOutput:p['得到合格硅片']};
+  },[seed,output.g],[label('清洗',cleanTarget,'清洗',[100,-70]),label('检测',checkPoint,'检测',[-100,-75]),
+    label('合格硅片',output.g,'得到合格硅片',[-100,-75])],
+  {eye:[1.5,2,10],look:[0,0,0],span:9.2});
+}
+function materialFoundation(parent,beat){
+  const g=group(parent),w=wafer(g,1.4,[0,-.9,0]),chain=group(g);
+  mineral(chain,[-1.2,1.7,0],.32);rod(chain,.25,.85,[0,1.7,0]);wafer(chain,.45,[1.2,1.7,0]);
+  const paths=[arrow(chain,[-.85,1.7,.1],[-.5,1.7,.1],M.green,.018),arrow(chain,[.5,1.7,.1],[.8,1.7,.1],M.green,.018)];
+  const computers=group(g);
+  box(computers,1.5,.85,.15,M.dark,[0,2.95,0]);box(computers,1.25,.6,.02,M.glass,[0,2.95,.09]);
+  box(computers,.25,.35,.2,M.ceramic,[0,2.35,0]);box(computers,1,.1,.6,M.dark,[0,2.15,.15]);
+  const chips=Array.from({length:4},(_,i)=>box(computers,.28,.1,.28,M.bright,[(i-1.5)*.35,3.6,0]));
+  const link=arrow(g,[0,-.3,.2],[0,1.2,.2],M.green,.025);
+  const face=target(w.g,[.5,.02,.6],'一片硅');
+  return finish(g,beat,'material-chain-to-separate-computing-world',p=>{
+    chain.visible=active(p['一整条精密制造链']);computers.visible=active(p['计算世界']);link.visible=active(p['材料上开始搭建']);
+    chips.forEach((o,i)=>o.visible=p['材料上开始搭建']>i/4);
+    return {waferRemainsUnpatterned:true,upstreamChain:p['一整条精密制造链'],downstreamComputing:p['计算世界'],
+      materialFoundation:p['材料上开始搭建'],computingDevicesAreSeparateSchematic:true};
+  },[face,chain],[label('精密制造链',chain,'一整条精密制造链',[0,-95]),label('材料起点',face,'材料上开始搭建',[100,-80])],
+  {eye:[2,3.4,10],look:[0,.7,0],span:10});
+}
+
+const builders={
+  '01-start-01':openingWafer,'01-start-02':dimensions,'01-start-03':quality,'03-order-03':roadmap,
+  '18-trim-01':endTrimming,'18-trim-02':notch,'18-trim-03':multiwire,
+  '19-slice-01':abrasiveCut,'19-slice-02':kerfAccounting,'19-slice-03':asSawn,
+  '20-edge-01':edgeRounding,'20-edge-02':doubleLapping,'20-edge-03':chemicalEtching,
+  '21-polish-01':cmpContact,'21-polish-02':asperityPolish,'21-polish-03':finalPolish,
+  '22-flatness-01':scaleComparison,'22-flatness-02':opticalFocus,'22-flatness-03':productTolerance,
+  '23-clean-01':contamination,'23-clean-02':rinseDry,'23-clean-03':cleanHandling,
+  '25-inspect-01':inspectionTypes,'25-inspect-02':opticalScan,'25-inspect-03':geometricMeasurement,
+  '26-shipping-01':traceability,'26-shipping-02':protectedTransport,'26-shipping-03':deviceFabrication,
+  '27-industry-01':repeatedProduction,'27-industry-02':supplierExamples,'27-industry-03':productionCapability,
+  '28-recap-01':chemicalRecap,'28-recap-02':manufacturingRecap,'28-recap-03':materialFoundation,
+};
+export function finishingRig(key,parent,beat){
+  if(!beat?.id)throw new Error('finishingRig requires the actual beat; key-only caching is unsupported');
+  const build=builders[beat.id];
+  if(!build)throw new Error(`No independent finishing scene for ${beat.id} (${key})`);
+  return build(parent,beat);
 }

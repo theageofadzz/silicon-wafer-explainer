@@ -1,9 +1,9 @@
 {
   "status": "mismatches-need-visual-review",
   "engine": "Apple Vision accurate / zh-Hans,en-US / correction disabled",
-  "encodedSha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7",
+  "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
   "count": 335,
-  "matched": 330,
+  "matched": 331,
   "comparison": "letters and digits; punctuation and whitespace excluded",
   "limits": "Caption OCR does not verify explanatory labels, narration or scientific meaning.",
   "results": [
@@ -851,7 +851,7 @@
       "time": 181.375,
       "beat": "09-feedstock-02",
       "expected": "再重新建立",
-      "observed": "•再重新建立",
+      "observed": "再重新建立",
       "match": true,
       "crop": "output/review-full/caption-0105-crop.png"
     },
@@ -1195,8 +1195,8 @@
       "time": 260.25,
       "beat": "13-growth-02",
       "expected": "进入等径生长",
-      "observed": "进入等径生",
-      "match": false,
+      "observed": "进入等径生长",
+      "match": true,
       "crop": "output/review-full/caption-0148-crop.png"
     },
     {

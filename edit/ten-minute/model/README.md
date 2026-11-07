@@ -4,6 +4,21 @@ The browser fetches `../timeline.json`. The parent owns this file. All beat,
 word, and action times are absolute seconds. Invalid action windows or missing
 word timing stop loading; the engine never distributes actions by image count.
 
+The v2.1 production revision uses `semanticVersion: 3`. This describes the
+execution protocol, not a semantic acceptance result. Each exact beat ID owns
+its rig and `semanticPlan`; `visual` selects a mechanism family, not reusable
+generic footage. Shared geometry helpers are allowed, but a changed caption,
+camera angle or clip name cannot stand in for a different explanatory action.
+Atomic plans live in `atomic-plan.mjs`, growth plans and rigs in
+`growth-semantic.mjs`, and finishing plans in `finishing-plan.mjs`.
+
+Each event names `phrase`, `object`, `action`, and `fact`, plus `seconds` and
+`lead`. `semantic.mjs` locates that phrase in the actual recorded word events,
+then records `wordStart`, `wordEnd`, `start`, and `end`. `ctx.q(phrase)` drives
+that event independently. Missing phrases, actions outside the beat, duration
+disagreements and declared actions never evaluated by the rig are errors.
+The engine does not fall back to one normalized action clock for every sentence.
+
 `window.__ready === true` means the timeline and first frame loaded.
 `window.renderBeat(beatId, absoluteTime)` is seek-safe and returns object anchors
 in normalized top-left frame coordinates, nonblank metrics, action progress,
@@ -17,8 +32,9 @@ An explicit 12fps draft repeats each captured image and its anchors twice.
 Mechanism cameras are orthographic. Wafer inspection uses perspective and a
 directional PMREM environment so its physically thin, polished face reflects
 the lighting across its surface. Beat index selects a locked angle; model changes
-follow `actionStart` / `actionEnd` and hold thereafter. Action windows are owned
-by the narration timeline; camera movement never supplies action progress.
+follow their separate phrase windows and hold after the final event.
+`actionStart` / `actionEnd` bound the whole plan. Action windows are owned
+by recorded speech and the calibrated plan; camera movement never supplies action progress.
 `actionAnchor` is preserved in metadata for the parent's word-timing audit.
 The camera fits the whole action envelope before capturing and stays locked
 through the action and its hold.
@@ -35,71 +51,51 @@ levels of one diamond network with bonds to the substrate.
 The magnified wafer-edge anchor explicitly prefixes its text with
 `厚度截面放大`; the main disk retains its true physical thickness.
 
-The point-defect visual belongs to `atomicKeys`, exclusively. `17-defects-01`
-starts with an intact diamond lattice. The actual word intervals for
-`少一个原子` and `多一个原子` separately drive removal of a regular-site atom
-and arrival of an extra atom at an unoccupied interstitial site. The vacancy
-and interstitial labels become available after their corresponding phrases.
-`17-defects-02` shows two vacancies approach by successive neighboring atom
-exchanges, alongside two approaching interstitials. This migration is a
-schematic, not relaxed atomistics or a quantitative cooling simulation.
-`17-defects-03`, whose parent visual remains `lattice`, shows point defects in
-the same continuous orientation. Other lattice beats retain their regular rig.
+Point defects, dislocations, epitaxy and purity retain distinct explanations.
+Removing an atom at a regular site and adding an interstitial are different
+phrase actions; neck line termination must not replace either. Epitaxy must
+distinguish new layers from the substrate while preserving orientation.
+Metrology and optical focus must preserve the measured surface geometry.
+These remain review requirements for future edits. The frozen v2.1 encoded
+evidence and its bounded image-review conclusions are linked below.
 
-The purity comparison is selected by the exact beat ID `02-purity-02`; the
-presence of `10N` in labels never selects it. A fixed row of ten cells provides
-the benchmark. The lower remainder decreases from ten cells to exactly one,
-with empty guides retained. This is relative impurity remaining, not a measured
-concentration. The separate 100-sphere / one-impurity example stays available.
-
-Epitaxy uses white substrate atoms and mint new atoms on one diamond network,
-with coherent interface bonds. A complete initial growth level gives the
-new-layer label a real target from frame zero. Its anchor follows a fully
-formed atom on the highest complete level; the substrate anchor stays on an
-actual white atom below the interface. Atomic layer thickness is schematic.
-
-All three neck beats use a separate local geometry enlargement (five times the
-former neck radius), without furnace bounds reducing it to a tiny detail.
-Red line defects meet the actual cylindrical sidewall and stay visible in the
-upper crystal while the lower neck grows free of those lines. Endpoint radii
-are returned for verification. The view is attached to the seed, and the local
-melt boundary moves with the growing section. Lines represent dislocations,
-not visible cracks. All final geometry holds after `actionEnd`.
+The compositor may use photographic footage for a phrase about appearance.
+For `01-start-01`, the cached blank-wafer insert starts at the recorded phrase
+`表面亮得像镜子`, replacing the earlier introductory placement. It appears once,
+for at most 2.5 seconds, without retiming the footage or speech. Other introductory
+photos end before mechanism actions; mechanisms remain code-rendered.
+The frozen revision includes this placement. `26-shipping-03` also disables the
+chip photograph so lithography, etching, deposition and interconnect remain
+visible as separate code actions at their recorded phrases. The final encoded
+image review confirmed the photographic obstruction was removed. Photographic
+clips were reused from matching caches; no new diffusion ran in this revision.
 
 The parent's compositor projects `semanticAnchors` entries
 `{text, object, offset:[dx,dy]}`. These are metadata only; canvas clips contain
-no text. Exact local labels and object targets are:
+no text. The calibrated beat's `localLabels` enumerate its actual local text.
+The rig supplies visible object targets and offsets at each frame; hidden
+targets must not silently become leaders to an unrelated center point.
+Review labels against the rendered object at each phrase, not just at the hold.
 
-| Visual | Allowed text | Actual target | Pixel offset |
-| --- | --- | --- | --- |
-| Purity tenfold | `剩余杂质相对量` | Fixed ten-cell benchmark | `[0,-45]` |
-| Purity tenfold | `10 → 1` | Moving remainder midpoint | `[0,45]` |
-| Point defects | `空位` | First vacancy's empty-site halo | `[-110,-35]` |
-| Point defects | `间隙原子` | First actual extra atom | `[110,35]` |
-| Epitaxy | `衬底` | White substrate atom | `[-110,45]` |
-| Epitaxy | `新生外延层` | Fully formed mint atom on top grown level | `[110,-45]` |
-| Doping | `受控掺杂原子` | Incoming dopant, then substituted lattice site | `[90,-35]` |
-
-Neck primary anchors are red line / enlarged neck for `12-neck-01`, enlarged
-neck / sidewall intersection for `12-neck-02`, and red line / sidewall
-intersection for `12-neck-03`. Their `userData.objectLabel` names the actual
-target. There are no extra neck local labels.
-
-Correction beats: `02-purity-02`, `02-purity-03`, `10-melt-03`, `12-neck-01`, `12-neck-02`,
-`12-neck-03`, `17-defects-01`, `17-defects-02`, `17-defects-03`,
-`24-epitaxy-01`, `24-epitaxy-02`, `24-epitaxy-03`. Shared-rig regression checks
-include `02-purity-01`, `05-furnace-03`, `03-order-02`, and other doping beats.
-Review frames verify geometry, seeking, and holds; they do not establish audio,
-caption, compositor-overlay, or normal-speed whole-film acceptance.
+Calibrate before review or capture whenever a plan, phrase or rig changes:
 
 From the project root:
 
 ```sh
+node edit/ten-minute/production/render.mjs --calibrate
+python3 edit/ten-minute/production/content_check.py
 node edit/ten-minute/production/render.mjs --review --limit=3
 node edit/ten-minute/production/render.mjs --review --fixture
 node edit/ten-minute/production/render.mjs --render --capture-fps=12 --limit=6
 node edit/ten-minute/production/render.mjs --render --w=1080 --h=1920 --capture-fps=24
 ```
+
+`--only=<beatId>` can restrict calibration, review or rendering. Calibration
+writes the timeline's semantic plans and `SEMANTIC-STORYBOARD.md`. It is a
+preparation step, not permission to reuse clips captured against an older plan.
+Review samples every event before, during and after its action and tests seeking
+and the final hold. Neither pixel movement nor a valid phrase plan establishes
+scientific meaning, composited-label readability, audio synchrony or full-film acceptance.
 
 Review is the default. If the parent timeline is absent, review uses an
 in-memory synthetic fixture. `--fixture` explicitly selects that fixture.
@@ -114,3 +110,25 @@ Silent H.264 clips and sidecar
 metadata go to `model/renders/<beatId>.mp4` and `.json`. Defaults are 1080x1920;
 `--w` / `--h` can set even dimensions. `SILICON_CHROME_PATH` selects an installed
 Chromium binary; otherwise Playwright uses the local Chrome channel.
+
+Each sidecar includes `semanticVersion`, the full calibrated `semanticPlan`,
+and `modelSources`, mapping every non-hidden model `.mjs` to its SHA-256.
+Assembly rejects legacy generic clips, changed plans or model hashes, changed
+visuals, and stale beat/action times. The source gate currently covers all model
+modules, so even an unrelated model edit invalidates old source snapshots.
+Recalibrate, review and recapture as required; never hand-edit sidecars to bypass
+the gate. Model clips remain in their beat-ID paths; the assembled revision goes
+to `output/silicon-wafer-10min-9x16-v3.mp4`, preserving the v2 baseline.
+
+All 84 native 1080x1920/24fps clips were rerendered for the 306 phrase actions.
+The frozen final encoded SHA-256 is
+`487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf`.
+Full decode, OCR, full/sample 1x browser playback, audit and content checks
+are recorded for the release candidate. See the
+[semantic correction report](../review/semantic-correction-v3.md) and
+[visual review](../review/visual-review.md) for actual image-review scope.
+Caption OCR matched 331/335; explanatory OCR matched 72/84 beats. Image
+reinspection of the discrepancies does not change those raw OCR results to
+an all-pass result. Seven final beat holds are below one second, with a minimum
+of 0.543 seconds. Programmatic playback is not human listening; no human
+full-film audio approval is recorded.

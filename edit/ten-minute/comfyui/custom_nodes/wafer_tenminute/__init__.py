@@ -72,7 +72,7 @@ class WTPrepare:
 
     def prepare(self, only, pilot, render_missing, render_command):
         if not (ROOT / "assets/narration.wav").is_file():
-            before = digest(ROOT / "timeline.json") if (ROOT / "timeline.json").is_file() else None
+            before = json.loads((ROOT / "timeline.json").read_text()) if (ROOT / "timeline.json").is_file() else None
             plan = json.loads((ROOT / "script.json").read_text())
             for scene in plan["scenes"]:
                 stem = ROOT / "assets/voice" / scene["id"]
@@ -88,14 +88,34 @@ class WTPrepare:
                 raise FileNotFoundError(f"Repository Python required for offline cached narration: {python}")
             subprocess.run([str(python), str(ROOT / "production/narrate.py"), "--fit"],
                            cwd=ROOT, env=dict(os.environ, SILICON_TENMIN_ROOT=str(ROOT)), check=True)
-            if before is not None and digest(ROOT / "timeline.json") != before:
+            if before is not None and json.loads((ROOT / "timeline.json").read_text()) != before:
                 raise ValueError("Offline narration reconstruction changed timeline hash; calibrate and re-export before generation")
         module = compositor()
         timeline = module.load_timeline()
         items = module.select_beats(timeline, only, pilot)
-        module.preflight(timeline, items)
         ids = [item["beat"]["id"] for item in items]
-        missing = [bid for bid in ids if not (ROOT / "model/renders" / f"{bid}.mp4").is_file()]
+        # The visual source owns the explicit action plan. Re-resolve it against
+        # actual cached words before deciding whether old footage is reusable.
+        release_models()
+        subprocess.run([os.environ.get("SILICON_NODE", "node"),
+                        str(ROOT / "production/render.mjs"), "--calibrate",
+                        "--w=576", "--h=1024", "--only=" + ",".join(ids)],
+                       cwd=ROOT, env=dict(os.environ, SILICON_TENMIN_ROOT=str(ROOT)), check=True)
+        timeline = module.load_timeline()
+        items = module.select_beats(timeline, only, pilot)
+        module.preflight(timeline, items)
+        expected_sources = {f"model/{p.name}": digest(p) for p in (ROOT / "model").glob("*.mjs")
+                            if not p.name.startswith(".")}
+        planned = {item["beat"]["id"]: item["beat"].get("semanticPlan") for item in items}
+        missing = []
+        for bid in ids:
+            video = ROOT / "model/renders" / f"{bid}.mp4"
+            sidecar = video.with_suffix(".json")
+            record = json.loads(sidecar.read_text()) if sidecar.is_file() else {}
+            if (not video.is_file() or record.get("semanticVersion") != 3
+                    or record.get("modelSources") != expected_sources
+                    or record.get("semanticPlan") != planned[bid]):
+                missing.append(bid)
         if missing:
             if not render_missing:
                 raise FileNotFoundError(f"Missing exact code renders: {', '.join(missing)}")

@@ -1,10 +1,12 @@
 import {T,V,C,clamp,ease} from './core.mjs';
-import {atomicKeys,atomicRig} from './atomic.mjs';
-import {growthKeys,growthRig} from './growth.mjs';
-import {finishingKeys,finishingRig} from './finishing.mjs';
 import {validateTimeline,flattenBeats} from './timeline.mjs';
+import {makeContext,compilePlan} from './semantic.mjs';
 
 const query=new URLSearchParams(location.search);
+const family=query.get('family')||'all';
+const {atomicKeys,atomicRig}=family==='all'||family==='atomic'?await import('./atomic.mjs'):{atomicKeys:[]};
+const {growthKeys,growthRig}=family==='all'||family==='growth'?await import('./growth-semantic.mjs'):{growthKeys:[]};
+const {finishingKeys,finishingRig}=family==='all'||family==='finishing'?await import('./finishing.mjs'):{finishingKeys:[]};
 const W=Number(query.get('w')||576),H=Number(query.get('h')||1024);
 if(!Number.isInteger(W)||!Number.isInteger(H)||W<64||H<64)throw new Error('Invalid render dimensions');
 const renderer=new T.WebGLRenderer({canvas:document.getElementById('world'),antialias:true,preserveDrawingBuffer:true,alpha:false});
@@ -38,12 +40,15 @@ const beats=flattenBeats(timeline),byId=new Map(beats.map(b=>[b.id,b]));
 const keys=[...atomicKeys,...growthKeys,...finishingKeys],cache=new Map();
 const frameCache=new Map();
 const inventory={};
-function getRig(key){
-  if(cache.has(key))return cache.get(key);
+function getRig(beat){
+  const key=beat.visual;
+  if(cache.has(beat.id))return cache.get(beat.id);
   if(!keys.includes(key))throw new Error(`Unknown visual key: ${key}`);
-  const rig=atomicKeys.includes(key)?atomicRig(key,world):growthKeys.includes(key)?growthRig(key,world):finishingRig(key,world);
-  cache.set(key,rig);let meshes=0;rig.g.traverse(o=>{if(o.isMesh)meshes++;});
-  inventory[key]={meshes,source:key,schematic:['purity','segregation','doping','kerf','wire','edge','lap','etch','polish','flatness','focus'].includes(key)};
+  const rig=atomicKeys.includes(key)?atomicRig(key,world,beat):growthKeys.includes(key)?growthRig(key,world,beat):finishingRig(key,world,beat);
+  compilePlan(beat,rig.semanticPlan);
+  cache.set(beat.id,rig);let meshes=0;rig.g.traverse(o=>{if(o.isMesh)meshes++;});
+  inventory[beat.id]={meshes,source:key,semanticPlan:rig.semanticPlan,
+    schematic:['purity','segregation','doping','kerf','wire','edge','lap','etch','polish','flatness','focus'].includes(key)};
   return rig;
 }
 function project(o){
@@ -73,8 +78,8 @@ function fittedSpan(rig,ctx,minimum,aspect,cacheKey){
   if(frameCache.has(cacheKey))return frameCache.get(cacheKey);
   let span=minimum;
   // Fit the complete action envelope once, rather than resizing with each frame.
-  for(const raw of [0,.125,.25,.5,.75,.875,1]){
-    rig.update({...ctx,raw,p:ease(raw),a:(a,b)=>ease((raw-a)/(b-a))});
+  for(const fraction of [0,.125,.25,.5,.75,.875,1]){
+    rig.update(makeContext(ctx.beat,ctx.beat.start+fraction*(ctx.beat.end-ctx.beat.start),rig.semanticPlan));
     rig.g.updateMatrixWorld(true);
     rig.g.traverse(o=>{
       if(!o.isMesh)return;
@@ -93,11 +98,10 @@ window.renderBeat=(id,absoluteTime)=>{
   const beat=byId.get(id);if(!beat)throw new Error(`Unknown beat: ${id}`);
   if(!Number.isFinite(absoluteTime))throw new Error('Time must be finite absolute seconds');
   for(const rig of cache.values())rig.g.visible=false;
-  const rig=getRig(beat.visual);rig.g.visible=true;
+  const rig=getRig(beat);rig.g.visible=true;
   camera=['wafer','wafer-measure'].includes(beat.visual)?perspectiveCamera:orthoCamera;
   const time=Math.max(beat.start,Math.min(absoluteTime,beat.end));
-  const raw=clamp((time-beat.actionStart)/(beat.actionEnd-beat.actionStart));
-  const ctx={beat,time,raw,p:ease(raw),a:(a,b)=>ease((raw-a)/(b-a))};
+  const ctx=makeContext(beat,time,rig.semanticPlan),raw=ctx.raw;
   // Locked shot angles preserve measurements; cuts vary angles between beats.
   const variant=beat.index%3,view=variant===2&&rig.detailView?rig.detailView:rig.view;
   const eye=V(...view.eye),look=V(...view.look);
@@ -107,6 +111,7 @@ window.renderBeat=(id,absoluteTime)=>{
   camera.updateMatrixWorld();
   const span=fittedSpan(rig,ctx,view.span,aspect,beat.id);
   const data=rig.update(ctx);
+  for(const event of ctx.events)if(!ctx.used.has(event.phrase))throw new Error(`Planned action never evaluated: ${beat.id}/${event.phrase}`);
   camera.left=-span*aspect/2;camera.right=span*aspect/2;camera.top=span/2;camera.bottom=-span/2;
   if(camera.isPerspectiveCamera)camera.fov=T.MathUtils.radToDeg(2*Math.atan(span*1.08/36));
   camera.updateProjectionMatrix();camera.updateMatrixWorld();world.updateMatrixWorld(true);
@@ -136,13 +141,21 @@ window.renderBeat=(id,absoluteTime)=>{
     if(position)extraAnchors.push({text:entry.text,...position,
       offset:entry.offset||[0,-65],...(entry.visibleFrom!==undefined?{visibleFrom:entry.visibleFrom}:{})});
   }
-  const m=metrics(),state={id,visual:beat.visual,time,stage:time<beat.actionStart?'before':time>=beat.actionEnd?'hold':'action',
+  const actionStart=Math.min(...ctx.events.map(e=>e.start)),actionEnd=Math.max(...ctx.events.map(e=>e.end));
+  const m=metrics(),state={id,visual:beat.visual,time,stage:time<actionStart?'before':time>=actionEnd?'hold':'action',
     progress:raw,nonblank:m.nonblank,metrics:m,anchors,extraAnchors,anchorWarnings,data,
     camera:{eye:camera.position.toArray(),look:look.toArray(),span,shot:variant,projection:camera.isPerspectiveCamera?'perspective':'orthographic'},
-    action:{start:beat.actionStart,end:beat.actionEnd,anchor:beat.actionAnchor,hold:beat.end-beat.actionEnd},
+    action:{start:actionStart,end:actionEnd,anchor:beat.actionAnchor,hold:beat.end-actionEnd},
+    semanticEvents:ctx.events.map(e=>({...e,progress:ease((time-e.start)/(e.end-e.start))})),
+    semanticVersion:3,
     frame:{width:W,height:H},textBurnedIn:false};
   window.__state=state;return state;
 };
 window.__inventory=inventory;window.__visualKeys=keys;window.__timeline=timeline;
-window.renderBeat(beats[0].id,beats[0].start);
+window.semanticPlanFor=id=>{
+  const beat=byId.get(id),rig=getRig(beat);
+  return compilePlan(beat,rig.semanticPlan);
+};
+const initial=byId.get(query.get('beat'))||beats[0];
+window.renderBeat(initial.id,initial.start);
 window.__ready=true;

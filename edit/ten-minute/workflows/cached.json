@@ -516,7 +516,7 @@
         50
       ]
     },
-    "note": "Narration and timestamps are external immutable inputs. Photography <=2.5 seconds per eligible beat before its action. Exact 24fps code handles every mechanism. No diffusion on explanatory type."
+    "note": "Narration and timestamps are external immutable inputs. Photography <=2.5 seconds per eligible beat: introductions precede mechanisms; appearance inserts follow the actual spoken phrase. Exact 24fps code handles every mechanism. No diffusion on explanatory type."
   },
   "version": 0.4
 }
