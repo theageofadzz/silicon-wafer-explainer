@@ -1,0 +1,347 @@
+{
+  "config": {
+    "text": "氧也不总是越少越好。配合热处理，可以参与吸杂等设计，关键是按用途控制。掺杂还有分凝现象。元素在固体和液体中浓度未必相同，剩余熔体也会随生长改变。所以，称准原料还不够。沿晶棒长度、沿半径的性质均匀性，都需要控制。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 1967500,
+      "text": "氧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3046250,
+      "duration": 1157500,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4319580,
+      "duration": 1157080,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5476660,
+      "duration": 2546250,
+      "text": "总是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8254580,
+      "duration": 1273330,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9527910,
+      "duration": 1620410,
+      "text": "少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11263750,
+      "duration": 1273330,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12537080,
+      "duration": 2777910,
+      "text": "好"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20486250,
+      "duration": 3125000,
+      "text": "配合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23842500,
+      "duration": 5787080,
+      "text": "热处理"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 31597080,
+      "duration": 2199160,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33912080,
+      "duration": 3240830,
+      "text": "参与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37384160,
+      "duration": 4050830,
+      "text": "吸杂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41435000,
+      "duration": 1157500,
+      "text": "等"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42708330,
+      "duration": 4050830,
+      "text": "设计"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49652910,
+      "duration": 3356660,
+      "text": "关键"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53125000,
+      "duration": 1273330,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54398330,
+      "duration": 1273330,
+      "text": "按"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55787080,
+      "duration": 3587910,
+      "text": "用途"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59490830,
+      "duration": 3819580,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68634160,
+      "duration": 5208330,
+      "text": "掺杂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74074160,
+      "duration": 2430410,
+      "text": "还有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76736250,
+      "duration": 3009160,
+      "text": "分凝"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79861250,
+      "duration": 3935000,
+      "text": "现象"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 89120410,
+      "duration": 4050830,
+      "text": "元素"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 93402910,
+      "duration": 1504580,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 95023330,
+      "duration": 4629580,
+      "text": "固体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99884160,
+      "duration": 1157500,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101157500,
+      "duration": 2893330,
+      "text": "液体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104050830,
+      "duration": 3009160,
+      "text": "中"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107986250,
+      "duration": 3703750,
+      "text": "浓度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111921250,
+      "duration": 2662080,
+      "text": "未必"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114699160,
+      "duration": 5555410,
+      "text": "相同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123032500,
+      "duration": 3703750,
+      "text": "剩余"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126851660,
+      "duration": 4976660,
+      "text": "熔体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 132754580,
+      "duration": 1273330,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 134027910,
+      "duration": 1157500,
+      "text": "会"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135300830,
+      "duration": 1620410,
+      "text": "随"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137152910,
+      "duration": 3240830,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140509160,
+      "duration": 3935000,
+      "text": "改变"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149768330,
+      "duration": 4745410,
+      "text": "所以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 156828750,
+      "duration": 4398330,
+      "text": "称准"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161342500,
+      "duration": 2893330,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164467500,
+      "duration": 1157500,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165625000,
+      "duration": 2777910,
+      "text": "不够"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173611250,
+      "duration": 2083330,
+      "text": "沿"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175810000,
+      "duration": 3240830,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179166660,
+      "duration": 4861250,
+      "text": "长度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187037080,
+      "duration": 1967500,
+      "text": "沿"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189120410,
+      "duration": 3125000,
+      "text": "半径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 192245410,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193287080,
+      "duration": 2893330,
+      "text": "性质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 196296250,
+      "duration": 5440000,
+      "text": "均匀性"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 204050830,
+      "duration": 1851660,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 206018330,
+      "duration": 2199160,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 208333330,
+      "duration": 3703750,
+      "text": "控制"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "ad39364cdbaa71c09c1a8cd9dd164a6142c8085ea1edebe2f12543fda4d3c1bc"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-07",
+  "comfyui_version": "0.34.0",
+  "comfyuiCommit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "frontend": "1.49.6",
+  "python_version": "3.13.12",
+  "pytorch_version": "2.12.1",
+  "hardware": "Apple M4 / 16 GB unified memory",
+  "diffusion": "MPS fp16",
+  "textEncoder": "CPU fp16 loading of fp8 source",
+  "vae": "MPS bf16",
+  "codeCapture": "1080x1920 / native 24fps",
+  "newPhotographicI2V": "576x1024 / native 24fps / 65 frames per clip",
+  "modelManifest": "../../../workflows/models.json",
+  "seedReproducibility": "Identical settings do not promise identical pixels across hardware or engine versions."
+}

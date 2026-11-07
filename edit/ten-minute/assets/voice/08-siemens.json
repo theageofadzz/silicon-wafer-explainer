@@ -1,0 +1,299 @@
+{
+  "config": {
+    "text": "进入西门子法反应器。细长的硅芯通电加热，成为硅沉积的起点。高纯氯硅烷与氢气参加反应，硅沉积到硅芯表面，让棒体一层层长粗。这是把硅重新沉积出来。气体循环和副产物处理，也是生产体系的重要部分。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 4745410,
+      "text": "进入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5940000,
+      "duration": 4282080,
+      "text": "西门子"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10222080,
+      "duration": 1620410,
+      "text": "法"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11958330,
+      "duration": 6365830,
+      "text": "反应器"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23611250,
+      "duration": 3935000,
+      "text": "细长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27546250,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28472080,
+      "duration": 4166660,
+      "text": "硅芯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32870410,
+      "duration": 3240830,
+      "text": "通电"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36226660,
+      "duration": 4282500,
+      "text": "加热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41898330,
+      "duration": 3703750,
+      "text": "成为"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45833330,
+      "duration": 2199160,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48032500,
+      "duration": 3356250,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51388750,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52199160,
+      "duration": 3819580,
+      "text": "起点"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61342500,
+      "duration": 3587910,
+      "text": "高纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64930410,
+      "duration": 1041660,
+      "text": "氯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 65972080,
+      "duration": 4398330,
+      "text": "硅烷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71180410,
+      "duration": 1388750,
+      "text": "与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72685000,
+      "duration": 4050830,
+      "text": "氢气"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76967500,
+      "duration": 2546250,
+      "text": "参加"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79629580,
+      "duration": 4282500,
+      "text": "反应"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 87037080,
+      "duration": 2083330,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 89236250,
+      "duration": 3240410,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 92476660,
+      "duration": 1388750,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94097080,
+      "duration": 2893330,
+      "text": "硅芯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97106660,
+      "duration": 3935000,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 103009160,
+      "duration": 1967500,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105092500,
+      "duration": 4629580,
+      "text": "棒体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 109953750,
+      "duration": 1388750,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111342500,
+      "duration": 8449160,
+      "text": "层层长粗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125115830,
+      "duration": 5440000,
+      "text": "这是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131597080,
+      "duration": 1736250,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 133333330,
+      "duration": 1504580,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135069580,
+      "duration": 3703750,
+      "text": "重新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 138888750,
+      "duration": 3935000,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 142940000,
+      "duration": 3587910,
+      "text": "出来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151851660,
+      "duration": 3703750,
+      "text": "气体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155671250,
+      "duration": 5092500,
+      "text": "循环"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160995410,
+      "duration": 1273330,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162384160,
+      "duration": 1851660,
+      "text": "副"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164236250,
+      "duration": 2777910,
+      "text": "产物"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 167129580,
+      "duration": 4050830,
+      "text": "处理"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173032500,
+      "duration": 2777910,
+      "text": "也是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175925830,
+      "duration": 3125000,
+      "text": "生产"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179166660,
+      "duration": 2777910,
+      "text": "体系"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181944580,
+      "duration": 1388750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183565000,
+      "duration": 3009160,
+      "text": "重要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186690000,
+      "duration": 3472080,
+      "text": "部分"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "525af37103c8392dc589a0239534077537acca947179c07ed324b905c3b3512b"
+}

@@ -1,0 +1,311 @@
+{
+  "config": {
+    "text": "磁控直拉是一种办法。熔融硅能导电，磁场可以抑制某些流动，调节对流。磁场不是把硅吸起来，而是影响流动与传热，帮助控制生长和杂质输运。石英坩埚会引入氧。多少氧进入晶体、怎样分布，也受到熔体流动的影响。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3935000,
+      "text": "磁控"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4898330,
+      "duration": 3587910,
+      "text": "直拉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9412080,
+      "duration": 1851660,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11379580,
+      "duration": 1967500,
+      "text": "一种"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13462910,
+      "duration": 3935000,
+      "text": "办法"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22685000,
+      "duration": 3240830,
+      "text": "熔融"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25925830,
+      "duration": 1620410,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27662080,
+      "duration": 1273330,
+      "text": "能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29050830,
+      "duration": 4513750,
+      "text": "导电"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36342500,
+      "duration": 4050830,
+      "text": "磁场"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40625000,
+      "duration": 1967500,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42708330,
+      "duration": 2546250,
+      "text": "抑制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45486250,
+      "duration": 2199160,
+      "text": "某些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47800830,
+      "duration": 3240830,
+      "text": "流动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52777910,
+      "duration": 3819580,
+      "text": "调节"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56712910,
+      "duration": 4282500,
+      "text": "对流"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 66319580,
+      "duration": 4976660,
+      "text": "磁场"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71527910,
+      "duration": 1736250,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73379580,
+      "duration": 1157500,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74537080,
+      "duration": 1504580,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76157500,
+      "duration": 1967500,
+      "text": "吸"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78125000,
+      "duration": 3356660,
+      "text": "起来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84953750,
+      "duration": 2662080,
+      "text": "而是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 87731660,
+      "duration": 3125000,
+      "text": "影响"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 91087910,
+      "duration": 2430410,
+      "text": "流动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 93750000,
+      "duration": 578750,
+      "text": "与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94444580,
+      "duration": 4976660,
+      "text": "传热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101967500,
+      "duration": 2893330,
+      "text": "帮助"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104976660,
+      "duration": 2546250,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107638750,
+      "duration": 4282500,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112152910,
+      "duration": 1388750,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 113657500,
+      "duration": 3009160,
+      "text": "杂质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 116782500,
+      "duration": 3472080,
+      "text": "输运"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125578750,
+      "duration": 5208330,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131597080,
+      "duration": 3935000,
+      "text": "坩埚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135648330,
+      "duration": 1504580,
+      "text": "会"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137268330,
+      "duration": 2315000,
+      "text": "引入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139583330,
+      "duration": 2893330,
+      "text": "氧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147685000,
+      "duration": 3587910,
+      "text": "多少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151388750,
+      "duration": 2083330,
+      "text": "氧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 153703750,
+      "duration": 2315000,
+      "text": "进入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 156134160,
+      "duration": 4861250,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 163194580,
+      "duration": 3240830,
+      "text": "怎样"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 166550830,
+      "duration": 4050830,
+      "text": "分布"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172453750,
+      "duration": 1273330,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173842500,
+      "duration": 2893330,
+      "text": "受到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 176967500,
+      "duration": 2083330,
+      "text": "熔"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179050830,
+      "duration": 4629580,
+      "text": "体流动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183680410,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 184490830,
+      "duration": 3587910,
+      "text": "影响"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "d07d885240b9442d4d2e6dacd0709c18c341f5751564131a78fdf30c0d8d4997"
+}

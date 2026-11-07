@@ -1,0 +1,13 @@
+{
+  "duration": 598.0,
+  "scenes": 28,
+  "beats": 84,
+  "captions": 335,
+  "allWordAnchorsCalibrated": true,
+  "contiguousFrameBoundaries": true,
+  "captionTimingChecked": true,
+  "sourceRecordingCount": 28,
+  "tempo": 1.003483835005574,
+  "minimumReadingHold": 1.0231645604776531,
+  "humanListeningReview": false
+}

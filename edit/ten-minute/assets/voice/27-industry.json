@@ -1,0 +1,353 @@
+{
+  "config": {
+    "text": "做出样品，和持续量产，是两件事。客户需要每批都稳定，还要适配自己的工艺。信越、胜高、环球晶圆、世创和爱思开矽特隆，都是重要的硅片供应商。国内也在发展。不能只数厂房和规划产能。量产质量、客户验证与稳定交付，共同决定生产能力。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 2777910,
+      "text": "做出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3856660,
+      "duration": 5092500,
+      "text": "样品"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10685000,
+      "duration": 1504580,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12305410,
+      "duration": 3587910,
+      "text": "持续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16009160,
+      "duration": 4976660,
+      "text": "量产"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23879580,
+      "duration": 2083330,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26078750,
+      "duration": 2083330,
+      "text": "两"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28162080,
+      "duration": 1736250,
+      "text": "件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29898330,
+      "duration": 2315000,
+      "text": "事"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37384160,
+      "duration": 4282500,
+      "text": "客户"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41782500,
+      "duration": 2315000,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 44328750,
+      "duration": 1504580,
+      "text": "每"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45833330,
+      "duration": 1273330,
+      "text": "批"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47222080,
+      "duration": 1041660,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48379580,
+      "duration": 3935000,
+      "text": "稳定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55324160,
+      "duration": 2777910,
+      "text": "还要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58217500,
+      "duration": 3472080,
+      "text": "适配"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61921250,
+      "duration": 1851660,
+      "text": "自己"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63773330,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64583330,
+      "duration": 3240830,
+      "text": "工艺"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73148330,
+      "duration": 3125000,
+      "text": "信"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76273330,
+      "duration": 2546250,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80440000,
+      "duration": 5671250,
+      "text": "胜高"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88194580,
+      "duration": 3703750,
+      "text": "环球"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 92013750,
+      "duration": 5208330,
+      "text": "晶圆"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99768330,
+      "duration": 5208330,
+      "text": "世创"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105208330,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 106250000,
+      "duration": 1388750,
+      "text": "爱"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107638750,
+      "duration": 3009160,
+      "text": "思开"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 110879580,
+      "duration": 1851660,
+      "text": "矽"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112731660,
+      "duration": 4166660,
+      "text": "特隆"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119097080,
+      "duration": 2893330,
+      "text": "都是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 122106660,
+      "duration": 2546250,
+      "text": "重要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 124652910,
+      "duration": 1157500,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126041660,
+      "duration": 3587910,
+      "text": "硅片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129745410,
+      "duration": 5555410,
+      "text": "供应商"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140625000,
+      "duration": 3240830,
+      "text": "国内"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144097080,
+      "duration": 925830,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 145023330,
+      "duration": 1041660,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146180410,
+      "duration": 4282500,
+      "text": "发展"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155787080,
+      "duration": 4050830,
+      "text": "不能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159953750,
+      "duration": 1388750,
+      "text": "只"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161342500,
+      "duration": 1273330,
+      "text": "数"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162615830,
+      "duration": 4513750,
+      "text": "厂房"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 167361250,
+      "duration": 1851660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169328750,
+      "duration": 3240830,
+      "text": "规划"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172685000,
+      "duration": 4861250,
+      "text": "产能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182870410,
+      "duration": 4166660,
+      "text": "量产"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187152910,
+      "duration": 3819580,
+      "text": "质量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 194212910,
+      "duration": 3125000,
+      "text": "客户"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 197453750,
+      "duration": 4745410,
+      "text": "验证"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 203009160,
+      "duration": 1620410,
+      "text": "与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 204745410,
+      "duration": 3472080,
+      "text": "稳定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 208333330,
+      "duration": 3935000,
+      "text": "交付"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 214583330,
+      "duration": 3703750,
+      "text": "共同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 218402910,
+      "duration": 2777910,
+      "text": "决定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 221412080,
+      "duration": 6712910,
+      "text": "生产能力"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "2a86678bd319857ee64ace5b33e67a6639a87b10e66254b03038933f890cc183"
+}

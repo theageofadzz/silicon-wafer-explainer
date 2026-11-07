@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-07",
+  "photography": {
+    "promptId": "118a9d53-10b5-4107-bdc8-8dfaeb6d9188",
+    "workflow": "workflows/photos-api.json",
+    "status": "success",
+    "completed": true,
+    "outputNodes": ["27", "51", "63"],
+    "nativeSize": [576, 1024],
+    "fps": 24,
+    "framesPerClip": 65,
+    "clips": ["blank", "boule", "quartz"]
+  },
+  "finalAssembly": {
+    "promptId": "b0aef069-667b-4eee-ad78-02d3206292db",
+    "workflow": "workflows/cached-api.json",
+    "status": "success",
+    "completed": true,
+    "outputNode": "500",
+    "startedUnixMs": 1794025567886,
+    "completedUnixMs": 1794025682377,
+    "output": "output/silicon-wafer-10min-9x16.mp4",
+    "sha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7"
+  },
+  "divisionOfWork": {
+    "ComfyUI": "Native LTX photography, input validation, model rendering dispatch and final compositing dispatch",
+    "code": "Original narration timing, deterministic Three.js mechanisms, per-frame local labels, subtitles, FFmpeg encode and measured verification"
+  },
+  "runtime": "../workflows/runtime.json",
+  "weightsIncluded": false,
+  "referenceMediaIncluded": false
+}

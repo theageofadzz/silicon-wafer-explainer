@@ -1,0 +1,365 @@
+{
+  "config": {
+    "text": "全是硅，也不等于合格。不同区域各排各的，取向不同的交界处，就会出现晶界。单晶延续同一套晶格取向。像一张连续的网，而不是把几块不同方向的网拼接。我们从石头中取出硅，提纯、长成单晶，再加工表面。先从石英开始。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3009160,
+      "text": "全"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3972080,
+      "duration": 1504580,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5592500,
+      "duration": 3472080,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12074160,
+      "duration": 1273330,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13462910,
+      "duration": 1157500,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 14620410,
+      "duration": 1620410,
+      "text": "等于"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16356660,
+      "duration": 4513750,
+      "text": "合格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26157500,
+      "duration": 3356660,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29629580,
+      "duration": 4050830,
+      "text": "区域"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33912080,
+      "duration": 1620410,
+      "text": "各"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35532500,
+      "duration": 1851660,
+      "text": "排"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37500000,
+      "duration": 1620410,
+      "text": "各"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39120410,
+      "duration": 2315000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43518330,
+      "duration": 3703750,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47453750,
+      "duration": 2546250,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50000000,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50810000,
+      "duration": 5324160,
+      "text": "交界处"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57754580,
+      "duration": 1388750,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59143330,
+      "duration": 925830,
+      "text": "会"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60185000,
+      "duration": 2893330,
+      "text": "出现"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63194580,
+      "duration": 3587910,
+      "text": "晶界"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72106660,
+      "duration": 4398330,
+      "text": "单晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76736250,
+      "duration": 3819580,
+      "text": "延续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80787080,
+      "duration": 1504580,
+      "text": "同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82291660,
+      "duration": 2546250,
+      "text": "一套"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 85069580,
+      "duration": 2893330,
+      "text": "晶格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88078750,
+      "duration": 3935000,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97337910,
+      "duration": 2083330,
+      "text": "像"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99421250,
+      "duration": 810000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100231660,
+      "duration": 1273330,
+      "text": "张"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101736250,
+      "duration": 2893330,
+      "text": "连续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104629580,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105440000,
+      "duration": 2546250,
+      "text": "网"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112037080,
+      "duration": 2083330,
+      "text": "而"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114120410,
+      "duration": 4745410,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119907500,
+      "duration": 1736250,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121759160,
+      "duration": 1157500,
+      "text": "几"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 122916660,
+      "duration": 1388750,
+      "text": "块"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 124537080,
+      "duration": 3009160,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127662080,
+      "duration": 2777910,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 130440000,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131134160,
+      "duration": 1388750,
+      "text": "网"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 132638750,
+      "duration": 4282500,
+      "text": "拼接"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 142245410,
+      "duration": 2199160,
+      "text": "我们"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144560000,
+      "duration": 1736250,
+      "text": "从"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146527910,
+      "duration": 2662080,
+      "text": "石头"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149190000,
+      "duration": 2083330,
+      "text": "中"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151504580,
+      "duration": 3240830,
+      "text": "取出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 154745410,
+      "duration": 2777910,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160185000,
+      "duration": 5902910,
+      "text": "提纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168055410,
+      "duration": 3703750,
+      "text": "长成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 171875000,
+      "duration": 4513750,
+      "text": "单晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 178472080,
+      "duration": 1967500,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180555410,
+      "duration": 2893330,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183565000,
+      "duration": 3587910,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 192476660,
+      "duration": 2777910,
+      "text": "先"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 195254580,
+      "duration": 1620410,
+      "text": "从"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 197106660,
+      "duration": 2893330,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 200115830,
+      "duration": 4398330,
+      "text": "开始"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "84bf98ca3a0eb8111023b814ec76479c9e6eb3053c3b204297001f611fd401ed"
+}

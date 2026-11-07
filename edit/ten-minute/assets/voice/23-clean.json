@@ -1,0 +1,317 @@
+{
+  "config": {
+    "text": "表面仍可能有磨粒、有机残留和金属污染。清洗，要分别解决这些问题。组合处理步骤后，用高纯水漂洗并干燥。去掉旧污染，也要避免新的残留。夹具、空气和包装也要配合。每一次接触，都关系到清洁表面能否保住。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 5555410,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6750000,
+      "duration": 1851660,
+      "text": "仍"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8601660,
+      "duration": 2199160,
+      "text": "可能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10916660,
+      "duration": 1041660,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12190000,
+      "duration": 4050830,
+      "text": "磨粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19712910,
+      "duration": 3587910,
+      "text": "有机"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23416660,
+      "duration": 5787080,
+      "text": "残留"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30361250,
+      "duration": 1736250,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32212910,
+      "duration": 3472080,
+      "text": "金属"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35800830,
+      "duration": 3703750,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 44791660,
+      "duration": 5902910,
+      "text": "清洗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52893330,
+      "duration": 1388750,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54398330,
+      "duration": 3009160,
+      "text": "分别"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57523330,
+      "duration": 2315000,
+      "text": "解决"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60069580,
+      "duration": 1736250,
+      "text": "这些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61921250,
+      "duration": 3587910,
+      "text": "问题"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 70833330,
+      "duration": 3587910,
+      "text": "组合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74537080,
+      "duration": 2083330,
+      "text": "处理"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76736250,
+      "duration": 2662080,
+      "text": "步骤"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79398330,
+      "duration": 3240830,
+      "text": "后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84375000,
+      "duration": 2083330,
+      "text": "用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86574160,
+      "duration": 1967500,
+      "text": "高"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88541660,
+      "duration": 3472080,
+      "text": "纯水"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 92245410,
+      "duration": 4745410,
+      "text": "漂洗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97222080,
+      "duration": 1273330,
+      "text": "并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 98611250,
+      "duration": 3587910,
+      "text": "干燥"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107523330,
+      "duration": 4745410,
+      "text": "去掉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112500000,
+      "duration": 1273330,
+      "text": "旧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 113773330,
+      "duration": 5208330,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121643330,
+      "duration": 1157500,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 122800830,
+      "duration": 1041660,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123958330,
+      "duration": 2893330,
+      "text": "避免"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127083330,
+      "duration": 2083330,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129166660,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129976660,
+      "duration": 5092500,
+      "text": "残留"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140393330,
+      "duration": 5092500,
+      "text": "夹具"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148611250,
+      "duration": 3935000,
+      "text": "空气"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 152777910,
+      "duration": 810000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 153703750,
+      "duration": 4745410,
+      "text": "包装"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159375000,
+      "duration": 1273330,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160648330,
+      "duration": 925830,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161690000,
+      "duration": 4398330,
+      "text": "配合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 171412080,
+      "duration": 1851660,
+      "text": "每"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173263750,
+      "duration": 2199160,
+      "text": "一次"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175578750,
+      "duration": 4861250,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182060000,
+      "duration": 1273330,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183449160,
+      "duration": 4513750,
+      "text": "关系到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 188194580,
+      "duration": 3587910,
+      "text": "清洁"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 191898330,
+      "duration": 4629580,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 196759160,
+      "duration": 3125000,
+      "text": "能否"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 200000000,
+      "duration": 3587910,
+      "text": "保住"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "ba3ef4a1975ce1fc8d66d419bb35ca51785745578c15919e4899f4eec2493535"
+}

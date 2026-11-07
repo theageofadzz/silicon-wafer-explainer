@@ -1,0 +1,311 @@
+{
+  "config": {
+    "text": "芯片开始时，没有那些复杂线路。它先是一片薄薄的硅，表面亮得像镜子。常见的三百毫米硅片，直径接近餐盘，厚度却只有零点七七五毫米。材料里的杂质、原子的排列和表面的高低，都要受到控制。它究竟怎么做出来？",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3935000,
+      "text": "芯片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5013750,
+      "duration": 3356660,
+      "text": "开始"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8370410,
+      "duration": 3703750,
+      "text": "时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 14041660,
+      "duration": 2662080,
+      "text": "没有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16819580,
+      "duration": 2199160,
+      "text": "那些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19250000,
+      "duration": 2662080,
+      "text": "复杂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22027910,
+      "duration": 3703750,
+      "text": "线路"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 31018330,
+      "duration": 1388750,
+      "text": "它"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32523330,
+      "duration": 2777910,
+      "text": "先是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35416660,
+      "duration": 2315000,
+      "text": "一片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37962910,
+      "duration": 2546250,
+      "text": "薄薄"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40509160,
+      "duration": 1041660,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41550830,
+      "duration": 2777910,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47569580,
+      "duration": 1851660,
+      "text": "表"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49537080,
+      "duration": 2662080,
+      "text": "面亮"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52199160,
+      "duration": 694160,
+      "text": "得"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52893330,
+      "duration": 1620410,
+      "text": "像"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54629580,
+      "duration": 3703750,
+      "text": "镜子"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63657500,
+      "duration": 4050830,
+      "text": "常见"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 67708330,
+      "duration": 1504580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69444580,
+      "duration": 4976660,
+      "text": "三百毫米"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74537080,
+      "duration": 4398330,
+      "text": "硅片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82291660,
+      "duration": 3356660,
+      "text": "直径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 85879580,
+      "duration": 2546250,
+      "text": "接近"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88541660,
+      "duration": 5324160,
+      "text": "餐盘"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96643330,
+      "duration": 5671250,
+      "text": "厚度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102430410,
+      "duration": 1273330,
+      "text": "却"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 103819580,
+      "duration": 1851660,
+      "text": "只有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105902910,
+      "duration": 6944160,
+      "text": "零点七七五"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112847080,
+      "duration": 3356660,
+      "text": "毫米"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121296250,
+      "duration": 3356660,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 124652910,
+      "duration": 694160,
+      "text": "里"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125347080,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126157500,
+      "duration": 5208330,
+      "text": "杂质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 134375000,
+      "duration": 3125000,
+      "text": "原子"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137500000,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 138194580,
+      "duration": 5555410,
+      "text": "排列"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144791660,
+      "duration": 1620410,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146527910,
+      "duration": 2893330,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149421250,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 150115830,
+      "duration": 3819580,
+      "text": "高低"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 157407500,
+      "duration": 1504580,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 158912080,
+      "duration": 810000,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159837910,
+      "duration": 1967500,
+      "text": "受到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161921250,
+      "duration": 3703750,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170949160,
+      "duration": 1504580,
+      "text": "它"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172569580,
+      "duration": 2662080,
+      "text": "究竟"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175462910,
+      "duration": 1388750,
+      "text": "怎么"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 176967500,
+      "duration": 1388750,
+      "text": "做"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 178356660,
+      "duration": 3240830,
+      "text": "出来"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "eb550d990e80a192d1b5d55007968cb991d4d11ea50374ad2fb0a59717981b0a"
+}

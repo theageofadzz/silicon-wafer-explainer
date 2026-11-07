@@ -1,0 +1,305 @@
+{
+  "config": {
+    "text": "抛光垫和抛光液共同作用，表面发生化学作用，同时移走材料。这就是化学机械抛光。放大看，突起逐渐被削低。压力、运动和供液条件，一起决定加工结果。双面抛光后，还可以按要求精抛。镜面反光只是结果之一，平整需要实际测量。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 5787080,
+      "text": "抛光垫"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6981660,
+      "duration": 1157500,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8254580,
+      "duration": 4976660,
+      "text": "抛光液"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13462910,
+      "duration": 3009160,
+      "text": "共同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16587910,
+      "duration": 3587910,
+      "text": "作用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23648330,
+      "duration": 3587910,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27351660,
+      "duration": 3009160,
+      "text": "发生"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30592500,
+      "duration": 3125000,
+      "text": "化学"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33833330,
+      "duration": 3356660,
+      "text": "作用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38925830,
+      "duration": 4398330,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43555410,
+      "duration": 3009160,
+      "text": "移走"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46680410,
+      "duration": 4513750,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56481660,
+      "duration": 1967500,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58449160,
+      "duration": 1041660,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59490830,
+      "duration": 1157500,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60879580,
+      "duration": 3935000,
+      "text": "化学"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 64930410,
+      "duration": 3125000,
+      "text": "机械"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68171250,
+      "duration": 4629580,
+      "text": "抛光"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78125000,
+      "duration": 6481660,
+      "text": "放大看"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 87615830,
+      "duration": 3125000,
+      "text": "突起"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90972080,
+      "duration": 2662080,
+      "text": "逐渐"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 93750000,
+      "duration": 810000,
+      "text": "被"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94675830,
+      "duration": 3819580,
+      "text": "削低"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 103819580,
+      "duration": 4976660,
+      "text": "压力"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112847080,
+      "duration": 4745410,
+      "text": "运动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 118634160,
+      "duration": 1620410,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 120370410,
+      "duration": 3009160,
+      "text": "供液"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123495410,
+      "duration": 4629580,
+      "text": "条件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 130440000,
+      "duration": 2777910,
+      "text": "一起"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 133333330,
+      "duration": 2315000,
+      "text": "决定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135879580,
+      "duration": 3587910,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139583330,
+      "duration": 3356660,
+      "text": "结果"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148263750,
+      "duration": 4282500,
+      "text": "双面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 152662080,
+      "duration": 3587910,
+      "text": "抛光"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 156250000,
+      "duration": 2777910,
+      "text": "后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160995410,
+      "duration": 1504580,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162615830,
+      "duration": 1736250,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164467500,
+      "duration": 1273330,
+      "text": "按"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165972080,
+      "duration": 2546250,
+      "text": "要求"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168634160,
+      "duration": 4050830,
+      "text": "精抛"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 178009160,
+      "duration": 3587910,
+      "text": "镜面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181712910,
+      "duration": 3703750,
+      "text": "反光"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 185648330,
+      "duration": 1851660,
+      "text": "只是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187615830,
+      "duration": 2430410,
+      "text": "结果"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 190162080,
+      "duration": 3703750,
+      "text": "之一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 196990830,
+      "duration": 3703750,
+      "text": "平整"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 200810000,
+      "duration": 2315000,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 203356660,
+      "duration": 3819580,
+      "text": "实际"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 207291660,
+      "duration": 4050830,
+      "text": "测量"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "fb17931db6ded91a2e2569fa34b893888abdafae391de0770514e462537ea160"
+}

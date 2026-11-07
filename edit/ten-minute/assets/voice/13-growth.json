@@ -1,0 +1,305 @@
+{
+  "config": {
+    "text": "调节温度和拉速，晶体直径逐渐增大，形成肩部。这一步叫放肩。达到目标直径，进入等径生长。晶棒向上，固液界面继续补充新的晶体。真实晶棒有金属般的光泽。它是慢慢长出来的，热场和拉速需要持续调整。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3125000,
+      "text": "调节"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4203750,
+      "duration": 3703750,
+      "text": "温度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8138750,
+      "duration": 1041660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9296250,
+      "duration": 4050830,
+      "text": "拉速"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16587910,
+      "duration": 3587910,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20291660,
+      "duration": 3240830,
+      "text": "直径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23763750,
+      "duration": 3009160,
+      "text": "逐渐"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26888750,
+      "duration": 4050830,
+      "text": "增大"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33833330,
+      "duration": 3935000,
+      "text": "形成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37884160,
+      "duration": 3472080,
+      "text": "肩部"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46643330,
+      "duration": 1851660,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48495410,
+      "duration": 1157500,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49652910,
+      "duration": 1851660,
+      "text": "步"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51736250,
+      "duration": 1273330,
+      "text": "叫"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53125000,
+      "duration": 4398330,
+      "text": "放肩"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62847080,
+      "duration": 3587910,
+      "text": "达到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 66666660,
+      "duration": 2893330,
+      "text": "目标"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69675830,
+      "duration": 4629580,
+      "text": "直径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76273330,
+      "duration": 3819580,
+      "text": "进入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80324160,
+      "duration": 3356660,
+      "text": "等径"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 83796250,
+      "duration": 4282500,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 93402910,
+      "duration": 3240830,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96759160,
+      "duration": 4282500,
+      "text": "向上"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104398330,
+      "duration": 2777910,
+      "text": "固液"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107291660,
+      "duration": 4166660,
+      "text": "界面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111690000,
+      "duration": 3009160,
+      "text": "继续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114815000,
+      "duration": 2777910,
+      "text": "补充"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117824160,
+      "duration": 1735830,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119560000,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 120370410,
+      "duration": 3472080,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129166660,
+      "duration": 3819580,
+      "text": "真实"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 133101660,
+      "duration": 4513750,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 138541660,
+      "duration": 1388750,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140046250,
+      "duration": 3472080,
+      "text": "金属"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143518330,
+      "duration": 1157500,
+      "text": "般"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144675830,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 145486250,
+      "duration": 4398330,
+      "text": "光泽"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155208330,
+      "duration": 1504580,
+      "text": "它"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 156712910,
+      "duration": 925830,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 157754580,
+      "duration": 2777910,
+      "text": "慢慢"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160648330,
+      "duration": 1967500,
+      "text": "长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162615830,
+      "duration": 2430410,
+      "text": "出来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165046250,
+      "duration": 2315000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170486250,
+      "duration": 3935000,
+      "text": "热场"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 174652910,
+      "duration": 810000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175578750,
+      "duration": 4745410,
+      "text": "拉速"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181365830,
+      "duration": 2662080,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 184259160,
+      "duration": 3587910,
+      "text": "持续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187962910,
+      "duration": 3703750,
+      "text": "调整"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "5c6661b1dcd96f8bcbcea54dbff0156cb7ff95e942a3e2f8d281f6cf4fe3963e"
+}

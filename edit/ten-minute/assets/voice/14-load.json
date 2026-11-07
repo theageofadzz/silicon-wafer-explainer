@@ -1,0 +1,335 @@
+{
+  "config": {
+    "text": "晶棒越长越重，承重设计不能忽略。颈部结构或辅助机构，要配合安全生长。熔体也不安静。温差和旋转带来的流动，会改变正在凝固的界面条件。界面条件不稳定，均匀性就受影响。不仅要长得大，还要整根晶棒长得稳定。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3703750,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4898330,
+      "duration": 1735830,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6634160,
+      "duration": 1736250,
+      "text": "长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8486250,
+      "duration": 1504580,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9990830,
+      "duration": 2546250,
+      "text": "重"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15315000,
+      "duration": 4166660,
+      "text": "承重"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19597080,
+      "duration": 4282500,
+      "text": "设计"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24111250,
+      "duration": 2083330,
+      "text": "不能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26310000,
+      "duration": 3935000,
+      "text": "忽略"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35532500,
+      "duration": 3356660,
+      "text": "颈部"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39004580,
+      "duration": 4050830,
+      "text": "结构"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43287080,
+      "duration": 1620410,
+      "text": "或"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45023330,
+      "duration": 2777910,
+      "text": "辅助"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47916660,
+      "duration": 3935000,
+      "text": "机构"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53819580,
+      "duration": 1504580,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55440000,
+      "duration": 3356660,
+      "text": "配合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59027910,
+      "duration": 3009160,
+      "text": "安全"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62152910,
+      "duration": 3935000,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71412080,
+      "duration": 4166660,
+      "text": "熔体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75810000,
+      "duration": 925830,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76736250,
+      "duration": 925830,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 77662080,
+      "duration": 3703750,
+      "text": "安静"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86574160,
+      "duration": 4745410,
+      "text": "温差"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 91550830,
+      "duration": 1041660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 92708330,
+      "duration": 4398330,
+      "text": "旋转"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97337910,
+      "duration": 2083330,
+      "text": "带来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99421250,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100347080,
+      "duration": 3935000,
+      "text": "流动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107060000,
+      "duration": 1504580,
+      "text": "会"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108680410,
+      "duration": 3125000,
+      "text": "改变"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112037080,
+      "duration": 2546250,
+      "text": "正在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114699160,
+      "duration": 3240830,
+      "text": "凝固"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117940000,
+      "duration": 1273330,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119444580,
+      "duration": 2662080,
+      "text": "界面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 122222080,
+      "duration": 4166660,
+      "text": "条件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131712910,
+      "duration": 3703750,
+      "text": "界面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135532500,
+      "duration": 3240830,
+      "text": "条件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139004580,
+      "duration": 925830,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139930410,
+      "duration": 4050830,
+      "text": "稳定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146759160,
+      "duration": 5902910,
+      "text": "均匀性"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 152893330,
+      "duration": 1041660,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 153935000,
+      "duration": 1157500,
+      "text": "受"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155208330,
+      "duration": 3703750,
+      "text": "影响"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164236250,
+      "duration": 2546250,
+      "text": "不仅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 166898330,
+      "duration": 1157500,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168171250,
+      "duration": 1620410,
+      "text": "长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169791660,
+      "duration": 694580,
+      "text": "得"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170486250,
+      "duration": 3125000,
+      "text": "大"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 176967500,
+      "duration": 2430410,
+      "text": "还要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179398330,
+      "duration": 2893330,
+      "text": "整根"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182407500,
+      "duration": 3472080,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186111250,
+      "duration": 1388750,
+      "text": "长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187500000,
+      "duration": 578750,
+      "text": "得"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 188194580,
+      "duration": 3125000,
+      "text": "稳定"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "2399cae25c5007f06088f4e2a34d18b044fadad0c87bf969103a11080815bd5c"
+}

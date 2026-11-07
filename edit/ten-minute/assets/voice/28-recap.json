@@ -1,0 +1,347 @@
+{
+  "config": {
+    "text": "石英经还原得到硅，再转化、分离和沉积，一步步降低不需要的杂质。借助籽晶建立取向，控制生长与缺陷；再切磨抛、清洗和检测，得到合格硅片。一片镜面，背后是一整条精密制造链。我们熟悉的计算世界，就从这样的材料上开始搭建。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 5671250,
+      "text": "石英经"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6865830,
+      "duration": 2430410,
+      "text": "还原"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9412080,
+      "duration": 2430410,
+      "text": "得到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11842500,
+      "duration": 2662080,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16240830,
+      "duration": 1504580,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17861250,
+      "duration": 4166660,
+      "text": "转化"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24921250,
+      "duration": 4398330,
+      "text": "分离"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29550830,
+      "duration": 810000,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30476660,
+      "duration": 4398330,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37421250,
+      "duration": 1620410,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39041660,
+      "duration": 1157500,
+      "text": "步"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40199160,
+      "duration": 1157500,
+      "text": "步"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41472080,
+      "duration": 3819580,
+      "text": "降低"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45523330,
+      "duration": 1620000,
+      "text": "不"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47143330,
+      "duration": 2546250,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49690000,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50384160,
+      "duration": 3703750,
+      "text": "杂质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59375000,
+      "duration": 3472080,
+      "text": "借助"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62962910,
+      "duration": 3240830,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 66435000,
+      "duration": 2315000,
+      "text": "建立"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 68865830,
+      "duration": 4398330,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75578750,
+      "duration": 2777910,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78472080,
+      "duration": 3240830,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81944580,
+      "duration": 694580,
+      "text": "与"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82754580,
+      "duration": 4513750,
+      "text": "缺陷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90740830,
+      "duration": 2199160,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 93055410,
+      "duration": 3472080,
+      "text": "切磨"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96527910,
+      "duration": 3125000,
+      "text": "抛"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101736250,
+      "duration": 5092500,
+      "text": "清洗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107060000,
+      "duration": 1041660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108217500,
+      "duration": 4513750,
+      "text": "检测"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114699160,
+      "duration": 2546250,
+      "text": "得到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117476660,
+      "duration": 3356660,
+      "text": "合格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 120949160,
+      "duration": 3819580,
+      "text": "硅片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 130092500,
+      "duration": 3240830,
+      "text": "一片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 133449160,
+      "duration": 4282500,
+      "text": "镜面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140509160,
+      "duration": 4166660,
+      "text": "背后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144907500,
+      "duration": 1504580,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146412080,
+      "duration": 1272910,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147685000,
+      "duration": 1620410,
+      "text": "整"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149305410,
+      "duration": 2199160,
+      "text": "条"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151736250,
+      "duration": 3009160,
+      "text": "精密"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 154861250,
+      "duration": 4861250,
+      "text": "制造链"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165046250,
+      "duration": 2083330,
+      "text": "我们"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 167245410,
+      "duration": 2662080,
+      "text": "熟悉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169907500,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170949160,
+      "duration": 2315000,
+      "text": "计算"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173379580,
+      "duration": 4976660,
+      "text": "世界"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180671250,
+      "duration": 1736250,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182407500,
+      "duration": 1388750,
+      "text": "从"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 184027910,
+      "duration": 1620410,
+      "text": "这样"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 185648330,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186458330,
+      "duration": 3240830,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189699160,
+      "duration": 1967500,
+      "text": "上"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 191898330,
+      "duration": 2315000,
+      "text": "开始"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 194328750,
+      "duration": 3472080,
+      "text": "搭建"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "ac862d0077c2c15c180626b985000d187823b8003142b0c10b539a4a52f36ca4"
+}

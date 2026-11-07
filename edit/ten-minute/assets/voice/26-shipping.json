@@ -1,0 +1,317 @@
+{
+  "config": {
+    "text": "身份记录要能追溯到晶棒和批次。出现问题时，才能回查原料和加工环节。专用运输盒保护硅片，减少颗粒和接触污染，把合格材料送往后续工厂。这里仍是芯片的材料起点。光刻、刻蚀、沉积和互连，属于接下来的器件制造。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 4398330,
+      "text": "身份"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 5476660,
+      "duration": 4513750,
+      "text": "记录"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11032500,
+      "duration": 1504580,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12537080,
+      "duration": 1273330,
+      "text": "能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13925830,
+      "duration": 3009160,
+      "text": "追溯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16935000,
+      "duration": 1388750,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 18555410,
+      "duration": 4745410,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23532500,
+      "duration": 1620410,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25268330,
+      "duration": 4166660,
+      "text": "批次"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34722080,
+      "duration": 3240830,
+      "text": "出现"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38078750,
+      "duration": 2546250,
+      "text": "问题"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 40625000,
+      "duration": 3935000,
+      "text": "时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46296250,
+      "duration": 2662080,
+      "text": "才能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49074160,
+      "duration": 3125000,
+      "text": "回查"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52199160,
+      "duration": 4398330,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56828750,
+      "duration": 1851660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58796250,
+      "duration": 3703750,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62615830,
+      "duration": 4282500,
+      "text": "环节"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72222080,
+      "duration": 3935000,
+      "text": "专用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76273330,
+      "duration": 4050830,
+      "text": "运输"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80324160,
+      "duration": 1273330,
+      "text": "盒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81828750,
+      "duration": 2083330,
+      "text": "保护"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84027910,
+      "duration": 4050830,
+      "text": "硅片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 91319580,
+      "duration": 4050830,
+      "text": "减少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 95486250,
+      "duration": 4398330,
+      "text": "颗粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100115830,
+      "duration": 1504580,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101736250,
+      "duration": 2893330,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104745410,
+      "duration": 3587910,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111574160,
+      "duration": 1388750,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 113078750,
+      "duration": 2662080,
+      "text": "合格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115856660,
+      "duration": 4513750,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121296250,
+      "duration": 3472080,
+      "text": "送往"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125000000,
+      "duration": 2777910,
+      "text": "后续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127893330,
+      "duration": 3935000,
+      "text": "工厂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137152910,
+      "duration": 5440000,
+      "text": "这里"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143518330,
+      "duration": 2662080,
+      "text": "仍"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146180410,
+      "duration": 1388750,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147800830,
+      "duration": 3935000,
+      "text": "芯片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151736250,
+      "duration": 1273330,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 153240830,
+      "duration": 3819580,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 157175830,
+      "duration": 4166660,
+      "text": "起点"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 166666660,
+      "duration": 5787080,
+      "text": "光刻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175000000,
+      "duration": 6365830,
+      "text": "刻蚀"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183565000,
+      "duration": 4629580,
+      "text": "沉积"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 188425830,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189467500,
+      "duration": 4976660,
+      "text": "互连"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 196180410,
+      "duration": 3587910,
+      "text": "属于"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 200000000,
+      "duration": 3587910,
+      "text": "接下来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 203587910,
+      "duration": 1967500,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 205787080,
+      "duration": 4166660,
+      "text": "器件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 210069580,
+      "duration": 3587910,
+      "text": "制造"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "58355669f6fe2fa2554a1f897c1a359e27f6c73750b42800f94aefda80c8c5e0"
+}

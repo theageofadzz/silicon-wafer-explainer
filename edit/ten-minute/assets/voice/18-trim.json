@@ -1,0 +1,305 @@
+{
+  "config": {
+    "text": "冷却后，切去不合要求的头尾，把外圆加工到指定尺寸。材料也在这里损耗。确定晶向，制作定位缺口。看不见的晶格方向，给设备留下一个识别参照。晶棒送向密集排列的细线。运动的线网，同时加工许多平行切面。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3356660,
+      "text": "冷却"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4319580,
+      "duration": 3125000,
+      "text": "后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10685000,
+      "duration": 3935000,
+      "text": "切去"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 14851660,
+      "duration": 1967500,
+      "text": "不合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16935000,
+      "duration": 2662080,
+      "text": "要求"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19597080,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20407500,
+      "duration": 4282500,
+      "text": "头尾"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27004580,
+      "duration": 1620410,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28740830,
+      "duration": 3587910,
+      "text": "外圆"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32560000,
+      "duration": 3587910,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36148330,
+      "duration": 1851660,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38231660,
+      "duration": 3009160,
+      "text": "指定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41356660,
+      "duration": 4513750,
+      "text": "尺寸"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51157500,
+      "duration": 4398330,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55787080,
+      "duration": 810000,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56597080,
+      "duration": 925830,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57638750,
+      "duration": 1504580,
+      "text": "这里"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59259160,
+      "duration": 4861250,
+      "text": "损耗"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69444580,
+      "duration": 3703750,
+      "text": "确定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73263750,
+      "duration": 4861250,
+      "text": "晶向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79976660,
+      "duration": 3935000,
+      "text": "制作"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84143330,
+      "duration": 2546250,
+      "text": "定位"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86805410,
+      "duration": 4166660,
+      "text": "缺口"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96180410,
+      "duration": 2083330,
+      "text": "看"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 98263750,
+      "duration": 2083330,
+      "text": "不见"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100347080,
+      "duration": 925830,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 101504580,
+      "duration": 2777910,
+      "text": "晶格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 104398330,
+      "duration": 4629580,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111226660,
+      "duration": 1157500,
+      "text": "给"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112500000,
+      "duration": 4513750,
+      "text": "设备"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117245410,
+      "duration": 2315000,
+      "text": "留下"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119675830,
+      "duration": 1388750,
+      "text": "一个"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121296250,
+      "duration": 3703750,
+      "text": "识别"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125115830,
+      "duration": 4398330,
+      "text": "参照"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 134837910,
+      "duration": 4976660,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139930410,
+      "duration": 1736250,
+      "text": "送"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141666660,
+      "duration": 1967500,
+      "text": "向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143865830,
+      "duration": 2546250,
+      "text": "密集"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146527910,
+      "duration": 2546250,
+      "text": "排列"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149074160,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149768330,
+      "duration": 4745410,
+      "text": "细线"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159837910,
+      "duration": 2546250,
+      "text": "运动"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162384160,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 163194580,
+      "duration": 4513750,
+      "text": "线网"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169675830,
+      "duration": 3125000,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172916660,
+      "duration": 2777910,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175810000,
+      "duration": 3587910,
+      "text": "许多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179629580,
+      "duration": 3240830,
+      "text": "平行"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182986250,
+      "duration": 3240830,
+      "text": "切面"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "0c24fb6550777cadc9fa6df236b4dd41b77041f455ac7024db32e2fa2d20d242"
+}

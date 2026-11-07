@@ -1,0 +1,317 @@
+{
+  "config": {
+    "text": "取出硅棒，还要破碎、清理并洁净包装。工具带来的污染，也必须去掉。原料很纯，却含有取向不同的晶粒。接下来，要打散原来的排列，再重新建立。所以先熔化，再重新生长单晶。并不是让那些小晶粒，在固体里面自己转正。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3472080,
+      "text": "取出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4550830,
+      "duration": 4050830,
+      "text": "硅棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10685000,
+      "duration": 2430410,
+      "text": "还要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13231660,
+      "duration": 4166660,
+      "text": "破碎"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20870410,
+      "duration": 6250000,
+      "text": "清理"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28162080,
+      "duration": 1851660,
+      "text": "并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30129580,
+      "duration": 3356660,
+      "text": "洁净"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33601660,
+      "duration": 4050830,
+      "text": "包装"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42824160,
+      "duration": 4282500,
+      "text": "工具"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47337910,
+      "duration": 1851660,
+      "text": "带来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49190000,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50000000,
+      "duration": 4976660,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57407500,
+      "duration": 1388750,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58912080,
+      "duration": 2777910,
+      "text": "必须"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61805410,
+      "duration": 4050830,
+      "text": "去掉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 71180410,
+      "duration": 3703750,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75000000,
+      "duration": 1851660,
+      "text": "很"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76851660,
+      "duration": 4282500,
+      "text": "纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 83680410,
+      "duration": 1736250,
+      "text": "却"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 85416660,
+      "duration": 2430410,
+      "text": "含有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88078750,
+      "duration": 3125000,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 91319580,
+      "duration": 3009160,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 95138750,
+      "duration": 3240830,
+      "text": "晶粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 103703750,
+      "duration": 6365830,
+      "text": "接下来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 113657500,
+      "duration": 1620410,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115393330,
+      "duration": 3240830,
+      "text": "打散"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 118865830,
+      "duration": 2199160,
+      "text": "原来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121065000,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121759160,
+      "duration": 4861250,
+      "text": "排列"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129976660,
+      "duration": 1388750,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131481660,
+      "duration": 4050830,
+      "text": "重新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135648330,
+      "duration": 3356660,
+      "text": "建立"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144328750,
+      "duration": 2893330,
+      "text": "所以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147453750,
+      "duration": 1851660,
+      "text": "先"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149305410,
+      "duration": 5555410,
+      "text": "熔化"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 156597080,
+      "duration": 1504580,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 158217500,
+      "duration": 3819580,
+      "text": "重新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162152910,
+      "duration": 3009160,
+      "text": "生长"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165277910,
+      "duration": 4282500,
+      "text": "单晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 174884160,
+      "duration": 2315000,
+      "text": "并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 177199160,
+      "duration": 1851660,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179166660,
+      "duration": 694580,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 179976660,
+      "duration": 1851660,
+      "text": "那些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181944580,
+      "duration": 1967500,
+      "text": "小"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183912080,
+      "duration": 4050830,
+      "text": "晶粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 190046250,
+      "duration": 1504580,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 191666660,
+      "duration": 3009160,
+      "text": "固体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 194791660,
+      "duration": 2083330,
+      "text": "里面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 197106660,
+      "duration": 2199160,
+      "text": "自己"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 199421250,
+      "duration": 3935000,
+      "text": "转正"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "680f471ebde7055a178fa4453bc01ae60eb2a58076b0375870226e9771fcdb78"
+}

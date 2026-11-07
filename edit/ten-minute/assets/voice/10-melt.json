@@ -1,0 +1,341 @@
+{
+  "config": {
+    "text": "多晶硅装进石英坩埚。外侧有石墨支撑和热场，加热后，固体逐渐变成熔体。气氛和热量分布也要控制。目标是保持稳定的条件，而不是温度越高越好。加入极少量的硼或磷，可以调节电阻率。加入多少、分布怎样，都有要求。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 3356660,
+      "text": "多晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4435000,
+      "duration": 2893330,
+      "text": "硅装"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 7328750,
+      "duration": 1851660,
+      "text": "进"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 9412080,
+      "duration": 3240830,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 12768330,
+      "duration": 4166660,
+      "text": "坩埚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22222080,
+      "duration": 3125000,
+      "text": "外侧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25462910,
+      "duration": 1388750,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 26851660,
+      "duration": 3356660,
+      "text": "石墨"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30324160,
+      "duration": 3935000,
+      "text": "支撑"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34490830,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35532500,
+      "duration": 4166660,
+      "text": "热场"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43287080,
+      "duration": 3587910,
+      "text": "加热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46875000,
+      "duration": 2893330,
+      "text": "后"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52315000,
+      "duration": 5324160,
+      "text": "固体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 57870410,
+      "duration": 3009160,
+      "text": "逐渐"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60995410,
+      "duration": 2199160,
+      "text": "变成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63310000,
+      "duration": 3819580,
+      "text": "熔体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72453750,
+      "duration": 4629580,
+      "text": "气氛"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 77315000,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78356660,
+      "duration": 2315000,
+      "text": "热量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80787080,
+      "duration": 3819580,
+      "text": "分布"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 85532500,
+      "duration": 1272910,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86805410,
+      "duration": 810000,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 87731660,
+      "duration": 3935000,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96990830,
+      "duration": 3935000,
+      "text": "目标"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100925830,
+      "duration": 1273330,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102315000,
+      "duration": 2546250,
+      "text": "保持"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105092500,
+      "duration": 2893330,
+      "text": "稳定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107986250,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108796250,
+      "duration": 4398330,
+      "text": "条件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 116898330,
+      "duration": 1851660,
+      "text": "而"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 118865830,
+      "duration": 1967500,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121065000,
+      "duration": 3240830,
+      "text": "温度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 124537080,
+      "duration": 1851660,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126388750,
+      "duration": 1504580,
+      "text": "高"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 128009160,
+      "duration": 1273330,
+      "text": "越"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129282500,
+      "duration": 2662080,
+      "text": "好"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137152910,
+      "duration": 4166660,
+      "text": "加入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141550830,
+      "duration": 1736250,
+      "text": "极"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143287080,
+      "duration": 2893330,
+      "text": "少量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 146180410,
+      "duration": 1273330,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147569580,
+      "duration": 1967500,
+      "text": "硼"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149652910,
+      "duration": 1388750,
+      "text": "或"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151041660,
+      "duration": 2777910,
+      "text": "磷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155555410,
+      "duration": 2083330,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 157754580,
+      "duration": 3125000,
+      "text": "调节"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161111250,
+      "duration": 3356250,
+      "text": "电阻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164467500,
+      "duration": 1967500,
+      "text": "率"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 171643330,
+      "duration": 3125000,
+      "text": "加入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 174884160,
+      "duration": 4513750,
+      "text": "多少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181828750,
+      "duration": 3240830,
+      "text": "分布"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 185185000,
+      "duration": 3703750,
+      "text": "怎样"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 191666660,
+      "duration": 1388750,
+      "text": "都"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193055410,
+      "duration": 694580,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193865830,
+      "duration": 4166660,
+      "text": "要求"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "2da5e0dd6c0da76dd9fd1ef5d480dddd17d55cf679bb4779edc8d1f47673c6cb"
+}

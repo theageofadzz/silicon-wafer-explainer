@@ -28,6 +28,13 @@
 该镜头使用原创精确三维运动参考。历史公有领域晶棒照片由 Sebastian Wallroth 拍摄，
 不作为当前 `input-boule.png` 的输入。
 
+上述空白片取舍描述 `v1.0.0`。十分钟版重新生成了该照片的短暂动态镜头，
+保留原图中房间的镜面倒影，并在照片切入后用原创精确模型继续解释。
+新版的石英、晶棒仍分别沿用 Jan Helebrant 和 Thingreenline4546 的照片。
+新增片段与来源照片哈希、提示词、原生尺寸记录在
+`edit/ten-minute/generated/*.json`；全片选用记录见该目录的 `review/`。
+新版也保留已有的籽晶、单晶外观和加工晶圆镜头，署名及许可与上表一致。
+
 实验炉照片 [Avogadro Crystal (in the furnace)](https://commons.wikimedia.org/wiki/File:Avogadro_Crystal_(in_the_furnace)_-_SFU_PAMR.jpg)，
 Simon Fraser University Public Affairs and Media Relations，
 [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)，保留为来源研究与已生成的候选镜头。

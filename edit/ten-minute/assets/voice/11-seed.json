@@ -1,0 +1,329 @@
+{
+  "config": {
+    "text": "靠一小段籽晶。它已经是单晶，方向已知，给新来的硅原子一个排列参照。籽晶接触熔硅，缓慢向上提拉。接触处凝固的新晶体，延续籽晶的取向。晶体和坩埚的旋转，用来配合传热和物质输运，并不是把原子像螺丝一样拧上去。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 2430410,
+      "text": "靠"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3625000,
+      "duration": 925830,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4550830,
+      "duration": 1620410,
+      "text": "小"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6171250,
+      "duration": 1851660,
+      "text": "段"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8023330,
+      "duration": 3819580,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17013750,
+      "duration": 1273330,
+      "text": "它"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 18402910,
+      "duration": 1735830,
+      "text": "已经"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20138750,
+      "duration": 925830,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21180410,
+      "duration": 4745410,
+      "text": "单晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 27662080,
+      "duration": 2893330,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30671250,
+      "duration": 4398330,
+      "text": "已知"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37615830,
+      "duration": 1620410,
+      "text": "给"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39351660,
+      "duration": 2777910,
+      "text": "新来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42129580,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43055410,
+      "duration": 6481660,
+      "text": "硅原子"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50462910,
+      "duration": 1736250,
+      "text": "一个"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52315000,
+      "duration": 3935000,
+      "text": "排列"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56365830,
+      "duration": 4282500,
+      "text": "参照"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 65972080,
+      "duration": 3703750,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69907500,
+      "duration": 2893330,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72916660,
+      "duration": 4398330,
+      "text": "熔硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80787080,
+      "duration": 3703750,
+      "text": "缓慢"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84606660,
+      "duration": 3356660,
+      "text": "向上"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 88078750,
+      "duration": 3356660,
+      "text": "提拉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96759160,
+      "duration": 3356660,
+      "text": "接触"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 100115830,
+      "duration": 2083330,
+      "text": "处"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102430410,
+      "duration": 3009160,
+      "text": "凝固"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105440000,
+      "duration": 925830,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 106597080,
+      "duration": 2083330,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108680410,
+      "duration": 4513750,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114930410,
+      "duration": 3472080,
+      "text": "延续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 118634160,
+      "duration": 3009160,
+      "text": "籽晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121643330,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 122453750,
+      "duration": 4282500,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 132060000,
+      "duration": 4745410,
+      "text": "晶体"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137037080,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 138078750,
+      "duration": 2662080,
+      "text": "坩埚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 140740830,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141435000,
+      "duration": 4861250,
+      "text": "旋转"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149074160,
+      "duration": 2315000,
+      "text": "用来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151504580,
+      "duration": 2546250,
+      "text": "配合"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 154282500,
+      "duration": 4398330,
+      "text": "传热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 158912080,
+      "duration": 1041660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160069580,
+      "duration": 2315000,
+      "text": "物质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162500000,
+      "duration": 4282500,
+      "text": "输运"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169675830,
+      "duration": 3472080,
+      "text": "并不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173263750,
+      "duration": 1041660,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 174421250,
+      "duration": 3703750,
+      "text": "原子"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 178125000,
+      "duration": 1967500,
+      "text": "像"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180208330,
+      "duration": 3587910,
+      "text": "螺丝"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183912080,
+      "duration": 1967500,
+      "text": "一样"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186111250,
+      "duration": 1388750,
+      "text": "拧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187500000,
+      "duration": 3587910,
+      "text": "上去"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "6a150a3c37c2ffcb2eba3ae27f8a575634f15e2abd19956aa4444d80459bc41d"
+}

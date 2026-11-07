@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>硅片：从石英到晶圆</title>
+  <style>
+    @font-face{font-family:Noto;src:url("../../assets/fonts/NotoSansSC-Regular.otf") format("opentype");font-weight:400;font-display:swap}
+    @font-face{font-family:Noto;src:url("../../assets/fonts/NotoSansSC-Bold.otf") format("opentype");font-weight:700;font-display:swap}
+    *{box-sizing:border-box}body{margin:0;background:#111719;color:#edf1ef;font:15px/1.65 Noto,system-ui,sans-serif;letter-spacing:0}
+    main{max-width:1160px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:minmax(0,560px) minmax(220px,1fr);gap:36px}
+    h1{font-size:24px;line-height:1.45;margin:0 0 16px;font-weight:700}h2{font-size:17px;margin:26px 0 10px}
+    video{display:block;aspect-ratio:9/16;width:100%;max-height:88vh;object-fit:contain;background:#050808}
+    .links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:16px}a{color:#9edfc8;text-underline-offset:4px}
+    #status{color:#aebdb6;margin:12px 0}ol{list-style:none;margin:0;padding:0;border-top:1px solid #34413b}
+    li{border-bottom:1px solid #34413b}button{font:inherit;letter-spacing:0;cursor:pointer;border:0;border-radius:0;background:transparent;color:inherit;padding:13px 0;width:100%;text-align:left;display:grid;grid-template-columns:55px minmax(0,1fr);gap:12px;line-height:1.5}
+    button:hover,button[aria-current=true]{color:#9edfc8}button:focus-visible,a:focus-visible{outline:2px solid #9edfc8;outline-offset:4px}
+    time{font-variant-numeric:tabular-nums;color:#aebdb6;font-size:13px}#chapters span{overflow-wrap:anywhere}
+    select{font:inherit;letter-spacing:0;max-width:100%;background:#1d2925;color:#edf1ef;border:1px solid #53665c;border-radius:4px;padding:7px 10px;margin:0 0 16px}
+    .meta{color:#aebdb6;font-size:13px}#error{color:#ffc2b3}
+    @media(max-width:700px){main{grid-template-columns:minmax(0,1fr);gap:24px;padding:18px 16px}video{max-height:78vh}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <main>
+    <section aria-label="视频">
+      <video id="video" controls playsinline preload="metadata" src="output/silicon-wafer-10min-9x16.mp4"></video>
+      <div class="links">
+        <a id="download" href="output/silicon-wafer-10min-9x16.mp4" download>下载视频</a>
+        <a id="subtitles" href="output/full-captions.srt" download>下载字幕</a>
+        <a id="verification" href="output/full-verification.json">验收记录</a>
+      </div>
+      <p id="error" role="status"></p>
+    </section>
+    <section aria-label="章节">
+      <h1>硅片：从石英到晶圆</h1>
+      <select id="version" aria-label="视频版本">
+        <option value="full">完整视频</option>
+        <option value="pilot">样段</option>
+        <option value="only">选定片段</option>
+      </select>
+      <p id="status" role="status">正在读取时间轴</p>
+      <ol id="chapters"></ol>
+    </section>
+  </main>
+  <script type="module">
+    const video=document.querySelector('#video'), version=document.querySelector('#version');
+    const list=document.querySelector('#chapters'), status=document.querySelector('#status'), error=document.querySelector('#error');
+    const stamp=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+    let timeline, chapters=[], loading=0;
+    async function json(file){
+      const response=await fetch(file,{cache:'no-store'});
+      if(!response.ok)throw new Error(`${file}: ${response.status}`);
+      return response.json();
+    }
+    async function show(){
+      const token=++loading, mode=version.value;
+      const filename=mode==='full'?'silicon-wafer-10min-9x16.mp4':`${mode}.mp4`;
+      video.pause(); video.src=`output/${filename}`; video.load();
+      document.querySelector('#download').href=`output/${filename}`;
+      document.querySelector('#subtitles').href=`output/${mode}-captions.srt`;
+      document.querySelector('#verification').href=`output/${mode}-verification.json`;
+      error.textContent=''; list.replaceChildren();
+      try{
+        timeline??=await json('timeline.json');
+        let record;
+        try{record=await json(`output/${mode}-assembly.json`)}catch{}
+        if(token!==loading)return;
+        chapters=[];
+        for(const scene of timeline.scenes){
+          const selected=record?.selection?.filter(s=>s.scene===scene.id);
+          if(mode!=='full'&&!selected?.length)continue;
+          if(record&&selected?.length===0)continue;
+          const start=selected?.length?selected[0].startFrame/timeline.fps:scene.start;
+          const end=selected?.length?selected.at(-1).endFrame/timeline.fps:scene.end;
+          chapters.push({title:scene.title,chapter:scene.chapter,start,end});
+        }
+        for(const chapter of chapters){
+          const li=document.createElement('li'), button=document.createElement('button');
+          const time=document.createElement('time'), text=document.createElement('span');
+          time.textContent=stamp(chapter.start); text.textContent=`${chapter.chapter}  ${chapter.title}`;
+          button.type='button';button.append(time,text);
+          button.addEventListener('click',()=>{video.currentTime=chapter.start;video.play().catch(()=>{});});
+          chapter.button=button;li.append(button);list.append(li);
+        }
+        const duration=record?.duration??(mode==='full'?timeline.duration:undefined);
+        status.textContent=duration?`${stamp(duration)} · ${timeline.width} × ${timeline.height} · ${timeline.fps} fps`:'尚未生成此版本';
+        if(!chapters.length)status.textContent='尚未生成此版本的章节记录';
+      }catch(e){if(token===loading)status.textContent=`时间轴暂不可用：${e.message}`;}
+    }
+    version.addEventListener('change',show);
+    video.addEventListener('timeupdate',()=>{
+      for(const c of chapters)c.button.setAttribute('aria-current',String(video.currentTime>=c.start&&video.currentTime<c.end));
+    });
+    video.addEventListener('error',()=>{error.textContent='视频尚未生成，或当前服务器无法读取视频文件。';});
+    show();
+  </script>
+</body>
+</html>

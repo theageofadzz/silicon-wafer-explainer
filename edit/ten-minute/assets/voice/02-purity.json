@@ -1,0 +1,365 @@
+{
+  "config": {
+    "text": "百分之九十九，就是平均每一百份里面，还混着一份别的东西。离芯片的要求还远。电子级多晶硅能达到十个、甚至十一个九。每多一个九，剩余杂质再少十倍。这是高纯原料的指标。后面有意加入的掺杂元素，要和失控的污染分开理解。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 10416660,
+      "text": "百分之九十九"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13694580,
+      "duration": 1504580,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15199160,
+      "duration": 925830,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 16240830,
+      "duration": 3703750,
+      "text": "平均"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20175830,
+      "duration": 1388750,
+      "text": "每"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21565000,
+      "duration": 2546250,
+      "text": "一百"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24111250,
+      "duration": 1388750,
+      "text": "份"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25615830,
+      "duration": 3703750,
+      "text": "里面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32097080,
+      "duration": 1967500,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34065000,
+      "duration": 1620000,
+      "text": "混"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35685000,
+      "duration": 810000,
+      "text": "着"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36611250,
+      "duration": 810000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37421250,
+      "duration": 1157500,
+      "text": "份"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 38810000,
+      "duration": 2546250,
+      "text": "别的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41472080,
+      "duration": 3125000,
+      "text": "东西"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 49884160,
+      "duration": 1388750,
+      "text": "离"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 51388750,
+      "duration": 3009160,
+      "text": "芯片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 54398330,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55092500,
+      "duration": 3009160,
+      "text": "要求"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58333330,
+      "duration": 1504580,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59837910,
+      "duration": 2662080,
+      "text": "远"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 67708330,
+      "duration": 4861250,
+      "text": "电子级"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72800830,
+      "duration": 2777910,
+      "text": "多晶"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75578750,
+      "duration": 2777910,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79282500,
+      "duration": 1736250,
+      "text": "能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81134160,
+      "duration": 2199160,
+      "text": "达到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 83565000,
+      "duration": 3009160,
+      "text": "十"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86574160,
+      "duration": 2199160,
+      "text": "个"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90625000,
+      "duration": 3472080,
+      "text": "甚至"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 3125000,
+      "text": "十一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97453750,
+      "duration": 925830,
+      "text": "个"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 98495410,
+      "duration": 3009160,
+      "text": "九"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 106712910,
+      "duration": 1967500,
+      "text": "每"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108680410,
+      "duration": 810000,
+      "text": "多"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 109490830,
+      "duration": 5208330,
+      "text": "一个九"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117245410,
+      "duration": 3703750,
+      "text": "剩余"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121065000,
+      "duration": 4629580,
+      "text": "杂质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125925830,
+      "duration": 1504580,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127430410,
+      "duration": 1620410,
+      "text": "少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 129166660,
+      "duration": 2199160,
+      "text": "十"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131365830,
+      "duration": 2083330,
+      "text": "倍"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 138657500,
+      "duration": 2662080,
+      "text": "这是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141550830,
+      "duration": 3356660,
+      "text": "高纯"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 145023330,
+      "duration": 2198750,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147222080,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148032500,
+      "duration": 4513750,
+      "text": "指标"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 157870410,
+      "duration": 3472080,
+      "text": "后面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 161574160,
+      "duration": 2662080,
+      "text": "有意"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164351660,
+      "duration": 2662080,
+      "text": "加入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 167013750,
+      "duration": 1273330,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168518330,
+      "duration": 3703750,
+      "text": "掺杂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172337910,
+      "duration": 4629580,
+      "text": "元素"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180440000,
+      "duration": 1620000,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182060000,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 183217500,
+      "duration": 3125000,
+      "text": "失控"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186342500,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187152910,
+      "duration": 3240830,
+      "text": "污染"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 190625000,
+      "duration": 3356660,
+      "text": "分开"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 194097080,
+      "duration": 3356660,
+      "text": "理解"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "9717f2e64a132750bbfc581516ab378c4a8cac00f1ef9a7ef26bde1e322c452f"
+}

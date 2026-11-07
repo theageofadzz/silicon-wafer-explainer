@@ -1,0 +1,978 @@
+{
+  "status": "mismatches-need-visual-review",
+  "encodedSha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7",
+  "beatCount": 84,
+  "exactlyMatchedBeats": 71,
+  "limits": "OCR mismatches may be recognition errors; retain and inspect them.",
+  "checks": [
+    {
+      "beat": "01-start-01",
+      "file": "output/review-full/action-01-start-01-7.jpg",
+      "expected": [
+        "这片镜面，难在哪里？",
+        "电路制造之前",
+        "空白硅片"
+      ],
+      "observed": "01这片镜面，难在哪里？空白硅片电路制造之前",
+      "missing": []
+    },
+    {
+      "beat": "01-start-02",
+      "file": "output/review-full/action-01-start-02-7.jpg",
+      "expected": [
+        "这片镜面，难在哪里？",
+        "厚度截面已放大",
+        "直径 300 mm",
+        "截面放大 · 0.775 mm"
+      ],
+      "observed": "01这片镜面，难在哪里？直径300mm截面放大•0.775mm厚度截面已放大",
+      "missing": []
+    },
+    {
+      "beat": "01-start-03",
+      "file": "output/review-full/action-01-start-03-7.jpg",
+      "expected": [
+        "这片镜面，难在哪里？",
+        "杂质",
+        "原子排列",
+        "表面高低"
+      ],
+      "observed": "01这片镜面，难在哪里？杂质原子排列表面高低",
+      "missing": []
+    },
+    {
+      "beat": "02-purity-01",
+      "file": "output/review-full/action-02-purity-01-7.jpg",
+      "expected": [
+        "“很纯”究竟有多纯？",
+        "示意数量，不代表原子实测",
+        "99%：杂质约占 1%"
+      ],
+      "observed": "01“很纯”究竟有多纯？99%：杂质约占 1%示意数量，不代表原子实测",
+      "missing": []
+    },
+    {
+      "beat": "02-purity-02",
+      "file": "output/review-full/action-02-purity-02-7.jpg",
+      "expected": [
+        "“很纯”究竟有多纯？",
+        "每增加一个 9，残余量变为 1/10",
+        "电子级原料：10N / 11N",
+        "剩余杂质相对量",
+        "10 → 1"
+      ],
+      "observed": "01“很纯”究竟有多纯？电子级原料：10N/11N剩余杂质相对量10-1每增加一个9，残余量变为1/10",
+      "missing": []
+    },
+    {
+      "beat": "02-purity-03",
+      "file": "output/review-full/action-02-purity-03-7.jpg",
+      "expected": [
+        "“很纯”究竟有多纯？",
+        "受控掺杂另有规格",
+        "原料纯度 ≠ 成品全部成分",
+        "受控掺杂原子"
+      ],
+      "observed": "01“很纯”究竟有多纯？原料纯度 成品全部成分受控掺杂原子受控掺杂另有规格",
+      "missing": []
+    },
+    {
+      "beat": "03-order-01",
+      "file": "output/review-full/action-03-order-01-7.jpg",
+      "expected": [
+        "纯净，还要排得整齐",
+        "取向不同",
+        "多晶：不同晶粒"
+      ],
+      "observed": "01纯净，还要排得整齐多晶：不同晶粒取向不同",
+      "missing": []
+    },
+    {
+      "beat": "03-order-02",
+      "file": "output/review-full/action-03-order-02-7.jpg",
+      "expected": [
+        "纯净，还要排得整齐",
+        "晶格取向连续",
+        "单晶"
+      ],
+      "observed": "01纯净，还要排得整齐单晶晶格取向连续",
+      "missing": []
+    },
+    {
+      "beat": "03-order-03",
+      "file": "output/review-full/action-03-order-03-7.jpg",
+      "expected": [
+        "纯净，还要排得整齐",
+        "加工 → 检测",
+        "还原 → 提纯 → 生长"
+      ],
+      "observed": "01纯净，还要排得整齐还原一提纯一生长加工 检测",
+      "missing": [
+        "还原 → 提纯 → 生长"
+      ]
+    },
+    {
+      "beat": "04-quartz-01",
+      "file": "output/review-full/action-04-quartz-01-7.jpg",
+      "expected": [
+        "石英里有硅，为什么不能直接用？",
+        "标本外观不等于工业纯度",
+        "石英：SiO₂"
+      ],
+      "observed": "02石英里有硅，为什么不能直接用？石英：SiO2标本外观不等于工业纯度",
+      "missing": []
+    },
+    {
+      "beat": "04-quartz-02",
+      "file": "output/review-full/action-04-quartz-02-7.jpg",
+      "expected": [
+        "石英里有硅，为什么不能直接用？",
+        "先进行化学还原",
+        "硅—氧网络"
+      ],
+      "observed": "02石英里有硅，为什么不能直接用？硅一氧网络先进行化学还原",
+      "missing": [
+        "硅—氧网络"
+      ]
+    },
+    {
+      "beat": "04-quartz-03",
+      "file": "output/review-full/action-04-quartz-03-7.jpg",
+      "expected": [
+        "石英里有硅，为什么不能直接用？",
+        "还原：改变化学组成",
+        "清洗：去掉外来污染"
+      ],
+      "observed": "02石英里有硅，为什么不能直接用？清洗：去掉外来污染还原：改变化学组成",
+      "missing": []
+    },
+    {
+      "beat": "05-furnace-01",
+      "file": "output/review-full/action-05-furnace-01-7.jpg",
+      "expected": [
+        "先把氧分离出来",
+        "埋弧电炉",
+        "石英 + 碳质还原剂"
+      ],
+      "observed": "02先把氧分离出来石英＋碳质还原剂埋弧电炉",
+      "missing": []
+    },
+    {
+      "beat": "05-furnace-02",
+      "file": "output/review-full/action-05-furnace-02-7.jpg",
+      "expected": [
+        "先把氧分离出来",
+        "实际包含多步反应",
+        "总体反应：SiO₂ + 2C → Si + 2CO"
+      ],
+      "observed": "02先把氧分离出来总体反应：Si02+2C- Si+2C0实际包含多步反应",
+      "missing": [
+        "总体反应：SiO₂ + 2C → Si + 2CO"
+      ]
+    },
+    {
+      "beat": "05-furnace-03",
+      "file": "output/review-full/action-05-furnace-03-7.jpg",
+      "expected": [
+        "先把氧分离出来",
+        "还原完成，提纯继续",
+        "工业硅：约 98%—99%"
+      ],
+      "observed": "02先把氧分离出来工业硅：约98%-99%还原完成，提纯继续",
+      "missing": []
+    },
+    {
+      "beat": "06-transform-01",
+      "file": "output/review-full/action-06-transform-01-7.jpg",
+      "expected": [
+        "固体难分，换一种形态",
+        "示例：三氯氢硅",
+        "工业硅 → 氯硅烷"
+      ],
+      "observed": "03固体难分，换一种形态工业硅一氯硅烷示例：三氯氢硅",
+      "missing": [
+        "工业硅 → 氯硅烷"
+      ]
+    },
+    {
+      "beat": "06-transform-02",
+      "file": "output/review-full/action-06-transform-02-7.jpg",
+      "expected": [
+        "固体难分，换一种形态",
+        "为分离创造条件",
+        "化学转化"
+      ],
+      "observed": "03固体难分，换一种形态化学转化为分离创造条件",
+      "missing": []
+    },
+    {
+      "beat": "06-transform-03",
+      "file": "output/review-full/action-06-transform-03-7.jpg",
+      "expected": [
+        "固体难分，换一种形态",
+        "不同组分分流",
+        "汽化 / 冷凝"
+      ],
+      "observed": "03固体难分，换一种形态汽化/冷凝不同组分分流",
+      "missing": []
+    },
+    {
+      "beat": "07-distill-01",
+      "file": "output/review-full/action-07-distill-01-7.jpg",
+      "expected": [
+        "精馏塔，怎样把杂质分开？",
+        "液体回流",
+        "蒸气上升"
+      ],
+      "observed": "03精馏塔，怎样把杂质分开？蒸气上升液体回流",
+      "missing": []
+    },
+    {
+      "beat": "07-distill-02",
+      "file": "output/review-full/action-07-distill-02-7.jpg",
+      "expected": [
+        "精馏塔，怎样把杂质分开？",
+        "逐级分离",
+        "多次汽液接触"
+      ],
+      "observed": "03精馏塔，怎样把杂质分开？多次汽液接触逐级分离",
+      "missing": []
+    },
+    {
+      "beat": "07-distill-03",
+      "file": "output/review-full/action-07-distill-03-7.jpg",
+      "expected": [
+        "精馏塔，怎样把杂质分开？",
+        "杂质分别处理",
+        "目标原料保留"
+      ],
+      "observed": "03精馏塔，怎样把杂质分开？目标原料保留杂质分别处理",
+      "missing": []
+    },
+    {
+      "beat": "08-siemens-01",
+      "file": "output/review-full/action-08-siemens-01-7.jpg",
+      "expected": [
+        "提纯之后，怎样变回硅？",
+        "西门子法",
+        "加热硅芯"
+      ],
+      "observed": "03提纯之后，怎样变回硅？加热硅芯西门子法",
+      "missing": []
+    },
+    {
+      "beat": "08-siemens-02",
+      "file": "output/review-full/action-08-siemens-02-7.jpg",
+      "expected": [
+        "提纯之后，怎样变回硅？",
+        "直径逐渐增加",
+        "硅在表面沉积"
+      ],
+      "observed": "03提纯之后，怎样变回硅？硅在表面沉积直径逐渐增加",
+      "missing": []
+    },
+    {
+      "beat": "08-siemens-03",
+      "file": "output/review-full/action-08-siemens-03-7.jpg",
+      "expected": [
+        "提纯之后，怎样变回硅？",
+        "气体与副产物循环处理",
+        "高纯多晶硅"
+      ],
+      "observed": "03提纯之后，怎样变回硅？高纯多晶硅气体与副产物循环处理",
+      "missing": []
+    },
+    {
+      "beat": "09-feedstock-01",
+      "file": "output/review-full/action-09-feedstock-01-7.jpg",
+      "expected": [
+        "高纯原料，为什么还要重熔？",
+        "避免金属污染",
+        "破碎 / 清理 / 包装"
+      ],
+      "observed": "03高纯原料，为什么还要重熔？破碎/ 清理/包装避免金属污染",
+      "missing": []
+    },
+    {
+      "beat": "09-feedstock-02",
+      "file": "output/review-full/action-09-feedstock-02-7.jpg",
+      "expected": [
+        "高纯原料，为什么还要重熔？",
+        "晶体取向仍需统一",
+        "纯度已经提高"
+      ],
+      "observed": "03高纯原料，为什么还要重熔？纯度已经提高晶体取向仍需统—",
+      "missing": [
+        "晶体取向仍需统一"
+      ]
+    },
+    {
+      "beat": "09-feedstock-03",
+      "file": "output/review-full/action-09-feedstock-03-7.jpg",
+      "expected": [
+        "高纯原料，为什么还要重熔？",
+        "再进行单晶生长",
+        "多晶硅熔化"
+      ],
+      "observed": "03高纯原料，为什么还要重熔？多晶硅熔化再进行单晶生长",
+      "missing": []
+    },
+    {
+      "beat": "10-melt-01",
+      "file": "output/review-full/action-10-melt-01-7.jpg",
+      "expected": [
+        "一炉硅，怎样开始生长？",
+        "硅熔点约 1414 ℃",
+        "石英坩埚"
+      ],
+      "observed": "04一炉硅，怎样开始生长？石英坩埚硅熔点约1414°C",
+      "missing": []
+    },
+    {
+      "beat": "10-melt-02",
+      "file": "output/review-full/action-10-melt-02-7.jpg",
+      "expected": [
+        "一炉硅，怎样开始生长？",
+        "保持稳定生长界面",
+        "控制气氛与热场"
+      ],
+      "observed": "04一炉硅，怎样开始生长？控制气氛与热场保持稳定生长界面",
+      "missing": []
+    },
+    {
+      "beat": "10-melt-03",
+      "file": "output/review-full/action-10-melt-03-7.jpg",
+      "expected": [
+        "一炉硅，怎样开始生长？",
+        "调节电阻率",
+        "受控掺杂",
+        "受控掺杂原子"
+      ],
+      "observed": "04一炉硅，怎样开始生长？受控掺杂受控掺杂原子调节电阻率",
+      "missing": []
+    },
+    {
+      "beat": "11-seed-01",
+      "file": "output/review-full/action-11-seed-01-7.jpg",
+      "expected": [
+        "谁来决定原子往哪儿排？",
+        "已知晶格取向",
+        "籽晶"
+      ],
+      "observed": "04谁来决定原子往哪儿排？籽晶已知晶格取向",
+      "missing": []
+    },
+    {
+      "beat": "11-seed-02",
+      "file": "output/review-full/action-11-seed-02-7.jpg",
+      "expected": [
+        "谁来决定原子往哪儿排？",
+        "新晶体延续籽晶取向",
+        "接触 → 凝固 → 提拉"
+      ],
+      "observed": "04谁来决定原子往哪儿排？接触一凝固一提拉新晶体延续籽晶取向",
+      "missing": [
+        "接触 → 凝固 → 提拉"
+      ]
+    },
+    {
+      "beat": "11-seed-03",
+      "file": "output/review-full/action-11-seed-03-7.jpg",
+      "expected": [
+        "谁来决定原子往哪儿排？",
+        "时间经过压缩",
+        "旋转调节传热与输运"
+      ],
+      "observed": "04谁来决定原子往哪儿排？旋转调节传热与输运时间经过压缩",
+      "missing": []
+    },
+    {
+      "beat": "12-neck-01",
+      "file": "output/review-full/action-12-neck-01-7.jpg",
+      "expected": [
+        "为什么先拉出一根细颈？",
+        "局部放大示意",
+        "位错：线状晶格缺陷"
+      ],
+      "observed": "04为什么先拉出一根细颈？位错：线状晶格缺陷局部放大示意",
+      "missing": []
+    },
+    {
+      "beat": "12-neck-02",
+      "file": "output/review-full/action-12-neck-02-7.jpg",
+      "expected": [
+        "为什么先拉出一根细颈？",
+        "位错在侧面终止",
+        "缩颈"
+      ],
+      "observed": "04为什么先拉出一根细颈？缩颈位错在侧面终止",
+      "missing": []
+    },
+    {
+      "beat": "12-neck-03",
+      "file": "output/review-full/action-12-neck-03-7.jpg",
+      "expected": [
+        "为什么先拉出一根细颈？",
+        "为无位错生长创造条件",
+        "位错示意，不是裂缝"
+      ],
+      "observed": "04为什么先拉出一根细颈？位错示意，不是裂缝为无位错生长创造条件",
+      "missing": []
+    },
+    {
+      "beat": "13-growth-01",
+      "file": "output/review-full/action-13-growth-01-7.jpg",
+      "expected": [
+        "细颈怎样长成粗晶棒？",
+        "直径逐渐增大",
+        "放肩"
+      ],
+      "observed": "04细颈怎样长成粗晶棒？放肩直径逐渐增大",
+      "missing": []
+    },
+    {
+      "beat": "13-growth-02",
+      "file": "output/review-full/action-13-growth-02-7.jpg",
+      "expected": [
+        "细颈怎样长成粗晶棒？",
+        "新增晶体形成于界面",
+        "等径生长"
+      ],
+      "observed": "04细颈怎样长成粗晶棒？等径生长新增晶体形成于界面",
+      "missing": []
+    },
+    {
+      "beat": "13-growth-03",
+      "file": "output/review-full/action-13-growth-03-7.jpg",
+      "expected": [
+        "细颈怎样长成粗晶棒？",
+        "生长条件持续调节",
+        "真实单晶硅表面"
+      ],
+      "observed": "04细颈怎样长成粗晶棒？真实单晶硅表面生长条件持续调节",
+      "missing": []
+    },
+    {
+      "beat": "14-load-01",
+      "file": "output/review-full/action-14-load-01-7.jpg",
+      "expected": [
+        "晶棒越来越重，怎样稳住？",
+        "设备方案因工艺而异",
+        "承重与夹持"
+      ],
+      "observed": "04晶棒越来越重，怎样稳住？承重与夹持设备方案因工艺而异",
+      "missing": []
+    },
+    {
+      "beat": "14-load-02",
+      "file": "output/review-full/action-14-load-02-7.jpg",
+      "expected": [
+        "晶棒越来越重，怎样稳住？",
+        "影响界面条件",
+        "熔体对流"
+      ],
+      "observed": "04晶棒越来越重，怎样稳住？熔体对流影响界面条件",
+      "missing": []
+    },
+    {
+      "beat": "14-load-03",
+      "file": "output/review-full/action-14-load-03-7.jpg",
+      "expected": [
+        "晶棒越来越重，怎样稳住？",
+        "从头部控制到尾部",
+        "目标：稳定、均匀"
+      ],
+      "observed": "04晶棒越来越重，怎样稳住？目标：稳定、均匀从头部控制到尾部",
+      "missing": []
+    },
+    {
+      "beat": "15-magnetic-01",
+      "file": "output/review-full/action-15-magnetic-01-7.jpg",
+      "expected": [
+        "磁场为什么能帮助长晶？",
+        "调节导电熔体的流动",
+        "MCZ：磁控直拉"
+      ],
+      "observed": "04磁场为什么能帮助长晶？MCZ：磁控直拉调节导电熔体的流动",
+      "missing": []
+    },
+    {
+      "beat": "15-magnetic-02",
+      "file": "output/review-full/action-15-magnetic-02-7.jpg",
+      "expected": [
+        "磁场为什么能帮助长晶？",
+        "晶体仍由提拉机构牵引",
+        "磁场作用于流动"
+      ],
+      "observed": "04磁场为什么能帮助长晶？磁场作用于流动晶体仍由提拉机构牵引",
+      "missing": []
+    },
+    {
+      "beat": "15-magnetic-03",
+      "file": "output/review-full/action-15-magnetic-03-7.jpg",
+      "expected": [
+        "磁场为什么能帮助长晶？",
+        "输运影响晶体中的分布",
+        "氧可来自石英坩埚"
+      ],
+      "observed": "04磁场为什么能帮助长晶？氧可来自石英坩埚输运影响晶体中的分布",
+      "missing": []
+    },
+    {
+      "beat": "16-control-01",
+      "file": "output/review-full/action-16-control-01-7.jpg",
+      "expected": [
+        "需要控制的，不止是杂质总量",
+        "具体要求取决于用途",
+        "氧含量与热处理协同"
+      ],
+      "observed": "04需要控制的，不止是杂质总量氧含量与热处理协同具体要求取決于用途",
+      "missing": [
+        "具体要求取决于用途"
+      ]
+    },
+    {
+      "beat": "16-control-02",
+      "file": "output/review-full/action-16-control-02-7.jpg",
+      "expected": [
+        "需要控制的，不止是杂质总量",
+        "分凝现象",
+        "固相与液相浓度不同"
+      ],
+      "observed": "04需要控制的，不止是杂质总量固相与液相浓度不同分凝现象",
+      "missing": []
+    },
+    {
+      "beat": "16-control-03",
+      "file": "output/review-full/action-16-control-03-7.jpg",
+      "expected": [
+        "需要控制的，不止是杂质总量",
+        "径向均匀性",
+        "轴向均匀性"
+      ],
+      "observed": "04需要控制的，不止是杂质总量轴向均匀性径向均匀性",
+      "missing": []
+    },
+    {
+      "beat": "17-defects-01",
+      "file": "output/review-full/action-17-defects-01-7.jpg",
+      "expected": [
+        "没有位错，就毫无缺陷了吗？",
+        "原子与间距均为示意",
+        "点缺陷：原子尺度放大",
+        "空位",
+        "间隙原子"
+      ],
+      "observed": "04没有位错，就毫无缺陷了吗？点缺陷：原子尺度放大间隙原子原子与间距均为示意",
+      "missing": [
+        "空位"
+      ]
+    },
+    {
+      "beat": "17-defects-02",
+      "file": "output/review-full/action-17-defects-02-7.jpg",
+      "expected": [
+        "没有位错，就毫无缺陷了吗？",
+        "生长与冷却共同控制",
+        "点缺陷可能聚集",
+        "空位",
+        "间隙原子"
+      ],
+      "observed": "04没有位错，就毫无缺陷了吗？点缺陷可能聚集空位间隙原子生长与冷却共同控制",
+      "missing": []
+    },
+    {
+      "beat": "17-defects-03",
+      "file": "output/review-full/action-17-defects-03-7.jpg",
+      "expected": [
+        "没有位错，就毫无缺陷了吗？",
+        "不同指标分别控制",
+        "单晶 ≠ 绝对无缺陷",
+        "空位",
+        "间隙原子"
+      ],
+      "observed": "04没有位错，就毫无缺陷了吗？单晶 夫绝对无缺陷空位间隙原子不同指标分别控制",
+      "missing": [
+        "单晶 ≠ 绝对无缺陷"
+      ]
+    },
+    {
+      "beat": "18-trim-01",
+      "file": "output/review-full/action-18-trim-01-7.jpg",
+      "expected": [
+        "晶棒怎样变成圆片？",
+        "保留合格晶段",
+        "切头尾 / 外圆加工"
+      ],
+      "observed": "05晶棒怎样变成圆片？切头尾/外圆加工保留合格晶段",
+      "missing": []
+    },
+    {
+      "beat": "18-trim-02",
+      "file": "output/review-full/action-18-trim-02-7.jpg",
+      "expected": [
+        "晶棒怎样变成圆片？",
+        "缺口尺寸放大 · 晶向参照",
+        "定位缺口",
+        "晶向参照"
+      ],
+      "observed": "05晶棒怎样变成圆片？定位缺口晶向参照缺口尺寸放大•晶向参照",
+      "missing": []
+    },
+    {
+      "beat": "18-trim-03",
+      "file": "output/review-full/action-18-trim-03-7.jpg",
+      "expected": [
+        "晶棒怎样变成圆片？",
+        "同时形成平行切面",
+        "多线切割"
+      ],
+      "observed": "05晶棒怎样变成圆片？多线切割同时形成平行切面",
+      "missing": []
+    },
+    {
+      "beat": "19-slice-01",
+      "file": "output/review-full/action-19-slice-01-7.jpg",
+      "expected": [
+        "薄片，为什么不能一刀到位？",
+        "线径与片间距已放大",
+        "金刚线切割示意"
+      ],
+      "observed": "05薄片，为什么不能一刀到位？金刚线切割示意线径与片间距已放大",
+      "missing": []
+    },
+    {
+      "beat": "19-slice-02",
+      "file": "output/review-full/action-19-slice-02-7.jpg",
+      "expected": [
+        "薄片，为什么不能一刀到位？",
+        "切缝材料被去除",
+        "成品薄片"
+      ],
+      "observed": "05薄片，为什么不能一刀到位？成品薄片切缝材料被去除",
+      "missing": []
+    },
+    {
+      "beat": "19-slice-03",
+      "file": "output/review-full/action-19-slice-03-7.jpg",
+      "expected": [
+        "薄片，为什么不能一刀到位？",
+        "机械损伤层",
+        "锯痕"
+      ],
+      "observed": "05薄片，为什么不能一刀到位？锯痕机械损伤层",
+      "missing": []
+    },
+    {
+      "beat": "20-edge-01",
+      "file": "output/review-full/action-20-edge-01-7.jpg",
+      "expected": [
+        "为什么先照顾边缘？",
+        "降低崩边风险",
+        "边缘倒圆"
+      ],
+      "observed": "05为什么先照顾边缘？边缘倒圆降低崩边风险",
+      "missing": []
+    },
+    {
+      "beat": "20-edge-02",
+      "file": "output/review-full/action-20-edge-02-7.jpg",
+      "expected": [
+        "为什么先照顾边缘？",
+        "改善两面平行度",
+        "控制厚度"
+      ],
+      "observed": "05为什么先照顾边缘？控制厚度改善两面平行度",
+      "missing": []
+    },
+    {
+      "beat": "20-edge-03",
+      "file": "output/review-full/action-20-edge-03-7.jpg",
+      "expected": [
+        "为什么先照顾边缘？",
+        "去除加工损伤层",
+        "化学蚀刻"
+      ],
+      "observed": "05为什么先照顾边缘？化学蚀刻去除加工损伤层",
+      "missing": []
+    },
+    {
+      "beat": "21-polish-01",
+      "file": "output/review-full/action-21-polish-01-7.jpg",
+      "expected": [
+        "镜面，是怎样抛出来的？",
+        "CMP",
+        "化学作用 + 机械去除"
+      ],
+      "observed": "05镜面，是怎样抛出来的？化学作用＋机械去除CMP",
+      "missing": []
+    },
+    {
+      "beat": "21-polish-02",
+      "file": "output/review-full/action-21-polish-02-7.jpg",
+      "expected": [
+        "镜面，是怎样抛出来的？",
+        "逐步整平",
+        "表面起伏放大示意"
+      ],
+      "observed": "05镜面，是怎样抛出来的？表面起伏放大示意逐步整平",
+      "missing": []
+    },
+    {
+      "beat": "21-polish-03",
+      "file": "output/review-full/action-21-polish-03-7.jpg",
+      "expected": [
+        "镜面，是怎样抛出来的？",
+        "镜面外观之外，还要测量",
+        "双面加工 / 精抛"
+      ],
+      "observed": "05镜面，是怎样抛出来的？双面加工/精抛镜面外观之外，还要测量",
+      "missing": []
+    },
+    {
+      "beat": "22-flatness-01",
+      "file": "output/review-full/action-22-flatness-01-7.jpg",
+      "expected": [
+        "看着平，和真的够平",
+        "起伏放大示意 · 表面粗糙度",
+        "整片形状 / 局部平坦度"
+      ],
+      "observed": "05看着平，和真的够平整片形状/局部平坦度起伏放大示意•表面粗糙度",
+      "missing": []
+    },
+    {
+      "beat": "22-flatness-02",
+      "file": "output/review-full/action-22-flatness-02-7.jpg",
+      "expected": [
+        "看着平，和真的够平",
+        "起伏放大示意 · 高度差影响成像",
+        "焦平面"
+      ],
+      "observed": "05看着平，和真的够平起伏放大示意•高度差影响成像焦平面",
+      "missing": []
+    },
+    {
+      "beat": "22-flatness-03",
+      "file": "output/review-full/action-22-flatness-03-7.jpg",
+      "expected": [
+        "看着平，和真的够平",
+        "起伏放大示意 · 各项指标分别验收",
+        "平整度由用途决定"
+      ],
+      "observed": "05看着平，和真的够平平整度由用途决定起伏放大示意•各项指标分别验收",
+      "missing": []
+    },
+    {
+      "beat": "23-clean-01",
+      "file": "output/review-full/action-23-clean-01-7.jpg",
+      "expected": [
+        "抛光结束，为什么还不能出厂？",
+        "金属污染",
+        "颗粒 / 有机残留"
+      ],
+      "observed": "06抛光结束，为什么还不能出厂？颗粒/有机残留金属污染",
+      "missing": []
+    },
+    {
+      "beat": "23-clean-02",
+      "file": "output/review-full/action-23-clean-02-7.jpg",
+      "expected": [
+        "抛光结束，为什么还不能出厂？",
+        "具体配方因工艺而异",
+        "分步清洗 → 漂洗 → 干燥"
+      ],
+      "observed": "06抛光结束，为什么还不能出厂？分步清洗一漂洗一干燥具体配方因工艺而异",
+      "missing": [
+        "分步清洗 → 漂洗 → 干燥"
+      ]
+    },
+    {
+      "beat": "23-clean-03",
+      "file": "output/review-full/action-23-clean-03-7.jpg",
+      "expected": [
+        "抛光结束，为什么还不能出厂？",
+        "控制二次污染",
+        "洁净搬运"
+      ],
+      "observed": "06抛光结束，为什么还不能出厂？洁净搬运控制二次污染",
+      "missing": []
+    },
+    {
+      "beat": "24-epitaxy-01",
+      "file": "output/review-full/action-24-epitaxy-01-7.jpg",
+      "expected": [
+        "有些硅片，为什么再长一层？",
+        "原子尺度放大 · 在衬底上生长单晶层",
+        "外延：可选加工",
+        "衬底",
+        "新生外延层"
+      ],
+      "observed": "06有些硅片，为什么再长一层？外延：可选加工新生外延层衬底原子尺度放大•在衬底上生长单晶层",
+      "missing": []
+    },
+    {
+      "beat": "24-epitaxy-02",
+      "file": "output/review-full/action-24-epitaxy-02-7.jpg",
+      "expected": [
+        "有些硅片，为什么再长一层？",
+        "原子尺度放大 · 外延层：厚度与电阻率受控",
+        "晶格取向连续",
+        "衬底",
+        "新生外延层"
+      ],
+      "observed": "06有些硅片，为什么再长一层？晶格取向连续新生外延层衬底原子尺度放大• 外延层：厚度与电阻率受控",
+      "missing": []
+    },
+    {
+      "beat": "24-epitaxy-03",
+      "file": "output/review-full/action-24-epitaxy-03-7.jpg",
+      "expected": [
+        "有些硅片，为什么再长一层？",
+        "原子尺度放大 · 按产品需求选择",
+        "抛光片 / 外延片",
+        "衬底",
+        "新生外延层"
+      ],
+      "observed": "06有些硅片，为什么再长一层？抛光片/外延片新生外延层衬底原子尺度放大• 按产品需求选择",
+      "missing": []
+    },
+    {
+      "beat": "25-inspect-01",
+      "file": "output/review-full/action-25-inspect-01-7.jpg",
+      "expected": [
+        "怎样证明每片都合格？",
+        "多项指标分别检测",
+        "外观不是验收结论"
+      ],
+      "observed": "07怎样证明每片都合格？外观不是验收结论多项指标分别检测",
+      "missing": []
+    },
+    {
+      "beat": "25-inspect-02",
+      "file": "output/review-full/action-25-inspect-02-7.jpg",
+      "expected": [
+        "怎样证明每片都合格？",
+        "扫描轨迹示意",
+        "光学表面检查"
+      ],
+      "observed": "07怎样证明每片都合格？光学表面检查扫描轨迹示意",
+      "missing": []
+    },
+    {
+      "beat": "25-inspect-03",
+      "file": "output/review-full/action-25-inspect-03-7.jpg",
+      "expected": [
+        "怎样证明每片都合格？",
+        "起伏放大示意 · 与颗粒检查分开",
+        "厚度 / 平整度 / 翘曲"
+      ],
+      "observed": "07怎样证明每片都合格？厚度/平整度/翘曲起伏放大示意• 与颗粒检查分开",
+      "missing": []
+    },
+    {
+      "beat": "26-shipping-01",
+      "file": "output/review-full/action-26-shipping-01-7.jpg",
+      "expected": [
+        "离开工厂，洁净还要继续",
+        "贯穿制造流程",
+        "身份标记与批次记录"
+      ],
+      "observed": "07离开工厂，洁净还要继续身份标记与批次记录贯穿制造流程",
+      "missing": []
+    },
+    {
+      "beat": "26-shipping-02",
+      "file": "output/review-full/action-26-shipping-02-7.jpg",
+      "expected": [
+        "离开工厂，洁净还要继续",
+        "保护表面与边缘",
+        "专用洁净运输盒"
+      ],
+      "observed": "07离开工厂，洁净还要继续专用洁净运输盒保护表面与边缘",
+      "missing": []
+    },
+    {
+      "beat": "26-shipping-03",
+      "file": "output/review-full/action-26-shipping-03-7.jpg",
+      "expected": [
+        "离开工厂，洁净还要继续",
+        "器件制造随后开始",
+        "硅片制备完成"
+      ],
+      "observed": "07离开工厂，洁净还要继续硅片制备完成器件制造随后开始",
+      "missing": []
+    },
+    {
+      "beat": "27-industry-01",
+      "file": "output/review-full/action-27-industry-01-7.jpg",
+      "expected": [
+        "难的不只是做出一片",
+        "适配客户工艺",
+        "批次一致性"
+      ],
+      "observed": "07难的不只是做出一片批次一致性适配客户工艺",
+      "missing": []
+    },
+    {
+      "beat": "27-industry-02",
+      "file": "output/review-full/action-27-industry-02-7.jpg",
+      "expected": [
+        "难的不只是做出一片",
+        "不以图形面积表示份额",
+        "主要供应商示例"
+      ],
+      "observed": "07难的不只是做出一片主要供应商示例不以图形面积表示份额",
+      "missing": []
+    },
+    {
+      "beat": "27-industry-03",
+      "file": "output/review-full/action-27-industry-03-7.jpg",
+      "expected": [
+        "难的不只是做出一片",
+        "共同决定量产能力",
+        "质量 / 验证 / 交付"
+      ],
+      "observed": "07难的不只是做出一片质量/验证/交付共同決定量产能力",
+      "missing": [
+        "共同决定量产能力"
+      ]
+    },
+    {
+      "beat": "28-recap-01",
+      "file": "output/review-full/action-28-recap-01-7.jpg",
+      "expected": [
+        "从石头，到芯片的起点",
+        "改变组成，再净化原料",
+        "还原 → 提纯"
+      ],
+      "observed": "08从石头，到芯片的起点还原一提纯改变组成，再净化原料",
+      "missing": [
+        "还原 → 提纯"
+      ]
+    },
+    {
+      "beat": "28-recap-02",
+      "file": "output/review-full/action-28-recap-02-7.jpg",
+      "expected": [
+        "从石头，到芯片的起点",
+        "每个环节都有自己的指标",
+        "单晶生长 → 表面加工"
+      ],
+      "observed": "08从石头，到芯片的起点单晶生长一表面加工每个环节都有自己的指标",
+      "missing": [
+        "单晶生长 → 表面加工"
+      ]
+    },
+    {
+      "beat": "28-recap-03",
+      "file": "output/review-full/action-28-recap-03-7.jpg",
+      "expected": [
+        "从石头，到芯片的起点",
+        "一整条精密制造链",
+        "一片硅"
+      ],
+      "observed": "08从石头，到芯片的起点一片硅一整条精密制造链",
+      "missing": []
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "config": {
+    "text": "部分产品还要外延：在受控条件下，让气相原料在硅片表面形成新的单晶层。新层延续下面的晶格取向，同时按要求控制厚度和电阻率，提供所需材料特性。这不是贴一层膜。抛光片和外延片，服务不同的使用要求，外延也并非必经步骤。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 2662080,
+      "text": "部分"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3740830,
+      "duration": 4166660,
+      "text": "产品"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8138750,
+      "duration": 2199160,
+      "text": "还要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 10453750,
+      "duration": 4050830,
+      "text": "外延"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17398330,
+      "duration": 1736250,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 19250000,
+      "duration": 3125000,
+      "text": "受控"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22490830,
+      "duration": 2893330,
+      "text": "条件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25384160,
+      "duration": 3009160,
+      "text": "下"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 31287080,
+      "duration": 1851660,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 33254580,
+      "duration": 3125000,
+      "text": "气相"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 36495410,
+      "duration": 4166660,
+      "text": "原料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 41587910,
+      "duration": 1736250,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43440000,
+      "duration": 3240830,
+      "text": "硅片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46796250,
+      "duration": 4398330,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52120410,
+      "duration": 3472080,
+      "text": "形成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55824160,
+      "duration": 2314580,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58138750,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58949160,
+      "duration": 5671250,
+      "text": "单晶层"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69907500,
+      "duration": 2662080,
+      "text": "新"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72569580,
+      "duration": 1620410,
+      "text": "层"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74421250,
+      "duration": 2662080,
+      "text": "延续"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 77199160,
+      "duration": 2777500,
+      "text": "下面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 79976660,
+      "duration": 925830,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81134160,
+      "duration": 2777910,
+      "text": "晶格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84027910,
+      "duration": 4050830,
+      "text": "取向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90972080,
+      "duration": 3240830,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 1273330,
+      "text": "按"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 95717500,
+      "duration": 3703750,
+      "text": "要求"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99652910,
+      "duration": 2662080,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102430410,
+      "duration": 4166660,
+      "text": "厚度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 106828750,
+      "duration": 1273330,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 108217500,
+      "duration": 3125000,
+      "text": "电阻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111342500,
+      "duration": 1851660,
+      "text": "率"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115393330,
+      "duration": 3240830,
+      "text": "提供"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 118865830,
+      "duration": 2314580,
+      "text": "所"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121180410,
+      "duration": 1736250,
+      "text": "需"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123032500,
+      "duration": 3472080,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126620410,
+      "duration": 3703750,
+      "text": "特性"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 135648330,
+      "duration": 1735830,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 137384160,
+      "duration": 2083330,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139583330,
+      "duration": 1736250,
+      "text": "贴"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141319580,
+      "duration": 810000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 142129580,
+      "duration": 1620410,
+      "text": "层"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143750000,
+      "duration": 3587910,
+      "text": "膜"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 152546250,
+      "duration": 6018330,
+      "text": "抛光片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 158796250,
+      "duration": 925830,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159837910,
+      "duration": 5092500,
+      "text": "外延片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168518330,
+      "duration": 3009160,
+      "text": "服务"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 171759160,
+      "duration": 2546250,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 174305410,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 175231660,
+      "duration": 1967500,
+      "text": "使用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 177315000,
+      "duration": 5092500,
+      "text": "要求"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 185069580,
+      "duration": 4166660,
+      "text": "外延"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189467500,
+      "duration": 925830,
+      "text": "也"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 190509160,
+      "duration": 3240830,
+      "text": "并非"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193981660,
+      "duration": 2315000,
+      "text": "必经"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 196412080,
+      "duration": 3587910,
+      "text": "步骤"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "8e1d02a708e9641db6e2ca6a43a071e7709adca2e48c505021ba67fad6ac259c"
+}

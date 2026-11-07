@@ -1,0 +1,347 @@
+{
+  "config": {
+    "text": "热冲击可能引入位错。这是晶格中的线状缺陷，还可能在后续生长中延伸。先拉出很细的颈部，让表面更近，使合适方向的位错在侧壁终止。这叫缩颈。细颈关系到整根晶棒的品质。图中的红线表示位错，不是实际可见的裂缝。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 1851660,
+      "text": "热"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 2815000,
+      "duration": 4398330,
+      "text": "冲击"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8254580,
+      "duration": 2777910,
+      "text": "可能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11148330,
+      "duration": 1967500,
+      "text": "引入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13231660,
+      "duration": 4166660,
+      "text": "位错"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 22685000,
+      "duration": 2662080,
+      "text": "这是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 25578750,
+      "duration": 2662080,
+      "text": "晶格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28240830,
+      "duration": 1272910,
+      "text": "中"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 29513750,
+      "duration": 810000,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30555410,
+      "duration": 3472080,
+      "text": "线状"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34143330,
+      "duration": 4976660,
+      "text": "缺陷"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42245410,
+      "duration": 1736250,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43981660,
+      "duration": 2315000,
+      "text": "可能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 46412080,
+      "duration": 1041660,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47685000,
+      "duration": 5671250,
+      "text": "后续生"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53472080,
+      "duration": 4513750,
+      "text": "长中"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58101660,
+      "duration": 4050830,
+      "text": "延伸"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 67476660,
+      "duration": 2199160,
+      "text": "先"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 69675830,
+      "duration": 2662080,
+      "text": "拉出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72569580,
+      "duration": 1620410,
+      "text": "很"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 74190000,
+      "duration": 1272910,
+      "text": "细"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75462910,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76273330,
+      "duration": 3935000,
+      "text": "颈部"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82060000,
+      "duration": 1504580,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 83680410,
+      "duration": 3472080,
+      "text": "表面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 87268330,
+      "duration": 1851660,
+      "text": "更"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 89120410,
+      "duration": 2083330,
+      "text": "近"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 2199160,
+      "text": "使"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96643330,
+      "duration": 3009160,
+      "text": "合适"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99768330,
+      "duration": 2662080,
+      "text": "方向"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102430410,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 103240830,
+      "duration": 4745410,
+      "text": "位错"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 109027910,
+      "duration": 1620410,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 110763750,
+      "duration": 3472080,
+      "text": "侧壁"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 114351660,
+      "duration": 3356660,
+      "text": "终止"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123032500,
+      "duration": 2546250,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 125578750,
+      "duration": 1157500,
+      "text": "叫"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126851660,
+      "duration": 4745410,
+      "text": "缩颈"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 136921250,
+      "duration": 4166660,
+      "text": "细颈"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 141319580,
+      "duration": 2662080,
+      "text": "关系"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143981660,
+      "duration": 1620410,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 145833330,
+      "duration": 3009160,
+      "text": "整根"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148958330,
+      "duration": 2546250,
+      "text": "晶棒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151504580,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 152315000,
+      "duration": 4976660,
+      "text": "品质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162615830,
+      "duration": 1967500,
+      "text": "图"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164583330,
+      "duration": 1041660,
+      "text": "中"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165625000,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 166435000,
+      "duration": 3819580,
+      "text": "红线"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170486250,
+      "duration": 2430410,
+      "text": "表示"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 173032500,
+      "duration": 4629580,
+      "text": "位错"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180092500,
+      "duration": 2662080,
+      "text": "不是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182870410,
+      "duration": 3356660,
+      "text": "实际"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 186342500,
+      "duration": 3125000,
+      "text": "可见"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189467500,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 190162080,
+      "duration": 3356660,
+      "text": "裂缝"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "451a716c691b139f578ca8e509cbd4223d22eeb265e18aaa5948e7f5692e4492"
+}

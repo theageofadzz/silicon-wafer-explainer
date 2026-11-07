@@ -1,0 +1,317 @@
+{
+  "config": {
+    "text": "硅很脆，尖边容易崩缺并产生颗粒。把边缘加工成圆滑轮廓，可以降低风险。研磨让两面更平行，厚度接近目标。控制的是整片几何，不只把正面磨亮。机械加工可能留下损伤。再用化学蚀刻移除一定材料，进一步去掉受损层。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 1967500,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 3046250,
+      "duration": 1504580,
+      "text": "很"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 4550830,
+      "duration": 3240830,
+      "text": "脆"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11263750,
+      "duration": 2315000,
+      "text": "尖"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 13578750,
+      "duration": 1736250,
+      "text": "边"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 15546250,
+      "duration": 1967500,
+      "text": "容易"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 17629580,
+      "duration": 4976660,
+      "text": "崩缺"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 23532500,
+      "duration": 1273330,
+      "text": "并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24921250,
+      "duration": 3125000,
+      "text": "产生"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 28162080,
+      "duration": 3819580,
+      "text": "颗粒"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37268330,
+      "duration": 1736250,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 39120410,
+      "duration": 3587910,
+      "text": "边缘"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 42940000,
+      "duration": 3009160,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45949160,
+      "duration": 1388750,
+      "text": "成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47569580,
+      "duration": 2777910,
+      "text": "圆滑"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 50462910,
+      "duration": 4050830,
+      "text": "轮廓"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56828750,
+      "duration": 2199160,
+      "text": "可以"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59143330,
+      "duration": 2662080,
+      "text": "降低"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 61921250,
+      "duration": 3587910,
+      "text": "风险"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 70833330,
+      "duration": 4282500,
+      "text": "研磨"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75347080,
+      "duration": 1273330,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76736250,
+      "duration": 3587910,
+      "text": "两面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 80555410,
+      "duration": 1736250,
+      "text": "更"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 82291660,
+      "duration": 4745410,
+      "text": "平行"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 90162080,
+      "duration": 4513750,
+      "text": "厚度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94907500,
+      "duration": 2893330,
+      "text": "接近"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 97916660,
+      "duration": 3819580,
+      "text": "目标"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107060000,
+      "duration": 3356660,
+      "text": "控制"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 110416660,
+      "duration": 925830,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 111574160,
+      "duration": 810000,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112500000,
+      "duration": 3125000,
+      "text": "整片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115740830,
+      "duration": 4861250,
+      "text": "几何"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123495410,
+      "duration": 2662080,
+      "text": "不只"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126273330,
+      "duration": 1041660,
+      "text": "把"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127430410,
+      "duration": 2662080,
+      "text": "正面"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 130208330,
+      "duration": 3587910,
+      "text": "磨亮"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 139120410,
+      "duration": 3935000,
+      "text": "机械"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143171250,
+      "duration": 4745410,
+      "text": "加工"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148842500,
+      "duration": 2662080,
+      "text": "可能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 151620410,
+      "duration": 2430410,
+      "text": "留下"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 154166660,
+      "duration": 4513750,
+      "text": "损伤"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 164004580,
+      "duration": 1736250,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 165740830,
+      "duration": 1967500,
+      "text": "用"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 167940000,
+      "duration": 3125000,
+      "text": "化学"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 171180410,
+      "duration": 5092500,
+      "text": "蚀刻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 177199160,
+      "duration": 3356660,
+      "text": "移除"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 180787080,
+      "duration": 2083330,
+      "text": "一定"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182986250,
+      "duration": 4513750,
+      "text": "材料"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189467500,
+      "duration": 4398330,
+      "text": "进一步"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193981660,
+      "duration": 3356660,
+      "text": "去掉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 197569580,
+      "duration": 6481660,
+      "text": "受损层"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "a295879fd6666e84fdffecdcac230560e06d1ab93fe70763a5f373d6137725a6"
+}

@@ -1,0 +1,2691 @@
+{
+  "status": "mismatches-need-visual-review",
+  "engine": "Apple Vision accurate / zh-Hans,en-US / correction disabled",
+  "encodedSha256": "d6762872e750e480a729efb362e23eb6d63d23a696b9265ddff916de3e6c19a7",
+  "count": 335,
+  "matched": 330,
+  "comparison": "letters and digits; punctuation and whitespace excluded",
+  "limits": "Caption OCR does not verify explanatory labels, narration or scientific meaning.",
+  "results": [
+    {
+      "time": 0.6666666666666666,
+      "beat": "01-start-01",
+      "expected": "芯片开始时",
+      "observed": "芯片开始时",
+      "match": true,
+      "crop": "output/review-full/caption-0000-crop.png"
+    },
+    {
+      "time": 2.0,
+      "beat": "01-start-01",
+      "expected": "没有那些复杂线路",
+      "observed": "没有那些复杂线路",
+      "match": true,
+      "crop": "output/review-full/caption-0001-crop.png"
+    },
+    {
+      "time": 3.75,
+      "beat": "01-start-01",
+      "expected": "它先是一片薄薄的硅",
+      "observed": "它先是一片薄薄的硅",
+      "match": true,
+      "crop": "output/review-full/caption-0002-crop.png"
+    },
+    {
+      "time": 5.291666666666667,
+      "beat": "01-start-01",
+      "expected": "表面亮得像镜子",
+      "observed": "表面亮得像镜子",
+      "match": true,
+      "crop": "output/review-full/caption-0003-crop.png"
+    },
+    {
+      "time": 7.125,
+      "beat": "01-start-02",
+      "expected": "常见的三百毫米硅片",
+      "observed": "常见的三百毫米硅片",
+      "match": true,
+      "crop": "output/review-full/caption-0004-crop.png"
+    },
+    {
+      "time": 8.791666666666666,
+      "beat": "01-start-02",
+      "expected": "直径接近餐盘",
+      "observed": "直径接近餐盘",
+      "match": true,
+      "crop": "output/review-full/caption-0005-crop.png"
+    },
+    {
+      "time": 10.625,
+      "beat": "01-start-02",
+      "expected": "厚度却只有零点七七五毫米",
+      "observed": "厚度却只有零点七七五毫米",
+      "match": true,
+      "crop": "output/review-full/caption-0006-crop.png"
+    },
+    {
+      "time": 12.625,
+      "beat": "01-start-03",
+      "expected": "材料里的杂质",
+      "observed": "材料里的杂质",
+      "match": true,
+      "crop": "output/review-full/caption-0007-crop.png"
+    },
+    {
+      "time": 14.375,
+      "beat": "01-start-03",
+      "expected": "原子的排列和表面的高低",
+      "observed": "原子的排列和表面的高低",
+      "match": true,
+      "crop": "output/review-full/caption-0008-crop.png"
+    },
+    {
+      "time": 16.125,
+      "beat": "01-start-03",
+      "expected": "都要受到控制",
+      "observed": "都要受到控制",
+      "match": true,
+      "crop": "output/review-full/caption-0009-crop.png"
+    },
+    {
+      "time": 17.583333333333332,
+      "beat": "01-start-03",
+      "expected": "它究竟怎么做出来",
+      "observed": "它究竟怎么做出来",
+      "match": true,
+      "crop": "output/review-full/caption-0010-crop.png"
+    },
+    {
+      "time": 20.166666666666668,
+      "beat": "02-purity-01",
+      "expected": "百分之九十九",
+      "observed": "百分之九十九",
+      "match": true,
+      "crop": "output/review-full/caption-0011-crop.png"
+    },
+    {
+      "time": 21.666666666666668,
+      "beat": "02-purity-01",
+      "expected": "就是平均每一百份里面",
+      "observed": "就是平均每一百份里面",
+      "match": true,
+      "crop": "output/review-full/caption-0012-crop.png"
+    },
+    {
+      "time": 23.333333333333332,
+      "beat": "02-purity-01",
+      "expected": "还混着一份别的东西",
+      "observed": "还混着一份别的东西",
+      "match": true,
+      "crop": "output/review-full/caption-0013-crop.png"
+    },
+    {
+      "time": 25.125,
+      "beat": "02-purity-01",
+      "expected": "离芯片的要求还远",
+      "observed": "离芯片的要求还远",
+      "match": true,
+      "crop": "output/review-full/caption-0014-crop.png"
+    },
+    {
+      "time": 27.333333333333332,
+      "beat": "02-purity-02",
+      "expected": "电子级多晶硅能达到十个",
+      "observed": "电子级多晶硅能达到十个",
+      "match": true,
+      "crop": "output/review-full/caption-0015-crop.png"
+    },
+    {
+      "time": 29.125,
+      "beat": "02-purity-02",
+      "expected": "甚至十一个九",
+      "observed": "甚至十一个九",
+      "match": true,
+      "crop": "output/review-full/caption-0016-crop.png"
+    },
+    {
+      "time": 30.583333333333332,
+      "beat": "02-purity-02",
+      "expected": "每多一个九",
+      "observed": "每多一个九",
+      "match": true,
+      "crop": "output/review-full/caption-0017-crop.png"
+    },
+    {
+      "time": 32.041666666666664,
+      "beat": "02-purity-02",
+      "expected": "剩余杂质再少十倍",
+      "observed": "剩余杂质再少十倍",
+      "match": true,
+      "crop": "output/review-full/caption-0018-crop.png"
+    },
+    {
+      "time": 34.041666666666664,
+      "beat": "02-purity-03",
+      "expected": "这是高纯原料的指标",
+      "observed": "这是高纯原料的指标",
+      "match": true,
+      "crop": "output/review-full/caption-0019-crop.png"
+    },
+    {
+      "time": 36.208333333333336,
+      "beat": "02-purity-03",
+      "expected": "后面有意加入的掺杂元素",
+      "observed": "后面有意加入的掺杂元素",
+      "match": true,
+      "crop": "output/review-full/caption-0020-crop.png"
+    },
+    {
+      "time": 38.375,
+      "beat": "02-purity-03",
+      "expected": "要和失控的污染分开理解",
+      "observed": "要和失控的污染分开理解",
+      "match": true,
+      "crop": "output/review-full/caption-0021-crop.png"
+    },
+    {
+      "time": 41.166666666666664,
+      "beat": "03-order-01",
+      "expected": "全是硅",
+      "observed": "全是硅",
+      "match": true,
+      "crop": "output/review-full/caption-0022-crop.png"
+    },
+    {
+      "time": 42.291666666666664,
+      "beat": "03-order-01",
+      "expected": "也不等于合格",
+      "observed": "也不等于合格",
+      "match": true,
+      "crop": "output/review-full/caption-0023-crop.png"
+    },
+    {
+      "time": 44.041666666666664,
+      "beat": "03-order-01",
+      "expected": "不同区域各排各的",
+      "observed": "不同区域各排各的",
+      "match": true,
+      "crop": "output/review-full/caption-0024-crop.png"
+    },
+    {
+      "time": 45.625,
+      "beat": "03-order-01",
+      "expected": "取向不同的交界处",
+      "observed": "取向不同的交界处",
+      "match": true,
+      "crop": "output/review-full/caption-0025-crop.png"
+    },
+    {
+      "time": 46.875,
+      "beat": "03-order-01",
+      "expected": "就会出现晶界",
+      "observed": "就会出现晶界",
+      "match": true,
+      "crop": "output/review-full/caption-0026-crop.png"
+    },
+    {
+      "time": 48.833333333333336,
+      "beat": "03-order-02",
+      "expected": "单晶延续同一套晶格取向",
+      "observed": "单晶延续同一套晶格取向",
+      "match": true,
+      "crop": "output/review-full/caption-0027-crop.png"
+    },
+    {
+      "time": 50.875,
+      "beat": "03-order-02",
+      "expected": "像一张连续的网",
+      "observed": "像一张连续的网",
+      "match": true,
+      "crop": "output/review-full/caption-0028-crop.png"
+    },
+    {
+      "time": 53.083333333333336,
+      "beat": "03-order-02",
+      "expected": "而不是把几块不同方向的网拼接",
+      "observed": "而不是把几块不同方向的网拼接",
+      "match": true,
+      "crop": "output/review-full/caption-0029-crop.png"
+    },
+    {
+      "time": 55.625,
+      "beat": "03-order-03",
+      "expected": "我们从石头中取出硅",
+      "observed": "我们从石头中取出硅",
+      "match": true,
+      "crop": "output/review-full/caption-0030-crop.png"
+    },
+    {
+      "time": 56.916666666666664,
+      "beat": "03-order-03",
+      "expected": "提纯",
+      "observed": "提纯",
+      "match": true,
+      "crop": "output/review-full/caption-0031-crop.png"
+    },
+    {
+      "time": 57.833333333333336,
+      "beat": "03-order-03",
+      "expected": "长成单晶",
+      "observed": "长成单晶",
+      "match": true,
+      "crop": "output/review-full/caption-0032-crop.png"
+    },
+    {
+      "time": 58.875,
+      "beat": "03-order-03",
+      "expected": "再加工表面",
+      "observed": "再加工表面",
+      "match": true,
+      "crop": "output/review-full/caption-0033-crop.png"
+    },
+    {
+      "time": 60.458333333333336,
+      "beat": "03-order-03",
+      "expected": "先从石英开始",
+      "observed": "先从石英开始",
+      "match": true,
+      "crop": "output/review-full/caption-0034-crop.png"
+    },
+    {
+      "time": 63.0,
+      "beat": "04-quartz-01",
+      "expected": "真实的石英",
+      "observed": "真实的石英",
+      "match": true,
+      "crop": "output/review-full/caption-0035-crop.png"
+    },
+    {
+      "time": 64.04166666666667,
+      "beat": "04-quartz-01",
+      "expected": "可以透明",
+      "observed": "可以透明",
+      "match": true,
+      "crop": "output/review-full/caption-0036-crop.png"
+    },
+    {
+      "time": 65.04166666666667,
+      "beat": "04-quartz-01",
+      "expected": "也可以乳白",
+      "observed": "也可以乳白",
+      "match": true,
+      "crop": "output/review-full/caption-0037-crop.png"
+    },
+    {
+      "time": 66.5,
+      "beat": "04-quartz-01",
+      "expected": "它的主要成分",
+      "observed": "它的主要成分",
+      "match": true,
+      "crop": "output/review-full/caption-0038-crop.png"
+    },
+    {
+      "time": 67.75,
+      "beat": "04-quartz-01",
+      "expected": "是二氧化硅",
+      "observed": "是二氧化硅",
+      "match": true,
+      "crop": "output/review-full/caption-0039-crop.png"
+    },
+    {
+      "time": 69.625,
+      "beat": "04-quartz-02",
+      "expected": "这里的硅与氧结合在一起",
+      "observed": "这里的硅与氧结合在一起",
+      "match": true,
+      "crop": "output/review-full/caption-0040-crop.png"
+    },
+    {
+      "time": 71.54166666666667,
+      "beat": "04-quartz-02",
+      "expected": "要得到单质硅",
+      "observed": "要得到单质硅",
+      "match": true,
+      "crop": "output/review-full/caption-0041-crop.png"
+    },
+    {
+      "time": 73.04166666666667,
+      "beat": "04-quartz-02",
+      "expected": "必须通过化学反应",
+      "observed": "必须通过化学反应",
+      "match": true,
+      "crop": "output/review-full/caption-0042-crop.png"
+    },
+    {
+      "time": 74.33333333333333,
+      "beat": "04-quartz-02",
+      "expected": "把它们分开",
+      "observed": "把它们分开",
+      "match": true,
+      "crop": "output/review-full/caption-0043-crop.png"
+    },
+    {
+      "time": 75.54166666666667,
+      "beat": "04-quartz-03",
+      "expected": "所以",
+      "observed": "所以",
+      "match": true,
+      "crop": "output/review-full/caption-0044-crop.png"
+    },
+    {
+      "time": 76.75,
+      "beat": "04-quartz-03",
+      "expected": "沙子洗得再干净",
+      "observed": "沙子洗得再干净",
+      "match": true,
+      "crop": "output/review-full/caption-0045-crop.png"
+    },
+    {
+      "time": 78.16666666666667,
+      "beat": "04-quartz-03",
+      "expected": "也不能直接做芯片",
+      "observed": "也不能直接做芯片",
+      "match": true,
+      "crop": "output/review-full/caption-0046-crop.png"
+    },
+    {
+      "time": 79.70833333333333,
+      "beat": "04-quartz-03",
+      "expected": "洗掉泥土",
+      "observed": "洗掉泥土",
+      "match": true,
+      "crop": "output/review-full/caption-0047-crop.png"
+    },
+    {
+      "time": 80.91666666666667,
+      "beat": "04-quartz-03",
+      "expected": "并没有改变物质",
+      "observed": "并没有改变物质",
+      "match": true,
+      "crop": "output/review-full/caption-0048-crop.png"
+    },
+    {
+      "time": 84.16666666666667,
+      "beat": "05-furnace-01",
+      "expected": "石英和碳质还原剂进入电炉",
+      "observed": "石英和碳质还原剂进入电炉",
+      "match": true,
+      "crop": "output/review-full/caption-0049-crop.png"
+    },
+    {
+      "time": 86.41666666666667,
+      "beat": "05-furnace-01",
+      "expected": "电极送入能量",
+      "observed": "电极送入能量",
+      "match": true,
+      "crop": "output/review-full/caption-0050-crop.png"
+    },
+    {
+      "time": 87.58333333333333,
+      "beat": "05-furnace-01",
+      "expected": "在高温区域",
+      "observed": "在高温区域",
+      "match": true,
+      "crop": "output/review-full/caption-0051-crop.png"
+    },
+    {
+      "time": 88.75,
+      "beat": "05-furnace-01",
+      "expected": "让还原反应发生",
+      "observed": "让还原反应发生",
+      "match": true,
+      "crop": "output/review-full/caption-0052-crop.png"
+    },
+    {
+      "time": 90.5,
+      "beat": "05-furnace-02",
+      "expected": "合并看这组反应",
+      "observed": "合并看这组反应",
+      "match": true,
+      "crop": "output/review-full/caption-0053-crop.png"
+    },
+    {
+      "time": 92.5,
+      "beat": "05-furnace-02",
+      "expected": "氧主要随一氧化碳离开",
+      "observed": "氧主要随一氧化碳离开",
+      "match": true,
+      "crop": "output/review-full/caption-0054-crop.png"
+    },
+    {
+      "time": 94.625,
+      "beat": "05-furnace-02",
+      "expected": "液态硅汇集炉底",
+      "observed": "液态硅汇集炉底",
+      "match": true,
+      "crop": "output/review-full/caption-0055-crop.png"
+    },
+    {
+      "time": 96.08333333333333,
+      "beat": "05-furnace-02",
+      "expected": "再从出料口放出",
+      "observed": "再从出料口放出",
+      "match": true,
+      "crop": "output/review-full/caption-0056-crop.png"
+    },
+    {
+      "time": 98.5,
+      "beat": "05-furnace-03",
+      "expected": "工业硅的纯度通常约百分之九十八到",
+      "observed": "工业硅的纯度通常约百分之九十八到",
+      "match": true,
+      "crop": "output/review-full/caption-0057-crop.png"
+    },
+    {
+      "time": 100.125,
+      "beat": "05-furnace-03",
+      "expected": "九十九",
+      "observed": "九十九",
+      "match": true,
+      "crop": "output/review-full/caption-0058-crop.png"
+    },
+    {
+      "time": 101.375,
+      "beat": "05-furnace-03",
+      "expected": "硅炼出来了",
+      "observed": "硅炼出来了",
+      "match": true,
+      "crop": "output/review-full/caption-0059-crop.png"
+    },
+    {
+      "time": 102.625,
+      "beat": "05-furnace-03",
+      "expected": "但还远远不够纯",
+      "observed": "但还远远不够纯",
+      "match": true,
+      "crop": "output/review-full/caption-0060-crop.png"
+    },
+    {
+      "time": 105.20833333333333,
+      "beat": "06-transform-01",
+      "expected": "杂质筛不出来",
+      "observed": "杂质筛不出来",
+      "match": true,
+      "crop": "output/review-full/caption-0061-crop.png"
+    },
+    {
+      "time": 106.33333333333333,
+      "beat": "06-transform-01",
+      "expected": "怎么办",
+      "observed": "怎么办",
+      "match": true,
+      "crop": "output/review-full/caption-0062-crop.png"
+    },
+    {
+      "time": 107.58333333333333,
+      "beat": "06-transform-01",
+      "expected": "一条典型路线",
+      "observed": "一条典型路线",
+      "match": true,
+      "crop": "output/review-full/caption-0063-crop.png"
+    },
+    {
+      "time": 109.625,
+      "beat": "06-transform-01",
+      "expected": "是把硅转化成三氯氢硅等氯硅烷",
+      "observed": "是把硅转化成三氯氢硅等氯硅烷",
+      "match": true,
+      "crop": "output/review-full/caption-0064-crop.png"
+    },
+    {
+      "time": 112.16666666666667,
+      "beat": "06-transform-02",
+      "expected": "这改变了化学形态",
+      "observed": "这改变了化学形态",
+      "match": true,
+      "crop": "output/review-full/caption-0065-crop.png"
+    },
+    {
+      "time": 113.58333333333333,
+      "beat": "06-transform-02",
+      "expected": "不是简单熔化",
+      "observed": "不是简单熔化",
+      "match": true,
+      "crop": "output/review-full/caption-0066-crop.png"
+    },
+    {
+      "time": 115.75,
+      "beat": "06-transform-02",
+      "expected": "目的是利用不同物质挥发性的差别",
+      "observed": "目的是利用不同物质挥发性的差别",
+      "match": true,
+      "crop": "output/review-full/caption-0067-crop.png"
+    },
+    {
+      "time": 118.08333333333333,
+      "beat": "06-transform-03",
+      "expected": "经过汽化和冷凝",
+      "observed": "经过汽化和冷凝",
+      "match": true,
+      "crop": "output/review-full/caption-0068-crop.png"
+    },
+    {
+      "time": 120.41666666666667,
+      "beat": "06-transform-03",
+      "expected": "让不同组分走进不同的收集路径",
+      "observed": "让不同组分走进不同的收集路径",
+      "match": true,
+      "crop": "output/review-full/caption-0069-crop.png"
+    },
+    {
+      "time": 122.375,
+      "beat": "06-transform-03",
+      "expected": "提纯",
+      "observed": "提纯",
+      "match": true,
+      "crop": "output/review-full/caption-0070-crop.png"
+    },
+    {
+      "time": 123.41666666666667,
+      "beat": "06-transform-03",
+      "expected": "由此有了新办法",
+      "observed": "由此有了新办法",
+      "match": true,
+      "crop": "output/review-full/caption-0071-crop.png"
+    },
+    {
+      "time": 125.66666666666667,
+      "beat": "07-distill-01",
+      "expected": "塔内",
+      "observed": "塔内",
+      "match": true,
+      "crop": "output/review-full/caption-0072-crop.png"
+    },
+    {
+      "time": 126.58333333333333,
+      "beat": "07-distill-01",
+      "expected": "蒸气向上",
+      "observed": "蒸气向上",
+      "match": true,
+      "crop": "output/review-full/caption-0073-crop.png"
+    },
+    {
+      "time": 127.75,
+      "beat": "07-distill-01",
+      "expected": "液体向下",
+      "observed": "液体向下",
+      "match": true,
+      "crop": "output/review-full/caption-0074-crop.png"
+    },
+    {
+      "time": 128.83333333333334,
+      "beat": "07-distill-01",
+      "expected": "不断接触",
+      "observed": "不断接触",
+      "match": true,
+      "crop": "output/review-full/caption-0075-crop.png"
+    },
+    {
+      "time": 130.29166666666666,
+      "beat": "07-distill-01",
+      "expected": "容易挥发的组分",
+      "observed": "容易挥发的组分",
+      "match": true,
+      "crop": "output/review-full/caption-0076-crop.png"
+    },
+    {
+      "time": 131.70833333333334,
+      "beat": "07-distill-01",
+      "expected": "更倾向进入蒸气",
+      "observed": "更倾向进入蒸气",
+      "match": true,
+      "crop": "output/review-full/caption-0077-crop.png"
+    },
+    {
+      "time": 133.45833333333334,
+      "beat": "07-distill-02",
+      "expected": "重复这样的交换",
+      "observed": "重复这样的交换",
+      "match": true,
+      "crop": "output/review-full/caption-0078-crop.png"
+    },
+    {
+      "time": 134.91666666666666,
+      "beat": "07-distill-02",
+      "expected": "组分逐渐富集",
+      "observed": "组分逐渐富集",
+      "match": true,
+      "crop": "output/review-full/caption-0079-crop.png"
+    },
+    {
+      "time": 136.125,
+      "beat": "07-distill-02",
+      "expected": "再分别收集",
+      "observed": "再分别收集",
+      "match": true,
+      "crop": "output/review-full/caption-0080-crop.png"
+    },
+    {
+      "time": 137.625,
+      "beat": "07-distill-02",
+      "expected": "多个分离步骤",
+      "observed": "多个分离步骤",
+      "match": true,
+      "crop": "output/review-full/caption-0081-crop.png"
+    },
+    {
+      "time": 138.91666666666666,
+      "beat": "07-distill-02",
+      "expected": "继续净化原料",
+      "observed": "继续净化原料",
+      "match": true,
+      "crop": "output/review-full/caption-0082-crop.png"
+    },
+    {
+      "time": 140.58333333333334,
+      "beat": "07-distill-03",
+      "expected": "杂质种类不同",
+      "observed": "杂质种类不同",
+      "match": true,
+      "crop": "output/review-full/caption-0083-crop.png"
+    },
+    {
+      "time": 142.08333333333334,
+      "beat": "07-distill-03",
+      "expected": "分离难度也不同",
+      "observed": "分离难度也不同",
+      "match": true,
+      "crop": "output/review-full/caption-0084-crop.png"
+    },
+    {
+      "time": 143.875,
+      "beat": "07-distill-03",
+      "expected": "精馏不是万能滤网",
+      "observed": "精馏不是万能滤网",
+      "match": true,
+      "crop": "output/review-full/caption-0085-crop.png"
+    },
+    {
+      "time": 145.45833333333334,
+      "beat": "07-distill-03",
+      "expected": "需要整套工艺配合",
+      "observed": "需要整套工艺配合",
+      "match": true,
+      "crop": "output/review-full/caption-0086-crop.png"
+    },
+    {
+      "time": 148.54166666666666,
+      "beat": "08-siemens-01",
+      "expected": "进入西门子法反应器",
+      "observed": "进入西门子法反应器",
+      "match": true,
+      "crop": "output/review-full/caption-0087-crop.png"
+    },
+    {
+      "time": 150.79166666666666,
+      "beat": "08-siemens-01",
+      "expected": "细长的硅芯通电加热",
+      "observed": "细长的硅芯通电加热",
+      "match": true,
+      "crop": "output/review-full/caption-0088-crop.png"
+    },
+    {
+      "time": 152.45833333333334,
+      "beat": "08-siemens-01",
+      "expected": "成为硅沉积的起点",
+      "observed": "成为硅沉积的起点",
+      "match": true,
+      "crop": "output/review-full/caption-0089-crop.png"
+    },
+    {
+      "time": 154.83333333333334,
+      "beat": "08-siemens-02",
+      "expected": "高纯氯硅烷与氢气参加反应",
+      "observed": "高纯氯硅烷与氢气参加反应",
+      "match": true,
+      "crop": "output/review-full/caption-0090-crop.png"
+    },
+    {
+      "time": 156.95833333333334,
+      "beat": "08-siemens-02",
+      "expected": "硅沉积到硅芯表面",
+      "observed": "硅沉积到硅芯表面",
+      "match": true,
+      "crop": "output/review-full/caption-0091-crop.png"
+    },
+    {
+      "time": 158.70833333333334,
+      "beat": "08-siemens-02",
+      "expected": "让棒体一层层长粗",
+      "observed": "让棒体一层层长粗",
+      "match": true,
+      "crop": "output/review-full/caption-0092-crop.png"
+    },
+    {
+      "time": 161.125,
+      "beat": "08-siemens-03",
+      "expected": "这是把硅重新沉积出来",
+      "observed": "这是把硅重新沉积出来",
+      "match": true,
+      "crop": "output/review-full/caption-0093-crop.png"
+    },
+    {
+      "time": 163.66666666666666,
+      "beat": "08-siemens-03",
+      "expected": "气体循环和副产物处理",
+      "observed": "气体循环和副产物处理",
+      "match": true,
+      "crop": "output/review-full/caption-0094-crop.png"
+    },
+    {
+      "time": 165.66666666666666,
+      "beat": "08-siemens-03",
+      "expected": "也是生产体系的重要部分",
+      "observed": "也是生产体系的重要部分",
+      "match": true,
+      "crop": "output/review-full/caption-0095-crop.png"
+    },
+    {
+      "time": 168.45833333333334,
+      "beat": "09-feedstock-01",
+      "expected": "取出硅棒",
+      "observed": "取出硅棒",
+      "match": true,
+      "crop": "output/review-full/caption-0096-crop.png"
+    },
+    {
+      "time": 169.375,
+      "beat": "09-feedstock-01",
+      "expected": "还要破碎",
+      "observed": "还要破碎",
+      "match": true,
+      "crop": "output/review-full/caption-0097-crop.png"
+    },
+    {
+      "time": 170.875,
+      "beat": "09-feedstock-01",
+      "expected": "清理并洁净包装",
+      "observed": "清理井洁净包装",
+      "match": false,
+      "crop": "output/review-full/caption-0098-crop.png"
+    },
+    {
+      "time": 172.83333333333334,
+      "beat": "09-feedstock-01",
+      "expected": "工具带来的污染",
+      "observed": "工具带来的污染",
+      "match": true,
+      "crop": "output/review-full/caption-0099-crop.png"
+    },
+    {
+      "time": 174.125,
+      "beat": "09-feedstock-01",
+      "expected": "也必须去掉",
+      "observed": "也必须去掉",
+      "match": true,
+      "crop": "output/review-full/caption-0100-crop.png"
+    },
+    {
+      "time": 175.54166666666666,
+      "beat": "09-feedstock-02",
+      "expected": "原料很纯",
+      "observed": "原料很纯",
+      "match": true,
+      "crop": "output/review-full/caption-0101-crop.png"
+    },
+    {
+      "time": 177.04166666666666,
+      "beat": "09-feedstock-02",
+      "expected": "却含有取向不同的晶粒",
+      "observed": "却含有取向不同的晶粒",
+      "match": true,
+      "crop": "output/review-full/caption-0102-crop.png"
+    },
+    {
+      "time": 178.625,
+      "beat": "09-feedstock-02",
+      "expected": "接下来",
+      "observed": "接下来",
+      "match": true,
+      "crop": "output/review-full/caption-0103-crop.png"
+    },
+    {
+      "time": 179.95833333333334,
+      "beat": "09-feedstock-02",
+      "expected": "要打散原来的排列",
+      "observed": "要打散原来的排列",
+      "match": true,
+      "crop": "output/review-full/caption-0104-crop.png"
+    },
+    {
+      "time": 181.375,
+      "beat": "09-feedstock-02",
+      "expected": "再重新建立",
+      "observed": "•再重新建立",
+      "match": true,
+      "crop": "output/review-full/caption-0105-crop.png"
+    },
+    {
+      "time": 182.875,
+      "beat": "09-feedstock-03",
+      "expected": "所以先熔化",
+      "observed": "所以先熔化",
+      "match": true,
+      "crop": "output/review-full/caption-0106-crop.png"
+    },
+    {
+      "time": 184.20833333333334,
+      "beat": "09-feedstock-03",
+      "expected": "再重新生长单晶",
+      "observed": "再重新生长单晶",
+      "match": true,
+      "crop": "output/review-full/caption-0107-crop.png"
+    },
+    {
+      "time": 186.04166666666666,
+      "beat": "09-feedstock-03",
+      "expected": "并不是让那些小晶粒",
+      "observed": "并不是让那些小晶粒",
+      "match": true,
+      "crop": "output/review-full/caption-0108-crop.png"
+    },
+    {
+      "time": 187.58333333333334,
+      "beat": "09-feedstock-03",
+      "expected": "在固体里面自己转正",
+      "observed": "在固体里面自己转正",
+      "match": true,
+      "crop": "output/review-full/caption-0109-crop.png"
+    },
+    {
+      "time": 190.58333333333334,
+      "beat": "10-melt-01",
+      "expected": "多晶硅装进石英坩埚",
+      "observed": "多晶硅装进石英坩埚",
+      "match": true,
+      "crop": "output/review-full/caption-0110-crop.png"
+    },
+    {
+      "time": 192.75,
+      "beat": "10-melt-01",
+      "expected": "外侧有石墨支撑和热场",
+      "observed": "外侧有石墨支撑和热场",
+      "match": true,
+      "crop": "output/review-full/caption-0111-crop.png"
+    },
+    {
+      "time": 194.33333333333334,
+      "beat": "10-melt-01",
+      "expected": "加热后",
+      "observed": "加热后",
+      "match": true,
+      "crop": "output/review-full/caption-0112-crop.png"
+    },
+    {
+      "time": 195.625,
+      "beat": "10-melt-01",
+      "expected": "固体逐渐变成熔体",
+      "observed": "固体逐渐变成熔体",
+      "match": true,
+      "crop": "output/review-full/caption-0113-crop.png"
+    },
+    {
+      "time": 197.875,
+      "beat": "10-melt-02",
+      "expected": "气氛和热量分布也要控制",
+      "observed": "气氛和热量分布也要控制",
+      "match": true,
+      "crop": "output/review-full/caption-0114-crop.png"
+    },
+    {
+      "time": 200.16666666666666,
+      "beat": "10-melt-02",
+      "expected": "目标是保持稳定的条件",
+      "observed": "目标是保持稳定的条件",
+      "match": true,
+      "crop": "output/review-full/caption-0115-crop.png"
+    },
+    {
+      "time": 202.08333333333334,
+      "beat": "10-melt-02",
+      "expected": "而不是温度越高越好",
+      "observed": "而不是温度越高越好",
+      "match": true,
+      "crop": "output/review-full/caption-0116-crop.png"
+    },
+    {
+      "time": 204.16666666666666,
+      "beat": "10-melt-03",
+      "expected": "加入极少量的硼或磷",
+      "observed": "加入极少量的硼或磷",
+      "match": true,
+      "crop": "output/review-full/caption-0117-crop.png"
+    },
+    {
+      "time": 205.75,
+      "beat": "10-melt-03",
+      "expected": "可以调节电阻率",
+      "observed": "可以调节电阻率",
+      "match": true,
+      "crop": "output/review-full/caption-0118-crop.png"
+    },
+    {
+      "time": 207.20833333333334,
+      "beat": "10-melt-03",
+      "expected": "加入多少",
+      "observed": "加入多少",
+      "match": true,
+      "crop": "output/review-full/caption-0119-crop.png"
+    },
+    {
+      "time": 208.16666666666666,
+      "beat": "10-melt-03",
+      "expected": "分布怎样",
+      "observed": "分布怎样",
+      "match": true,
+      "crop": "output/review-full/caption-0120-crop.png"
+    },
+    {
+      "time": 209.125,
+      "beat": "10-melt-03",
+      "expected": "都有要求",
+      "observed": "都有要求",
+      "match": true,
+      "crop": "output/review-full/caption-0121-crop.png"
+    },
+    {
+      "time": 211.5,
+      "beat": "11-seed-01",
+      "expected": "靠一小段籽晶",
+      "observed": "靠一小段籽晶",
+      "match": true,
+      "crop": "output/review-full/caption-0122-crop.png"
+    },
+    {
+      "time": 213.0,
+      "beat": "11-seed-01",
+      "expected": "它已经是单晶",
+      "observed": "它已经是单晶",
+      "match": true,
+      "crop": "output/review-full/caption-0123-crop.png"
+    },
+    {
+      "time": 214.0,
+      "beat": "11-seed-01",
+      "expected": "方向已知",
+      "observed": "方向已知",
+      "match": true,
+      "crop": "output/review-full/caption-0124-crop.png"
+    },
+    {
+      "time": 215.75,
+      "beat": "11-seed-01",
+      "expected": "给新来的硅原子一个排列参照",
+      "observed": "给新来的硅原子一个排列参照",
+      "match": true,
+      "crop": "output/review-full/caption-0125-crop.png"
+    },
+    {
+      "time": 218.0,
+      "beat": "11-seed-02",
+      "expected": "籽晶接触熔硅",
+      "observed": "籽晶接触熔硅",
+      "match": true,
+      "crop": "output/review-full/caption-0126-crop.png"
+    },
+    {
+      "time": 219.45833333333334,
+      "beat": "11-seed-02",
+      "expected": "缓慢向上提拉",
+      "observed": "缓慢向上提拉",
+      "match": true,
+      "crop": "output/review-full/caption-0127-crop.png"
+    },
+    {
+      "time": 221.33333333333334,
+      "beat": "11-seed-02",
+      "expected": "接触处凝固的新晶体",
+      "observed": "接触处凝固的新晶体",
+      "match": true,
+      "crop": "output/review-full/caption-0128-crop.png"
+    },
+    {
+      "time": 222.91666666666666,
+      "beat": "11-seed-02",
+      "expected": "延续籽晶的取向",
+      "observed": "延续籽晶的取向",
+      "match": true,
+      "crop": "output/review-full/caption-0129-crop.png"
+    },
+    {
+      "time": 224.75,
+      "beat": "11-seed-03",
+      "expected": "晶体和坩埚的旋转",
+      "observed": "晶体和坩埚的旋转",
+      "match": true,
+      "crop": "output/review-full/caption-0130-crop.png"
+    },
+    {
+      "time": 226.625,
+      "beat": "11-seed-03",
+      "expected": "用来配合传热和物质输运",
+      "observed": "用来配合传热和物质输运",
+      "match": true,
+      "crop": "output/review-full/caption-0131-crop.png"
+    },
+    {
+      "time": 228.83333333333334,
+      "beat": "11-seed-03",
+      "expected": "并不是把原子像螺丝一样拧上去",
+      "observed": "并不是把原子像螺丝一样拧上去",
+      "match": true,
+      "crop": "output/review-full/caption-0132-crop.png"
+    },
+    {
+      "time": 232.25,
+      "beat": "12-neck-01",
+      "expected": "热冲击可能引入位错",
+      "observed": "热冲击可能引入位错",
+      "match": true,
+      "crop": "output/review-full/caption-0133-crop.png"
+    },
+    {
+      "time": 234.41666666666666,
+      "beat": "12-neck-01",
+      "expected": "这是晶格中的线状缺陷",
+      "observed": "这是晶格中的线状缺陷",
+      "match": true,
+      "crop": "output/review-full/caption-0134-crop.png"
+    },
+    {
+      "time": 236.54166666666666,
+      "beat": "12-neck-01",
+      "expected": "还可能在后续生长中延伸",
+      "observed": "还可能在后续生长中延伸",
+      "match": true,
+      "crop": "output/review-full/caption-0135-crop.png"
+    },
+    {
+      "time": 238.70833333333334,
+      "beat": "12-neck-02",
+      "expected": "先拉出很细的颈部",
+      "observed": "先拉出很细的颈部",
+      "match": true,
+      "crop": "output/review-full/caption-0136-crop.png"
+    },
+    {
+      "time": 239.95833333333334,
+      "beat": "12-neck-02",
+      "expected": "让表面更近",
+      "observed": "让表面更近",
+      "match": true,
+      "crop": "output/review-full/caption-0137-crop.png"
+    },
+    {
+      "time": 241.91666666666666,
+      "beat": "12-neck-02",
+      "expected": "使合适方向的位错在侧壁终止",
+      "observed": "使合适方向的位错在侧壁终止",
+      "match": true,
+      "crop": "output/review-full/caption-0138-crop.png"
+    },
+    {
+      "time": 244.04166666666666,
+      "beat": "12-neck-02",
+      "expected": "这叫缩颈",
+      "observed": "这叫缩颈",
+      "match": true,
+      "crop": "output/review-full/caption-0139-crop.png"
+    },
+    {
+      "time": 246.0,
+      "beat": "12-neck-03",
+      "expected": "细颈关系到整根晶棒的品质",
+      "observed": "细颈关系到整根晶棒的品质",
+      "match": true,
+      "crop": "output/review-full/caption-0140-crop.png"
+    },
+    {
+      "time": 248.29166666666666,
+      "beat": "12-neck-03",
+      "expected": "图中的红线表示位错",
+      "observed": "图中的红线表示位错",
+      "match": true,
+      "crop": "output/review-full/caption-0141-crop.png"
+    },
+    {
+      "time": 249.95833333333334,
+      "beat": "12-neck-03",
+      "expected": "不是实际可见的裂缝",
+      "observed": "不是实际可见的裂缝",
+      "match": true,
+      "crop": "output/review-full/caption-0142-crop.png"
+    },
+    {
+      "time": 252.75,
+      "beat": "13-growth-01",
+      "expected": "调节温度和拉速",
+      "observed": "调节温度和拉速",
+      "match": true,
+      "crop": "output/review-full/caption-0143-crop.png"
+    },
+    {
+      "time": 254.41666666666666,
+      "beat": "13-growth-01",
+      "expected": "晶体直径逐渐增大",
+      "observed": "晶体直径逐渐增大",
+      "match": true,
+      "crop": "output/review-full/caption-0144-crop.png"
+    },
+    {
+      "time": 255.79166666666666,
+      "beat": "13-growth-01",
+      "expected": "形成肩部",
+      "observed": "形成肩部",
+      "match": true,
+      "crop": "output/review-full/caption-0145-crop.png"
+    },
+    {
+      "time": 257.25,
+      "beat": "13-growth-01",
+      "expected": "这一步叫放肩",
+      "observed": "这一步叫放肩",
+      "match": true,
+      "crop": "output/review-full/caption-0146-crop.png"
+    },
+    {
+      "time": 258.875,
+      "beat": "13-growth-02",
+      "expected": "达到目标直径",
+      "observed": "达到目标直径",
+      "match": true,
+      "crop": "output/review-full/caption-0147-crop.png"
+    },
+    {
+      "time": 260.25,
+      "beat": "13-growth-02",
+      "expected": "进入等径生长",
+      "observed": "进入等径生",
+      "match": false,
+      "crop": "output/review-full/caption-0148-crop.png"
+    },
+    {
+      "time": 261.75,
+      "beat": "13-growth-02",
+      "expected": "晶棒向上",
+      "observed": "晶棒向上",
+      "match": true,
+      "crop": "output/review-full/caption-0149-crop.png"
+    },
+    {
+      "time": 263.4583333333333,
+      "beat": "13-growth-02",
+      "expected": "固液界面继续补充新的晶体",
+      "observed": "固液界面继续补充新的晶体",
+      "match": true,
+      "crop": "output/review-full/caption-0150-crop.png"
+    },
+    {
+      "time": 265.9583333333333,
+      "beat": "13-growth-03",
+      "expected": "真实晶棒有金属般的光泽",
+      "observed": "真实晶棒有金属般的光泽",
+      "match": true,
+      "crop": "output/review-full/caption-0151-crop.png"
+    },
+    {
+      "time": 268.125,
+      "beat": "13-growth-03",
+      "expected": "它是慢慢长出来的",
+      "observed": "它是慢慢长出来的",
+      "match": true,
+      "crop": "output/review-full/caption-0152-crop.png"
+    },
+    {
+      "time": 270.125,
+      "beat": "13-growth-03",
+      "expected": "热场和拉速需要持续调整",
+      "observed": "热场和拉速需要持续调整",
+      "match": true,
+      "crop": "output/review-full/caption-0153-crop.png"
+    },
+    {
+      "time": 273.2916666666667,
+      "beat": "14-load-01",
+      "expected": "晶棒越长越重",
+      "observed": "晶棒越长越重",
+      "match": true,
+      "crop": "output/review-full/caption-0154-crop.png"
+    },
+    {
+      "time": 274.875,
+      "beat": "14-load-01",
+      "expected": "承重设计不能忽略",
+      "observed": "承重设计不能忽略",
+      "match": true,
+      "crop": "output/review-full/caption-0155-crop.png"
+    },
+    {
+      "time": 276.9583333333333,
+      "beat": "14-load-01",
+      "expected": "颈部结构或辅助机构",
+      "observed": "颈部结构或辅助机构",
+      "match": true,
+      "crop": "output/review-full/caption-0156-crop.png"
+    },
+    {
+      "time": 278.5833333333333,
+      "beat": "14-load-01",
+      "expected": "要配合安全生长",
+      "observed": "要配合安全生长",
+      "match": true,
+      "crop": "output/review-full/caption-0157-crop.png"
+    },
+    {
+      "time": 280.2083333333333,
+      "beat": "14-load-02",
+      "expected": "熔体也不安静",
+      "observed": "熔体也不安静",
+      "match": true,
+      "crop": "output/review-full/caption-0158-crop.png"
+    },
+    {
+      "time": 282.125,
+      "beat": "14-load-02",
+      "expected": "温差和旋转带来的流动",
+      "observed": "温差和旋转带来的流动",
+      "match": true,
+      "crop": "output/review-full/caption-0159-crop.png"
+    },
+    {
+      "time": 284.25,
+      "beat": "14-load-02",
+      "expected": "会改变正在凝固的界面条件",
+      "observed": "会改变正在凝固的界面条件",
+      "match": true,
+      "crop": "output/review-full/caption-0160-crop.png"
+    },
+    {
+      "time": 286.3333333333333,
+      "beat": "14-load-03",
+      "expected": "界面条件不稳定",
+      "observed": "界面条件不稳定",
+      "match": true,
+      "crop": "output/review-full/caption-0161-crop.png"
+    },
+    {
+      "time": 287.8333333333333,
+      "beat": "14-load-03",
+      "expected": "均匀性就受影响",
+      "observed": "均匀性就受影响",
+      "match": true,
+      "crop": "output/review-full/caption-0162-crop.png"
+    },
+    {
+      "time": 289.4583333333333,
+      "beat": "14-load-03",
+      "expected": "不仅要长得大",
+      "observed": "不仅要长得大",
+      "match": true,
+      "crop": "output/review-full/caption-0163-crop.png"
+    },
+    {
+      "time": 290.9583333333333,
+      "beat": "14-load-03",
+      "expected": "还要整根晶棒长得稳定",
+      "observed": "还要整根晶棒长得稳定",
+      "match": true,
+      "crop": "output/review-full/caption-0164-crop.png"
+    },
+    {
+      "time": 294.0416666666667,
+      "beat": "15-magnetic-01",
+      "expected": "磁控直拉是一种办法",
+      "observed": "磁控直拉是一种办法",
+      "match": true,
+      "crop": "output/review-full/caption-0165-crop.png"
+    },
+    {
+      "time": 295.9166666666667,
+      "beat": "15-magnetic-01",
+      "expected": "熔融硅能导电",
+      "observed": "熔融硅能导电",
+      "match": true,
+      "crop": "output/review-full/caption-0166-crop.png"
+    },
+    {
+      "time": 297.4583333333333,
+      "beat": "15-magnetic-01",
+      "expected": "磁场可以抑制某些流动",
+      "observed": "磁场可以抑制某些流动",
+      "match": true,
+      "crop": "output/review-full/caption-0167-crop.png"
+    },
+    {
+      "time": 298.7916666666667,
+      "beat": "15-magnetic-01",
+      "expected": "调节对流",
+      "observed": "调节对流",
+      "match": true,
+      "crop": "output/review-full/caption-0168-crop.png"
+    },
+    {
+      "time": 300.5,
+      "beat": "15-magnetic-02",
+      "expected": "磁场不是把硅吸起来",
+      "observed": "磁场不是把硅吸起来",
+      "match": true,
+      "crop": "output/review-full/caption-0169-crop.png"
+    },
+    {
+      "time": 302.3333333333333,
+      "beat": "15-magnetic-02",
+      "expected": "而是影响流动与传热",
+      "observed": "而是影响流动与传热",
+      "match": true,
+      "crop": "output/review-full/caption-0170-crop.png"
+    },
+    {
+      "time": 304.1666666666667,
+      "beat": "15-magnetic-02",
+      "expected": "帮助控制生长和杂质输运",
+      "observed": "帮助控制生长和杂质输运",
+      "match": true,
+      "crop": "output/review-full/caption-0171-crop.png"
+    },
+    {
+      "time": 306.5,
+      "beat": "15-magnetic-03",
+      "expected": "石英坩埚会引入氧",
+      "observed": "石英坩埚会引入氧",
+      "match": true,
+      "crop": "output/review-full/caption-0172-crop.png"
+    },
+    {
+      "time": 308.5,
+      "beat": "15-magnetic-03",
+      "expected": "多少氧进入晶体",
+      "observed": "多少氧进入晶体",
+      "match": true,
+      "crop": "output/review-full/caption-0173-crop.png"
+    },
+    {
+      "time": 309.75,
+      "beat": "15-magnetic-03",
+      "expected": "怎样分布",
+      "observed": "怎样分布",
+      "match": true,
+      "crop": "output/review-full/caption-0174-crop.png"
+    },
+    {
+      "time": 311.0833333333333,
+      "beat": "15-magnetic-03",
+      "expected": "也受到熔体流动的影响",
+      "observed": "也受到熔体流动的影响",
+      "match": true,
+      "crop": "output/review-full/caption-0175-crop.png"
+    },
+    {
+      "time": 314.125,
+      "beat": "16-control-01",
+      "expected": "氧也不总是越少越好",
+      "observed": "氧也不总是越少越好",
+      "match": true,
+      "crop": "output/review-full/caption-0176-crop.png"
+    },
+    {
+      "time": 315.7916666666667,
+      "beat": "16-control-01",
+      "expected": "配合热处理",
+      "observed": "配合热处理",
+      "match": true,
+      "crop": "output/review-full/caption-0177-crop.png"
+    },
+    {
+      "time": 317.2083333333333,
+      "beat": "16-control-01",
+      "expected": "可以参与吸杂等设计",
+      "observed": "可以参与吸杂等设计",
+      "match": true,
+      "crop": "output/review-full/caption-0178-crop.png"
+    },
+    {
+      "time": 318.9583333333333,
+      "beat": "16-control-01",
+      "expected": "关键是按用途控制",
+      "observed": "关键是按用途控制",
+      "match": true,
+      "crop": "output/review-full/caption-0179-crop.png"
+    },
+    {
+      "time": 320.9166666666667,
+      "beat": "16-control-02",
+      "expected": "掺杂还有分凝现象",
+      "observed": "掺杂还有分凝现象",
+      "match": true,
+      "crop": "output/review-full/caption-0180-crop.png"
+    },
+    {
+      "time": 323.75,
+      "beat": "16-control-02",
+      "expected": "元素在固体和液体中浓度未必相同",
+      "observed": "元素在固体和液体中浓度未必相同",
+      "match": true,
+      "crop": "output/review-full/caption-0181-crop.png"
+    },
+    {
+      "time": 326.625,
+      "beat": "16-control-02",
+      "expected": "剩余熔体也会随生长改变",
+      "observed": "剩余熔体也会随生长改变",
+      "match": true,
+      "crop": "output/review-full/caption-0182-crop.png"
+    },
+    {
+      "time": 328.4583333333333,
+      "beat": "16-control-03",
+      "expected": "所以",
+      "observed": "所以",
+      "match": true,
+      "crop": "output/review-full/caption-0183-crop.png"
+    },
+    {
+      "time": 329.5,
+      "beat": "16-control-03",
+      "expected": "称准原料还不够",
+      "observed": "称准原料还不够",
+      "match": true,
+      "crop": "output/review-full/caption-0184-crop.png"
+    },
+    {
+      "time": 331.125,
+      "beat": "16-control-03",
+      "expected": "沿晶棒长度",
+      "observed": "沿晶棒长度",
+      "match": true,
+      "crop": "output/review-full/caption-0185-crop.png"
+    },
+    {
+      "time": 332.6666666666667,
+      "beat": "16-control-03",
+      "expected": "沿半径的性质均匀性",
+      "observed": "沿半径的性质均匀性",
+      "match": true,
+      "crop": "output/review-full/caption-0186-crop.png"
+    },
+    {
+      "time": 334.0416666666667,
+      "beat": "16-control-03",
+      "expected": "都需要控制",
+      "observed": "都需要控制",
+      "match": true,
+      "crop": "output/review-full/caption-0187-crop.png"
+    },
+    {
+      "time": 336.7083333333333,
+      "beat": "17-defects-01",
+      "expected": "晶格可能少一个原子",
+      "observed": "晶格可能少一个原子",
+      "match": true,
+      "crop": "output/review-full/caption-0188-crop.png"
+    },
+    {
+      "time": 338.0833333333333,
+      "beat": "17-defects-01",
+      "expected": "形成空位",
+      "observed": "形成空位",
+      "match": true,
+      "crop": "output/review-full/caption-0189-crop.png"
+    },
+    {
+      "time": 339.3333333333333,
+      "beat": "17-defects-01",
+      "expected": "也可能多一个原子",
+      "observed": "也可能多一个原子",
+      "match": true,
+      "crop": "output/review-full/caption-0190-crop.png"
+    },
+    {
+      "time": 340.8333333333333,
+      "beat": "17-defects-01",
+      "expected": "挤进正常位置之间",
+      "observed": "挤进正常位置之间",
+      "match": true,
+      "crop": "output/review-full/caption-0191-crop.png"
+    },
+    {
+      "time": 343.0833333333333,
+      "beat": "17-defects-02",
+      "expected": "点缺陷在冷却时可能聚集",
+      "observed": "点缺陷在冷却时可能聚集",
+      "match": true,
+      "crop": "output/review-full/caption-0192-crop.png"
+    },
+    {
+      "time": 345.0833333333333,
+      "beat": "17-defects-02",
+      "expected": "生长速度",
+      "observed": "生长速度",
+      "match": true,
+      "crop": "output/review-full/caption-0193-crop.png"
+    },
+    {
+      "time": 346.8333333333333,
+      "beat": "17-defects-02",
+      "expected": "温度梯度和后续热过程",
+      "observed": "温度梯度和后续热过程",
+      "match": true,
+      "crop": "output/review-full/caption-0194-crop.png"
+    },
+    {
+      "time": 348.5,
+      "beat": "17-defects-02",
+      "expected": "都要配合控制",
+      "observed": "都要配合控制",
+      "match": true,
+      "crop": "output/review-full/caption-0195-crop.png"
+    },
+    {
+      "time": 350.0833333333333,
+      "beat": "17-defects-03",
+      "expected": "单晶说的是取向",
+      "observed": "单晶说的是取向",
+      "match": true,
+      "crop": "output/review-full/caption-0196-crop.png"
+    },
+    {
+      "time": 351.5416666666667,
+      "beat": "17-defects-03",
+      "expected": "低缺陷说的是质量",
+      "observed": "低缺陷说的是质量",
+      "match": true,
+      "crop": "output/review-full/caption-0197-crop.png"
+    },
+    {
+      "time": 353.125,
+      "beat": "17-defects-03",
+      "expected": "不能把单晶",
+      "observed": "不能把单晶",
+      "match": true,
+      "crop": "output/review-full/caption-0198-crop.png"
+    },
+    {
+      "time": 354.5416666666667,
+      "beat": "17-defects-03",
+      "expected": "直接理解成绝对完美",
+      "observed": "直接理解成绝对完美",
+      "match": true,
+      "crop": "output/review-full/caption-0199-crop.png"
+    },
+    {
+      "time": 357.1666666666667,
+      "beat": "18-trim-01",
+      "expected": "冷却后",
+      "observed": "冷却后",
+      "match": true,
+      "crop": "output/review-full/caption-0200-crop.png"
+    },
+    {
+      "time": 358.5416666666667,
+      "beat": "18-trim-01",
+      "expected": "切去不合要求的头尾",
+      "observed": "切去不合要求的头尾",
+      "match": true,
+      "crop": "output/review-full/caption-0201-crop.png"
+    },
+    {
+      "time": 360.4166666666667,
+      "beat": "18-trim-01",
+      "expected": "把外圆加工到指定尺寸",
+      "observed": "把外圆加工到指定尺寸",
+      "match": true,
+      "crop": "output/review-full/caption-0202-crop.png"
+    },
+    {
+      "time": 362.5416666666667,
+      "beat": "18-trim-01",
+      "expected": "材料也在这里损耗",
+      "observed": "材料也在这里损耗",
+      "match": true,
+      "crop": "output/review-full/caption-0203-crop.png"
+    },
+    {
+      "time": 364.125,
+      "beat": "18-trim-02",
+      "expected": "确定晶向",
+      "observed": "确定晶向",
+      "match": true,
+      "crop": "output/review-full/caption-0204-crop.png"
+    },
+    {
+      "time": 365.2916666666667,
+      "beat": "18-trim-02",
+      "expected": "制作定位缺口",
+      "observed": "制作定位缺口",
+      "match": true,
+      "crop": "output/review-full/caption-0205-crop.png"
+    },
+    {
+      "time": 367.0,
+      "beat": "18-trim-02",
+      "expected": "看不见的晶格方向",
+      "observed": "看不见的晶格方向",
+      "match": true,
+      "crop": "output/review-full/caption-0206-crop.png"
+    },
+    {
+      "time": 368.75,
+      "beat": "18-trim-02",
+      "expected": "给设备留下一个识别参照",
+      "observed": "给设备留下一个识别参照",
+      "match": true,
+      "crop": "output/review-full/caption-0207-crop.png"
+    },
+    {
+      "time": 371.2083333333333,
+      "beat": "18-trim-03",
+      "expected": "晶棒送向密集排列的细线",
+      "observed": "晶棒送向密集排列的细线",
+      "match": true,
+      "crop": "output/review-full/caption-0208-crop.png"
+    },
+    {
+      "time": 373.0833333333333,
+      "beat": "18-trim-03",
+      "expected": "运动的线网",
+      "observed": "运动的线网",
+      "match": true,
+      "crop": "output/review-full/caption-0209-crop.png"
+    },
+    {
+      "time": 374.5,
+      "beat": "18-trim-03",
+      "expected": "同时加工许多平行切面",
+      "observed": "同时加工许多平行切面",
+      "match": true,
+      "crop": "output/review-full/caption-0210-crop.png"
+    },
+    {
+      "time": 378.125,
+      "beat": "19-slice-01",
+      "expected": "这里展示金刚线怎样逐步去除硅",
+      "observed": "这里展示金刚线怎样逐步去除硅",
+      "match": true,
+      "crop": "output/review-full/caption-0211-crop.png"
+    },
+    {
+      "time": 380.4166666666667,
+      "beat": "19-slice-01",
+      "expected": "为看清过程",
+      "observed": "为看清过程",
+      "match": true,
+      "crop": "output/review-full/caption-0212-crop.png"
+    },
+    {
+      "time": 382.1666666666667,
+      "beat": "19-slice-01",
+      "expected": "线径和片间距都做了放大",
+      "observed": "线径和片间距都做了放大",
+      "match": true,
+      "crop": "output/review-full/caption-0213-crop.png"
+    },
+    {
+      "time": 384.625,
+      "beat": "19-slice-02",
+      "expected": "每道切口都会消耗材料",
+      "observed": "每道切口都会消耗材料",
+      "match": true,
+      "crop": "output/review-full/caption-0214-crop.png"
+    },
+    {
+      "time": 386.5,
+      "beat": "19-slice-02",
+      "expected": "形成切缝损耗",
+      "observed": "形成切缝损耗",
+      "match": true,
+      "crop": "output/review-full/caption-0215-crop.png"
+    },
+    {
+      "time": 388.2916666666667,
+      "beat": "19-slice-02",
+      "expected": "算原料用量时",
+      "observed": "算原料用量时",
+      "match": true,
+      "crop": "output/review-full/caption-0216-crop.png"
+    },
+    {
+      "time": 389.8333333333333,
+      "beat": "19-slice-02",
+      "expected": "也要算上这些损失",
+      "observed": "也要算上这些损失",
+      "match": true,
+      "crop": "output/review-full/caption-0217-crop.png"
+    },
+    {
+      "time": 391.4166666666667,
+      "beat": "19-slice-03",
+      "expected": "刚切下的片",
+      "observed": "刚切下的片",
+      "match": true,
+      "crop": "output/review-full/caption-0218-crop.png"
+    },
+    {
+      "time": 392.4583333333333,
+      "beat": "19-slice-03",
+      "expected": "还不够平",
+      "observed": "还不够平",
+      "match": true,
+      "crop": "output/review-full/caption-0219-crop.png"
+    },
+    {
+      "time": 393.4166666666667,
+      "beat": "19-slice-03",
+      "expected": "不够光",
+      "observed": "不够光",
+      "match": true,
+      "crop": "output/review-full/caption-0220-crop.png"
+    },
+    {
+      "time": 394.9583333333333,
+      "beat": "19-slice-03",
+      "expected": "锯痕和受损层都在",
+      "observed": "锯痕和受损层都在",
+      "match": true,
+      "crop": "output/review-full/caption-0221-crop.png"
+    },
+    {
+      "time": 396.4166666666667,
+      "beat": "19-slice-03",
+      "expected": "必须继续加工",
+      "observed": "必须继续加工",
+      "match": true,
+      "crop": "output/review-full/caption-0222-crop.png"
+    },
+    {
+      "time": 398.8333333333333,
+      "beat": "20-edge-01",
+      "expected": "硅很脆",
+      "observed": "硅很脆",
+      "match": true,
+      "crop": "output/review-full/caption-0223-crop.png"
+    },
+    {
+      "time": 400.5416666666667,
+      "beat": "20-edge-01",
+      "expected": "尖边容易崩缺并产生颗粒",
+      "observed": "尖边容易崩缺并产生颗粒",
+      "match": true,
+      "crop": "output/review-full/caption-0224-crop.png"
+    },
+    {
+      "time": 402.9583333333333,
+      "beat": "20-edge-01",
+      "expected": "把边缘加工成圆滑轮廓",
+      "observed": "把边缘加工成圆滑轮廓",
+      "match": true,
+      "crop": "output/review-full/caption-0225-crop.png"
+    },
+    {
+      "time": 404.5,
+      "beat": "20-edge-01",
+      "expected": "可以降低风险",
+      "observed": "可以降低风险",
+      "match": true,
+      "crop": "output/review-full/caption-0226-crop.png"
+    },
+    {
+      "time": 406.25,
+      "beat": "20-edge-02",
+      "expected": "研磨让两面更平行",
+      "observed": "研磨让两面更平行",
+      "match": true,
+      "crop": "output/review-full/caption-0227-crop.png"
+    },
+    {
+      "time": 407.9166666666667,
+      "beat": "20-edge-02",
+      "expected": "厚度接近目标",
+      "observed": "厚度接近目标",
+      "match": true,
+      "crop": "output/review-full/caption-0228-crop.png"
+    },
+    {
+      "time": 409.75,
+      "beat": "20-edge-02",
+      "expected": "控制的是整片几何",
+      "observed": "控制的是整片几何",
+      "match": true,
+      "crop": "output/review-full/caption-0229-crop.png"
+    },
+    {
+      "time": 411.2083333333333,
+      "beat": "20-edge-02",
+      "expected": "不只把正面磨亮",
+      "observed": "不只把正面磨亮",
+      "match": true,
+      "crop": "output/review-full/caption-0230-crop.png"
+    },
+    {
+      "time": 413.2083333333333,
+      "beat": "20-edge-03",
+      "expected": "机械加工可能留下损伤",
+      "observed": "机械加工可能留下损伤",
+      "match": true,
+      "crop": "output/review-full/caption-0231-crop.png"
+    },
+    {
+      "time": 415.9166666666667,
+      "beat": "20-edge-03",
+      "expected": "再用化学蚀刻移除一定材料",
+      "observed": "再用化学蚀刻移除一定材料",
+      "match": true,
+      "crop": "output/review-full/caption-0232-crop.png"
+    },
+    {
+      "time": 418.0,
+      "beat": "20-edge-03",
+      "expected": "进一步去掉受损层",
+      "observed": "进一步去掉受损层",
+      "match": true,
+      "crop": "output/review-full/caption-0233-crop.png"
+    },
+    {
+      "time": 421.25,
+      "beat": "21-polish-01",
+      "expected": "抛光垫和抛光液共同作用",
+      "observed": "拋光垫和抛光液共同作用",
+      "match": false,
+      "crop": "output/review-full/caption-0234-crop.png"
+    },
+    {
+      "time": 423.2083333333333,
+      "beat": "21-polish-01",
+      "expected": "表面发生化学作用",
+      "observed": "表面发生化学作用",
+      "match": true,
+      "crop": "output/review-full/caption-0235-crop.png"
+    },
+    {
+      "time": 424.6666666666667,
+      "beat": "21-polish-01",
+      "expected": "同时移走材料",
+      "observed": "同时移走材料",
+      "match": true,
+      "crop": "output/review-full/caption-0236-crop.png"
+    },
+    {
+      "time": 426.625,
+      "beat": "21-polish-01",
+      "expected": "这就是化学机械抛光",
+      "observed": "这就是化学机械抛光",
+      "match": true,
+      "crop": "output/review-full/caption-0237-crop.png"
+    },
+    {
+      "time": 428.2916666666667,
+      "beat": "21-polish-02",
+      "expected": "放大看",
+      "observed": "放大看",
+      "match": true,
+      "crop": "output/review-full/caption-0238-crop.png"
+    },
+    {
+      "time": 429.4583333333333,
+      "beat": "21-polish-02",
+      "expected": "突起逐渐被削低",
+      "observed": "突起逐渐被削低",
+      "match": true,
+      "crop": "output/review-full/caption-0239-crop.png"
+    },
+    {
+      "time": 430.75,
+      "beat": "21-polish-02",
+      "expected": "压力",
+      "observed": "压力",
+      "match": true,
+      "crop": "output/review-full/caption-0240-crop.png"
+    },
+    {
+      "time": 432.2083333333333,
+      "beat": "21-polish-02",
+      "expected": "运动和供液条件",
+      "observed": "运动和供液条件",
+      "match": true,
+      "crop": "output/review-full/caption-0241-crop.png"
+    },
+    {
+      "time": 433.7916666666667,
+      "beat": "21-polish-02",
+      "expected": "一起决定加工结果",
+      "observed": "一起决定加工结果",
+      "match": true,
+      "crop": "output/review-full/caption-0242-crop.png"
+    },
+    {
+      "time": 435.5,
+      "beat": "21-polish-03",
+      "expected": "双面抛光后",
+      "observed": "双面抛光后",
+      "match": true,
+      "crop": "output/review-full/caption-0243-crop.png"
+    },
+    {
+      "time": 436.7916666666667,
+      "beat": "21-polish-03",
+      "expected": "还可以按要求精抛",
+      "observed": "还可以按要求精抛",
+      "match": true,
+      "crop": "output/review-full/caption-0244-crop.png"
+    },
+    {
+      "time": 438.7083333333333,
+      "beat": "21-polish-03",
+      "expected": "镜面反光只是结果之一",
+      "observed": "镜面反光只是结果之一",
+      "match": true,
+      "crop": "output/review-full/caption-0245-crop.png"
+    },
+    {
+      "time": 440.5416666666667,
+      "beat": "21-polish-03",
+      "expected": "平整需要实际测量",
+      "observed": "平整需要实际测量",
+      "match": true,
+      "crop": "output/review-full/caption-0246-crop.png"
+    },
+    {
+      "time": 443.5,
+      "beat": "22-flatness-01",
+      "expected": "平整有不同尺度",
+      "observed": "平整有不同尺度",
+      "match": true,
+      "crop": "output/review-full/caption-0247-crop.png"
+    },
+    {
+      "time": 445.2083333333333,
+      "beat": "22-flatness-01",
+      "expected": "整片翘曲",
+      "observed": "整片翘曲",
+      "match": true,
+      "crop": "output/review-full/caption-0248-crop.png"
+    },
+    {
+      "time": 447.0,
+      "beat": "22-flatness-01",
+      "expected": "局部平坦度和微观粗糙度",
+      "observed": "局部平坦度和微观粗糙度",
+      "match": true,
+      "crop": "output/review-full/caption-0249-crop.png"
+    },
+    {
+      "time": 448.875,
+      "beat": "22-flatness-01",
+      "expected": "不能混成一个数字",
+      "observed": "不能混成一个数字",
+      "match": true,
+      "crop": "output/review-full/caption-0250-crop.png"
+    },
+    {
+      "time": 450.75,
+      "beat": "22-flatness-02",
+      "expected": "光刻需要清楚成像",
+      "observed": "光刻需要清楚成像",
+      "match": true,
+      "crop": "output/review-full/caption-0251-crop.png"
+    },
+    {
+      "time": 452.5,
+      "beat": "22-flatness-02",
+      "expected": "有些地方高",
+      "observed": "有些地方高",
+      "match": true,
+      "crop": "output/review-full/caption-0252-crop.png"
+    },
+    {
+      "time": 453.5833333333333,
+      "beat": "22-flatness-02",
+      "expected": "有些地方低",
+      "observed": "有些地方低",
+      "match": true,
+      "crop": "output/review-full/caption-0253-crop.png"
+    },
+    {
+      "time": 455.3333333333333,
+      "beat": "22-flatness-02",
+      "expected": "就更难同时处在合适的焦点",
+      "observed": "就更难同时处在合适的焦点",
+      "match": true,
+      "crop": "output/review-full/caption-0254-crop.png"
+    },
+    {
+      "time": 457.5833333333333,
+      "beat": "22-flatness-03",
+      "expected": "容许多少起伏",
+      "observed": "容许多少起伏",
+      "match": true,
+      "crop": "output/review-full/caption-0255-crop.png"
+    },
+    {
+      "time": 459.4166666666667,
+      "beat": "22-flatness-03",
+      "expected": "要看器件和产品规格",
+      "observed": "要看器件和产品规格",
+      "match": true,
+      "crop": "output/review-full/caption-0256-crop.png"
+    },
+    {
+      "time": 461.1666666666667,
+      "beat": "22-flatness-03",
+      "expected": "平整",
+      "observed": "平整",
+      "match": true,
+      "crop": "output/review-full/caption-0257-crop.png"
+    },
+    {
+      "time": 462.4166666666667,
+      "beat": "22-flatness-03",
+      "expected": "是为了服务下一阶段的加工",
+      "observed": "是为了服务下一阶段的加工",
+      "match": true,
+      "crop": "output/review-full/caption-0258-crop.png"
+    },
+    {
+      "time": 465.5,
+      "beat": "23-clean-01",
+      "expected": "表面仍可能有磨粒",
+      "observed": "表面仍可能有磨粒",
+      "match": true,
+      "crop": "output/review-full/caption-0259-crop.png"
+    },
+    {
+      "time": 467.5833333333333,
+      "beat": "23-clean-01",
+      "expected": "有机残留和金属污染",
+      "observed": "有机残留和金属污染",
+      "match": true,
+      "crop": "output/review-full/caption-0260-crop.png"
+    },
+    {
+      "time": 469.4166666666667,
+      "beat": "23-clean-01",
+      "expected": "清洗",
+      "observed": "清洗",
+      "match": true,
+      "crop": "output/review-full/caption-0261-crop.png"
+    },
+    {
+      "time": 470.5416666666667,
+      "beat": "23-clean-01",
+      "expected": "要分别解决这些问题",
+      "observed": "要分别解决这些问题",
+      "match": true,
+      "crop": "output/review-full/caption-0262-crop.png"
+    },
+    {
+      "time": 472.2916666666667,
+      "beat": "23-clean-02",
+      "expected": "组合处理步骤后",
+      "observed": "组合处理步骤后",
+      "match": true,
+      "crop": "output/review-full/caption-0263-crop.png"
+    },
+    {
+      "time": 473.9583333333333,
+      "beat": "23-clean-02",
+      "expected": "用高纯水漂洗并干燥",
+      "observed": "用高纯水漂洗并干燥",
+      "match": true,
+      "crop": "output/review-full/caption-0264-crop.png"
+    },
+    {
+      "time": 475.9166666666667,
+      "beat": "23-clean-02",
+      "expected": "去掉旧污染",
+      "observed": "去掉旧污染",
+      "match": true,
+      "crop": "output/review-full/caption-0265-crop.png"
+    },
+    {
+      "time": 477.4583333333333,
+      "beat": "23-clean-02",
+      "expected": "也要避免新的残留",
+      "observed": "也要避免新的残留",
+      "match": true,
+      "crop": "output/review-full/caption-0266-crop.png"
+    },
+    {
+      "time": 478.875,
+      "beat": "23-clean-03",
+      "expected": "夹具",
+      "observed": "夹具",
+      "match": true,
+      "crop": "output/review-full/caption-0267-crop.png"
+    },
+    {
+      "time": 480.3333333333333,
+      "beat": "23-clean-03",
+      "expected": "空气和包装也要配合",
+      "observed": "空气和包装也要配合",
+      "match": true,
+      "crop": "output/review-full/caption-0268-crop.png"
+    },
+    {
+      "time": 482.1666666666667,
+      "beat": "23-clean-03",
+      "expected": "每一次接触",
+      "observed": "每一次接触",
+      "match": true,
+      "crop": "output/review-full/caption-0269-crop.png"
+    },
+    {
+      "time": 483.875,
+      "beat": "23-clean-03",
+      "expected": "都关系到清洁表面能否保住",
+      "observed": "都关系到清洁表面能否保住",
+      "match": true,
+      "crop": "output/review-full/caption-0270-crop.png"
+    },
+    {
+      "time": 487.125,
+      "beat": "24-epitaxy-01",
+      "expected": "部分产品还要外延",
+      "observed": "部分产品还要外延",
+      "match": true,
+      "crop": "output/review-full/caption-0271-crop.png"
+    },
+    {
+      "time": 488.6666666666667,
+      "beat": "24-epitaxy-01",
+      "expected": "在受控条件下",
+      "observed": "在受控条件下",
+      "match": true,
+      "crop": "output/review-full/caption-0272-crop.png"
+    },
+    {
+      "time": 491.125,
+      "beat": "24-epitaxy-01",
+      "expected": "让气相原料在硅片表面形成新的单晶层",
+      "observed": "让气相原料在硅片表面形成新的单晶层",
+      "match": true,
+      "crop": "output/review-full/caption-0273-crop.png"
+    },
+    {
+      "time": 494.25,
+      "beat": "24-epitaxy-02",
+      "expected": "新层延续下面的晶格取向",
+      "observed": "新层延续下面的晶格取向",
+      "match": true,
+      "crop": "output/review-full/caption-0274-crop.png"
+    },
+    {
+      "time": 496.5416666666667,
+      "beat": "24-epitaxy-02",
+      "expected": "同时按要求控制厚度和电阻率",
+      "observed": "同时按要求控制厚度和电阻率",
+      "match": true,
+      "crop": "output/review-full/caption-0275-crop.png"
+    },
+    {
+      "time": 498.5833333333333,
+      "beat": "24-epitaxy-02",
+      "expected": "提供所需材料特性",
+      "observed": "提供所需材料特性",
+      "match": true,
+      "crop": "output/review-full/caption-0276-crop.png"
+    },
+    {
+      "time": 500.4583333333333,
+      "beat": "24-epitaxy-03",
+      "expected": "这不是贴一层膜",
+      "observed": "这不是贴一层膜",
+      "match": true,
+      "crop": "output/review-full/caption-0277-crop.png"
+    },
+    {
+      "time": 502.1666666666667,
+      "beat": "24-epitaxy-03",
+      "expected": "抛光片和外延片",
+      "observed": "拋光片和外延片",
+      "match": false,
+      "crop": "output/review-full/caption-0278-crop.png"
+    },
+    {
+      "time": 503.8333333333333,
+      "beat": "24-epitaxy-03",
+      "expected": "服务不同的使用要求",
+      "observed": "服务不同的使用要求",
+      "match": true,
+      "crop": "output/review-full/caption-0279-crop.png"
+    },
+    {
+      "time": 505.5416666666667,
+      "beat": "24-epitaxy-03",
+      "expected": "外延也并非必经步骤",
+      "observed": "外延也并非必经步骤",
+      "match": true,
+      "crop": "output/review-full/caption-0280-crop.png"
+    },
+    {
+      "time": 508.375,
+      "beat": "25-inspect-01",
+      "expected": "发亮不等于合格",
+      "observed": "发亮不等于合格",
+      "match": true,
+      "crop": "output/review-full/caption-0281-crop.png"
+    },
+    {
+      "time": 509.6666666666667,
+      "beat": "25-inspect-01",
+      "expected": "颗粒",
+      "observed": "颗粒",
+      "match": true,
+      "crop": "output/review-full/caption-0282-crop.png"
+    },
+    {
+      "time": 510.375,
+      "beat": "25-inspect-01",
+      "expected": "缺陷",
+      "observed": "缺陷",
+      "match": true,
+      "crop": "output/review-full/caption-0283-crop.png"
+    },
+    {
+      "time": 511.1666666666667,
+      "beat": "25-inspect-01",
+      "expected": "厚度",
+      "observed": "厚度",
+      "match": true,
+      "crop": "output/review-full/caption-0284-crop.png"
+    },
+    {
+      "time": 512.5416666666666,
+      "beat": "25-inspect-01",
+      "expected": "平整度和电学性质",
+      "observed": "平整度和电学性质",
+      "match": true,
+      "crop": "output/review-full/caption-0285-crop.png"
+    },
+    {
+      "time": 514.1666666666666,
+      "beat": "25-inspect-01",
+      "expected": "各有测量方法",
+      "observed": "各有测量方法",
+      "match": true,
+      "crop": "output/review-full/caption-0286-crop.png"
+    },
+    {
+      "time": 515.8333333333334,
+      "beat": "25-inspect-02",
+      "expected": "用光扫描表面",
+      "observed": "用光扫描表面",
+      "match": true,
+      "crop": "output/review-full/caption-0287-crop.png"
+    },
+    {
+      "time": 517.3333333333334,
+      "beat": "25-inspect-02",
+      "expected": "可以关注异常散射",
+      "observed": "可以关注异常散射",
+      "match": true,
+      "crop": "output/review-full/caption-0288-crop.png"
+    },
+    {
+      "time": 519.4166666666666,
+      "beat": "25-inspect-02",
+      "expected": "探头与光点关联运动",
+      "observed": "探头与光点关联运动",
+      "match": true,
+      "crop": "output/review-full/caption-0289-crop.png"
+    },
+    {
+      "time": 521.0416666666666,
+      "beat": "25-inspect-02",
+      "expected": "覆盖检查区域",
+      "observed": "覆盖检查区域",
+      "match": true,
+      "crop": "output/review-full/caption-0290-crop.png"
+    },
+    {
+      "time": 523.0,
+      "beat": "25-inspect-03",
+      "expected": "几何测量回答厚不厚",
+      "observed": "几何测量回答厚不厚",
+      "match": true,
+      "crop": "output/review-full/caption-0291-crop.png"
+    },
+    {
+      "time": 524.4166666666666,
+      "beat": "25-inspect-03",
+      "expected": "平不平",
+      "observed": "平不平",
+      "match": true,
+      "crop": "output/review-full/caption-0292-crop.png"
+    },
+    {
+      "time": 525.375,
+      "beat": "25-inspect-03",
+      "expected": "有没有翘曲",
+      "observed": "有没有翘曲",
+      "match": true,
+      "crop": "output/review-full/caption-0293-crop.png"
+    },
+    {
+      "time": 526.875,
+      "beat": "25-inspect-03",
+      "expected": "和颗粒检查",
+      "observed": "和颗粒检查",
+      "match": true,
+      "crop": "output/review-full/caption-0294-crop.png"
+    },
+    {
+      "time": 528.125,
+      "beat": "25-inspect-03",
+      "expected": "是不同的任务",
+      "observed": "是不同的任务",
+      "match": true,
+      "crop": "output/review-full/caption-0295-crop.png"
+    },
+    {
+      "time": 531.5,
+      "beat": "26-shipping-01",
+      "expected": "身份记录要能追溯到晶棒和批次",
+      "observed": "身份记录要能追溯到晶棒和批次",
+      "match": true,
+      "crop": "output/review-full/caption-0296-crop.png"
+    },
+    {
+      "time": 533.9583333333334,
+      "beat": "26-shipping-01",
+      "expected": "出现问题时",
+      "observed": "出现问题时",
+      "match": true,
+      "crop": "output/review-full/caption-0297-crop.png"
+    },
+    {
+      "time": 535.625,
+      "beat": "26-shipping-01",
+      "expected": "才能回查原料和加工环节",
+      "observed": "才能回查原料和加工环节",
+      "match": true,
+      "crop": "output/review-full/caption-0298-crop.png"
+    },
+    {
+      "time": 538.0,
+      "beat": "26-shipping-02",
+      "expected": "专用运输盒保护硅片",
+      "observed": "专用运输盒保护硅片",
+      "match": true,
+      "crop": "output/review-full/caption-0299-crop.png"
+    },
+    {
+      "time": 539.9583333333334,
+      "beat": "26-shipping-02",
+      "expected": "减少颗粒和接触污染",
+      "observed": "减少颗粒和接触污染",
+      "match": true,
+      "crop": "output/review-full/caption-0300-crop.png"
+    },
+    {
+      "time": 542.125,
+      "beat": "26-shipping-02",
+      "expected": "把合格材料送往后续工厂",
+      "observed": "把合格材料送往后续工厂",
+      "match": true,
+      "crop": "output/review-full/caption-0301-crop.png"
+    },
+    {
+      "time": 544.875,
+      "beat": "26-shipping-03",
+      "expected": "这里仍是芯片的材料起点",
+      "observed": "这里仍是芯片的材料起点",
+      "match": true,
+      "crop": "output/review-full/caption-0302-crop.png"
+    },
+    {
+      "time": 546.9166666666666,
+      "beat": "26-shipping-03",
+      "expected": "光刻",
+      "observed": "光刻",
+      "match": true,
+      "crop": "output/review-full/caption-0303-crop.png"
+    },
+    {
+      "time": 547.75,
+      "beat": "26-shipping-03",
+      "expected": "刻蚀",
+      "observed": "刻蚀",
+      "match": true,
+      "crop": "output/review-full/caption-0304-crop.png"
+    },
+    {
+      "time": 548.8333333333334,
+      "beat": "26-shipping-03",
+      "expected": "沉积和互连",
+      "observed": "沉积和互连",
+      "match": true,
+      "crop": "output/review-full/caption-0305-crop.png"
+    },
+    {
+      "time": 550.4166666666666,
+      "beat": "26-shipping-03",
+      "expected": "属于接下来的器件制造",
+      "observed": "属于接下来的器件制造",
+      "match": true,
+      "crop": "output/review-full/caption-0306-crop.png"
+    },
+    {
+      "time": 553.2083333333334,
+      "beat": "27-industry-01",
+      "expected": "做出样品",
+      "observed": "做出样品",
+      "match": true,
+      "crop": "output/review-full/caption-0307-crop.png"
+    },
+    {
+      "time": 554.2916666666666,
+      "beat": "27-industry-01",
+      "expected": "和持续量产",
+      "observed": "和持续量产",
+      "match": true,
+      "crop": "output/review-full/caption-0308-crop.png"
+    },
+    {
+      "time": 555.5,
+      "beat": "27-industry-01",
+      "expected": "是两件事",
+      "observed": "是两件事",
+      "match": true,
+      "crop": "output/review-full/caption-0309-crop.png"
+    },
+    {
+      "time": 557.1666666666666,
+      "beat": "27-industry-01",
+      "expected": "客户需要每批都稳定",
+      "observed": "客户需要每批都稳定",
+      "match": true,
+      "crop": "output/review-full/caption-0310-crop.png"
+    },
+    {
+      "time": 558.8333333333334,
+      "beat": "27-industry-01",
+      "expected": "还要适配自己的工艺",
+      "observed": "还要适配自己的工艺",
+      "match": true,
+      "crop": "output/review-full/caption-0311-crop.png"
+    },
+    {
+      "time": 560.2916666666666,
+      "beat": "27-industry-02",
+      "expected": "信越",
+      "observed": "信越",
+      "match": true,
+      "crop": "output/review-full/caption-0312-crop.png"
+    },
+    {
+      "time": 561.0,
+      "beat": "27-industry-02",
+      "expected": "胜高",
+      "observed": "胜高",
+      "match": true,
+      "crop": "output/review-full/caption-0313-crop.png"
+    },
+    {
+      "time": 561.9583333333334,
+      "beat": "27-industry-02",
+      "expected": "环球晶圆",
+      "observed": "环球晶圆",
+      "match": true,
+      "crop": "output/review-full/caption-0314-crop.png"
+    },
+    {
+      "time": 563.5,
+      "beat": "27-industry-02",
+      "expected": "世创和爱思开矽特隆",
+      "observed": "世创和爱思开矽特隆",
+      "match": true,
+      "crop": "output/review-full/caption-0315-crop.png"
+    },
+    {
+      "time": 565.4166666666666,
+      "beat": "27-industry-02",
+      "expected": "都是重要的硅片供应商",
+      "observed": "都是重要的硅片供应商",
+      "match": true,
+      "crop": "output/review-full/caption-0316-crop.png"
+    },
+    {
+      "time": 567.2083333333334,
+      "beat": "27-industry-02",
+      "expected": "国内也在发展",
+      "observed": "国内也在发展",
+      "match": true,
+      "crop": "output/review-full/caption-0317-crop.png"
+    },
+    {
+      "time": 569.3333333333334,
+      "beat": "27-industry-03",
+      "expected": "不能只数厂房和规划产能",
+      "observed": "不能只数厂房和规划产能",
+      "match": true,
+      "crop": "output/review-full/caption-0318-crop.png"
+    },
+    {
+      "time": 571.3333333333334,
+      "beat": "27-industry-03",
+      "expected": "量产质量",
+      "observed": "量产质量",
+      "match": true,
+      "crop": "output/review-full/caption-0319-crop.png"
+    },
+    {
+      "time": 572.9583333333334,
+      "beat": "27-industry-03",
+      "expected": "客户验证与稳定交付",
+      "observed": "客户验证与稳定交付",
+      "match": true,
+      "crop": "output/review-full/caption-0320-crop.png"
+    },
+    {
+      "time": 574.7916666666666,
+      "beat": "27-industry-03",
+      "expected": "共同决定生产能力",
+      "observed": "共同决定生产能力",
+      "match": true,
+      "crop": "output/review-full/caption-0321-crop.png"
+    },
+    {
+      "time": 577.6666666666666,
+      "beat": "28-recap-01",
+      "expected": "石英经还原得到硅",
+      "observed": "石英经还原得到硅",
+      "match": true,
+      "crop": "output/review-full/caption-0322-crop.png"
+    },
+    {
+      "time": 578.7916666666666,
+      "beat": "28-recap-01",
+      "expected": "再转化",
+      "observed": "再转化",
+      "match": true,
+      "crop": "output/review-full/caption-0323-crop.png"
+    },
+    {
+      "time": 579.875,
+      "beat": "28-recap-01",
+      "expected": "分离和沉积",
+      "observed": "分离和沉积",
+      "match": true,
+      "crop": "output/review-full/caption-0324-crop.png"
+    },
+    {
+      "time": 581.4583333333334,
+      "beat": "28-recap-01",
+      "expected": "一步步降低不需要的杂质",
+      "observed": "一步步降低不需要的杂质",
+      "match": true,
+      "crop": "output/review-full/caption-0325-crop.png"
+    },
+    {
+      "time": 583.5,
+      "beat": "28-recap-02",
+      "expected": "借助籽晶建立取向",
+      "observed": "借助籽晶建立取向",
+      "match": true,
+      "crop": "output/review-full/caption-0326-crop.png"
+    },
+    {
+      "time": 585.0,
+      "beat": "28-recap-02",
+      "expected": "控制生长与缺陷",
+      "observed": "控制生长与缺陷",
+      "match": true,
+      "crop": "output/review-full/caption-0327-crop.png"
+    },
+    {
+      "time": 586.375,
+      "beat": "28-recap-02",
+      "expected": "再切磨抛",
+      "observed": "再切磨拋",
+      "match": false,
+      "crop": "output/review-full/caption-0328-crop.png"
+    },
+    {
+      "time": 587.5833333333334,
+      "beat": "28-recap-02",
+      "expected": "清洗和检测",
+      "observed": "清洗和检测",
+      "match": true,
+      "crop": "output/review-full/caption-0329-crop.png"
+    },
+    {
+      "time": 588.8333333333334,
+      "beat": "28-recap-02",
+      "expected": "得到合格硅片",
+      "observed": "得到合格硅片",
+      "match": true,
+      "crop": "output/review-full/caption-0330-crop.png"
+    },
+    {
+      "time": 590.25,
+      "beat": "28-recap-03",
+      "expected": "一片镜面",
+      "observed": "一片镜面",
+      "match": true,
+      "crop": "output/review-full/caption-0331-crop.png"
+    },
+    {
+      "time": 591.8333333333334,
+      "beat": "28-recap-03",
+      "expected": "背后是一整条精密制造链",
+      "observed": "背后是一整条精密制造链",
+      "match": true,
+      "crop": "output/review-full/caption-0332-crop.png"
+    },
+    {
+      "time": 594.0,
+      "beat": "28-recap-03",
+      "expected": "我们熟悉的计算世界",
+      "observed": "我们熟悉的计算世界",
+      "match": true,
+      "crop": "output/review-full/caption-0333-crop.png"
+    },
+    {
+      "time": 595.75,
+      "beat": "28-recap-03",
+      "expected": "就从这样的材料上开始搭建",
+      "observed": "就从这样的材料上开始搭建",
+      "match": true,
+      "crop": "output/review-full/caption-0334-crop.png"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "title": "一块石头，怎样成为芯片的起点",
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+8%",
+  "targetSeconds": 598,
+  "fps": 24,
+  "scenes": [
+    {
+      "id": "01-start", "chapter": "01", "title": "这片镜面，难在哪里？",
+      "beats": [
+        {"text": "芯片开始时，没有那些复杂线路。它先是一片薄薄的硅，表面亮得像镜子。", "visual": "wafer", "actionAnchor": "没有那些复杂线路", "labels": ["空白硅片", "电路制造之前"], "media": "blank"},
+        {"text": "常见的三百毫米硅片，直径接近餐盘，厚度却只有零点七七五毫米。", "visual": "wafer-measure", "actionAnchor": "三百毫米", "labels": ["直径与厚度", "厚度截面已放大"], "localLabels": ["直径 300 mm", "截面放大 · 0.775 mm"]},
+        {"text": "材料里的杂质、原子的排列和表面的高低，都要受到控制。它究竟怎么做出来？", "visual": "recap", "actionAnchor": "杂质", "actionSeconds": 4.2, "labels": ["三项材料控制"], "localLabels": ["杂质", "原子排列", "表面高低"]}
+      ]
+    },
+    {
+      "id": "02-purity", "chapter": "01", "title": "“很纯”究竟有多纯？",
+      "beats": [
+        {"text": "百分之九十九，就是平均每一百份里面，还混着一份别的东西。离芯片的要求还远。", "visual": "purity", "actionAnchor": "一百份", "labels": ["99%：杂质约占 1%", "示意数量，不代表原子实测"]},
+        {"text": "电子级多晶硅能达到十个、甚至十一个九。每多一个九，剩余杂质再少十倍。", "visual": "purity", "actionAnchor": "每多一个九", "actionSeconds": 2.0, "labels": ["电子级原料：10N / 11N", "每增加一个 9，残余量变为 1/10"], "localLabels": ["剩余杂质相对量", "10 → 1"]},
+        {"text": "这是高纯原料的指标。后面有意加入的掺杂元素，要和失控的污染分开理解。", "visual": "doping", "actionAnchor": "有意加入", "labels": ["原料纯度 ≠ 成品全部成分", "受控掺杂另有规格"], "localLabels": ["受控掺杂原子"]}
+      ]
+    },
+    {
+      "id": "03-order", "chapter": "01", "title": "纯净，还要排得整齐",
+      "beats": [
+        {"text": "全是硅，也不等于合格。不同区域各排各的，取向不同的交界处，就会出现晶界。", "visual": "grains", "actionAnchor": "各排各的", "labels": ["多晶：不同晶粒", "取向不同"]},
+        {"text": "单晶延续同一套晶格取向。像一张连续的网，而不是把几块不同方向的网拼接。", "visual": "lattice", "actionAnchor": "同一套晶格取向", "labels": ["单晶", "晶格取向连续"]},
+        {"text": "我们从石头中取出硅，提纯、长成单晶，再加工表面。先从石英开始。", "visual": "recap", "actionAnchor": "从石头中取出硅", "labels": ["还原 → 提纯 → 生长", "加工 → 检测"]}
+      ]
+    },
+    {
+      "id": "04-quartz", "chapter": "02", "title": "石英里有硅，为什么不能直接用？",
+      "beats": [
+        {"text": "真实的石英，可以透明，也可以乳白。它的主要成分，是二氧化硅。", "visual": "silica", "actionAnchor": "它的主要成分", "labels": ["石英：SiO₂", "标本外观不等于工业纯度"], "media": "quartz"},
+        {"text": "这里的硅与氧结合在一起。要得到单质硅，必须通过化学反应，把它们分开。", "visual": "silica", "actionAnchor": "结合在一起", "labels": ["硅—氧网络", "先进行化学还原"]},
+        {"text": "所以，沙子洗得再干净，也不能直接做芯片。洗掉泥土，并没有改变物质。", "visual": "silica", "actionAnchor": "没有改变物质", "labels": ["清洗：去掉外来污染", "还原：改变化学组成"]}
+      ]
+    },
+    {
+      "id": "05-furnace", "chapter": "02", "title": "先把氧分离出来",
+      "beats": [
+        {"text": "石英和碳质还原剂进入电炉。电极送入能量，在高温区域，让还原反应发生。", "visual": "furnace", "actionAnchor": "电极送入能量", "labels": ["石英 + 碳质还原剂", "埋弧电炉"]},
+        {"text": "合并看这组反应，氧主要随一氧化碳离开。液态硅汇集炉底，再从出料口放出。", "visual": "furnace", "actionAnchor": "液态硅", "labels": ["总体反应：SiO₂ + 2C → Si + 2CO", "实际包含多步反应"]},
+        {"text": "工业硅的纯度通常约百分之九十八到九十九。硅炼出来了，但还远远不够纯。", "visual": "purity", "actionAnchor": "还远远不够纯", "labels": ["工业硅：约 98%—99%", "还原完成，提纯继续"]}
+      ]
+    },
+    {
+      "id": "06-transform", "chapter": "03", "title": "固体难分，换一种形态",
+      "beats": [
+        {"text": "杂质筛不出来，怎么办？一条典型路线，是把硅转化成三氯氢硅等氯硅烷。", "visual": "distill", "actionAnchor": "转化成", "labels": ["工业硅 → 氯硅烷", "示例：三氯氢硅"]},
+        {"text": "这改变了化学形态，不是简单熔化。目的是利用不同物质挥发性的差别。", "visual": "distill", "actionAnchor": "目的是利用", "labels": ["化学转化", "为分离创造条件"]},
+        {"text": "经过汽化和冷凝，让不同组分走进不同的收集路径。提纯，由此有了新办法。", "visual": "distill", "actionAnchor": "不同的收集路径", "labels": ["汽化 / 冷凝", "不同组分分流"]}
+      ]
+    },
+    {
+      "id": "07-distill", "chapter": "03", "title": "精馏塔，怎样把杂质分开？",
+      "beats": [
+        {"text": "塔内，蒸气向上，液体向下，不断接触。容易挥发的组分，更倾向进入蒸气。", "visual": "distill", "actionAnchor": "蒸气向上", "labels": ["蒸气上升", "液体回流"]},
+        {"text": "重复这样的交换，组分逐渐富集，再分别收集。多个分离步骤，继续净化原料。", "visual": "distill", "actionAnchor": "重复这样的交换", "labels": ["多次汽液接触", "逐级分离"]},
+        {"text": "杂质种类不同，分离难度也不同。精馏不是万能滤网，需要整套工艺配合。", "visual": "distill", "actionAnchor": "整套工艺配合", "labels": ["目标原料保留", "杂质分别处理"]}
+      ]
+    },
+    {
+      "id": "08-siemens", "chapter": "03", "title": "提纯之后，怎样变回硅？",
+      "beats": [
+        {"text": "进入西门子法反应器。细长的硅芯通电加热，成为硅沉积的起点。", "visual": "siemens", "actionAnchor": "通电加热", "labels": ["加热硅芯", "西门子法"]},
+        {"text": "高纯氯硅烷与氢气参加反应，硅沉积到硅芯表面，让棒体一层层长粗。", "visual": "siemens", "actionAnchor": "沉积到硅芯表面", "labels": ["硅在表面沉积", "直径逐渐增加"]},
+        {"text": "这是把硅重新沉积出来。气体循环和副产物处理，也是生产体系的重要部分。", "visual": "siemens", "actionAnchor": "重新沉积", "labels": ["高纯多晶硅", "气体与副产物循环处理"]}
+      ]
+    },
+    {
+      "id": "09-feedstock", "chapter": "03", "title": "高纯原料，为什么还要重熔？",
+      "beats": [
+        {"text": "取出硅棒，还要破碎、清理并洁净包装。工具带来的污染，也必须去掉。", "visual": "siemens", "actionAnchor": "洁净包装", "labels": ["破碎 / 清理 / 包装", "避免金属污染"]},
+        {"text": "原料很纯，却含有取向不同的晶粒。接下来，要打散原来的排列，再重新建立。", "visual": "grains", "actionAnchor": "取向不同", "labels": ["纯度已经提高", "晶体取向仍需统一"]},
+        {"text": "所以先熔化，再重新生长单晶。并不是让那些小晶粒，在固体里面自己转正。", "visual": "melt", "actionAnchor": "重新生长", "labels": ["多晶硅熔化", "再进行单晶生长"]}
+      ]
+    },
+    {
+      "id": "10-melt", "chapter": "04", "title": "一炉硅，怎样开始生长？",
+      "beats": [
+        {"text": "多晶硅装进石英坩埚。外侧有石墨支撑和热场，加热后，固体逐渐变成熔体。", "visual": "melt", "actionAnchor": "加热后", "labels": ["石英坩埚", "硅熔点约 1414 ℃"]},
+        {"text": "气氛和热量分布也要控制。目标是保持稳定的条件，而不是温度越高越好。", "visual": "melt", "actionAnchor": "稳定的条件", "labels": ["控制气氛与热场", "保持稳定生长界面"]},
+        {"text": "加入极少量的硼或磷，可以调节电阻率。加入多少、分布怎样，都有要求。", "visual": "doping", "actionAnchor": "加入极少量", "labels": ["受控掺杂", "调节电阻率"], "localLabels": ["受控掺杂原子"]}
+      ]
+    },
+    {
+      "id": "11-seed", "chapter": "04", "title": "谁来决定原子往哪儿排？",
+      "beats": [
+        {"text": "靠一小段籽晶。它已经是单晶，方向已知，给新来的硅原子一个排列参照。", "visual": "seed", "actionAnchor": "籽晶", "labels": ["籽晶", "已知晶格取向"], "media": "silicon-seed"},
+        {"text": "籽晶接触熔硅，缓慢向上提拉。接触处凝固的新晶体，延续籽晶的取向。", "visual": "seed", "actionAnchor": "接触熔硅", "labels": ["接触 → 凝固 → 提拉", "新晶体延续籽晶取向"]},
+        {"text": "晶体和坩埚的旋转，用来配合传热和物质输运，并不是把原子像螺丝一样拧上去。", "visual": "seed", "actionAnchor": "传热和物质输运", "labels": ["旋转调节传热与输运", "时间经过压缩"]}
+      ]
+    },
+    {
+      "id": "12-neck", "chapter": "04", "title": "为什么先拉出一根细颈？",
+      "beats": [
+        {"text": "热冲击可能引入位错。这是晶格中的线状缺陷，还可能在后续生长中延伸。", "visual": "neck", "actionAnchor": "线状缺陷", "labels": ["位错：线状晶格缺陷", "局部放大示意"]},
+        {"text": "先拉出很细的颈部，让表面更近，使合适方向的位错在侧壁终止。这叫缩颈。", "visual": "neck", "actionAnchor": "侧壁终止", "labels": ["缩颈", "位错在侧面终止"]},
+        {"text": "细颈关系到整根晶棒的品质。图中的红线表示位错，不是实际可见的裂缝。", "visual": "neck", "actionAnchor": "整根晶棒的品质", "labels": ["位错示意，不是裂缝", "为无位错生长创造条件"]}
+      ]
+    },
+    {
+      "id": "13-growth", "chapter": "04", "title": "细颈怎样长成粗晶棒？",
+      "beats": [
+        {"text": "调节温度和拉速，晶体直径逐渐增大，形成肩部。这一步叫放肩。", "visual": "shoulder", "actionAnchor": "直径逐渐增大", "labels": ["放肩", "直径逐渐增大"]},
+        {"text": "达到目标直径，进入等径生长。晶棒向上，固液界面继续补充新的晶体。", "visual": "growth", "actionAnchor": "晶棒向上", "labels": ["等径生长", "新增晶体形成于界面"]},
+        {"text": "真实晶棒有金属般的光泽。它是慢慢长出来的，热场和拉速需要持续调整。", "visual": "growth", "actionAnchor": "慢慢长出来", "labels": ["真实单晶硅表面", "生长条件持续调节"], "media": "boule"}
+      ]
+    },
+    {
+      "id": "14-load", "chapter": "04", "title": "晶棒越来越重，怎样稳住？",
+      "beats": [
+        {"text": "晶棒越长越重，承重设计不能忽略。颈部结构或辅助机构，要配合安全生长。", "visual": "support", "actionAnchor": "承重", "labels": ["承重与夹持", "设备方案因工艺而异"]},
+        {"text": "熔体也不安静。温差和旋转带来的流动，会改变正在凝固的界面条件。", "visual": "magnetic", "actionAnchor": "流动", "labels": ["熔体对流", "影响界面条件"]},
+        {"text": "界面条件不稳定，均匀性就受影响。不仅要长得大，还要整根晶棒长得稳定。", "visual": "growth", "actionAnchor": "均匀性", "labels": ["目标：稳定、均匀", "从头部控制到尾部"]}
+      ]
+    },
+    {
+      "id": "15-magnetic", "chapter": "04", "title": "磁场为什么能帮助长晶？",
+      "beats": [
+        {"text": "磁控直拉是一种办法。熔融硅能导电，磁场可以抑制某些流动，调节对流。", "visual": "magnetic", "actionAnchor": "磁场可以", "labels": ["MCZ：磁控直拉", "调节导电熔体的流动"]},
+        {"text": "磁场不是把硅吸起来，而是影响流动与传热，帮助控制生长和杂质输运。", "visual": "magnetic", "actionAnchor": "流动与传热", "labels": ["磁场作用于流动", "晶体仍由提拉机构牵引"]},
+        {"text": "石英坩埚会引入氧。多少氧进入晶体、怎样分布，也受到熔体流动的影响。", "visual": "oxygen", "actionAnchor": "引入氧", "labels": ["氧可来自石英坩埚", "输运影响晶体中的分布"]}
+      ]
+    },
+    {
+      "id": "16-control", "chapter": "04", "title": "需要控制的，不止是杂质总量",
+      "beats": [
+        {"text": "氧也不总是越少越好。配合热处理，可以参与吸杂等设计，关键是按用途控制。", "visual": "oxygen", "actionAnchor": "配合热处理", "labels": ["氧含量与热处理协同", "具体要求取决于用途"]},
+        {"text": "掺杂还有分凝现象。元素在固体和液体中浓度未必相同，剩余熔体也会随生长改变。", "visual": "segregation", "actionAnchor": "浓度未必相同", "labels": ["固相与液相浓度不同", "分凝现象"]},
+        {"text": "所以，称准原料还不够。沿晶棒长度、沿半径的性质均匀性，都需要控制。", "visual": "segregation", "actionAnchor": "性质均匀性", "labels": ["轴向均匀性", "径向均匀性"]}
+      ]
+    },
+    {
+      "id": "17-defects", "chapter": "04", "title": "没有位错，就毫无缺陷了吗？",
+      "beats": [
+        {"text": "晶格可能少一个原子，形成空位；也可能多一个原子，挤进正常位置之间。", "visual": "defects", "actionAnchor": "少一个原子", "actionSeconds": 4.0, "labels": ["点缺陷：原子尺度放大", "原子与间距均为示意"], "localLabels": ["空位", "间隙原子"]},
+        {"text": "点缺陷在冷却时可能聚集。生长速度、温度梯度和后续热过程，都要配合控制。", "visual": "defects", "actionAnchor": "可能聚集", "labels": ["点缺陷可能聚集", "生长与冷却共同控制"], "localLabels": ["空位", "间隙原子"]},
+        {"text": "单晶说的是取向，低缺陷说的是质量。不能把单晶，直接理解成绝对完美。", "visual": "lattice", "actionAnchor": "不能", "labels": ["单晶 ≠ 绝对无缺陷", "不同指标分别控制"], "localLabels": ["空位", "间隙原子"]}
+      ]
+    },
+    {
+      "id": "18-trim", "chapter": "05", "title": "晶棒怎样变成圆片？",
+      "beats": [
+        {"text": "冷却后，切去不合要求的头尾，把外圆加工到指定尺寸。材料也在这里损耗。", "visual": "trim", "actionAnchor": "切去", "labels": ["切头尾 / 外圆加工", "保留合格晶段"], "media": "silicon-shoulder"},
+        {"text": "确定晶向，制作定位缺口。看不见的晶格方向，给设备留下一个识别参照。", "visual": "trim", "actionAnchor": "定位缺口", "labels": ["定位缺口", "对应规定的晶向关系"], "localLabels": ["定位缺口", "晶向参照"]},
+        {"text": "晶棒送向密集排列的细线。运动的线网，同时加工许多平行切面。", "visual": "wire", "actionAnchor": "线网", "labels": ["多线切割", "同时形成平行切面"]}
+      ]
+    },
+    {
+      "id": "19-slice", "chapter": "05", "title": "薄片，为什么不能一刀到位？",
+      "beats": [
+        {"text": "这里展示金刚线怎样逐步去除硅。为看清过程，线径和片间距都做了放大。", "visual": "wire", "actionAnchor": "逐步去除", "labels": ["金刚线切割示意", "线径与片间距已放大"]},
+        {"text": "每道切口都会消耗材料，形成切缝损耗。算原料用量时，也要算上这些损失。", "visual": "kerf", "actionAnchor": "切缝损耗", "labels": ["成品薄片", "切缝材料被去除"]},
+        {"text": "刚切下的片，还不够平、不够光。锯痕和受损层都在，必须继续加工。", "visual": "lap", "actionAnchor": "锯痕和受损层", "labels": ["锯痕", "机械损伤层"]}
+      ]
+    },
+    {
+      "id": "20-edge", "chapter": "05", "title": "为什么先照顾边缘？",
+      "beats": [
+        {"text": "硅很脆，尖边容易崩缺并产生颗粒。把边缘加工成圆滑轮廓，可以降低风险。", "visual": "edge", "actionAnchor": "把边缘加工成", "labels": ["边缘倒圆", "降低崩边风险"]},
+        {"text": "研磨让两面更平行，厚度接近目标。控制的是整片几何，不只把正面磨亮。", "visual": "lap", "actionAnchor": "两面更平行", "labels": ["控制厚度", "改善两面平行度"]},
+        {"text": "机械加工可能留下损伤。再用化学蚀刻移除一定材料，进一步去掉受损层。", "visual": "etch", "actionAnchor": "移除一定材料", "labels": ["化学蚀刻", "去除加工损伤层"]}
+      ]
+    },
+    {
+      "id": "21-polish", "chapter": "05", "title": "镜面，是怎样抛出来的？",
+      "beats": [
+        {"text": "抛光垫和抛光液共同作用，表面发生化学作用，同时移走材料。这就是化学机械抛光。", "visual": "polish", "actionAnchor": "共同作用", "labels": ["化学作用 + 机械去除", "CMP"]},
+        {"text": "放大看，突起逐渐被削低。压力、运动和供液条件，一起决定加工结果。", "visual": "polish", "actionAnchor": "突起逐渐被削低", "labels": ["表面起伏放大示意", "逐步整平"]},
+        {"text": "双面抛光后，还可以按要求精抛。镜面反光只是结果之一，平整需要实际测量。", "visual": "polish", "actionAnchor": "平整", "labels": ["双面加工 / 精抛", "镜面外观之外，还要测量"]}
+      ]
+    },
+    {
+      "id": "22-flatness", "chapter": "05", "title": "看着平，和真的够平",
+      "beats": [
+        {"text": "平整有不同尺度。整片翘曲、局部平坦度和微观粗糙度，不能混成一个数字。", "visual": "flatness", "actionAnchor": "不同尺度", "labels": ["整片形状 / 局部平坦度", "表面粗糙度"]},
+        {"text": "光刻需要清楚成像。有些地方高、有些地方低，就更难同时处在合适的焦点。", "visual": "focus", "actionAnchor": "有些地方高", "labels": ["焦平面", "高度差影响成像"]},
+        {"text": "容许多少起伏，要看器件和产品规格。平整，是为了服务下一阶段的加工。", "visual": "focus", "actionAnchor": "产品规格", "labels": ["平整度由用途决定", "各项指标分别验收"]}
+      ]
+    },
+    {
+      "id": "23-clean", "chapter": "06", "title": "抛光结束，为什么还不能出厂？",
+      "beats": [
+        {"text": "表面仍可能有磨粒、有机残留和金属污染。清洗，要分别解决这些问题。", "visual": "wash", "actionAnchor": "磨粒", "labels": ["颗粒 / 有机残留", "金属污染"]},
+        {"text": "组合处理步骤后，用高纯水漂洗并干燥。去掉旧污染，也要避免新的残留。", "visual": "wash", "actionAnchor": "漂洗并干燥", "labels": ["分步清洗 → 漂洗 → 干燥", "具体配方因工艺而异"]},
+        {"text": "夹具、空气和包装也要配合。每一次接触，都关系到清洁表面能否保住。", "visual": "wash", "actionAnchor": "每一次接触", "labels": ["洁净搬运", "控制二次污染"]}
+      ]
+    },
+    {
+      "id": "24-epitaxy", "chapter": "06", "title": "有些硅片，为什么再长一层？",
+      "beats": [
+        {"text": "部分产品还要外延：在受控条件下，让气相原料在硅片表面形成新的单晶层。", "visual": "epitaxy", "actionAnchor": "让气相原料", "actionSeconds": 2.5, "labels": ["外延：可选加工", "在衬底上生长单晶层"], "localLabels": ["衬底", "新生外延层"]},
+        {"text": "新层延续下面的晶格取向，同时按要求控制厚度和电阻率，提供所需材料特性。", "visual": "epitaxy", "actionAnchor": "延续下面的晶格取向", "labels": ["晶格取向连续", "外延层：厚度与电阻率受控"], "localLabels": ["衬底", "新生外延层"]},
+        {"text": "这不是贴一层膜。抛光片和外延片，服务不同的使用要求，外延也并非必经步骤。", "visual": "epitaxy", "actionAnchor": "不同的使用要求", "labels": ["抛光片 / 外延片", "按产品需求选择"], "localLabels": ["衬底", "新生外延层"]}
+      ]
+    },
+    {
+      "id": "25-inspect", "chapter": "07", "title": "怎样证明每片都合格？",
+      "beats": [
+        {"text": "发亮不等于合格。颗粒、缺陷、厚度、平整度和电学性质，各有测量方法。", "visual": "scan", "actionAnchor": "颗粒", "labels": ["外观不是验收结论", "多项指标分别检测"]},
+        {"text": "用光扫描表面，可以关注异常散射。探头与光点关联运动，覆盖检查区域。", "visual": "scan", "actionAnchor": "光扫描表面", "labels": ["光学表面检查", "扫描轨迹示意"]},
+        {"text": "几何测量回答厚不厚、平不平、有没有翘曲。和颗粒检查，是不同的任务。", "visual": "flatness", "actionAnchor": "厚不厚", "labels": ["厚度 / 平整度 / 翘曲", "与颗粒检查分开"]}
+      ]
+    },
+    {
+      "id": "26-shipping", "chapter": "07", "title": "离开工厂，洁净还要继续",
+      "beats": [
+        {"text": "身份记录要能追溯到晶棒和批次。出现问题时，才能回查原料和加工环节。", "visual": "trim", "actionAnchor": "追溯", "labels": ["身份标记与批次记录", "贯穿制造流程"]},
+        {"text": "专用运输盒保护硅片，减少颗粒和接触污染，把合格材料送往后续工厂。", "visual": "cassette", "actionAnchor": "运输盒", "labels": ["专用洁净运输盒", "保护表面与边缘"]},
+        {"text": "这里仍是芯片的材料起点。光刻、刻蚀、沉积和互连，属于接下来的器件制造。", "visual": "wafer", "actionAnchor": "材料起点", "labels": ["硅片制备完成", "器件制造随后开始"], "media": "chip"}
+      ]
+    },
+    {
+      "id": "27-industry", "chapter": "07", "title": "难的不只是做出一片",
+      "beats": [
+        {"text": "做出样品，和持续量产，是两件事。客户需要每批都稳定，还要适配自己的工艺。", "visual": "industry", "actionAnchor": "每批都稳定", "labels": ["批次一致性", "适配客户工艺"]},
+        {"text": "信越、胜高、环球晶圆、世创和爱思开矽特隆，都是重要的硅片供应商。国内也在发展。", "visual": "industry", "actionAnchor": "重要的硅片供应商", "labels": ["主要供应商示例", "不以图形面积表示份额"]},
+        {"text": "不能只数厂房和规划产能。量产质量、客户验证与稳定交付，共同决定生产能力。", "visual": "industry", "actionAnchor": "稳定交付", "labels": ["质量 / 验证 / 交付", "共同决定量产能力"]}
+      ]
+    },
+    {
+      "id": "28-recap", "chapter": "08", "title": "从石头，到芯片的起点",
+      "beats": [
+        {"text": "石英经还原得到硅，再转化、分离和沉积，一步步降低不需要的杂质。", "visual": "recap", "actionAnchor": "还原", "labels": ["还原 → 提纯", "改变组成，再净化原料"], "media": "quartz-macro"},
+        {"text": "借助籽晶建立取向，控制生长与缺陷；再切磨抛、清洗和检测，得到合格硅片。", "visual": "recap", "actionAnchor": "籽晶", "labels": ["单晶生长 → 表面加工", "每个环节都有自己的指标"]},
+        {"text": "一片镜面，背后是一整条精密制造链。我们熟悉的计算世界，就从这样的材料上开始搭建。", "visual": "wafer", "actionAnchor": "一整条精密制造链", "labels": ["一片硅", "一整条精密制造链"], "media": "blank"}
+      ]
+    }
+  ]
+}

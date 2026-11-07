@@ -1,0 +1,329 @@
+{
+  "config": {
+    "text": "平整有不同尺度。整片翘曲、局部平坦度和微观粗糙度，不能混成一个数字。光刻需要清楚成像。有些地方高、有些地方低，就更难同时处在合适的焦点。容许多少起伏，要看器件和产品规格。平整，是为了服务下一阶段的加工。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 5092500,
+      "text": "平整"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6287080,
+      "duration": 1736250,
+      "text": "有"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8254580,
+      "duration": 3009160,
+      "text": "不同"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11379580,
+      "duration": 4050830,
+      "text": "尺度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 20717500,
+      "duration": 3819580,
+      "text": "整片"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 24652910,
+      "duration": 5092500,
+      "text": "翘曲"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 32523330,
+      "duration": 3009160,
+      "text": "局部"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 35532500,
+      "duration": 1620410,
+      "text": "平"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37268330,
+      "duration": 5092500,
+      "text": "坦度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43518330,
+      "duration": 1388750,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45023330,
+      "duration": 3819580,
+      "text": "微观"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 48958330,
+      "duration": 3356660,
+      "text": "粗糙"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 52315000,
+      "duration": 1620410,
+      "text": "度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 56597080,
+      "duration": 2430410,
+      "text": "不能"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 59143330,
+      "duration": 2893330,
+      "text": "混成"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 62268330,
+      "duration": 1273330,
+      "text": "一个"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 63657500,
+      "duration": 3819580,
+      "text": "数字"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 72800830,
+      "duration": 5555410,
+      "text": "光刻"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78587910,
+      "duration": 2546250,
+      "text": "需要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 81250000,
+      "duration": 2662080,
+      "text": "清楚"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 84027910,
+      "duration": 4976660,
+      "text": "成像"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 2546250,
+      "text": "有些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96990830,
+      "duration": 2777500,
+      "text": "地方"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 99768330,
+      "duration": 2662080,
+      "text": "高"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 105440000,
+      "duration": 2430410,
+      "text": "有些"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 107986250,
+      "duration": 2893330,
+      "text": "地方"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 110879580,
+      "duration": 2546250,
+      "text": "低"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115740830,
+      "duration": 1620410,
+      "text": "就"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 117476660,
+      "duration": 1851660,
+      "text": "更"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119328750,
+      "duration": 2777910,
+      "text": "难"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 123032500,
+      "duration": 4282500,
+      "text": "同时"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 127430410,
+      "duration": 2662080,
+      "text": "处在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 130324160,
+      "duration": 2893330,
+      "text": "合适"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 133217500,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 134027910,
+      "duration": 3703750,
+      "text": "焦点"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 143055410,
+      "duration": 4398330,
+      "text": "容许"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 147685000,
+      "duration": 2893330,
+      "text": "多少"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 150694580,
+      "duration": 5555410,
+      "text": "起伏"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 158449160,
+      "duration": 1735830,
+      "text": "要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160185000,
+      "duration": 2315000,
+      "text": "看"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 162731660,
+      "duration": 5092500,
+      "text": "器件"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 168055410,
+      "duration": 1041660,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169212910,
+      "duration": 3356660,
+      "text": "产品"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 172685000,
+      "duration": 4513750,
+      "text": "规格"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 182523330,
+      "duration": 5440000,
+      "text": "平整"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 189699160,
+      "duration": 1851660,
+      "text": "是"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 191550830,
+      "duration": 1504580,
+      "text": "为了"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193171250,
+      "duration": 2315000,
+      "text": "服务"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 195717500,
+      "duration": 2546250,
+      "text": "下"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 198263750,
+      "duration": 810000,
+      "text": "一"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 199190000,
+      "duration": 2314580,
+      "text": "阶段"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 201504580,
+      "duration": 694580,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 202315000,
+      "duration": 3819580,
+      "text": "加工"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "62f2210f46839a42f740599468074cb052dc1a85fb1c2cd1f04309fed32b4c36"
+}

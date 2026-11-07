@@ -1,0 +1,317 @@
+{
+  "config": {
+    "text": "石英和碳质还原剂进入电炉。电极送入能量，在高温区域，让还原反应发生。合并看这组反应，氧主要随一氧化碳离开。液态硅汇集炉底，再从出料口放出。工业硅的纯度通常约百分之九十八到九十九。硅炼出来了，但还远远不够纯。",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%"
+  },
+  "events": [
+    {
+      "type": "WordBoundary",
+      "offset": 962910,
+      "duration": 5787080,
+      "text": "石英"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 6981660,
+      "duration": 1620410,
+      "text": "和"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 8717500,
+      "duration": 2893330,
+      "text": "碳质"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 11726660,
+      "duration": 5440000,
+      "text": "还原剂"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 18092500,
+      "duration": 2893330,
+      "text": "进入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 21101660,
+      "duration": 4282500,
+      "text": "电炉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 30555410,
+      "duration": 3935000,
+      "text": "电极"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 34722080,
+      "duration": 2199160,
+      "text": "送入"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 37037080,
+      "duration": 3703750,
+      "text": "能量"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 43287080,
+      "duration": 1620410,
+      "text": "在"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 45023330,
+      "duration": 2777910,
+      "text": "高温"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 47916660,
+      "duration": 3935000,
+      "text": "区域"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 53472080,
+      "duration": 1620410,
+      "text": "让"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 55208330,
+      "duration": 3125000,
+      "text": "还原"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 58449160,
+      "duration": 2430410,
+      "text": "反应"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 60995410,
+      "duration": 4166660,
+      "text": "发生"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 70486250,
+      "duration": 3472080,
+      "text": "合并"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 73958330,
+      "duration": 1620410,
+      "text": "看"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 75810000,
+      "duration": 1041660,
+      "text": "这"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 76851660,
+      "duration": 1041660,
+      "text": "组"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 78009160,
+      "duration": 5208330,
+      "text": "反应"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 86574160,
+      "duration": 3703750,
+      "text": "氧"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 91319580,
+      "duration": 2893330,
+      "text": "主要"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 94328750,
+      "duration": 2199160,
+      "text": "随"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 96759160,
+      "duration": 5671250,
+      "text": "一氧化碳"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 102546250,
+      "duration": 4166660,
+      "text": "离开"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 112037080,
+      "duration": 3472080,
+      "text": "液态"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 115625000,
+      "duration": 3472080,
+      "text": "硅汇"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 119097080,
+      "duration": 2546250,
+      "text": "集炉"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 121643330,
+      "duration": 2662080,
+      "text": "底"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 126273330,
+      "duration": 1851660,
+      "text": "再"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 128125000,
+      "duration": 3125000,
+      "text": "从出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 131365830,
+      "duration": 3356660,
+      "text": "料口"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 134837910,
+      "duration": 4629580,
+      "text": "放出"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 144791660,
+      "duration": 3703750,
+      "text": "工业"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 148495410,
+      "duration": 1272910,
+      "text": "硅"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 149768330,
+      "duration": 578750,
+      "text": "的"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 150462910,
+      "duration": 4398330,
+      "text": "纯度"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 155902910,
+      "duration": 3356660,
+      "text": "通常"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 159375000,
+      "duration": 1388750,
+      "text": "约"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 160995410,
+      "duration": 8217500,
+      "text": "百分之九十八"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 169212910,
+      "duration": 1388750,
+      "text": "到"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 170717500,
+      "duration": 5555410,
+      "text": "九十九"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 181597080,
+      "duration": 3240830,
+      "text": "硅炼"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 184953750,
+      "duration": 2546250,
+      "text": "出来"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 187500000,
+      "duration": 2546250,
+      "text": "了"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 193055410,
+      "duration": 1388750,
+      "text": "但"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 194444580,
+      "duration": 925830,
+      "text": "还"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 195486250,
+      "duration": 2546250,
+      "text": "远远"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 198148330,
+      "duration": 1967500,
+      "text": "不够"
+    },
+    {
+      "type": "WordBoundary",
+      "offset": 200115830,
+      "duration": 3356660,
+      "text": "纯"
+    }
+  ],
+  "timestampUnits": "100ns from segment audio",
+  "audioSHA256": "9cd8ef77d8d09fb7ba6dcfba3f4d040f0679b4ce880932ba0fb74b8a50ea8ef6"
+}

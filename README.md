@@ -1,14 +1,67 @@
 # 从石英到硅片
 
-一条 9:16 中文科普视频，以及可以重新运行的 ComfyUI 制作工程。
+当前版本：**9 分 58 秒，1080×1920，24fps，9:16 中文科普视频**，
+以及可重复运行的代码与 ComfyUI 工程。
 
-影片约 2 分 54 秒，输出 1080 x 1920、24 fps。以实物照片呈现石英、晶棒、
-籽晶和加工晶圆；用有明确动作的三维图解解释提纯、晶体生长、切片、研磨、
-抛光、清洗与检测。文字在最后合成，照片署名放在工程和播放器外侧。
+新版以 28 个问题、8 个章节、84 个语义节拍讲解硅片制造。口播重新撰写和配音，
+实际词时间戳驱动动作、物体标注和 335 条字幕。实物照片由 ComfyUI LTX 生成短镜头；
+晶格、长晶和加工机制由 Three.js 精确解释，ComfyUI 最终合成节点调用 FFmpeg。
+说明文字在生成画面后叠加，旁白字幕最后合成；画面内没有额外署名水印。
 
 **[下载完整视频与工程包](https://github.com/theageofadzz/silicon-wafer-explainer/releases/latest)**
 
-![分镜预览](review/overview.jpg)
+新版入口：[完整制作说明](edit/ten-minute/README.md)、
+[旁白全文](edit/ten-minute/NARRATION.md)、
+[台词与动作](edit/ten-minute/BEATS.md)、
+[科学依据](edit/ten-minute/FACTS.md)。
+
+![十分钟版画面](edit/ten-minute/review/overview.jpg)
+
+| 工作流 | 用途 |
+| --- | --- |
+| [full.json](edit/ten-minute/workflows/full.json) | 准备真实时间轴与模型镜头，生成三段新实物镜头，合成全片 |
+| [cached.json](edit/ten-minute/workflows/cached.json) | 复用已生成实物镜头，重建代码镜头并合成全片 |
+| [photos.json](edit/ten-minute/workflows/photos.json) | 单独生成石英、晶棒、空白硅片，便于控制设备资源 |
+| `*-api.json` | 对应的 ComfyUI API 图 |
+
+缓存口播 MP3、词事件、字体、照片、生成片段、脚本、节点源码和工作流都在仓库里。
+Release 工程包另带模型渲染片段和完整视频。未打包模型权重、ComfyUI 运行时或参考片。
+原生代码镜头为 1080×1920、24fps；新实物扩散镜头原生为 576×1024、24fps，
+合成时放大。照片动态重建属于 AI 生成画面，设备剖面属于教学图解。
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+npm ci
+
+# 原文未变时，从仓库中的录音缓存离线恢复 WAV 和统一时间轴。
+python edit/ten-minute/production/narrate.py --fit
+
+# 安装独立 ComfyUI 和模型后启动；也向 ComfyUI 的 Python 安装 requirements.txt。
+python edit/ten-minute/production/launch_comfy.py \
+  --comfy-root /absolute/path/to/ComfyUI \
+  --model-root /absolute/path/to/models --port 8197
+
+# 缓存工作流：缺少的代码镜头会自动渲染。
+SILICON_COMFY_URL=http://127.0.0.1:8197 \
+  node edit/ten-minute/production/comfy.mjs cached --run
+
+python edit/ten-minute/production/verify.py --captions all --continuity all
+python edit/ten-minute/production/ocr.py  # macOS Vision
+node production/server.mjs --background
+```
+
+播放器：`http://127.0.0.1:60090/edit/ten-minute/watch.html`。
+修改口播后需重新配音、校准词事件并重建动作，不能沿用旧时间轴。
+详细安装、参数和可替换执行入口见新版制作说明。
+
+## v1.0.0 历史工程
+
+以下保留最初约 2 分 54 秒版本的结构和运行说明；对应根目录旧时间轴与
+`v1.0.0` Release。当前十分钟版以 `edit/ten-minute/` 为准。
+
+![三分钟版分镜预览](review/overview.jpg)
 
 ## 制作分工
 
