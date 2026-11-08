@@ -1,7 +1,7 @@
 {
   "status": "mismatches-need-visual-review",
   "engine": "Apple Vision accurate / zh-Hans,en-US / correction disabled",
-  "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
+  "encodedSha256": "a1630f9b4ec35eee9de9be4a486af72df45d0ceb11f38433e1c7f4706b941425",
   "count": 335,
   "matched": 331,
   "comparison": "letters and digits; punctuation and whitespace excluded",

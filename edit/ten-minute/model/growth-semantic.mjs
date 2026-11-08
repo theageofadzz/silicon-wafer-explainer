@@ -1,4 +1,6 @@
 import {T,V,M,group,box,cyl,ball,ring,segment,dynamicLine,setSegment,tube,arrow,openCup,marker,rigResult,mix,buildDiamond} from './core.mjs';
+import {crucibleDetails,detailGrowthRig,furnaceDetails,conversionDetails,distillationDetails,
+  siemensDetails,magneticDetails,trayDeck,polycrystalProduct} from './growth-detail.mjs';
 
 export const growthKeys=['furnace','distill','siemens','melt','seed','neck','shoulder','growth','support','magnetic','oxygen','segregation'];
 const E=(phrase,seconds,object,action,fact)=>({phrase,seconds,lead:0,object,action,fact});
@@ -162,10 +164,8 @@ function apparatus(parent,{radius=1.55}={}){
   const g=group(parent),cup=tag(openCup(g,radius,-1.15),'石英坩埚');
   const liquid=cyl(g,radius-.12,.055,M.hot,[0,-.76,0]);
   const graphite=group(g);
-  for(const sign of [-1,1])box(graphite,.15,1.25,1.4,M.dark,[sign*(radius+.15),-1.26,0]);
-  box(graphite,radius*2+.45,.18,1.4,M.dark,[0,-1.95,0]);
   const heat=group(g);
-  for(const y of [-1.6,-1.25,-.9])ring(heat,radius+.4,M.hot,[0,y,0],.036);
+  heat.name='slotted graphite resistance heater';
   const neck=cyl(g,.09,.7,M.silicon,[0,1.4,0]);
   const seed=tag(cyl(g,.13,.4,M.silver,[0,1.95,0]),'籽晶');
   const chuck=cyl(g,.2,.25,M.dark,[0,2.28,0]);
@@ -184,7 +184,8 @@ function apparatus(parent,{radius=1.55}={}){
   };
   setCrystal();
   const anchor=marker(g,[.58,-.73,0]),bodyAnchor=marker(body,[.64,0,.05]);
-  return {g,cup,liquid,graphite,heat,neck,seed,chuck,cable,body,shoulder,assembly,setCrystal,anchor,bodyAnchor};
+  const a={g,cup,liquid,graphite,heat,neck,seed,chuck,cable,body,shoulder,assembly,setCrystal,anchor,bodyAnchor};
+  a.detail=crucibleDetails(a);g.growthApparatus=a;return a;
 }
 function chlorosilane(parent,xyz=[0,0,0]){
   const g=group(parent);g.position.set(...xyz);
@@ -209,6 +210,7 @@ function separationSteps(parent,beat){
   const waste=box(g,.7,.65,.8,M.glass,[-1.95,-1.75,0]);
   const unit=group(g);unit.position.set(1.2,.05,0);
   box(unit,.8,1.5,.8,M.glass);
+  g.growthDetails=distillationDetails(g,{stages,unit,clean,waste});
   const outlet=dots(g,8,.065,M.green),reject=dots(g,6,.07,M.amber),
     persistent=dots(g,5,.07,M.hot),lastReject=dots(g,5,.07,M.hot);
   return rigResult(g,ctx=>{
@@ -269,6 +271,7 @@ function chemical(parent,beat){
     const liquid=cyl(g,1.35,.08,M.hot,[0,-.52,0]),gases=dots(g,10,.07,M.green);
     const stream=dynamicLine(g,M.hot,.06),receiver=cyl(g,.5,.12,M.hot,[1.95,-1.5,0]);
     tube(g,[[1.3,-.55,0],[1.95,-.6,0],[1.95,-.9,0]],.08,M.dark);
+    g.growthDetails=furnaceDetails(g,{electrodes,receiver});
     const gasAnchor=marker(g,[.6,1.6,.3]);
     anchors=[id.endsWith('01')?electrodes[0]:gasAnchor,receiver];
     labels.push(...(id.endsWith('01')?[
@@ -299,6 +302,7 @@ function chemical(parent,beat){
     if(id.endsWith('01')||id.endsWith('02')){
       const chunk=new T.Mesh(new T.IcosahedronGeometry(.55,1),M.silicon);chunk.position.set(-1.2,.5,0);g.add(chunk);
       const molecule=chlorosilane(g,[1.15,.5,0]),conversion=arrow(g,[-.4,.5,0],[.45,.5,0]);
+      g.growthDetails=conversionDetails(g,{chunk,molecule});
       const frameA=box(g,1.3,1.1,.7,M.glass,[-1.15,-1.3,0]),frameB=box(g,1.3,1.1,.7,M.glass,[1.15,-1.3,0]);
       const vapor=dots(g,10,.06,M.green),residue=dots(g,8,.065,M.amber);
       anchors=[chunk,molecule.centre];labels.push({text:'硅原料',object:chunk,offset:[0,-80]},
@@ -320,6 +324,7 @@ function chemical(parent,beat){
       tube(g,[[-1.15,-.5,0],[-1.15,1,0],[.2,1,0],[.2,-.2,0],[1.15,-.5,0]],.045);
       const cold=ring(g,.35,M.silver,[.2,.45,0],.025);cold.rotation.z=Math.PI/2;
       const out=box(g,.8,.6,.7,M.glass,[-.2,-2.05,.2]);
+      g.growthDetails=conversionDetails(g,{pots,cold,out});
       const vapor=dots(g,8,.055,M.green),condensate=dots(g,8,.06,M.green),split=dots(g,8,.06,M.amber);
       anchors=[pots[0],pots[1]];labels.push({text:'汽化',object:pots[0],offset:[-50,90],phrase:'汽化'},
         {text:'冷凝',object:cold,offset:[60,-70],phrase:'冷凝'},
@@ -335,15 +340,25 @@ function chemical(parent,beat){
   }else if(id.startsWith('07-distill')){
     const tower=group(g);tower.position.x=-.4;
     box(tower,1.1,4.2,.9,M.glass);
-    const trays=Array.from({length:5},(_,i)=>box(tower,1.02,.04,.85,M.silver,[0,-1.6+i*.8,0]));
+    const trays=Array.from({length:5},(_,i)=>trayDeck(tower,-1.6+i*.8));
     const gas=dots(tower,12,.055,M.green),liquid=dots(tower,10,.06,M.silver),other=dots(tower,6,.065,M.amber);
     const unit=group(g);unit.position.set(1.55,0,0);
     box(unit,.7,2.5,.7,M.glass);const collector=box(g,.8,.6,.7,M.glass,[1.55,-1.9,0]);
+    g.growthDetails=distillationDetails(g,{tower,trays,collector});
     const out=dots(g,10,.06,M.green),waste=dots(g,6,.06,M.amber);
+    const contact=group(tower);contact.position.z=.55;
+    box(contact,1.8,.065,.8,M.silver,[0,.52,.48]);
+    box(contact,1.72,.24,.72,M.glass,[0,.67,.48]);
+    const phaseGas=marker(contact,[0,1.62,.58]),phaseLiquid=marker(contact,[0,.69,.58]);
+    const volatile=Array.from({length:4},()=>ball(contact,.075,M.green));
+    const lessVolatile=Array.from({length:4},()=>ball(contact,.075,M.amber));
+    arrow(contact,[-.94,.85,.55],[-.94,1.45,.55],M.green,.012);
     anchors=[trays[2],collector];
     labels.push(...(id.endsWith('01')?[
       {text:'蒸气 ↑',object:gas[3],offset:[-100,-30],phrase:'蒸气向上'},
-      {text:'回流液体 ↓',object:liquid[3],offset:[90,30],phrase:'液体向下'}]:[
+      {text:'回流液体 ↓',object:liquid[3],offset:[90,30],phrase:'液体向下'},
+      {text:'汽相（示意）',object:phaseGas,offset:[0,-90],phrase:'容易挥发'},
+      {text:'液相（示意）',object:phaseLiquid,offset:[0,100],phrase:'容易挥发'}]:[
       {text:'逐级富集',object:trays[3],offset:[-90,-20],phrase:id.endsWith('02')?'重复这样的交换':'杂质种类不同'},
       {text:'后续分离',object:unit,offset:[-20,-90],phrase:id.endsWith('02')?'多个分离步骤':'整套工艺配合'}]));
     update=ctx=>{
@@ -351,18 +366,31 @@ function chemical(parent,beat){
       const up=ctx.q(first?'蒸气向上':second?'重复这样的交换':'杂质种类不同');
       const down=ctx.q(first?'液体向下':second?'分别收集':'不是万能滤网');
       const final=ctx.q(first?'容易挥发':second?'多个分离步骤':'整套工艺配合');
+      const showContact=first&&ctx.time>=ctx.window('容易挥发').start;
+      contact.visible=showContact;
+      for(const [i,o]of volatile.entries()){
+        const start=V((i-1.5)*.44,.75,.62),end=V((i-1.5)*.44,i<3?1.55:.75,.62);
+        o.position.copy(start.lerp(end,final));
+      }
+      for(const [i,o]of lessVolatile.entries()){
+        const start=V((i-1.5)*.44,.6,.4),end=V(i===0?.66:(i-2)*.44,i===0?1.55:.75,i===0?.62:.4);
+        o.position.copy(start.lerp(end,final));
+      }
       unit.visible=!first&&final>0;
       gas.forEach((o,i)=>{
+        o.visible=!showContact;
         const stage=second?Math.min(1,Math.max(0,up*3-(i%3))):up;
         o.position.set(-.28+(i%3)*.16,mix(-1.75+(i%4)*.2,1.55+(i%3)*.15,stage),.35);
         o.scale.setScalar(.055*(1+final*.35));
       });
-      liquid.forEach((o,i)=>o.position.set(.28,mix(1.6-(i%3)*.16,-1.6+(i%3)*.16,first?down:up),.35));
-      other.forEach((o,i)=>{o.visible=!second;o.position.set(.1+Math.sin(i)*.2,mix(.9,-1.6,first?final:down),.36);});
+      liquid.forEach((o,i)=>{o.visible=!showContact;o.position.set(.28,mix(1.6-(i%3)*.16,-1.6+(i%3)*.16,first?down:up),.35);});
+      other.forEach((o,i)=>{o.visible=!second&&!showContact;o.position.set(.1+Math.sin(i)*.2,mix(.9,-1.6,first?final:down),.36);});
       out.forEach((o,i)=>{o.visible=!first&&down>0;o.position.set(mix(.2,1.55,down)+Math.sin(i)*.15,mix(1.5,-1.75,down)+(i%3)*.1,.25);});
       waste.forEach((o,i)=>{o.visible=!first&&final>0;o.position.set(mix(.1,2.1,final),mix(-.3,-1.6,final)+(i%3)*.1,.3);});
       return {operation:first?'countercurrent-contact':second?'successive-enrichment':'staged-impurity-treatment',
-        vaporUp:up,liquidDown:first?down:undefined,additionalUnit:unit.visible,schematic:true,noPurityMeasurement:true};
+        vaporUp:up,liquidDown:first?down:undefined,additionalUnit:unit.visible,
+        phaseTransfer:showContact?final:undefined,conservedIllustrativeSpecies:showContact?[4,4]:undefined,
+        compositionNotQuantitative:true,schematic:true,noPurityMeasurement:true};
     };
   }else{
     const base=cyl(g,1.25,.16,M.dark,[0,-1.5,0]),rods=[],seedMaterial=M.silicon.clone();
@@ -374,6 +402,7 @@ function chemical(parent,beat){
     const recycle=tube(g,[[1.1,1,0],[1.7,1,0],[1.7,1.8,0],[-1.7,1.8,0],[-1.7,-1.1,0],[-1.1,-1.1,0]],.04);
     const byproduct=box(g,.7,.6,.7,M.glass,[1.9,-1.6,0]);
     const bypoints=dots(g,6,.06,M.amber),rodAnchor=marker(rods[0],[.08,0,.05]);
+    const hardware=siemensDetails(g,{base,rods,recycle,byproduct});g.growthDetails=hardware;
     tag(rodAnchor,'硅芯');anchors=[rodAnchor,byproduct];
     labels.push(...(id.endsWith('01')?[
       {text:'硅芯',object:rodAnchor,offset:[-70,-60],phrase:'细长的硅芯'}]:id.endsWith('02')?[
@@ -381,7 +410,8 @@ function chemical(parent,beat){
       {text:'气体回路',object:returnGas[3],offset:[0,-70],phrase:'气体循环'},
       {text:'副产物处理',object:byproduct,offset:[-20,90],phrase:'副产物处理'}]));
     if(id==='09-feedstock-01'){
-      const pieces=chunks(g,12,.18,M.silicon),dirt=dots(g,6,.04,M.amber);
+      polycrystalProduct(rods,bridge,seedMaterial);
+      const pieces=chunks(g,12,.18,seedMaterial),dirt=dots(g,6,.04,M.amber);
       const tray=box(g,2.0,.15,1.15,M.silver,[0,-.9,0]),cover=box(g,2.05,.08,1.2,M.glass,[0,.3,0]);
       const walls=group(g);
       for(const sign of [-1,1]){
@@ -389,7 +419,7 @@ function chemical(parent,beat){
         box(walls,2.0,.6,.08,M.glass,[0,-.55,sign*.575]);
       }
       const inset=group(g);inset.position.set(1.25,1.25,0);
-      const specimen=chunks(inset,1,.3,M.silicon)[0];
+      const specimen=chunks(inset,1,.3,seedMaterial)[0];
       const tool=box(inset,.15,.2,.8,M.dark,[.75,.15,0]),
         contamination=ball(inset,.09,M.amber,[.26,.15,.2]);
       anchors=[tray,tool];labels.length=0;labels.push({text:'破碎原料',object:tray,offset:[-60,100],phrase:'破碎'},
@@ -397,18 +427,23 @@ function chemical(parent,beat){
       update=ctx=>{
         const extract=ctx.q('取出硅棒'),breakup=ctx.q('破碎'),clean=ctx.q('清理'),
           pack=ctx.q('洁净包装'),touch=ctx.q('工具带来的污染'),remove=ctx.q('去掉');
+        hardware.bell.visible=false;hardware.treatment.visible=false;hardware.ports.visible=false;
+        hardware.terminals.visible=hardware.power.visible=breakup<.9;
         inlet.visible=recycle.visible=false;
-        rods.forEach((o,i)=>{o.visible=breakup<.9;o.position.set((i?1:-1)*.55,-.1+extract*.6,0);});
-        bridge.visible=breakup<.9;bridge.position.y=1.2+extract*.6;base.visible=breakup<.9;
+        rods.forEach((o,i)=>{o.visible=breakup<.9;o.position.set((i?1:-1)*.55,-.12+extract*.6,0);});
+        bridge.visible=breakup<.9;bridge.position.y=1.18+extract*.6;base.visible=breakup<.9;
         pieces.forEach((o,i)=>{o.visible=breakup>0;o.position.set(Math.sin(i*2.4)*.7,mix(.6,-.65,breakup)+(i%3)*.13,Math.cos(i*2.4)*.35);o.scale.setScalar(.18*breakup);});
         dirt.forEach((o,i)=>{o.visible=clean<1&&breakup>0;o.position.set(Math.sin(i)*.6,-.4+clean*.4,.5);});
         tray.visible=breakup>0;walls.visible=pack>0;
-        cover.visible=pack>0;cover.position.y=mix(.6,-.15,pack);
-        inset.visible=touch>0;tool.position.x=mix(.75,.32,touch);
+        cover.visible=pack>0;cover.position.y=mix(.6,-.21,pack);
+        inset.visible=ctx.time>=ctx.window('工具带来的污染').start;tool.position.x=mix(.75,.32,touch);
         specimen.rotation.set(.3,.4,.2);
         contamination.visible=touch>0&&remove<1;contamination.scale.setScalar(.09*(1-remove));
         [...incoming,...hydrogen,...returnGas,...bypoints].forEach(o=>o.visible=false);byproduct.visible=false;
-        return {operation:'extract-break-clean-pack-contact-clean',broken:breakup,cleaned:clean,packed:pack,contactPollution:touch*(1-remove)};
+        return {operation:'extract-break-clean-pack-contact-clean',broken:breakup,cleaned:clean,packed:pack,contactPollution:touch*(1-remove),
+          extracted:extract,depositedRodRadiusFactor:3.5,roughPolycrystalSurface:true,
+          rodBaseY:-1.42+extract*.6,baseTopY:-1.42,
+          packageLidBottom:cover.position.y-.04,packageWallTop:-.25};
       };
     }else update=ctx=>{
       const first=id.endsWith('01'),second=id.endsWith('02');
@@ -443,6 +478,9 @@ function meltStage(parent,beat){
   const id=beat.id,a=apparatus(parent),g=a.g;
   a.assembly.visible=a.cable.visible=false;
   const charge=chunks(g,24,.15,M.silicon);
+  const cupPoint=tag(marker(a.cup,[.35,.3,1.54]),'石英坩埚');
+  const graphitePoint=tag(marker(a.graphite,[1.66,-1.30,.01]),'石墨支撑');
+  const heatPoint=marker(a.heat,[-1.94,-1.12,.01]);
   const gas=Array.from({length:4},(_,i)=>{
     const x=i<2?-1.5+i*.25:1.25+(i-2)*.25;
     return arrow(g,[x,i<2?1.55:.85,.1],[x,i<2?.85:1.55,.1],M.green,.015);
@@ -452,9 +490,9 @@ function meltStage(parent,beat){
   segment(ruler,[0,-1,0],[0,1.3,0],.018,M.silver);
   const needle=box(ruler,.3,.07,.08,M.green,[0,0,.06]),bad=cross(ruler,[0,1.15,.08]);
   const labels=id==='10-melt-01'?[
-    {text:'石英坩埚',object:a.cup,offset:[-130,40],phrase:'多晶硅装进'},
-    {text:'石墨支撑',object:a.graphite,offset:[140,60],phrase:'石墨支撑'},
-    {text:'热场示意',object:a.heat,offset:[-140,-70],phrase:'热场'}]:[
+    {text:'石英坩埚',object:cupPoint,offset:[-130,40],phrase:'多晶硅装进'},
+    {text:'石墨支撑',object:graphitePoint,offset:[-140,60],phrase:'石墨支撑'},
+    {text:'热场示意',object:heatPoint,offset:[100,-70],phrase:'热场'}]:[
     {text:'气氛',object:gas[1],offset:[70,-50],phrase:'气氛'},
     {text:'热区分布示意',object:zones[3],offset:[110,90],phrase:'热量分布'}];
   return rigResult(g,ctx=>{
@@ -464,9 +502,11 @@ function meltStage(parent,beat){
       melting=first?ctx.q('固体逐渐变成熔体'):1;
     a.graphite.visible=support>0;a.heat.visible=first?heat>0:true;
     charge.forEach((o,i)=>{
-      o.visible=first&&melting<1;const r=1.25*Math.sqrt((i+.5)/24),angle=i*2.4;
-      o.position.set(Math.sin(angle)*r,mix(1.8+(i%3)*.2,-.52+(i%3)*.08,load),Math.cos(angle)*r);
-      o.scale.setScalar(.15*(1-melting));
+      o.visible=first&&melting<1;
+      const layer=Math.floor(i/8),slot=i%8;
+      o.position.set((slot%4-1.5)*.29,
+        mix(1.8+(i%3)*.2,-1.60+layer*.29,load),(Math.floor(slot/4)-.5)*.29);
+      o.scale.setScalar(.21*(1-melting));
     });
     a.liquid.visible=melting>0;a.liquid.scale.setScalar(mix(.85,1,melting));
     const atmosphere=first?0:ctx.q('气氛'),stable=first?0:ctx.q('保持稳定'),
@@ -479,7 +519,7 @@ function meltStage(parent,beat){
     return {operation:first?'load-support-heat-melt':'atmosphere-thermal-stability',
       chargeLoad:load,graphiteSupport:support,thermalField:heat,solidFraction:1-melting,
       atmosphereControl:atmosphere,thermalStability:stable,noExcessHeat:limit,schematicThermalField:true};
-  },[a.cup,a.graphite],{semanticPlan:plans[id],view:{eye:[3.7,2.8,10],look:[0,-.1,0],span:7.8},
+  },[cupPoint,graphitePoint],{semanticPlan:plans[id],view:{eye:[3.7,2.8,10],look:[0,-.1,0],span:7.8},
     semanticAnchors:ctx=>localLabels(ctx,labels)});
 }
 function remelt(parent,beat){
@@ -513,6 +553,9 @@ function seedStage(parent,beat){
   l.g.position.set(1.6,1.3,0);l.g.scale.setScalar(.75);
   const axis=arrow(l.g,[0,-.8,0],[0,.85,0],M.amber,.018);
   const arrivals=dots(l.g,5,.07,M.green),tip=marker(a.g,[0,-.73,0]),heat=arrow(a.g,[-1.4,-1.1,.5],[-.35,-.8,.5],M.amber,.018);
+  const interfaceBand=cyl(a.g,.133,.08,M.green,[0,-.69,0]);
+  const outerX=Math.max(...l.points.map(p=>p[0]));
+  const newSites=l.points.map((p,i)=>({p,i})).filter(({p})=>p[0]===outerX).slice(0,arrivals.length);
   const flow=dots(a.g,8,.05,M.green),mark=segment(a.assembly,[.55,.1,0],[.55,.45,0],.025,M.green);
   const cupMark=group(a.g);
   for(let i=0;i<5;i++){
@@ -524,13 +567,21 @@ function seedStage(parent,beat){
   const transportAnchor=marker(a.g,[-.9,-.57,.75]);
   return rigResult(g,ctx=>{
     const first=id.endsWith('01'),second=id.endsWith('02');
-    a.heat.visible=false;a.graphite.visible=false;
+    interfaceBand.visible=false;
+    a.heat.visible=false;a.graphite.visible=true;
     l.g.visible=first||second;axis.visible=first?ctx.q('方向已知')>0:second?ctx.q('延续籽晶的取向')>0:false;
     if(first){
       const highlight=ctx.q('籽晶'),join=ctx.q('新来的硅原子');
       a.setCrystal(0,.12,.1);a.body.visible=a.shoulder.visible=false;
       l.g.scale.setScalar(.6+highlight*.18);
-      arrivals.forEach((o,i)=>{o.visible=join>0;o.position.copy(V(1.5,.9-i*.3,.4).lerp(V(...l.points[20+i]),join));});
+      l.atoms.forEach((o,i)=>o.visible=l.points[i][0]<outerX);
+      arrivals.forEach((o,i)=>{
+        o.visible=join>0;
+        const site=newSites[i%newSites.length];
+        o.position.copy(V(1.5,.9-i*.3,.4).lerp(V(...site.p),join));
+      });
+      l.bonds.forEach(({o,i,j})=>o.visible=(l.atoms[i].visible&&l.atoms[j].visible)||
+        join===1&&[i,j].every(index=>l.atoms[index].visible||newSites.some(site=>site.i===index)));
       heat.visible=mark.visible=cupMark.visible=rotationArrow.visible=false;flow.forEach(o=>o.visible=false);
       return {operation:'known-seed-orientation',seedIsSingleCrystal:true,incomingAligned:join};
     }
@@ -541,6 +592,8 @@ function seedStage(parent,beat){
       a.setCrystal(height,.13,base);a.shoulder.visible=false;
       a.neck.position.y=base+height+.35;a.seed.position.y=base+height+.9;
       a.chuck.position.y=base+height+1.225;setSegment(a.cable,[0,base+height+1.35,0],[0,3.6,0]);
+      interfaceBand.visible=solidify>0;
+      interfaceBand.scale.y=Math.max(.001,solidify);interfaceBand.position.y=base+.04*solidify;
       l.atoms.forEach((o,i)=>o.visible=i<16||solidify>Math.floor(i/8)/8);
       l.bonds.forEach(({o,i,j})=>o.visible=l.atoms[i].visible&&l.atoms[j].visible);
       heat.visible=mark.visible=cupMark.visible=rotationArrow.visible=false;flow.forEach(o=>o.visible=false);
@@ -562,7 +615,9 @@ function seedStage(parent,beat){
     semanticAnchors:ctx=>localLabels(ctx,[
       {text:'籽晶',object:a.seed,offset:[-100,-60]},
       ...(id.endsWith('01')?[{text:'同一取向',object:axis,offset:[80,-60],phrase:'方向已知'}]:
-        id.endsWith('02')?[{text:'固液界面',object:tip,offset:[100,60],phrase:'接触熔硅'}]:
+        id.endsWith('02')?(ctx.time>=ctx.window('接触熔硅').start+
+          plans[id].find(event=>event.phrase==='接触熔硅').seconds
+          ?[{text:'固液界面',object:tip,offset:[100,60],phrase:'接触熔硅'}]:[]):
           [{text:'输运路径示意',object:transportAnchor,offset:[-80,80],phrase:'物质输运'}]) ])});
 }
 function neckStage(parent,beat){
@@ -612,7 +667,7 @@ function neckStage(parent,beat){
 }
 function growthStage(parent,beat){
   const id=beat.id,a=apparatus(parent),g=a.g;
-  const thermal=ring(g,1.9,M.hot,[0,-1.15,0],.06);
+  const thermal=a.heat;
   const gauge=group(g);gauge.position.set(-1.65,1.4,0);
   const measure=dynamicLine(gauge,M.green,.015),speed=arrow(gauge,[0,-.4,0],[0,.5,0],M.green,.02);
   const diameter=dynamicLine(g,M.green,.014),newLayer=cyl(g,.65,.045,M.green,[0,-.72,0]);
@@ -641,7 +696,7 @@ function growthStage(parent,beat){
       }
       shoulderPositions.needsUpdate=true;a.shoulder.geometry.computeVertexNormals();
     }
-    a.heat.visible=false;thermal.visible=shoulder||real;thermal.scale.setScalar(1+controls*.08);
+    thermal.visible=shoulder||real;a.detail.setHeat(controls);
     gauge.visible=shoulder||real;speed.scale.y=.4+.6*controls;setSegment(measure,[-.25,-.6,0],[mix(-.25,.25,controls),-.6,0]);
     setSegment(diameter,[-radius,-.65,.75],[mix(-radius,radius,shoulder?p:controls),-.65,.75]);
     diameter.visible=shoulder||equal;
@@ -669,7 +724,7 @@ function growthStage(parent,beat){
 }
 function flowStage(parent,beat){
   const id=beat.id,a=apparatus(parent),g=a.g,magnets=group(g),paths=[],particles=dots(g,12,.05,M.green);
-  for(const sign of [-1,1])box(magnets,.2,2.0,.9,M.dark,[sign*2.05,-.8,0]);
+  magneticDetails(magnets);
   for(let i=0;i<3;i++)arrow(magnets,[-1.9,-1.3+i*.5,.85],[1.9,-1.3+i*.5,.85],M.green,.011);
   for(let i=0;i<4;i++)paths.push(tube(g,[[Math.sin(i)*1.15,-.7,Math.cos(i)*.8],[Math.sin(i)*.5,-.55,Math.cos(i)*.6],[.3,-.72,.15]],.016,M.green));
   const hot=Array.from({length:3},(_,i)=>ring(g,.5+i*.22,M.hot,[0,-.67,0],.018));
@@ -687,7 +742,7 @@ function flowStage(parent,beat){
     if(magnet){first=ctx.q('能导电');second=ctx.q('磁场');third=ctx.q('抑制某些流动');}
     if(notLift){first=ctx.q('不是把硅吸起来');second=ctx.q('流动与传热');third=ctx.q('帮助控制');}
     if(oxy){first=ctx.q('石英坩埚');second=ctx.q('引入氧');third=ctx.q('进入晶体');fourth=ctx.q('熔体流动');}
-    a.setCrystal(1.4);a.heat.visible=false;a.graphite.visible=false;
+    a.setCrystal(1.4);a.heat.visible=false;a.graphite.visible=true;
     if(oxy){a.body.material=cutaway;a.shoulder.material=cutaway;}
     magnets.visible=(magnet||notLift)&&second>0;
     traction.visible=notLift&&first>0;
@@ -794,13 +849,15 @@ function controlStage(parent,beat){
 }
 export function growthRig(key,parent,beat){
   if(!plans[beat.id])throw new Error(`No growth storyboard for ${beat.id}`);
-  if(['furnace','distill','siemens'].includes(key))return chemical(parent,beat);
-  if(beat.id==='09-feedstock-03')return remelt(parent,beat);
-  if(beat.id.startsWith('10-melt'))return meltStage(parent,beat);
-  if(beat.id.startsWith('11-seed'))return seedStage(parent,beat);
-  if(key==='neck')return neckStage(parent,beat);
-  if(beat.id.startsWith('13-growth')||beat.id==='14-load-01')return growthStage(parent,beat);
-  if(beat.id==='14-load-03')return comparison(parent,beat);
-  if(beat.id.startsWith('16-control'))return controlStage(parent,beat);
-  return flowStage(parent,beat);
+  let rig;
+  if(['furnace','distill','siemens'].includes(key))rig=chemical(parent,beat);
+  else if(beat.id==='09-feedstock-03')rig=remelt(parent,beat);
+  else if(beat.id.startsWith('10-melt'))rig=meltStage(parent,beat);
+  else if(beat.id.startsWith('11-seed'))rig=seedStage(parent,beat);
+  else if(key==='neck')rig=neckStage(parent,beat);
+  else if(beat.id.startsWith('13-growth')||beat.id==='14-load-01')rig=growthStage(parent,beat);
+  else if(beat.id==='14-load-03')rig=comparison(parent,beat);
+  else if(beat.id.startsWith('16-control'))rig=controlStage(parent,beat);
+  else rig=flowStage(parent,beat);
+  return detailGrowthRig(rig,beat);
 }

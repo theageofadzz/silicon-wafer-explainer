@@ -64,7 +64,7 @@ function reviewTimes(b){
   if(b.semanticPlan?.length){
     return [...new Set([b.start,b.end-1/24,...b.semanticPlan.flatMap(event=>[
       Math.max(b.start,event.start-1/24),(event.start+event.end)/2,event.end,
-    ])])].sort((a,b)=>a-b);
+    ]),...(b.cameraPlan||[]).flatMap(shot=>[Math.max(b.start,shot.at-1/24),shot.at,Math.min(b.end-1/24,shot.at+.25)])])].sort((a,b)=>a-b);
   }
   const frame=1/24,mid=(b.actionStart+b.actionEnd)/2;
   return [...new Set([b.start,Math.max(b.start,b.actionStart-frame),b.actionStart+frame,mid,
@@ -84,23 +84,27 @@ try{
   if(mode==='calibrate'){
     for(const beat of beats){
       const plan=await page.evaluate(id=>window.semanticPlanFor(id),beat.id),labels=new Set();
+      const cameraPlan=await page.evaluate(id=>window.cameraPlanFor(id),beat.id);
+      assert(cameraPlan.length>=2,`A richer scene needs distinct spoken shots: ${beat.id}`);
       const labelTimes=new Set([beat.start,beat.end,
         ...beat.words.flatMap(word=>[word.start,word.end]),
         ...plan.flatMap(event=>[event.start,(event.start+event.end)/2,event.end])]);
       for(const time of [...labelTimes].sort((a,b)=>a-b)){
-        const state=await page.evaluate(([id,t])=>window.renderBeat(id,t),[beat.id,time]);
+        const state=await page.evaluate(([id,t])=>window.renderBeat(id,t,{measure:false}),[beat.id,time]);
         state.extraAnchors.forEach(a=>labels.add(a.text));
       }
       const original=timeline.scenes.flatMap(s=>s.beats).find(b=>b.id===beat.id);
-      Object.assign(original,{semanticVersion:3,semanticPlan:plan,
+      Object.assign(original,{semanticVersion:3,semanticPlan:plan,visualRevision:4,cameraPlan,
         actionStart:Math.min(...plan.map(p=>p.start)),actionEnd:Math.max(...plan.map(p=>p.end)),
         localLabels:[...labels]});
       original.actionAnchor=plan[0].phrase;
       original.readingHold=original.end-original.actionEnd;
       console.log(`calibrated ${beat.id}: ${plan.length} specific actions; ${original.readingHold.toFixed(3)}s final hold`);
+      await page.evaluate(id=>window.releaseBeat(id),beat.id);
     }
     const complete=timeline.scenes.every(s=>s.beats.every(b=>b.semanticVersion===3));
     timeline.semanticVersion=complete?3:'partial';
+    timeline.visualRevision=timeline.scenes.every(s=>s.beats.every(b=>b.visualRevision===4))?4:'partial';
     timeline.timingMethod='Actual WordBoundary /1e7 + segment offset, then measured global tempo transform; each visual action separately bound to its spoken phrase';
     validateTimeline(timeline);
     await fs.writeFile(path.join(root,'timeline.json'),JSON.stringify(timeline,null,2)+'\n');
@@ -112,17 +116,26 @@ try{
       lines.push(`|${beat.id} / ${event.start.toFixed(3)}–${event.end.toFixed(3)}|${event.phrase}|${event.object}|${event.action}|${event.fact}|`);
     }
     await fs.writeFile(path.join(root,'SEMANTIC-STORYBOARD.md'),lines.join('\n')+'\n');
+    const cameraLines=['# 按台词切换的镜头表','',
+      '镜头由实际录音词组触发；表格记录制作意图，不能替代最终视频的音画复核。','',
+      '|节拍|切镜时间（秒）|配音锚点|景别|画面中的动作|解释的事实|',
+      '|---|---|---|---|---|---|'];
+    for(const scene of timeline.scenes)for(const beat of scene.beats)for(const shot of beat.cameraPlan||[]){
+      cameraLines.push(`|${beat.id}|${shot.at.toFixed(3)}|${shot.phrase}|${shot.kind}|${shot.action}|${shot.fact}|`);
+    }
+    await fs.writeFile(path.join(root,'CINEMATOGRAPHY.md'),cameraLines.join('\n')+'\n');
     console.log(`Saved ${beats.length} calibrated semantic storyboards`);
     process.exitCode=0;
   }else{
-  async function seek(beat,time){
-    const state=await page.evaluate(([id,t])=>window.renderBeat(id,t),[beat.id,time]);
-    checkState(state,beat);return state;
+  async function seek(beat,time,measure=true){
+    const state=await page.evaluate(([id,t,measure])=>window.renderBeat(id,t,{measure}),[beat.id,time,measure]);
+    if(measure)checkState(state,beat);return state;
   }
   for(const beat of beats){
     const frameCount=Math.round((beat.end-beat.start)*24),states=[];
     assert(frameCount>0,`Empty beat ${beat.id}`);
-    const record={id:beat.id,visual:beat.visual,semanticVersion:3,semanticPlan:beat.semanticPlan,modelSources,
+    const record={id:beat.id,visual:beat.visual,semanticVersion:3,semanticPlan:beat.semanticPlan,
+      visualRevision:4,cameraPlan:beat.cameraPlan,modelSources,
       synthetic:fixture,width:W,height:H,fps:24,
       start:beat.start,end:beat.end,frameCount,duration:frameCount/24,
       sourceDuration:beat.end-beat.start,captureFps:mode==='render'?captureFps:undefined,
@@ -163,14 +176,14 @@ try{
       // Sample native absolute times; only the explicit 12fps draft duplicates frames.
       try{
         for(let i=0;i<sampleCount;i++){
-          const state=await seek(beat,beat.start+i/captureFps);
+          const state=await seek(beat,beat.start+i/captureFps,i%12===0||i===sampleCount-1);
           if(i===0||i===sampleCount-1||i===Math.floor(sampleCount/2))states.push(state);
           for(let repeat=0;repeat<repeatCount&&i*repeatCount+repeat<frameCount;repeat++)record.anchorFrames.push({
             frame:i*repeatCount+repeat,time:beat.start+(i*repeatCount+repeat)/24,sourceTime:state.time,
             anchors:state.anchors,extraAnchors:state.extraAnchors||[],
             stage:state.stage,anchorWarnings:state.anchorWarnings,
           });
-          const image=await page.screenshot({type:'jpeg',quality:93,animations:'disabled'});
+          const image=Buffer.from(await page.evaluate(()=>document.querySelector('#world').toDataURL('image/jpeg',.93).split(',')[1]),'base64');
           if(!encoder.stdin.write(image))await once(encoder.stdin,'drain');
         }
         encoder.stdin.end();const [code]=await done;assert.equal(code,0,stderr);
@@ -185,6 +198,7 @@ try{
     }
     results.push(record);
     console.log(`${mode} ${beat.id}: ${mode==='render'?frameCount+' frames; captured at '+captureFps+'fps':states.length+' frames; deterministic; hold stable'}`);
+    await page.evaluate(id=>window.releaseBeat(id),beat.id);
   }
   assert.deepEqual(errors,[]);
   const inventory=await page.evaluate(()=>window.__inventory);

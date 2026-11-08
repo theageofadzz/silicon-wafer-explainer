@@ -44,15 +44,18 @@ const negative = 'Text, letters, subtitles, labels, logo, watermark, brand, illu
   + 'morphing, growth, melting, changing geometry, chip patterns on blank wafer, unstable camera, flicker, smeared detail.';
 const prompts = {
   quartz: 'Documentary macro film of the real stationary milky quartz mineral in the reference photograph. '
-    + 'A tiny controlled lateral camera move reveals the unchanged fracture planes, cloudy inclusions and translucent edges. '
-    + 'Preserve the exact rigid specimen and neutral color. Authentic mineral photography, soft directional light, sharp principal facet. '
+    + 'A low oblique macro camera tracks slowly past its unchanged fracture planes. Foreground chips and the rear fracture '
+    + 'separate in depth while focus stays on the principal rough face. Cloudy inclusions and translucent mineral edges remain visible. '
+    + 'Preserve the exact rigid specimen and neutral color. Authentic mineral photography, crisp texture, grazing softbox light. '
     + 'One continuous shot. No transformation, no writing, no diagram.',
   boule: 'Documentary close-up of the actual solid single crystal silicon boule in the photograph. '
-    + 'A small lateral camera dolly reveals its fixed cylindrical body, tapered shoulder, seed neck and fine growth striations. '
-    + 'Real neutral metallic reflections, authentic machining detail, unchanged geometry. '
+    + 'The close camera begins at the tapered shoulder and drifts a few degrees along the fixed cylindrical surface, '
+    + 'revealing fine circumferential growth striations and an unbroken broad silver reflection. The seed neck remains rigid. '
+    + 'Real neutral metallic reflections, authentic solid silicon detail, unchanged geometry. '
     + 'The solid object stays stationary. No growing, cutting or industrial action; no text.',
   blank: 'Scientific studio photograph brought gently to life: the actual completely blank, flat mirror-polished silicon wafer '
-    + 'in the reference. Tiny camera translation changes only broad smooth light reflections. '
+    + 'in the reference. A low inspection-camera translation reveals one continuous broad white softbox reflection '
+    + 'crossing the polished surface. A thin rigid edge remains visible and the background falls naturally out of focus. '
     + 'Preserve its exact circular outline, flat face, thin edge and fixed position. No chip dies, grid, ridges, grooves, '
     + 'surface growth, bending or shape changes. Real silver silicon on a dark neutral background. No writing or graphics.',
 };
@@ -109,7 +112,7 @@ function buildGraph(cached, photosOnly = false) {
       graph[b + 4] = {class_type: 'LTXVImgToVideo', inputs: {positive: ref(2), negative: ref(2, 1),
         vae: ['1', 2], image: ref(3), width: 576, height: 1024, length: 65, batch_size: 1, strength: 1}};
       graph[b + 5] = {class_type: 'SamplerCustom', inputs: {model: ['1', 0], add_noise: true,
-        noise_seed: 20261107010 + i, cfg: 1, positive: ref(4), negative: ref(4, 1),
+        noise_seed: 20261107140 + i, cfg: 1, positive: ref(4), negative: ref(4, 1),
         sampler: ['5', 0], sigmas: ['4', 0], latent_image: ref(4, 2)}};
       graph[b + 6] = {class_type: 'VAEDecodeTiled', inputs: {samples: ref(5, 1), vae: ['1', 2],
         tile_size: 256, overlap: 64, temporal_size: 16, temporal_overlap: 8}};

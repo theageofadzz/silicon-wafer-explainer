@@ -238,10 +238,25 @@ async def main():
                         actionStart=min(e["start"] for e in events),
                         actionEnd=max(e["end"] for e in events))
             beat["readingHold"] = beat["end"] - beat["actionEnd"]
+            if old.get("visualRevision") == 4:
+                cameras = []
+                for shot in old.get("cameraPlan", []):
+                    event = next((e for e in events if e["phrase"] == shot["phrase"]), None)
+                    if event is None:
+                        raise ValueError(f"Missing camera phrase after narration: {beat['id']}/{shot['phrase']}")
+                    cameras.append({**shot, "at": beat["start"] if not cameras else event["wordStart"],
+                                    "wordStart": event["wordStart"]})
+                if len(cameras) < 2:
+                    raise ValueError(f"Detailed scene needs a camera plan: {beat['id']}")
+                beat.update(visualRevision=4, cameraPlan=cameras)
     if all(b.get("semanticVersion") == 3 for s in scenes for b in s["beats"]):
         timeline["semanticVersion"] = 3
         timeline["timingMethod"] += "; each visual action separately bound to its spoken phrase"
-    save_json(ROOT / "timeline.json", timeline)
+    if all(b.get("visualRevision") == 4 for s in scenes for b in s["beats"]):
+        timeline["visualRevision"] = 4
+    # Preserve calibrated bytes when offline recovery reconstructs identical values.
+    if timeline != previous:
+        save_json(ROOT / "timeline.json", timeline)
     lines = ["# 台词与动作台账", "", f"真实录音时长：{cursor:.3f} 秒；语速换算：{tempo:.6f}。", "",
              "|时间|台词锚点|对象|动作目标|画面短标注|动作后阅读秒数|",
              "|---|---|---|---|---|---|"]

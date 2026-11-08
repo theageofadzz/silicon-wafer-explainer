@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT.parents[1]
 RELEASE = PROJECT / "release"
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 
 
 def stream_sha(stream):
@@ -81,8 +81,8 @@ def main():
     timeline_sha = sha(ROOT / "timeline.json")
     if any(record.get("timelineSha256") != timeline_sha for record in (report, assembly)):
         raise ValueError("Timeline changed since assembly or verification; rebuild and verify first")
-    if timeline.get("semanticVersion") != 3:
-        raise ValueError("Calibrate the semantic revision before packaging v2.1")
+    if timeline.get("semanticVersion") != 3 or timeline.get("visualRevision") != 4:
+        raise ValueError("Calibrate the semantic actions and detailed scenes before packaging v2.2")
     # The index includes tracked files and explicitly staged additions, never arbitrary untracked files.
     tracked = subprocess.check_output(["git", "ls-files", "--cached", "-z"], cwd=PROJECT).decode().split("\0")
     files = {PROJECT / name for name in tracked if name}
@@ -94,14 +94,20 @@ def main():
         raise ValueError("Explicitly stage new source files before packaging: " + ", ".join(new_sources))
     files.update([film, ROOT / "output/full-captions.srt", ROOT / "output/full-assembly.json",
                   ROOT / "output/full-verification.json"])
+    for workflow in ("photos", "cached", "cached-only"):
+        for suffix in ("-job.json", "-history.json"):
+            evidence = ROOT / "workflows" / (workflow + suffix)
+            if evidence.is_file():
+                files.add(evidence)
+    if not (ROOT / "workflows/photos-history.json").is_file():
+        raise ValueError("New Comfy photography execution history is required for v2.2")
     optional = optional_outputs(film_sha, timeline_sha)
     files.update(optional)
     model_sources = {f"model/{file.name}": sha(file) for file in (ROOT / "model").glob("*.mjs")
                      if not file.name.startswith(".")}
     required_sources = [ROOT / name for name in model_sources]
-    storyboard = ROOT / "SEMANTIC-STORYBOARD.md"
-    if storyboard.is_file():
-        required_sources.append(storyboard)
+    required_sources.extend(ROOT / name for name in
+                            ("SEMANTIC-STORYBOARD.md", "CINEMATOGRAPHY.md", "DETAIL-PLAN-v4.md"))
     missing_sources = [str(file.relative_to(PROJECT)) for file in required_sources if file not in files]
     if missing_sources:
         raise ValueError("Required source paths must be tracked or explicitly staged: " + ", ".join(missing_sources))
@@ -110,8 +116,11 @@ def main():
             record = json.loads((ROOT / "model/renders" / (beat["id"] + ".json")).read_text())
             if (record.get("semanticVersion") != 3 or not beat.get("semanticPlan")
                     or record.get("semanticPlan") != beat["semanticPlan"]
-                    or record.get("modelSources") != model_sources):
-                raise ValueError(f"Stale semantic plan or model sources; rerender {beat['id']}")
+                    or record.get("modelSources") != model_sources
+                    or record.get("visualRevision") != 4
+                    or len(record.get("cameraPlan", [])) < 2
+                    or record.get("cameraPlan") != beat.get("cameraPlan")):
+                raise ValueError(f"Stale actions, camera plan or model sources; rerender {beat['id']}")
             for suffix in (".mp4", ".json"):
                 files.add(ROOT / "model/renders" / (beat["id"] + suffix))
     for shot in assembly["shots"]:
@@ -138,6 +147,9 @@ def main():
                 "weightsIncluded": False, "referenceMediaIncluded": False,
                 "film": str(film.relative_to(PROJECT)), "encodedSha256": film_sha,
                 "semanticVersion": timeline["semanticVersion"],
+                "visualRevision": timeline["visualRevision"],
+                "cameraShotCount": sum(len(beat["cameraPlan"])
+                                       for scene in timeline["scenes"] for beat in scene["beats"]),
                 "semanticActionCount": sum(len(beat["semanticPlan"])
                                            for scene in timeline["scenes"] for beat in scene["beats"]),
                 "sourceSelection": "git index paths (including staged additions), working-tree bytes",

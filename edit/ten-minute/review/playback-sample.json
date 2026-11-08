@@ -1,11 +1,464 @@
 {
   "status": "normal-speed-browser-playback-completed",
-  "encodedSha256": "8cfe21be8f5aa5faa4574233ee439b76c35663d226b443acaf3966e98416e238",
-  "wallSeconds": 42.04,
-  "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4",
-  "duration": 41.666667,
-  "time": 41.666667,
-  "rate": 1,
-  "ended": true,
-  "limits": "Browser decode completion only; no human listening approval"
+  "url": "http://127.0.0.1:60090/edit/ten-minute/watch.html",
+  "file": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/output/only.mp4",
+  "muted": true,
+  "loadedURL": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4",
+  "servedSha256": "583be52913bfcb15c7385cb18ef5b5d2846dce3fef047be642948453b6bebe62",
+  "duration": 41.666666666666664,
+  "playbackRate": 1,
+  "encodedSha256": "583be52913bfcb15c7385cb18ef5b5d2846dce3fef047be642948453b6bebe62",
+  "wallSeconds": 42.252,
+  "observedSeconds": 42.221,
+  "environmentGaps": [],
+  "events": [
+    {
+      "event": "play",
+      "time": 0.000353,
+      "wall": 1794105822373
+    },
+    {
+      "event": "waiting",
+      "time": 0.000406,
+      "wall": 1794105822373
+    },
+    {
+      "event": "pause",
+      "time": 41.666667,
+      "wall": 1794105864095
+    },
+    {
+      "event": "ended",
+      "time": 41.666667,
+      "wall": 1794105864096
+    }
+  ],
+  "samples": [
+    {
+      "time": 0.963265,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 27,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 2.000612,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 52,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 3.002829,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 77,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 4.006382,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 101,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 5.008708,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 125,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 6.011978,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 149,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 7.014378,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 173,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 8.015689,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 197,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 9.017852,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 221,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 10.021574,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 245,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 11.023857,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 269,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 12.028895,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 293,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 13.032626,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 317,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 14.036068,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 341,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 15.038681,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 365,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 16.040956,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 389,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 17.041861,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 413,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 18.044554,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 437,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 19.047586,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 461,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 20.049737,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 485,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 21.053726,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 510,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 22.058098,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 534,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 23.066303,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 558,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 24.071752,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 582,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 25.075302,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 606,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 26.109718,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 631,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 27.113396,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 655,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 28.118412,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 679,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 29.122464,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 703,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 30.12598,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 727,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 31.132011,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 751,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 32.138396,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 776,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 33.143045,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 800,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 34.148013,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 824,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 35.151857,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 848,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 36.159346,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 872,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 37.161681,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 896,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 38.165506,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 920,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 39.169204,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 945,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 40.171352,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 969,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 41.175149,
+      "duration": 41.666667,
+      "paused": false,
+      "ended": false,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 993,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    },
+    {
+      "time": 41.666667,
+      "duration": 41.666667,
+      "paused": true,
+      "ended": true,
+      "rate": 1,
+      "ready": 4,
+      "decoded": 1000,
+      "src": "http://127.0.0.1:60090/edit/ten-minute/output/only.mp4"
+    }
+  ],
+  "screenshots": [
+    "sample-player-minute-00.jpg"
+  ],
+  "pageErrors": [],
+  "audioReview": "Audio was decoded; no human listening approval is claimed.",
+  "limits": "Browser completion and screenshots do not certify scientific meaning, pronunciation or visual taste."
 }

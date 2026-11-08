@@ -107,14 +107,17 @@ class WTPrepare:
         expected_sources = {f"model/{p.name}": digest(p) for p in (ROOT / "model").glob("*.mjs")
                             if not p.name.startswith(".")}
         planned = {item["beat"]["id"]: item["beat"].get("semanticPlan") for item in items}
+        cameras = {item["beat"]["id"]: item["beat"].get("cameraPlan") for item in items}
         missing = []
         for bid in ids:
             video = ROOT / "model/renders" / f"{bid}.mp4"
             sidecar = video.with_suffix(".json")
             record = json.loads(sidecar.read_text()) if sidecar.is_file() else {}
             if (not video.is_file() or record.get("semanticVersion") != 3
+                    or record.get("visualRevision") != 4
                     or record.get("modelSources") != expected_sources
-                    or record.get("semanticPlan") != planned[bid]):
+                    or record.get("semanticPlan") != planned[bid]
+                    or record.get("cameraPlan") != cameras[bid]):
                 missing.append(bid)
         if missing:
             if not render_missing:

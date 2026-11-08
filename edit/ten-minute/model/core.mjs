@@ -8,8 +8,8 @@ export const phase=(p,a=0,b=1)=>ease((p-a)/(b-a));
 export const C={background:0x191b1c,silver:0xbcc3c7,graphite:0x35393b,green:0x58bd8a,amber:0xf2b55b};
 const physical=(color,metalness=.65,roughness=.3,extra={})=>new T.MeshStandardMaterial({color,metalness,roughness,...extra});
 export const M={
-  silver:physical(C.silver,.82,.27),bright:physical(0xe0e4e5,.78,.21),
-  atom:physical(0xd3d9db,.12,.44),
+  silver:physical(C.silver,.82,.23),bright:physical(0xe0e4e5,.78,.18),
+  atom:physical(0xd3d9db,.19,.31),
   silicon:new T.MeshPhysicalMaterial({color:0x9ca9b3,metalness:.96,roughness:.075,clearcoat:1,clearcoatRoughness:.035,envMapIntensity:1.35}),
   dark:physical(C.graphite,.55,.42),
   black:physical(0x202324,.25,.5),ceramic:physical(0xb8bcba,.05,.65),
@@ -19,12 +19,22 @@ export const M={
   liquid:physical(0xb1cec4,.05,.25,{transparent:true,opacity:.42,depthWrite:false,side:T.DoubleSide}),
   glass:physical(0xdce5e2,.05,.3,{transparent:true,opacity:.16,depthWrite:false,side:T.DoubleSide}),
 };
-const ballGeometry=new T.SphereGeometry(1,16,12);
+const ballGeometry=new T.SphereGeometry(1,24,16);
 export function group(parent){const o=new T.Group();parent?.add(o);return o;}
 export function mesh(parent,geometry,material=M.silver,xyz=[0,0,0]){
-  const o=new T.Mesh(geometry,material);o.position.set(...xyz);parent.add(o);return o;
+  const o=new T.Mesh(geometry,material);o.position.set(...xyz);
+  o.castShadow=!material.transparent;o.receiveShadow=true;parent.add(o);return o;
 }
-export function box(parent,w,h,d,mat=M.silver,xyz){return mesh(parent,new T.BoxGeometry(w,h,d),mat,xyz);}
+export function box(parent,w,h,d,mat=M.silver,xyz){
+  const bevel=Math.min(.028,w*.08,h*.08,d*.08);
+  if(Math.min(w,h,d)<.075||mat.transparent)return mesh(parent,new T.BoxGeometry(w,h,d),mat,xyz);
+  const shape=new T.Shape(),x=w/2-bevel,y=h/2-bevel;
+  shape.moveTo(-x,-y);shape.lineTo(x,-y);shape.lineTo(x,y);shape.lineTo(-x,y);shape.closePath();
+  const geometry=new T.ExtrudeGeometry(shape,{depth:d-2*bevel,bevelEnabled:true,
+    bevelThickness:bevel,bevelSize:bevel,bevelSegments:2,steps:1,curveSegments:1});
+  geometry.translate(0,0,-d/2+bevel);
+  return mesh(parent,geometry,mat,xyz);
+}
 export function cyl(parent,r,h,mat=M.silver,xyz,top=r){
   return mesh(parent,new T.CylinderGeometry(top,r,h,64),mat,xyz);
 }

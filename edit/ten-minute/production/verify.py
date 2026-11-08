@@ -218,6 +218,32 @@ def verify(args):
             target = review / f"cut-{index:03}.jpg"
             strip(images, target, columns=4, thumb=(216, 384))
             sequences.append({"kind": "picture-boundary", "time": at, "strip": str(target)})
+        camera_cuts = []
+        for item in items:
+            beat = item["beat"]
+            shift = (item["startFrame"] - item["sourceStartFrame"]) / FPS
+            for shot_index, shot in enumerate(beat["cameraPlan"][1:], 1):
+                at = shot["at"] + shift
+                containing = next(source for source in assembly["shots"]
+                                  if source["startFrame"] <= at * FPS < source["endFrame"])
+                camera_cuts.append((item, shot_index, shot, at, containing))
+        if args.continuity == "first":
+            camera_cuts = camera_cuts[:1]
+        for item, shot_index, shot, at, containing in camera_cuts:
+            beat = item["beat"]
+            entry = {"kind": "spoken-camera-cut", "beat": beat["id"], "time": at,
+                     "phrase": shot["phrase"], "view": shot["kind"],
+                     "visible": containing["kind"] == "exact-code"}
+            images, times = [], []
+            for i, offset in enumerate([-1/FPS, 0, 1/FPS, .25]):
+                point = max(item["startFrame"] / FPS,
+                            min((item["endFrame"] - 1) / FPS, at + offset))
+                target = review / f"camera-{beat['id']}-{shot_index:02}-{i}.jpg"
+                images.append((f"{point:.3f}s", extract(file, point, target)))
+                times.append(point)
+            target = review / f"camera-{beat['id']}-{shot_index:02}.jpg"
+            strip(images, target, columns=4, thumb=(216, 384))
+            sequences.append({**entry, "times": times, "strip": str(target)})
     report["continuityStrips"] = sequences
     report["status"] = "technical-checks-passed-human-review-pending"
     return report, True

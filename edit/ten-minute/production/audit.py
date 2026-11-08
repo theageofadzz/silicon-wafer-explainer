@@ -11,6 +11,37 @@ def read(file):
     return json.loads(file.read_text())
 
 
+def composition_execution(workflow, tag, timeline_sha):
+    history_file = ROOT / "workflows" / (workflow + "-history.json")
+    history, job = read(history_file), read(ROOT / "workflows" / (workflow + "-job.json"))
+    assembly = read(ROOT / "output" / (tag + "-assembly.json"))
+    verification = read(ROOT / "output" / (tag + "-verification.json"))
+    film = Path(assembly["file"])
+    film = (film if film.is_absolute() else ROOT / film).resolve()
+    prompt_id = job["prompt_id"]
+    if (not history["status"].get("completed") or history["status"]["status_str"] != "success"
+            or history["prompt"][1] != prompt_id):
+        raise ValueError(f"Completed Comfy composition evidence is missing: {workflow}")
+    outputs = history["outputs"]["500"]["text"]
+    if str(film) not in outputs:
+        raise ValueError(f"Comfy output does not name the assembled film: {workflow}")
+    film_sha = sha(film)
+    if any(record.get("sha256") != film_sha or record.get("timelineSha256") != timeline_sha
+           for record in (assembly, verification)):
+        raise ValueError(f"Composition evidence changed: {workflow}")
+    if verification.get("fullDecode") != "passed":
+        raise ValueError(f"Encoded composition has not passed decode: {workflow}")
+    return {"promptId": prompt_id, "completed": True, "status": "success",
+            "history": str(history_file.relative_to(ROOT)), "historySha256": sha(history_file),
+            "workflow": "workflows/" + workflow + "-api.json",
+            "output": str(film.relative_to(ROOT)), "sha256": film_sha,
+            "assemblySha256": sha(ROOT / "output" / (tag + "-assembly.json")),
+            "duration": assembly["duration"], "beatCount": len(assembly["selection"]),
+            "nodeClasses": sorted({node["class_type"] for node in history["prompt"][2].values()}),
+            "photographsUsed": [shot["media"] for shot in assembly["shots"]
+                                if shot["kind"] == "photographic-i2v"]}
+
+
 def main():
     verification = read(ROOT / "output/full-verification.json")
     assembly = read(ROOT / "output/full-assembly.json")
@@ -49,10 +80,16 @@ def main():
     code = []
     for beat in beats:
         record = read(ROOT / "model/renders" / (beat["id"] + ".json"))
+        if (record.get("visualRevision") != 4
+                or record.get("cameraPlan") != beat.get("cameraPlan")
+                or len(record.get("cameraPlan", [])) < 2):
+            raise ValueError(f"Current detailed camera plan is missing: {beat['id']}")
         code.append({"beat": beat["id"], "width": record["width"], "height": record["height"],
                      "captureFps": record["captureFps"], "frames": record["frameCount"],
                      "duplicatedFrames": record["duplicatedFrames"],
                      "semanticVersion": record.get("semanticVersion"),
+                     "visualRevision": record["visualRevision"],
+                     "cameraShotCount": len(record["cameraPlan"]),
                      "semanticActionCount": len(record.get("semanticPlan", []))})
     caption_mismatches = ocr["count"] - ocr["matched"]
     label_mismatches = label_ocr["beatCount"] - label_ocr["exactlyMatchedBeats"]
@@ -63,6 +100,8 @@ def main():
         "sha256": film_sha,
         "timelineSha256": sha(ROOT / "timeline.json"),
         "semanticVersion": timeline.get("semanticVersion"),
+        "visualRevision": timeline.get("visualRevision"),
+        "cameraShotCount": sum(len(beat["cameraPlan"]) for beat in beats),
         "semanticActionCount": sum(len(beat.get("semanticPlan", [])) for beat in beats),
         "duration": verification["duration"],
         "width": verification["width"], "height": verification["height"],
@@ -94,18 +133,63 @@ def main():
         "comfyPhotography": [],
         "humanAudioReview": "not performed by this automated system",
         "normalSpeedPlayback": {"status": playback["status"], "duration": playback["duration"],
-                                "wallSeconds": playback["wallSeconds"], "pageErrors": playback["pageErrors"]},
+                                "wallSeconds": playback["wallSeconds"], "muted": playback.get("muted", False),
+                                "observedSeconds": playback.get("observedSeconds"),
+                                "environmentGaps": playback.get("environmentGaps", []),
+                                "pageErrors": playback["pageErrors"]},
         "semanticMeaningApprovedByAudit": False,
         "semanticReview": "not granted; phrase plans and action counts do not establish scientific meaning or synchrony",
     }
+    photo_history_file = ROOT / "workflows/photos-history.json"
+    photo_history = read(photo_history_file)
+    photo_job = read(ROOT / "workflows/photos-job.json")
+    graph = photo_history["prompt"][2]
+    if (not photo_history["status"].get("completed")
+            or photo_history["status"]["status_str"] != "success"
+            or photo_history["prompt"][1] != photo_job["prompt_id"]):
+        raise ValueError("New Comfy photography run has not completed")
+    cached_nodes = {str(node) for kind, detail in photo_history["status"]["messages"]
+                    if kind == "execution_cached" for node in detail["nodes"]}
     for key in ["quartz", "boule", "blank"]:
         metadata = read(ROOT / "generated" / (key + ".json"))
+        saves = [node_id for node_id, node in graph.items()
+                 if node["class_type"] == "WTSave" and node["inputs"]["photo"] == key]
+        if len(saves) != 1 or saves[0] in cached_nodes or metadata["prompt"] != graph:
+            raise ValueError(f"New uncached photography evidence is missing: {key}")
+        if metadata["sha256"] != sha(ROOT / "generated" / (key + ".mp4")):
+            raise ValueError(f"Photographic bytes changed: {key}")
         report["comfyPhotography"].append(
             {name: metadata[name] for name in ["frames", "fps", "width", "height", "sha256",
                                               "sourcePhotoSha256", "method"]}
-            | {"key": key, "cachedFromPriorRender": True})
+            | {"key": key, "cachedFromPriorRender": False,
+               "promptId": photo_job["prompt_id"], "saveNode": saves[0],
+               "historySha256": sha(photo_history_file)})
     target = ROOT / "review/verification-summary.json"
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2))
+    execution = {
+        "date": report["date"], "version": "2.2.0", "visualRevision": 4,
+        "timelineSha256": report["timelineSha256"],
+        "status": "generation-composition-and-encoded-evidence-recorded",
+        "photographyGeneration": {
+            "promptId": photo_job["prompt_id"], "completed": True,
+            "history": "workflows/photos-history.json", "historySha256": sha(photo_history_file),
+            "cachedFromPriorRender": False, "diffusionExecutedThisRun": True,
+            "photographs": report["comfyPhotography"]},
+        "finalAssembly": composition_execution("cached", "full", report["timelineSha256"]),
+        "sampleAssembly": composition_execution("cached-only", "only", report["timelineSha256"]),
+        "divisionOfWork": {
+            "ComfyUI": "A separate native LTX run generated three new photographic clips. "
+                       "The cached full/sample graphs read those files and dispatch final composition.",
+            "code": "Independent Three.js beat scenes, actual word timing, camera cuts, "
+                    "projection labels, subtitles, audio mix and FFmpeg encoding."},
+        "verificationSummary": "review/verification-summary.json",
+        "acceptanceLimits": {"semanticAcceptanceGranted": False, "humanAudioReviewGranted": False,
+                             "note": "Generation, decode and browser completion establish execution; "
+                                     "bounded image critiques remain separate."},
+        "weightsIncluded": False, "referenceMediaIncluded": False,
+    }
+    (ROOT / "review/comfy-execution.json").write_text(
+        json.dumps(execution, ensure_ascii=False, indent=2))
     print(json.dumps({key: value for key, value in report.items()
                       if key not in {"modelClips", "comfyPhotography"}}, ensure_ascii=False, indent=2))
     print(target)

@@ -64,7 +64,7 @@
         "2",
         0
       ],
-      "text": "Documentary macro film of the real stationary milky quartz mineral in the reference photograph. A tiny controlled lateral camera move reveals the unchanged fracture planes, cloudy inclusions and translucent edges. Preserve the exact rigid specimen and neutral color. Authentic mineral photography, soft directional light, sharp principal facet. One continuous shot. No transformation, no writing, no diagram."
+      "text": "Documentary macro film of the real stationary milky quartz mineral in the reference photograph. A low oblique macro camera tracks slowly past its unchanged fracture planes. Foreground chips and the rear fracture separate in depth while focus stays on the principal rough face. Cloudy inclusions and translucent mineral edges remain visible. Preserve the exact rigid specimen and neutral color. Authentic mineral photography, crisp texture, grazing softbox light. One continuous shot. No transformation, no writing, no diagram."
     }
   },
   "22": {
@@ -125,7 +125,7 @@
         0
       ],
       "add_noise": true,
-      "noise_seed": 20261107010,
+      "noise_seed": 20261107140,
       "cfg": 1,
       "positive": [
         "24",
@@ -194,7 +194,7 @@
         "2",
         0
       ],
-      "text": "Documentary close-up of the actual solid single crystal silicon boule in the photograph. A small lateral camera dolly reveals its fixed cylindrical body, tapered shoulder, seed neck and fine growth striations. Real neutral metallic reflections, authentic machining detail, unchanged geometry. The solid object stays stationary. No growing, cutting or industrial action; no text."
+      "text": "Documentary close-up of the actual solid single crystal silicon boule in the photograph. The close camera begins at the tapered shoulder and drifts a few degrees along the fixed cylindrical surface, revealing fine circumferential growth striations and an unbroken broad silver reflection. The seed neck remains rigid. Real neutral metallic reflections, authentic solid silicon detail, unchanged geometry. The solid object stays stationary. No growing, cutting or industrial action; no text."
     }
   },
   "46": {
@@ -255,7 +255,7 @@
         0
       ],
       "add_noise": true,
-      "noise_seed": 20261107012,
+      "noise_seed": 20261107142,
       "cfg": 1,
       "positive": [
         "48",
@@ -324,7 +324,7 @@
         "2",
         0
       ],
-      "text": "Scientific studio photograph brought gently to life: the actual completely blank, flat mirror-polished silicon wafer in the reference. Tiny camera translation changes only broad smooth light reflections. Preserve its exact circular outline, flat face, thin edge and fixed position. No chip dies, grid, ridges, grooves, surface growth, bending or shape changes. Real silver silicon on a dark neutral background. No writing or graphics."
+      "text": "Scientific studio photograph brought gently to life: the actual completely blank, flat mirror-polished silicon wafer in the reference. A low inspection-camera translation reveals one continuous broad white softbox reflection crossing the polished surface. A thin rigid edge remains visible and the background falls naturally out of focus. Preserve its exact circular outline, flat face, thin edge and fixed position. No chip dies, grid, ridges, grooves, surface growth, bending or shape changes. Real silver silicon on a dark neutral background. No writing or graphics."
     }
   },
   "58": {
@@ -385,7 +385,7 @@
         0
       ],
       "add_noise": true,
-      "noise_seed": 20261107013,
+      "noise_seed": 20261107143,
       "cfg": 1,
       "positive": [
         "60",

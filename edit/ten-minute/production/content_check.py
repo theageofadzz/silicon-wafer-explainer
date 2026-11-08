@@ -19,6 +19,7 @@ def main():
     beats = [b for s in timeline["scenes"] for b in s["beats"]]
     assert len(beats) == 84 and beats[0]["start"] == 0 and beats[-1]["end"] == timeline["duration"]
     assert timeline.get("semanticVersion") == 3
+    assert timeline.get("visualRevision") == 4
     for first, second in zip(beats, beats[1:]):
         assert first["end"] == second["start"], (first["id"], second["id"])
     for beat in beats:
@@ -27,6 +28,7 @@ def main():
         assert beat["end"] - beat["start"] > 2
         assert beat["end"] - beat["actionEnd"] >= .5, f"Action leaves no reading hold: {beat['id']}"
         assert beat.get("semanticVersion") == 3 and beat.get("semanticPlan")
+        assert beat.get("visualRevision") == 4 and len(beat.get("cameraPlan", [])) >= 2
         joined = norm("".join(w["text"] for w in beat["words"]))
         for event in beat["semanticPlan"]:
             assert norm(event["phrase"]) in joined, (beat["id"], event["phrase"])
@@ -46,6 +48,8 @@ def main():
               "sourceRecordingCount": len(timeline["scenes"]), "tempo": timeline["tempo"],
               "minimumReadingHold": min(b["end"]-b["actionEnd"] for b in beats),
               "semanticVersion": 3,
+              "visualRevision": 4,
+              "cameraShotCount": sum(len(b["cameraPlan"]) for b in beats),
               "semanticActionCount": sum(len(b["semanticPlan"]) for b in beats),
               "shortFinalHoldsRequireVisualReview": [
                   {"beat": b["id"], "seconds": b["end"]-b["actionEnd"],

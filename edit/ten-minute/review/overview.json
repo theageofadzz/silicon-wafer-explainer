@@ -1,16 +1,16 @@
 {
-  "status": "overview-extracted-final-evidence-recorded",
-  "generatedAt": "2026-11-07T07:11:01.498737+00:00",
+  "status": "overview-extracted-final-validation-pending-parent-confirmation",
+  "generatedAt": "2026-11-08T02:50:35.345598+00:00",
   "file": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/review/overview.jpg",
-  "sha256": "127b3b3ef10c189937441ac3b6a54eaf92378d17ddecbffd4ef9ef123a8edb2a",
+  "sha256": "d4fbf4ba5597ce5f2abe97f4ec77a1109f35f089625cbdc7b9c6d18dd614d7af",
   "size": [
     1500,
     2912
   ],
-  "encodedFile": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/output/silicon-wafer-10min-9x16-v3.mp4",
-  "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
-  "timelineSha256": "508552f1cb812834cc75300d13c30ed0f11405381c7cf1a7d0459c38df111cdf",
-  "assemblySha256": "8c224db6aa70bb70e2d1a211725b1d9ae707369c78cb66654a38a67f767d2152",
+  "encodedFile": "/Volumes/联想硬盘/视频/videos/silicon-wafer-explainer/edit/ten-minute/output/silicon-wafer-10min-9x16-v4.mp4",
+  "encodedSha256": "a1630f9b4ec35eee9de9be4a486af72df45d0ceb11f38433e1c7f4706b941425",
+  "timelineSha256": "279b3b7212988cf43878353a5015af95007c85c5d5198adf3204c5b574d2c6d8",
+  "assemblySha256": "987809770df3384857c729690c7f13c51ee9106453dd90959b8db2b39663536d",
   "sourceHashesMeasured": true,
   "panelCount": 16,
   "panels": [
@@ -321,7 +321,5 @@
   ],
   "humanListeningPerformed": false,
   "semanticAcceptanceGranted": false,
-  "semanticCorrectionReport": "review/semantic-correction-v3.md",
-  "verificationSummary": "review/verification-summary.json",
-  "limits": "Sixteen selected encoded frames only. Separate full verification, OCR, image-review and 1x playback evidence is recorded for this encoded SHA; the overview itself grants no final-film or human-audio approval."
+  "limits": "Sixteen selected encoded frames only. Full verification, OCR and 1x playback are handled separately; this overview grants no final-film or human-audio approval."
 }

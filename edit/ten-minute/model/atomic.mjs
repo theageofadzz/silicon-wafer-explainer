@@ -1,5 +1,7 @@
 import {T,V,M,group,box,ball,cyl,segment,dynamicLine,setSegment,arrow,wafer,marker,rigResult,buildDiamond,phase,mix} from './core.mjs';
 import {atomicPlanFor,atomicWindow} from './atomic-plan.mjs';
+import {fracturedQuartz,continueSilica,countRails,grainBackFaces,vacancyNeighborhood,meltCup,
+  epitaxyChamber,interfaceSection,directAtomic} from './atomic-detail.mjs';
 
 export const atomicKeys=['purity','lattice','silica','grains','doping','epitaxy','defects'];
 const mint=M.atom.clone();mint.color.setHex(0x77d5aa);mint.emissive.setHex(0x16482d);mint.emissiveIntensity=.12;
@@ -60,6 +62,7 @@ function showLattice(l,u,axis=1,min=0,max=1){
 }
 function grid(parent,name,impurities=1,{square=false,step=.3,radius=.085}={}){
   const g=scope(parent,name),atoms=[];
+  countRails(g,{step});
   for(let i=0;i<100;i++){
     const p=[(i%10-4.5)*step,(Math.floor(i/10)-4.5)*step,0];
     const o=square?box(g,radius*2,radius*2,.07,i>=100-impurities?M.green:M.atom,p):
@@ -134,7 +137,7 @@ function metallurgicalPurity(parent,beat){
   const cases=target(g,'range-case-target','工业硅98%与99%的两个固定比例案例',[0,.4,0]);
   const residueAnchor=target(g,'range-residue-target','两种案例均保留异类示意单位');
   return semanticRig(beat,g,([product,low,high,dirty])=>{
-    ingot.scale.setScalar(.65+.35*product);
+    ingot.scale.setScalar(.85+.15*product);
     a.g.visible=low>0;b.g.visible=high>0;
     a.g.scale.setScalar(Math.max(.001,low));b.g.scale.setScalar(Math.max(.001,high));
     residues.visible=dirty>0;
@@ -155,26 +158,28 @@ function silicaNetwork(parent,name){
     bonds.push({o:segment(g,[0,0,0],p,.025,M.silver),i:oxygen.length-1,inner:true},
       {o:segment(g,p,end,.025,M.silver),i:oxygen.length-1,inner:false});
   }
-  return {g,centre,oxygen,outer,bonds,oxygenPoints:oxygen.map(o=>o.position.toArray())};
+  const n={g,centre,oxygen,outer,bonds,oxygenPoints:oxygen.map(o=>o.position.toArray())};
+  n.boundary=continueSilica(n);return n;
 }
 function quartzSpecimen(parent,name,material,xyz){
-  const g=scope(parent,name,'石英外观标本');g.position.set(...xyz);
-  const prism=new T.Mesh(new T.CylinderGeometry(.46,.46,1.35,6),material);g.add(prism);
-  const tip=new T.Mesh(new T.ConeGeometry(.46,.55,6),material);tip.position.y=.95;g.add(tip);
-  return g;
+  return fracturedQuartz(parent,name,material,xyz,{milky:name==='milky-quartz'});
 }
 function quartzAppearance(parent,beat){
   const g=group(parent),clearMaterial=M.glass.clone(),milkMaterial=M.ceramic.clone();
-  clearMaterial.opacity=.22;milkMaterial.color.setHex(0xdde1df);
+  clearMaterial.opacity=.22;clearMaterial.roughness=.12;
+  milkMaterial.color.setHex(0xdde1df);milkMaterial.transparent=true;milkMaterial.opacity=.47;
+  milkMaterial.side=T.DoubleSide;milkMaterial.depthWrite=false;
   const clear=quartzSpecimen(g,'clear-quartz',clearMaterial,[-.65,1.05,0]);
   const milky=quartzSpecimen(g,'milky-quartz',milkMaterial,[.65,1.05,0]);
   const n=silicaNetwork(g,'silica-network');n.g.position.y=-1.25;n.g.scale.setScalar(.6);
   const centreAnchor=target(n.g,'silica-composition-target','石英的Si-O网络');
-  return semanticRig(beat,g,([transparent,white,composition])=>{
-    clearMaterial.opacity=mix(.1,.25,transparent);milky.visible=white>0;milky.scale.setScalar(Math.max(.001,white));
+  return semanticRig(beat,g,([transparent,white,composition],ctx)=>{
+    clearMaterial.opacity=mix(.24,.32,transparent);
+    milky.visible=ctx.time>=ctx.window('乳白').start;milky.scale.setScalar(.8+.2*white);
     n.g.visible=composition>0;n.g.scale.setScalar(.6*Math.max(.001,composition));
     return {material:'silica',localSiliconOxygenCoordination:4,oxygenBridgesTwoSilicon:true,networkContinuesBeyondView:true,
-      appearanceDoesNotMeasurePurity:true,atomicScale:composition>0};
+      appearanceDoesNotMeasurePurity:true,atomicScale:composition>0,scaleSeparatedSpecimenAndNetwork:true,
+      shellFracture:true,internalInclusionsQualitative:true};
   },[centreAnchor,clear],{view:{eye:[1.5,1.6,10],look:[0,0,0],span:8}});
 }
 function quartzReaction(parent,beat){
@@ -182,18 +187,6 @@ function quartzReaction(parent,beat){
   named(n.centre,'reacting-silicon','反应形成的单质硅示意');
   const bondGroup=scope(n.g,'silicon-oxygen-bonds'),product=scope(g,'silicon-product','单质硅产物区');
   n.bonds.forEach(({o})=>bondGroup.add(o));
-  // Boundary Si sites continue into the surrounding network, rather than floating free.
-  n.outer.forEach((o,i)=>{
-    const axis=V(...n.oxygenPoints[i]).sub(o.position).normalize();
-    const tangent=axis.clone().cross(V(0,1,0)).normalize(),normal=axis.clone().cross(tangent).normalize();
-    for(let j=0;j<3;j++){
-      const angle=j*Math.PI*2/3,direction=axis.clone().multiplyScalar(-1/3)
-        .add(tangent.clone().multiplyScalar(Math.sqrt(8/9)*Math.cos(angle)))
-        .add(normal.clone().multiplyScalar(Math.sqrt(8/9)*Math.sin(angle)));
-      const end=o.position.clone().addScaledVector(direction,.43);
-      segment(n.g,o.position.toArray(),end.toArray(),.014,M.silver);ball(n.g,.07,M.green,end.toArray());
-    }
-  });
   cyl(product,.65,.09,M.dark,[0,-1.8,0]);
   const carbonGroup=scope(g,'reductant-carbon','参与还原的碳'),coGroup=scope(g,'carbon-monoxide-products','带走氧的CO产物');
   const carbons=[ball(carbonGroup,.16,M.dark),ball(carbonGroup,.16,M.dark)],coBonds=[dynamicLine(coGroup,M.silver,.022),dynamicLine(coGroup,M.silver,.022)];
@@ -251,7 +244,8 @@ function grainSet(parent,name,spacing=1.65){
   const g=scope(parent,name),grains=[];
   for(let i=0;i<3;i++){
     const l=diamond(g,`grain-${i}`,{spacing:.78,atomRadius:.065});
-    l.g.position.y=(i-1)*spacing;l.g.rotation.set(.12+i*.25,i*.47,.1-i*.16);grains.push(l);
+    l.g.position.y=(i-1)*spacing;l.g.rotation.set(.12+i*.25,i*.47,.1-i*.16);
+    l.back=grainBackFaces(l);grains.push(l);
   }
   return {g,grains};
 }
@@ -298,6 +292,7 @@ function grainDisorder(parent,beat){
   return semanticRig(beat,g,([pure,directions,disorder,rebuild])=>{
     const moved=phase(disorder,.25,1);
     poly.grains.forEach((l,j)=>{
+      l.back.visible=disorder<.25;
       l.atoms.forEach(o=>{o.visible=moved===0;o.scale.setScalar(.05+.015*pure);});
       l.bonds.forEach(({o},i)=>o.visible=disorder<.25&&directions>(i/l.bonds.length)*.7+j*.08);
     });
@@ -314,27 +309,33 @@ function grainDisorder(parent,beat){
   },[poly.grains[1].atoms[30],nucleus.g],{view:{eye:[2.3,1.6,10],look:[0,-.2,0],span:8.6}});
 }
 function continuousLattice(parent,beat){
-  const g=group(parent),l=diamond(g,'continuous-lattice',{spacing:1.3});l.g.position.y=.8;
+  const g=group(parent),l=diamond(g,'continuous-lattice',{cells:3,spacing:1});l.g.position.y=.8;
   const cross=scope(g,'cross-region-bonds'),crossLines=[];
   l.bonds.forEach(({i,j})=>{
     if((l.points[i][0]<0)!==(l.points[j][0]<0))crossLines.push(segment(cross,l.points[i],l.points[j],.024,greenInk));
   });
   cross.position.copy(l.g.position);
   const comparison=scope(g,'misoriented-comparison'),edges=scope(comparison,'unmatched-edges');
-  const examples=[diamond(comparison,'misoriented-left',{cells:1,spacing:1}),diamond(comparison,'misoriented-right',{cells:1,spacing:1})];
+  const examples=[diamond(comparison,'misoriented-left',{cells:2,spacing:.7}),diamond(comparison,'misoriented-right',{cells:2,spacing:.7})];
   examples[0].g.rotation.y=.1;examples[1].g.rotation.set(.3,.75,.25);comparison.position.y=-1.65;
   const stopLines=[dynamicLine(edges,M.dark,.025),dynamicLine(edges,M.dark,.025)];
   const continuousTarget=target(l.g,'continuous-target','同一取向且近邻连接连续的单晶');
   const mismatchTarget=target(comparison,'mismatch-target','保持不同取向的比较晶粒');
-  return semanticRig(beat,g,([extend,connect,contrast,approach])=>{
+  const depth=scope(l.g,'lattice-depth-direction');
+  for(const x of [-1.45,1.45])arrow(depth,[x,-1.2,-1.25],[x,-1.2,1.25],M.silver,.012);
+  return semanticRig(beat,g,([extend,connect,contrast,approach],ctx)=>{
+    const compare=ctx.time>=ctx.window('而不是').start;
+    l.g.visible=!compare;
     showLattice(l,.5+.5*extend,0);
-    cross.visible=connect>0;crossLines.forEach((o,i)=>o.visible=connect>i/crossLines.length);
-    comparison.visible=contrast>0;comparison.scale.setScalar(.55+.2*contrast);
+    depth.visible=extend>0;
+    cross.visible=!compare&&connect>0;crossLines.forEach((o,i)=>o.visible=connect>i/crossLines.length);
+    comparison.visible=compare;comparison.scale.setScalar(.55+.2*contrast);
     examples.forEach((r,i)=>r.g.position.x=(i?1:-1)*mix(.9,.58,approach));
     edges.visible=approach>0;
     setSegment(stopLines[0],[-.23,0,.7],[-.08,0,.7]);setSegment(stopLines[1],[.08,0,.7],[.23,0,.7]);
     return {...latticeFacts(l),coherentOrientation:true,connectedCrossRegionBonds:Math.round(connect*crossLines.length),
-      comparisonOrientations:examples.map(r=>r.g.rotation.toArray().slice(0,3)),comparisonRemainsMisoriented:true};
+      comparisonOrientations:examples.map(r=>r.g.rotation.toArray().slice(0,3)),comparisonRemainsMisoriented:true,
+      latticeDepthCells:3,arrowsAreOrientationGuidesNotBonds:true};
   },[continuousTarget,mismatchTarget],{view:{eye:[2.7,1.8,10],look:[0,0,0],span:8}});
 }
 
@@ -342,6 +343,7 @@ function purityVersusDoping(parent,beat){
   const g=group(parent),comparison=scope(g,'composition-comparison'),l=diamond(comparison,'feedstock-lattice',{spacing:1.05});
   l.g.position.y=1.05;l.g.scale.setScalar(.85);
   const site=centralSite(l),sitePoint=l.points[site],dopant=ball(l.g,.1,M.amber,[2,1,0]);
+  target(l.g,'substitution-neighbourhood','受控替位位置及相邻晶格',sitePoint);
   named(dopant,'controlled-dopant','有意加入的掺杂原子');
   const pollutant=scope(comparison,'surface-contaminants'),surface=wafer(pollutant,1.12,[0,-1.3,0]);surface.g.rotation.x=.48;
   const dirt=[];for(let i=0;i<5;i++)dirt.push(ball(pollutant,.055,i%2?M.dark:M.green));
@@ -363,6 +365,7 @@ function purityVersusDoping(parent,beat){
 }
 function meltDoping(parent,beat){
   const g=group(parent),reservoir=scope(g,'melt-reservoir'),surface=cyl(reservoir,1.3,.1,M.hot,[0,.3,0]);
+  meltCup(reservoir);
   const feed=scope(g,'dopant-feed');cyl(feed,.13,.6,M.dark,[0,2.1,0]);
   const dose=scope(g,'dose-control'),gate=box(dose,.25,.05,.3,M.silver,[.3,1.8,0]);
   const reserves=[ball(dose,.065,mint,[-.08,2.5,.05]),ball(dose,.065,mint,[.08,2.64,.05])];
@@ -380,7 +383,9 @@ function meltDoping(parent,beat){
   const amountBracket=frame(dose,.65,.3,'dose-bound',[0,1.5,.25]);
   const atomAnchor=target(distribution,'melt-dopant-target','进入熔体并重新分布的掺杂示意原子');
   const electricAnchor=target(electrical,'electrical-target','电阻率的定性输运示意',[1,0,.4]);
-  return semanticRig(beat,g,([add,resistivity,amount,spread])=>{
+  return semanticRig(beat,g,([add,resistivity,amount,spread],ctx)=>{
+    const electricalCloseup=ctx.time>=ctx.window('调节电阻率').start&&ctx.time<ctx.window('加入多少').start;
+    reservoir.visible=feed.visible=dose.visible=distribution.visible=!electricalCloseup;
     dopants.forEach((o,i)=>{
       const enter=phase(add,i*.1,i*.1+.45),a=i*2.4;
       const landing=[(i-2.5)*.075,.46,(i%2)*.12];
@@ -389,7 +394,7 @@ function meltDoping(parent,beat){
     });
     gate.position.x=mix(.3,0,amount);amountBracket.visible=amount>0;
     reserves.forEach((o,i)=>o.position.y=mix(2.5+i*.14,2.05+i*.15,amount));
-    electrical.visible=resistivity>0;
+    electrical.visible=electricalCloseup||resistivity>0;
     solid.atoms[electricalDopant].material=resistivity>0?M.amber:M.atom;
     paths.forEach((o,i)=>o.visible=resistivity>i/4);
     carriers.forEach((o,i)=>{o.visible=resistivity>i/4;o.position.x=mix(.45,1.45,phase(resistivity,i*.15,.6+i*.15));});
@@ -415,6 +420,7 @@ function defectLattice(parent,name){
 }
 function pointDefectCreation(parent,beat){
   const g=group(parent),d=defectLattice(g,'point-defect-network'),{l,vacancy,gap}=d;
+  const neighbours=vacancyNeighborhood(l,vacancy);
   named(l.atoms[vacancy],'vacancy-site','正在离开正常位点的原子');
   const incoming=scope(g,'incoming-interstitial');incoming.add(d.extra);d.extra.position.set(1.8,1.2,.7);
   const impurityAnchor=target(g,'interstitial-target','实际额外原子的位置');
@@ -424,13 +430,15 @@ function pointDefectCreation(parent,beat){
     l.atoms[vacancy].visible=remove<1;
     l.bonds.forEach(({o,i,j})=>o.visible=(i!==vacancy&&j!==vacancy)||remove===0);
     d.halo.visible=vacancyCallout>0;d.halo.scale.setScalar(.65+.35*vacancyCallout);
+    neighbours.visible=vacancyCallout>0;
     const wait=[1.35,.7,.85];d.extra.visible=arrive>0;
     d.extra.position.copy(lerpPoint([1.9,1.5,.8],wait,arrive)).lerp(V(...gap),insert);
     impurityAnchor.position.copy(d.extra.position);
     return {...latticeFacts(l),vacancyCount:remove===1?1:0,interstitialCount:insert===1?1:0,
       regularSiteRemoved:remove===1,vacancyPosition:l.points[vacancy],interstitialPosition:d.extra.position.toArray(),
       interstitialRegularSiteCoincidence:l.points.some(p=>V(...p).distanceTo(d.extra.position)<1e-8),
-      initialLatticeIntact:remove===0&&arrive===0,pointDefects:true,atomicPositionsSchematic:true};
+      initialLatticeIntact:remove===0&&arrive===0,pointDefects:true,atomicPositionsSchematic:true,
+      vacancyNearestNeighbours:neighbours.userData.neighbourIndices,siteGuidesAreNotBonds:true};
   },[d.anchor,impurityAnchor],{view:{eye:[1,4.5,10],look:[0,0,0],span:8},
     semanticAnchors:ctx=>locals([
       ...(ctx.time>=ctx.window('形成空位').start?[{text:'空位',object:d.halo,offset:[-110,-40]}]:[]),
@@ -450,6 +458,7 @@ function vacancyPath(l,fixed){
 function pointDefectClustering(parent,beat){
   const g=group(parent),d=defectLattice(g,'defect-cluster'),{l,vacancy}=d;l.g.position.y=.45;l.g.scale.setScalar(.88);
   const path=vacancyPath(l,vacancy),secondHalo=circle(l.g,.145,l.points[path[0]]);
+  const neighbours=vacancyNeighborhood(l,vacancy,'cluster-local-neighbours');
   const extra2=ball(l.g,.12,mint,[-.1875,.5625,.5625]);
   const thermal=scope(g,'thermal-state'),temperature=cyl(thermal,.18,.12,M.hot,[-1.15,-2.1,0]);
   const growth=scope(g,'growth-rate-control'),front=box(growth,.4,.06,.25,M.green,[0,-2.1,0]);
@@ -473,6 +482,7 @@ function pointDefectClustering(parent,beat){
     l.atoms.forEach((o,i)=>{if(o.visible)o.position.add(V(Math.sin(i*2.3),Math.cos(i*1.7),Math.sin(i)).multiplyScalar(.025*(1-cool)));});
     l.bonds.forEach(({o,i,j})=>o.visible=occupancy[i]!==null&&occupancy[j]!==null&&i!==moving&&j!==moving);
     d.halo.visible=true;secondHalo.position.set(...hole);
+    neighbours.visible=cluster>0;
     [d.extra,extra2].forEach((o,i)=>o.position.copy(lerpPoint(startExtra[i],endExtra[i],cluster)));
     temperature.material=cool<.5?M.hot:M.dark;temperature.scale.y=1-.7*cool;
     front.position.y=mix(-2.25,-1.7,speed);
@@ -503,10 +513,13 @@ function singleCrystalQuality(parent,beat){
   const residual=scope(g,'residual-vacancy'),residualCue=circle(residual,.12);
   const primary=target(a.l.g,'single-quality-target','同一取向但含有点缺陷的单晶');
   const lower=target(b.l.g,'low-defect-target','缺陷更少但仍非绝对完美的比较样本');
+  target(b.l.g,'low-quality-vacancy-focus','较低缺陷样本的残余空位',b.l.points[b.vacancy]);
+  const upperNeighbours=vacancyNeighborhood(a.l,a.vacancy),lowerNeighbours=vacancyNeighborhood(b.l,b.vacancy);
   return semanticRig(beat,g,([orientation,quality,imperfection,perfect])=>{
     direction.visible=orientation>0;axes.forEach(o=>o.scale.setScalar(.5+.5*orientation));
     b.l.g.visible=quality>0;b.extra.visible=false;
     a.halo.visible=imperfection>0;a.extra.visible=imperfection>0;b.halo.visible=perfect>0;
+    upperNeighbours.visible=imperfection>0;lowerNeighbours.visible=perfect>0;
     residual.visible=perfect>0;residual.position.copy(V(...b.l.points[b.vacancy]).multiplyScalar(.58).add(b.l.g.position));
     residualCue.scale.setScalar(.7+.3*perfect);
     return {...latticeFacts(a.l),coherentOrientation:true,comparisonOrientationsIdentical:true,
@@ -546,34 +559,49 @@ function epitaxialNetwork(parent,name){
 }
 function epitaxyGrowth(parent,beat){
   const g=group(parent),n=epitaxialNetwork(g,'epitaxial-growth');
-  const environment=scope(g,'epitaxy-environment');cyl(environment,.12,.55,M.dark,[0,2.25,0]);
-  for(const x of [-1.55,1.55])box(environment,.08,1.1,.3,M.dark,[x,.3,0]);
+  n.l.g.position.y=-2.6;
+  const reactor=epitaxyChamber(g);reactor.g.position.y=1.7;
+  const section=interfaceSection(n);
   const gas=scope(g,'gas-feed-atoms'),incoming=[],sites=n.l.points.map((p,i)=>({p,i})).filter(({p})=>p[1]===n.growth[0]).slice(0,8);
+  gas.position.y=n.l.g.position.y;
   sites.forEach(()=>incoming.push(ball(gas,.065,mint)));
   const incorporation=scope(g,'surface-incorporation'),surfaceCue=frame(incorporation,2.55,2.55,'surface-plane');
-  incorporation.rotation.x=-Math.PI/2;incorporation.position.y=n.base;
+  incorporation.rotation.x=-Math.PI/2;incorporation.position.y=n.base+n.l.g.position.y;
   const primary=target(n.l.g,'epitaxy-surface-target','即将生长的衬底表面',[.7,n.base,.8]);
-  return semanticRig(beat,g,([conditions,feed,surface,grow])=>{
-    environment.visible=conditions>0;environment.scale.y=.7+.3*conditions;
+  return semanticRig(beat,g,([conditions,feed,surface,grow],ctx)=>{
+    const macro=ctx.time>=ctx.window('硅片表面').start;
+    reactor.g.visible=!macro;n.l.g.visible=macro;gas.visible=macro;
+    const equipment=reactor.update(conditions,feed);
     const state=n.updateLayers(surface+grow*3);
+    section.update(state.boundary);
     incoming.forEach((o,i)=>{
       const p=sites[i].p,u=phase(feed,i*.045,.65+i*.045);
       o.visible=feed>0&&surface<1;o.position.copy(lerpPoint([p[0],1.9+i*.04,p[2]],p,u));
       if(state.sizes[sites[i].i]>.99)o.visible=false;
     });
-    incorporation.visible=surface>0;surfaceCue.scale.setScalar(.6+.4*surface);
+    incorporation.visible=macro&&surface>0;surfaceCue.scale.setScalar(.6+.4*surface);
     primary.position.copy(n.newLayer.visible?n.newLayer.position:V(.7,n.base,.8));
     primary.userData.objectLabel=n.newLayer.visible?'已与衬底相干连接的新层':'即将生长的衬底表面';
     return {...latticeFacts(n.l),coherentDiamondSites:true,layerCount:state.completeGrowthLevels,
       substrateColor:'white',newLayerColor:'mint',interfaceY:n.base,gasPrecedesSolidGrowth:true,
-      connectedToSubstrate:true,layerThicknessNotToScale:true,notFloatingPlates:true};
+      connectedToSubstrate:true,layerThicknessNotToScale:true,notFloatingPlates:true,
+      separatePhysicalAndAtomicScales:true,equipment};
   },[n.substrate,primary],{view:{eye:[3.3,2.5,10],look:[0,.25,0],span:8.2},
-    semanticAnchors:ctx=>locals([
-      ...(ctx.time>=ctx.window('受控条件').start?[{text:'衬底',object:n.substrate,offset:[-105,50]}]:[]),
-      ...(ctx.time>=ctx.window('硅片表面').start?[{text:'新生外延层',object:n.newLayer,offset:[105,-55]}]:[])] )});
+    semanticAnchors:ctx=>{
+      if(ctx.time>=ctx.window('硅片表面').start)return locals([
+        {text:'衬底',object:n.substrate,offset:[-105,50]},
+        {text:'新生外延层',object:n.newLayer,offset:[105,-55]}]);
+      if(ctx.time>=ctx.window('气相原料').start)return locals([
+        {text:'气相原料',object:reactor.manifold,offset:[-100,-65]},
+        {text:'衬底',object:reactor.wafer.disk,offset:[95,50]}]);
+      return ctx.time>=ctx.window('受控条件').start?locals([
+        {text:'灯加热',object:reactor.lamps[10],offset:[-100,-65]},
+        {text:'衬底基座',object:reactor.susceptor,offset:[110,65]}]):[];
+    }});
 }
 function epitaxyProperties(parent,beat){
   const g=group(parent),n=epitaxialNetwork(g,'epilayer-property-network');
+  const section=interfaceSection(n);
   const coherent=scope(n.l.g,'coherent-interface'),interfaceBonds=[];
   n.l.bonds.forEach(({i,j})=>{if((n.l.points[i][1]<=n.base)!==(n.l.points[j][1]<=n.base))
     interfaceBonds.push(segment(coherent,n.l.points[i],n.l.points[j],.025,greenInk));});
@@ -586,6 +614,7 @@ function epitaxyProperties(parent,beat){
   for(let i=0;i<3;i++)carriers.push(ball(electrical,.035,M.green,[1.45,.3+i*.2,.9]));
   return semanticRig(beat,g,([direction,height,resistivity])=>{
     const state=n.updateLayers(2+height*3);
+    section.update(state.boundary);
     coherent.visible=direction>0;interfaceBonds.forEach((o,i)=>o.visible=direction>i/interfaceBonds.length);
     const top=n.growth[Math.max(0,state.completeGrowthLevels-1)];
     thickness.visible=height>0;setSegment(vertical,[1.52,n.base,.9],[1.52,top,.9]);
@@ -605,29 +634,35 @@ function epitaxyProducts(parent,beat){
   epi.position.y=-1.3;polished.position.y=1.3;
   const a=epitaxialNetwork(epi,'bonded-interface'),b=epitaxialNetwork(polished,'bare-silicon-section');
   a.l.g.scale.setScalar(.6);b.l.g.scale.setScalar(.6);
-  a.l.g.position.x=b.l.g.position.x=-.35;
+  a.l.g.position.x=b.l.g.position.x=-3.55;
   a.updateLayers(3);b.updateLayers(0);
-  const bare=wafer(polished,.55,[1.25,0,0]),grown=wafer(epi,.55,[1.25,0,0]);
+  const aSection=interfaceSection(a),bSection=interfaceSection(b);
+  aSection.update(a.growth[2]);bSection.update(b.base);
+  const productSilicon=M.silicon.clone();productSilicon.metalness=.78;productSilicon.roughness=.16;
+  const bare=wafer(polished,1.05,[0,0,0],productSilicon),grown=wafer(epi,1.05,[0,0,0],productSilicon);
   bare.g.rotation.x=grown.g.rotation.x=.5;
   const productPaths=scope(g,'product-routes'),routes=[dynamicLine(productPaths,M.green,.018),dynamicLine(productPaths,M.green,.018)];
   const direct=scope(g,'direct-polished-route'),directArrow=arrow(direct,[1.3,1.3,0],[1.9,1.3,0],M.green,.022);
   const connections=a.l.bonds.filter(({i,j})=>(a.l.points[i][1]<=a.base)!==(a.l.points[j][1]<=a.base));
-  return semanticRig(beat,g,([bonded,bareReveal,epiReveal,uses,optional])=>{
+  return semanticRig(beat,g,([bonded,bareReveal,epiReveal,uses,optional],ctx)=>{
     // Compare products without replaying the preceding beat's layer-growth action.
-    epi.visible=true;polished.visible=bareReveal>0;
-    a.l.g.visible=true;grown.g.visible=epiReveal>0;
+    epi.visible=true;polished.visible=ctx.time>=ctx.window('抛光片').start;
+    a.l.g.visible=ctx.time<ctx.window('抛光片').start;b.l.g.visible=false;grown.g.visible=epiReveal>0;
     connections.forEach(({o},i)=>{o.material=bonded>i/connections.length?greenInk:M.green;});
     polished.position.x=-.15*uses;epi.position.x=.15*uses;
     productPaths.visible=uses>0;
-    setSegment(routes[0],[1.3,1.3,0],[mix(1.3,1.9,uses),1.3,0]);
-    setSegment(routes[1],[1.4,-1.3,0],[mix(1.4,1.9,uses),-1.3,0]);
+    setSegment(routes[0],[1.05-.15*uses,1.3,0],[mix(1.05-.15*uses,1.9,uses),1.3,0]);
+    setSegment(routes[1],[1.05+.15*uses,-1.3,0],[mix(1.05+.15*uses,1.9,uses),-1.3,0]);
+    directArrow.position.x=1.05-.15*uses;
     direct.visible=optional>0;directArrow.scale.setScalar(Math.max(.001,optional));
     return {coherentDiamondSites:true,comparison:'polished wafer versus optional epitaxial wafer',
       polishedHasNewLayer:false,epitaxialHasNewLayer:true,existingLayerNeverFloats:true,independentProductRoutes:true,
       epitaxyOptional:optional===1,waferDiameterMm:300,waferThicknessMm:.775,atomicSectionsMagnified:true,noRequiredEpitaxySequence:true};
   },[b.substrate,a.newLayer],{view:{eye:[1.7,2.1,10],look:[.2,0,0],span:7.6},
-    semanticAnchors:ctx=>ctx.time>=ctx.window('外延片').start?locals([
-      {text:'衬底',object:a.substrate,offset:[-105,50]},{text:'新生外延层',object:a.newLayer,offset:[105,-55]}]):[]});
+    semanticAnchors:ctx=>locals([
+      ...(ctx.time>=ctx.window('抛光片').start?[{text:'抛光片',object:bare.disk,offset:[-95,-50]}]:[]),
+      ...(ctx.time>=ctx.window('外延片').start?[{text:'外延片',object:grown.disk,offset:[95,50]}]:[]),
+    ])});
 }
 
 const factories={
@@ -643,5 +678,5 @@ export function atomicRig(key,parent,beat){
   atomicPlanFor(beat);
   const factory=factories[beat.id];
   if(!factory)throw new Error(`No independent atomic mechanism for ${beat.id}`);
-  return factory(parent,beat);
+  return directAtomic(factory(parent,beat),beat);
 }

@@ -41,7 +41,7 @@
       "widgets_values": [
         "10-melt-01,10-melt-02,10-melt-03,11-seed-01,11-seed-02,11-seed-03",
         false,
-        true,
+        false,
         ""
       ]
     },

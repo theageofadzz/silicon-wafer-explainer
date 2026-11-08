@@ -10,6 +10,8 @@
   "tempo": 1.003483835005574,
   "minimumReadingHold": 0.542715750219827,
   "semanticVersion": 3,
+  "visualRevision": 4,
+  "cameraShotCount": 288,
   "semanticActionCount": 306,
   "shortFinalHoldsRequireVisualReview": [
     {

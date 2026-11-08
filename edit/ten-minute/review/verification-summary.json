@@ -1,10 +1,12 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "status": "automated-evidence-recorded",
-  "film": "output/silicon-wafer-10min-9x16-v3.mp4",
-  "sha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf",
-  "timelineSha256": "508552f1cb812834cc75300d13c30ed0f11405381c7cf1a7d0459c38df111cdf",
+  "film": "output/silicon-wafer-10min-9x16-v4.mp4",
+  "sha256": "a1630f9b4ec35eee9de9be4a486af72df45d0ceb11f38433e1c7f4706b941425",
+  "timelineSha256": "279b3b7212988cf43878353a5015af95007c85c5d5198adf3204c5b574d2c6d8",
   "semanticVersion": 3,
+  "visualRevision": 4,
+  "cameraShotCount": 288,
   "semanticActionCount": 306,
   "duration": 598.0,
   "width": 1080,
@@ -18,17 +20,17 @@
     "status": "mismatches-need-visual-review",
     "count": 335,
     "matched": 331,
-    "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf"
+    "encodedSha256": "a1630f9b4ec35eee9de9be4a486af72df45d0ceb11f38433e1c7f4706b941425"
   },
   "explanatoryOCR": {
     "status": "mismatches-need-visual-review",
     "beatCount": 84,
-    "exactlyMatchedBeats": 72,
-    "encodedSha256": "487673030d60029b17023333bab1e1cabfe53fa98820e29c5a023288f0c4e0cf"
+    "exactlyMatchedBeats": 69,
+    "encodedSha256": "a1630f9b4ec35eee9de9be4a486af72df45d0ceb11f38433e1c7f4706b941425"
   },
   "ocrMismatchImageReview": {
     "captionMismatchCount": 4,
-    "explanatoryMismatchBeatCount": 12,
+    "explanatoryMismatchBeatCount": 15,
     "status": "requires-visual-review",
     "humanReviewApprovedByAudit": false
   },
@@ -55,6 +57,8 @@
       "frames": 150,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -65,6 +69,8 @@
       "frames": 138,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -75,6 +81,8 @@
       "frames": 180,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -85,6 +93,8 @@
       "frames": 160,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 3
     },
     {
@@ -95,6 +105,8 @@
       "frames": 170,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 4
     },
     {
@@ -105,6 +117,8 @@
       "frames": 178,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -115,6 +129,8 @@
       "frames": 170,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -125,6 +141,8 @@
       "frames": 168,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -135,6 +153,8 @@
       "frames": 185,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -145,6 +165,8 @@
       "frames": 150,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -155,6 +177,8 @@
       "frames": 155,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -165,6 +189,8 @@
       "frames": 184,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -175,6 +201,8 @@
       "frames": 167,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -185,6 +213,8 @@
       "frames": 177,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -195,6 +225,8 @@
       "frames": 177,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 4
     },
     {
@@ -205,6 +237,8 @@
       "frames": 164,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -215,6 +249,8 @@
       "frames": 141,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -225,6 +261,8 @@
       "frames": 194,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -235,6 +273,8 @@
       "frames": 179,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -245,6 +285,8 @@
       "frames": 172,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -255,6 +297,8 @@
       "frames": 183,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -265,6 +309,8 @@
       "frames": 144,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -275,6 +321,8 @@
       "frames": 153,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -285,6 +333,8 @@
       "frames": 192,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -295,6 +345,8 @@
       "frames": 168,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 6,
       "semanticActionCount": 6
     },
     {
@@ -305,6 +357,8 @@
       "frames": 175,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -315,6 +369,8 @@
       "frames": 178,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -325,6 +381,8 @@
       "frames": 172,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -335,6 +393,8 @@
       "frames": 154,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -345,6 +405,8 @@
       "frames": 182,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -355,6 +417,8 @@
       "frames": 156,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -365,6 +429,8 @@
       "frames": 158,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -375,6 +441,8 @@
       "frames": 178,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -385,6 +453,8 @@
       "frames": 159,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -395,6 +465,8 @@
       "frames": 166,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -405,6 +477,8 @@
       "frames": 172,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -415,6 +489,8 @@
       "frames": 148,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -425,6 +501,8 @@
       "frames": 159,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -435,6 +513,8 @@
       "frames": 186,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -445,6 +525,8 @@
       "frames": 169,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -455,6 +537,8 @@
       "frames": 144,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -465,6 +549,8 @@
       "frames": 179,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -475,6 +561,8 @@
       "frames": 157,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -485,6 +573,8 @@
       "frames": 142,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -495,6 +585,8 @@
       "frames": 186,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -505,6 +597,8 @@
       "frames": 162,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -515,6 +609,8 @@
       "frames": 194,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 2,
       "semanticActionCount": 2
     },
     {
@@ -525,6 +621,8 @@
       "frames": 186,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -535,6 +633,8 @@
       "frames": 145,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -545,6 +645,8 @@
       "frames": 180,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 5
     },
     {
@@ -555,6 +657,8 @@
       "frames": 176,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -565,6 +669,8 @@
       "frames": 164,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -575,6 +681,8 @@
       "frames": 157,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -585,6 +693,8 @@
       "frames": 159,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -595,6 +705,8 @@
       "frames": 163,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -605,6 +717,8 @@
       "frames": 176,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -615,6 +729,8 @@
       "frames": 180,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -625,6 +741,8 @@
       "frames": 167,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -635,6 +753,8 @@
       "frames": 164,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -645,6 +765,8 @@
       "frames": 192,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -655,6 +777,8 @@
       "frames": 185,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -665,6 +789,8 @@
       "frames": 168,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -675,6 +801,8 @@
       "frames": 187,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -685,6 +813,8 @@
       "frames": 172,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -695,6 +825,8 @@
       "frames": 168,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -705,6 +837,8 @@
       "frames": 187,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -715,6 +849,8 @@
       "frames": 168,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -725,6 +861,8 @@
       "frames": 166,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -735,6 +873,8 @@
       "frames": 187,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -745,6 +885,8 @@
       "frames": 166,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 4
     },
     {
@@ -755,6 +897,8 @@
       "frames": 157,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     },
     {
@@ -765,6 +909,8 @@
       "frames": 191,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 5
     },
     {
@@ -775,6 +921,8 @@
       "frames": 177,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -785,6 +933,8 @@
       "frames": 165,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -795,6 +945,8 @@
       "frames": 192,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -805,6 +957,8 @@
       "frames": 171,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -815,6 +969,8 @@
       "frames": 155,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -825,6 +981,8 @@
       "frames": 219,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -835,6 +993,8 @@
       "frames": 173,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 4,
       "semanticActionCount": 4
     },
     {
@@ -845,6 +1005,8 @@
       "frames": 197,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 6,
       "semanticActionCount": 6
     },
     {
@@ -855,6 +1017,8 @@
       "frames": 210,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -865,6 +1029,8 @@
       "frames": 140,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 5,
       "semanticActionCount": 5
     },
     {
@@ -875,6 +1041,8 @@
       "frames": 169,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 6,
       "semanticActionCount": 6
     },
     {
@@ -885,6 +1053,8 @@
       "frames": 198,
       "duplicatedFrames": false,
       "semanticVersion": 3,
+      "visualRevision": 4,
+      "cameraShotCount": 3,
       "semanticActionCount": 3
     }
   ],
@@ -894,40 +1064,52 @@
       "fps": 24.0,
       "width": 576,
       "height": 1024,
-      "sha256": "7a873e34171b80e6ffb17ec61227d0da1b96bf43f8783e8878186f27f67c6b26",
+      "sha256": "2e26bb6401de262e8b107b47f312f15d452125a5dee38054876e10b38bd1432a",
       "sourcePhotoSha256": "ec5fa1721fdb84f1842e7fd2fd256e7e6a3e3df52dcdf40d60efda7ba29eea24",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
       "key": "quartz",
-      "cachedFromPriorRender": true
+      "cachedFromPriorRender": false,
+      "promptId": "83a78bc3-b34d-41ad-93f3-80a596277afe",
+      "saveNode": "27",
+      "historySha256": "e5a33b81a2915db733167fab3bd8d232dcd13761d3ad40421071f11843e69285"
     },
     {
       "frames": 65,
       "fps": 24.0,
       "width": 576,
       "height": 1024,
-      "sha256": "deab79724083ff89a3c0ebb5302348d23934bb2e1c1c1dbc1712c445e2e883db",
+      "sha256": "1c66d577e2f5f6c78a6dddfca1d58e2a18ea54ea9c2accb0fb8e47bb4507c521",
       "sourcePhotoSha256": "a0d09bcf710cc8dad561bcc712613a183400150a1d26716de2fc16982971b619",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
       "key": "boule",
-      "cachedFromPriorRender": true
+      "cachedFromPriorRender": false,
+      "promptId": "83a78bc3-b34d-41ad-93f3-80a596277afe",
+      "saveNode": "51",
+      "historySha256": "e5a33b81a2915db733167fab3bd8d232dcd13761d3ad40421071f11843e69285"
     },
     {
       "frames": 65,
       "fps": 24.0,
       "width": 576,
       "height": 1024,
-      "sha256": "60dcaadd229eb56dab6d168bf2b2a400d7c23a539614734cc9ee3093c0d08420",
+      "sha256": "70317af8f58e465e7384934583784ab792ee87c12cdb1227da41771e08e8e1e4",
       "sourcePhotoSha256": "c19da7de99fe5d24553c34fb4b98a0e071a973e60b6d4faa0cdf46195e77f993",
       "method": "Photograph -> LTXVImgToVideo -> SamplerCustom -> tiled VAE decode",
       "key": "blank",
-      "cachedFromPriorRender": true
+      "cachedFromPriorRender": false,
+      "promptId": "83a78bc3-b34d-41ad-93f3-80a596277afe",
+      "saveNode": "63",
+      "historySha256": "e5a33b81a2915db733167fab3bd8d232dcd13761d3ad40421071f11843e69285"
     }
   ],
   "humanAudioReview": "not performed by this automated system",
   "normalSpeedPlayback": {
     "status": "normal-speed-browser-playback-completed",
     "duration": 598,
-    "wallSeconds": 598.74,
+    "wallSeconds": 598.513,
+    "muted": true,
+    "observedSeconds": 598.1290000000008,
+    "environmentGaps": [],
     "pageErrors": []
   },
   "semanticMeaningApprovedByAudit": false,

@@ -24,9 +24,9 @@
 <body>
   <main>
     <section aria-label="视频">
-      <video id="video" controls playsinline preload="metadata" src="output/silicon-wafer-10min-9x16-v3.mp4"></video>
+      <video id="video" controls playsinline preload="metadata" src="output/silicon-wafer-10min-9x16-v4.mp4"></video>
       <div class="links">
-        <a id="download" href="output/silicon-wafer-10min-9x16-v3.mp4" download>下载视频</a>
+        <a id="download" href="output/silicon-wafer-10min-9x16-v4.mp4" download>下载视频</a>
         <a id="subtitles" href="output/full-captions.srt" download hidden>下载字幕</a>
         <a id="verification" href="output/full-verification.json" hidden>验收记录</a>
       </div>
@@ -35,7 +35,8 @@
     <section aria-label="章节">
       <h1>硅片：从石英到晶圆</h1>
       <select id="version" aria-label="视频版本">
-        <option value="full">修正版（v2.1）</option>
+        <option value="full">场景深化版（v2.2）</option>
+        <option value="previous">逐句修正版（v2.1）</option>
         <option value="baseline">原版基线（v2）</option>
         <option value="pilot">样段</option>
         <option value="only">选定片段</option>
@@ -49,7 +50,8 @@
     const list=document.querySelector('#chapters'), status=document.querySelector('#status'), error=document.querySelector('#error');
     const stamp=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
     const baseline='output/silicon-wafer-10min-9x16.mp4';
-    const corrected='output/silicon-wafer-10min-9x16-v3.mp4';
+    const previous='output/silicon-wafer-10min-9x16-v3.mp4';
+    const corrected='output/silicon-wafer-10min-9x16-v4.mp4';
     let timeline, chapters=[], loading=0;
     async function json(file){
       const response=await fetch(file,{cache:'no-store'});
@@ -61,15 +63,15 @@
       video.pause();chapters=[];list.replaceChildren();error.textContent='';
       status.textContent='正在读取版本记录';
       let record;
-      if(mode!=='baseline'){
+      if(!['baseline','previous'].includes(mode)){
         try{record=await json(`output/${mode}-assembly.json`)}catch{}
       }
       if(token!==loading)return;
       const recorded=record?.file?.replaceAll('\\','/').split('/').at(-1);
       const recordPath=recorded?.endsWith('.mp4')?`output/${encodeURIComponent(recorded)}`:null;
       // An old full-assembly record must not silently relabel the baseline as corrected.
-      const media=mode==='baseline'?baseline:mode==='full'
-        ?(recordPath&&recordPath!==baseline?recordPath:corrected)
+      const media=mode==='baseline'?baseline:mode==='previous'?previous:mode==='full'
+        ?(recordPath===corrected?recordPath:corrected)
         :(recordPath??`output/${mode}.mp4`);
       const recordMatches=recordPath===media;
       video.src=media;video.load();
@@ -86,6 +88,10 @@
         if(token!==loading)return;
         if(mode==='baseline'){
           status.textContent='原版基线（v2）；修正版章节与验收记录不适用于此文件。';
+          return;
+        }
+        if(mode==='previous'){
+          status.textContent='上一版逐句修正版（v2.1）；本轮场景深化的检查记录单独保存。';
           return;
         }
         if(!recordMatches){

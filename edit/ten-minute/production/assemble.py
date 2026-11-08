@@ -485,10 +485,15 @@ def label_picture(beat, face, anchor=None, extra_anchors=None):
         boxes = local["boxes"]
         low, high = min(b[1] for b in boxes)-5, max(b[3] for b in boxes)+5
         join = (x, high if local_point[1] > y else low)
-        draw = ImageDraw.Draw(image)
-        draw.line([join, local_point], fill=(218, 233, 226, 220), width=2)
-        draw.ellipse((local_point[0]-3, local_point[1]-3, local_point[0]+3, local_point[1]+3),
-                     fill=(237, 247, 240, 255))
+        visible_point = (4 <= local_point[0] <= WIDTH-5
+                         and LABEL_Y+4 <= local_point[1] <= LABEL_Y+LABEL_HEIGHT-5)
+        local["leader"] = visible_point
+        local["projectedPoint"] = list(local_point)
+        if visible_point:
+            draw = ImageDraw.Draw(image)
+            draw.line([join, local_point], fill=(218, 233, 226, 220), width=2)
+            draw.ellipse((local_point[0]-3, local_point[1]-3, local_point[0]+3, local_point[1]+3),
+                         fill=(237, 247, 240, 255))
     all_blocks = [block, *extra_blocks]
     for i, first in enumerate(all_blocks):
         for second in all_blocks[i+1:]:
@@ -667,14 +672,23 @@ def resolve_inputs(items, supplied=None):
 
 def picture_plan(items, code, photos):
     shots = []
+    used_photographs = set()
+    used_code = {}
     for item in items:
         beat, bid = item["beat"], item["beat"]["id"]
         data = media_info(code[bid])
+        code_sha = sha(code[bid])
+        if code_sha in used_code:
+            raise ValueError(f"Code footage repeats another beat: {used_code[code_sha]} / {bid}")
+        used_code[code_sha] = bid
         metadata = json.loads(code[bid].with_suffix(".json").read_text())
         if metadata.get("semanticVersion") != 3 or not beat.get("semanticPlan"):
             raise ValueError(f"Legacy generic footage cannot enter the semantic revision: {bid}")
         if metadata.get("semanticPlan") != beat["semanticPlan"]:
             raise ValueError(f"Semantic action plan changed; rerender {bid}")
+        if (metadata.get("visualRevision") != 4 or len(metadata.get("cameraPlan", [])) < 2
+                or metadata.get("cameraPlan") != beat.get("cameraPlan")):
+            raise ValueError(f"Detailed scene or spoken camera plan is stale; rerender {bid}")
         expected_sources = {f"model/{p.name}": sha(p) for p in (ROOT / "model").glob("*.mjs")
                             if not p.name.startswith(".")}
         if metadata.get("modelSources") != expected_sources:
@@ -714,6 +728,8 @@ def picture_plan(items, code, photos):
                 note = "real blank-wafer appearance at the spoken mirror-reflection phrase; no repeated introductory insert"
             elif key == "chip":
                 note = "patterned-wafer photograph omitted so each subsequent fabrication action remains visible"
+            elif bid == "28-recap-03":
+                note = "closing manufacturing chain has its own scene; opening photograph is not replayed"
             else:
                 # Introductory photos end before the modeled semantic action starts.
                 before_action = max(0, math.floor(beat["actionStart"] * FPS + 1e-7)
@@ -722,6 +738,10 @@ def picture_plan(items, code, photos):
                 note = "photo capped at action start, 2.5s, and source duration; no retiming"
         elif key:
             note = f"optional photographic asset {key} absent; exact code used throughout"
+        reviewed_caps = {"quartz": 48, "boule": 24, "blank": 30}
+        if count and key in reviewed_caps:
+            count = min(count, reviewed_caps[key])
+            note += f"; reviewed AI-motion window capped at {reviewed_caps[key] / FPS:g}s"
 
         def code_part(a, b):
             if b > a:
@@ -732,6 +752,10 @@ def picture_plan(items, code, photos):
                               if b == needed else 0})
 
         if count:
+            photograph_sha = sha(photos[key])
+            if photograph_sha in used_photographs:
+                raise ValueError(f"A photographic clip cannot be replayed in another beat: {bid}/{key}")
+            used_photographs.add(photograph_sha)
             code_part(0, photo_start)
             shots.append({"beat": bid, "kind": "photographic-i2v", "media": key,
                           "source": str(photos[key]), "sourceStartFrame": 0,
@@ -765,7 +789,7 @@ def encode_picture(shots, cache):
                 weight = "clip((1.2-(pow((X-287)/280,2)+pow((Y-465)/240,2)))/.2,0,1)"
                 feather = ":".join(f"{channel}='{channel}(X,Y)*({weight})+{background}*(1-({weight}))'"
                                    for channel, background in [("r", 26), ("g", 27), ("b", 29)])
-                framing = (f"format=gbrp,geq={feather},scale=702:1248:flags=lanczos,"
+                framing = (f"eq=gamma=1.65:contrast=1.04,format=gbrp,geq={feather},scale=960:1706:flags=lanczos,"
                            "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=0x1a1b1d,")
             else:
                 framing = (f"scale={WIDTH}:{HEIGHT}:force_original_aspect_ratio=increase:flags=lanczos,"
@@ -920,7 +944,7 @@ def build(args):
                              "targetLUFS": -16, "targetTruePeakDBTP": -1.5,
                              "method": "whole continuous narration; no beat-based voice cuts"}
     output = OUT / ("pilot.mp4" if args.pilot else "only.mp4" if args.only
-                    else "silicon-wafer-10min-9x16-v3.mp4")
+                    else "silicon-wafer-10min-9x16-v4.mp4")
     temp = output.with_suffix(".part.mp4")
     run(["ffmpeg", "-y", "-v", "warning", "-i", picture, "-i", text_track, "-i", object_track, "-i", caption_track,
          "-i", ROOT / "assets/narration.wav", "-filter_complex", ";".join(filters),
